@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-  background-image: url(../img/03-img-body/banner631pixels2.jpg);
+  background-image: url(../img/00-fondos/fondo4tvvieja.jpg);
   background-color: rgb(155, 54, 54);
   background-repeat: repeat;
   background-position: top;
@@ -104,7 +104,6 @@ footer {
   padding: 1%;
   background-color: transparent;
   color: rgb(255, 255, 255);
-  border: 1px solid rgb(255, 255, 255);
   margin: 0;
   text-align: center;
   width: 100%;
@@ -334,8 +333,10 @@ main {
   font-size: 18px;
 }
 
-.card1 {
+.card {
   background: transparent;
+  border: none;
+  border-radius: 20px;
 }
 
 .card-title {
