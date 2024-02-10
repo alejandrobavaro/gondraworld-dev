@@ -3,6 +3,20 @@ main {
   align-items: center;
 }
 
+.imgData1 {
+  color: aquamarine;
+  font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-transform: uppercase;
+  font-size: medium;
+  border: 2px orangered solid;
+  border-radius: 20px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
 .colCostado1 {
   height: auto;
   max-width: 50%;
@@ -148,11 +162,11 @@ main {
 /*******TIENDA********/
 
 .botonComprar {
-  padding: 8px 16px;
-  font-size: 16px;
+  padding: 4px 8px;
+  font-size: 13px;
   border: none;
   border-radius: 10px;
-  background-color: rgb(144, 67, 37);
+  background-color: black;
   color: rgb(255, 255, 255);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -161,8 +175,7 @@ main {
 }
 
 .botonComprar:hover {
-  background-color: #ff5e00;
-  color: #ffffff;
+  background-color: rgb(86, 86, 86);
   border: none;
 }
 
@@ -198,14 +211,14 @@ main {
 
 .tituloReproductores {
   text-align: center;
-  color: orangered;
+  color: rgb(255, 255, 255);
 }
 
 
 
 .h1Titulo {
-  color: white;
-  background: linear-gradient(black, orangered);
+  color: red;
+  background: linear-gradient(transparent, aquamarine);
   font-size: x-large;
   border: none;
   border-radius: 20px;
@@ -217,9 +230,7 @@ main {
   font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-transform: uppercase;
   font-size: medium;
-  border: 2px orangered solid;
-  border-radius: 20px;
-  padding: 5px;
+  padding: 10px;
   display: flex;
   justify-content: center;
 }

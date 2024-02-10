@@ -1,8 +1,8 @@
 body {
-  background-image: url(/img/03-img-body/fondo2.jpg);
-  background-color: black;
+  background-image: url(/img/03-img-body/banner631pixels2.jpg);
+  background-color: rgb(155, 54, 54);
   background-repeat: repeat;
-  background-position: center;
+  background-position:top;
   background-size: cover;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -16,7 +16,7 @@ p {
 }
 
 h1 {
-  color: white;
+
   font-size: large;
 }
 
@@ -67,13 +67,13 @@ ol {
 /* Link sin visitar todavia */
 a {
   &:link {
-    color: rgb(255, 255, 255);
+    color:aqua;
     text-decoration: none;
   }
 
   /* Link visitado */
   &:visited {
-    color: rgba(253, 255, 191, 0.53);
+    color:rgba(0, 255, 255, 0.816);
     text-decoration: none;
   }
 }

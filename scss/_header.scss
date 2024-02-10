@@ -1,34 +1,38 @@
 .navBar {
-  background-color: orangered;
-  font-size: x-large;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color:  transparent;
+  font-size: large;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
   justify-content: center;
 }
 
+
+.navColor {
+  color:aqua;
+}
+
 .navBardrop1,
 .navBardrop2 {
-  background-color: orangered;
+  background-color:transparent;
   border: none;
   justify-content: center;
-  color: rgb(241, 225, 192);
-  font-size: x-large;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color:aqua;
+  font-size: large;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .navBardrop2 {
   font-size: large;
-
 }
 
 
 .menu-link:hover {
-  color: #000000;
+  color: white;
   /* Cambia el color a blanco al pasar el mouse */
 }
 
 .navBardrop2.dropdown-toggle.menu-link::after {
-  display: none !important;
+  display: none;
 }
 
 
