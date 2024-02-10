@@ -1,0 +1,108 @@
+body {
+  background-image: url(/img/03-img-body/fondo2.jpg);
+  background-color: black;
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+p {
+  color: rgb(241, 225, 192);
+
+  font-size: medium;
+  text-align: justify;
+}
+
+h1 {
+  color: white;
+  font-size: large;
+}
+
+h2 {
+  color: aquamarine;
+  font-size: medium;
+}
+
+h3 {
+  color: rgb(255, 111, 0);
+}
+
+h4 {
+  color: #e3baa5;
+
+}
+
+
+h5 {
+  color: rgb(255, 255, 255);
+  font-style: normal;
+
+  margin-top: 11px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+h6 {
+  color: rgb(237, 228, 204);
+  font-style: normal;
+
+  margin-top: 11px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+li {
+  color: white;
+  font-size: medium;
+  list-style-type: none;
+}
+
+ol {
+  list-style-type: circle;
+}
+
+
+/* Link sin visitar todavia */
+a {
+  &:link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+
+  /* Link visitado */
+  &:visited {
+    color: rgba(253, 255, 191, 0.53);
+    text-decoration: none;
+  }
+}
+
+.videos1 {
+  width: 100px;
+  height: 100px;
+}
+
+form {
+  background-color: rgba(255, 98, 0, 0.448);
+  width: 50%;
+  height: auto;
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+}
+
+.botonEnviar {
+  background-color: white;
+  border-style: none;
+  font-weight: bold;
+  color: orangered;
+  margin-top: 30px;
+  border: none;
+}
+
+.parrafoContacto {
+  font-size: large;
+  color: aqua;
+  text-align: center;
+}

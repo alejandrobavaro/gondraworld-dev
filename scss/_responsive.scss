@@ -1,0 +1,129 @@
+@media screen and (max-width: 420px) {
+  .linksFooter div {
+    margin-right: 0.3rem;
+    margin-left: 0.3rem;
+  }
+}
+
+@media screen and (min-width: 421px) and (max-width: 767px) {
+  .linksFooter div {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footerElements {
+    flex-direction: column;
+  }
+
+  .linksFooter {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
+  .img2Footer {
+    display: none;
+  }
+
+  .img1Footer img {
+    max-height: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .h1Titulo {
+    font-size: 1.2em;
+  }
+}
+
+
+
+@media (max-width: 992px) {
+  #telefonoWhattsapp {
+    font-size: 1em;
+  
+  }
+}
+
+@media (max-width: 768px) {
+  #telefonoWhattsapp {
+    font-size: 1.2em;
+  
+  }
+}
+
+
+
+
+//----------textos---------///
+
+
+
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: medium;
+  }
+
+  h2 {
+    font-size: small;
+  }
+
+  p {
+    font-size: small;
+  }
+}
+
+
+
+
+//-----------nav--------------//
+
+
+
+@media only screen and (max-width: 600px) {
+  .navBar {
+    font-size: large;
+  }
+
+  .navBardrop1 {
+    font-size: large
+  }
+
+  .navBardrop2 {
+    font-size: medium
+  }
+}
+
+
+
+
+//--------botones--------//
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .botonEnviar {
+    font-size: 14px;
+  }
+
+  .botonComprar {
+    font-size: 14px;
+  }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .carruselContainer {
+    display: none;
+
+  }
+}

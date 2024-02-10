@@ -1,0 +1,30 @@
+footer {
+  font-size: 12px;
+  padding: 1%;
+  background-color: orangered;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.footerElements {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.linksFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 5rem; // Reduciendo el margen izquierdo y derecho
+
+  div {
+    list-style: none;
+  }
+}
+
+
+//--------------------------------------//

@@ -1,0 +1,39 @@
+.navBar {
+  background-color: orangered;
+  font-size: x-large;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  display: flex;
+  justify-content: center;
+}
+
+.navBardrop1,
+.navBardrop2 {
+  background-color: orangered;
+  border: none;
+  justify-content: center;
+  color: rgb(241, 225, 192);
+  font-size: x-large;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.navBardrop2 {
+  font-size: large;
+
+}
+
+
+.menu-link:hover {
+  color: #000000;
+  /* Cambia el color a blanco al pasar el mouse */
+}
+
+.navBardrop2.dropdown-toggle.menu-link::after {
+  display: none !important;
+}
+
+
+.encabezado {
+  background-color: transparent;
+  align-items: center;
+  margin-top: 10px;
+}
