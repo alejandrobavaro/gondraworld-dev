@@ -1,11 +1,25 @@
 // Ajustes para el cuerpo (BODY)
 
 /* Cambiar el tamaño del fondo a 100% para pantallas más pequeñas */
-@media (max-width: 768px) {
+@media (max-width: 578px) {
   body {
     background-size: 100%;
   }
 }
+
+/* Ajustes para la imagen después de los 1704px */
+@media screen and (min-width: 1604px) {
+  .teleGondra1 img {
+    width: 45%; /* Aumenta el ancho de la imagen al doble */
+  }
+}
+
+
+
+
+
+
+
 
 /* Ajustes para el footer en diferentes tamaños de pantalla */
 
@@ -30,6 +44,14 @@
   .footerElements {
     flex-direction: column;
   }
+
+
+
+
+
+
+
+
 
   .linksFooter {
     flex-direction: row;

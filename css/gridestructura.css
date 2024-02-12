@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/* GRID */
+.gridPadre {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  /* Centra verticalmente el contenido */
+  margin: 50px auto; /* Para centrar el grid horizontalmente */
+  max-width: 768px; /* Establece un ancho máximo para evitar que el grid se expanda demasiado en pantallas más grandes */
+  /* Ajusta el valor de los márgenes según tu preferencia */
+}
+
+.item {
+  text-align: center;
+}
+
+.item img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=gridestructura.css.map */

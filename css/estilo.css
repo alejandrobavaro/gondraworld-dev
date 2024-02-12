@@ -1,9 +1,9 @@
 @charset "UTF-8";
-/*   @import "body", "footer", "header", "main", "mixin", "responsive";  (es lo mismo que abajo) */
+/*   @import "body", "footer", "header", "main", "mixin", "responsive"; "gridestructura"; (es lo mismo que abajo) */
 /* Estilos del cuerpo de la página */
 /* Estilos para el cuerpo de la página */
 body {
-  background-image: url(../img/00-fondos/fondo4tvvieja1a.jpg); /* Imagen de fondo */
+  background-image: url(../img/00-fondos/fondo4tvvieja1b.jpg); /* Imagen de fondo */
   background-color: rgb(0, 0, 0); /* Color de fondo */
   background-repeat: no-repeat; /* No repetir la imagen de fondo */
   background-position: center; /* Posición de la imagen de fondo */
@@ -13,14 +13,13 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Famil
 }
 
 /* Estilos para el fondo negro en pantallas pequeñas */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 578px) {
   body {
-    background-image: url(../img/00-fondos/fondo5a.jpg); /* Elimina la imagen de fondo */
-    background-repeat: repeat; /* No repetir la imagen de fondo */
+    background-image: url(../img/00-fondos/fondo5c.jpg); /* Elimina la imagen de fondo */
+    background-repeat: no-repeat; /* No repetir la imagen de fondo */
     background-position: center; /* Posición de la imagen de fondo */
-    background-size: contain; /* 
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Familia de fuentes */
     background-size: cover; /* Ajusta la imagen al tamaño del body */
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; /* Familia de fuentes */
   }
 }
 /* Estilos para los párrafos */
@@ -250,31 +249,6 @@ main {
   justify-content: center; /* Centra horizontalmente */
 }
 
-/* Estilos para las columnas laterales */
-.colCostado1 {
-  height: auto; /* Altura automática */
-  max-width: 50%; /* Ancho máximo */
-}
-
-/* Estilos para el logo de WhatsApp */
-.logowhattsapp {
-  width: 10%; /* Ancho */
-  cursor: pointer; /* Cursor */
-}
-
-/* Estilos para el mapa */
-.mapaEstilo {
-  background-color: transparent; /* Color de fondo */
-  color: rgb(255, 255, 255); /* Color del texto */
-  font-style: normal; /* Estilo de fuente */
-  font-size: 20px; /* Tamaño de fuente */
-  width: "100%"; /* Ancho */
-  height: "600px"; /* Altura */
-  padding: 20px; /* Relleno */
-  border-radius: 20px; /* Radio del borde */
-  border: 5px orangered solid; /* Borde */
-}
-
 /* Estilos para las imágenes centradas */
 .imagenCentro {
   border: 3px orangered solid; /* Borde */
@@ -360,6 +334,27 @@ main {
   white-space: nowrap; /* Evita que el texto se envuelva */
 }
 
+/**LOGO WHATSAPP**/
+.logoWhats {
+  width: 150px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Estilos para el mapa */
+.mapaEstilo {
+  background-color: transparent; /* Color de fondo */
+  color: rgb(255, 255, 255); /* Color del texto */
+  font-style: normal; /* Estilo de fuente */
+  font-size: 20px; /* Tamaño de fuente */
+  width: "100%"; /* Ancho */
+  height: "600px"; /* Altura */
+  padding: 20px; /* Relleno */
+  border-radius: 20px; /* Radio del borde */
+  border: 5px orangered solid; /* Borde */
+}
+
 /* Definiciones de mixins reutilizables */
 /* Definición del mixin */
 /* Aplicando el mixin al título */
@@ -378,9 +373,15 @@ main {
 
 /* Estilos responsivos para diferentes tamaños de pantalla */
 /* Cambiar el tamaño del fondo a 100% para pantallas más pequeñas */
-@media (max-width: 768px) {
+@media (max-width: 578px) {
   body {
     background-size: 100%;
+  }
+}
+/* Ajustes para la imagen después de los 1704px */
+@media screen and (min-width: 1604px) {
+  .teleGondra1 img {
+    width: 45%; /* Aumenta el ancho de la imagen al doble */
   }
 }
 /* Ajustes para el footer en diferentes tamaños de pantalla */
@@ -475,6 +476,28 @@ main {
   .carruselContainer {
     display: none;
   }
+}
+/* Estilos responsivos para diferentes tamaños de pantalla */
+/* GRID */
+.gridPadre {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  /* Centra verticalmente el contenido */
+  margin: 50px auto; /* Para centrar el grid horizontalmente */
+  max-width: 768px; /* Establece un ancho máximo para evitar que el grid se expanda demasiado en pantallas más grandes */
+  /* Ajusta el valor de los márgenes según tu preferencia */
+}
+
+.item {
+  text-align: center;
+}
+
+.item img {
+  max-width: 100%;
+  height: auto;
 }
 
 /*# sourceMappingURL=estilo.css.map */

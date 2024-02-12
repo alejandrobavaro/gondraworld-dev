@@ -1,72 +1,31 @@
 /* GRID */
 
-/*Aplicamos estilo*/
-
-.item {
-    background-color: #87cefa;
-    border: 5px solid aqua;
-}
-
-.item p {
-    font-size: 300px;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-/*CONTENEDOR PADRE*/
-
 .gridPadre {
     display: grid;
-    /*Activamos el sistema*/
-
-    grid-template-columns: 200px 400px 200px;
-    
-    /*La cantidad de columnas que quiero que tenga*/
-    /*Pueden colocar la unidad de medida que quieran*/
-    /*Grid tiene su propia unidad de medida: fr*/
-    /*tambien tenemos una herramienta que nos permite repetir configuraciones: repeat() */
-/*
-    grid-template-rows: 200px 400px 200px;
-
-    gap: 10px;
-    /*gap me genera un espacio entre columnas y/o filas*/
-
-    row-gap: 15px;
-    column-gap: 5px;
-
-    /** PROPIEDADES QUE VAN A USAR POQUITO **/
-
-    /*Posicion de los items hijos desde el padre*/
-
-    /*justify-items*/
-    /*Distribuye los elementos en el eje horizontal*/
-    justify-items: center;
-    /*Valores mas utilizados: center, start, end*/
-
-    /*aling-items*/
-    /*Distribuye los elementos en el eje vertical*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
     align-items: center;
+    /* Centra verticalmente el contenido */
+    margin: 50px auto; /* Para centrar el grid horizontalmente */
+    max-width: 768px; /* Establece un ancho máximo para evitar que el grid se expanda demasiado en pantallas más grandes */
+    
+    /* Ajusta el valor de los márgenes según tu preferencia */
+  }
 
+  
+
+  
+
+
+
+.item {
+    text-align: center;
 }
 
-/** Aplicando desde el hijo **/
-
-.rebelde {
-    justify-self: start;
-    /*eje horizontal*/
-
-    align-self: start;
-    /*eje vertical*/
+.item img {
+    max-width: 100%;
+    height: auto;
 }
 
 
-
-/**LOGO WHATSAPP**/
-
-.logoWhats {
-    width: 150px;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-}

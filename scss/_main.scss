@@ -17,36 +17,22 @@ main {
   justify-content: center; /* Centra horizontalmente */
 }
 
-/* Estilos para las columnas laterales */
-.colCostado1 {
-  height: auto; /* Altura automática */
-  max-width: 50%; /* Ancho máximo */
-}
 
-/* Estilos para el logo de WhatsApp */
-.logowhattsapp {
-  width: 10%; /* Ancho */
-  cursor: pointer; /* Cursor */
-}
-
-/* Estilos para el mapa */
-.mapaEstilo {
-  background-color: transparent; /* Color de fondo */
-  color: rgb(255, 255, 255); /* Color del texto */
-  font-style: normal; /* Estilo de fuente */
-  font-size: 20px; /* Tamaño de fuente */
-  width: "100%"; /* Ancho */
-  height: "600px"; /* Altura */
-  padding: 20px; /* Relleno */
-  border-radius: 20px; /* Radio del borde */
-  border: 5px orangered solid; /* Borde */
-}
 
 /* Estilos para las imágenes centradas */
 .imagenCentro {
   border: 3px orangered solid; /* Borde */
   margin: 10px 80px; /* Margen */
 }
+
+
+
+
+
+
+
+
+
 
 /* Estilos para el formulario */
 .estiloFormulario {
@@ -125,4 +111,28 @@ main {
   font-weight: bold; /* Peso de la fuente */
   text-align: center; /* Alineación del texto */
   white-space: nowrap; /* Evita que el texto se envuelva */
+}
+
+
+
+/**LOGO WHATSAPP**/
+
+.logoWhats {
+  width: 150px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Estilos para el mapa */
+.mapaEstilo {
+  background-color: transparent; /* Color de fondo */
+  color: rgb(255, 255, 255); /* Color del texto */
+  font-style: normal; /* Estilo de fuente */
+  font-size: 20px; /* Tamaño de fuente */
+  width: "100%"; /* Ancho */
+  height: "600px"; /* Altura */
+  padding: 20px; /* Relleno */
+  border-radius: 20px; /* Radio del borde */
+  border: 5px orangered solid; /* Borde */
 }
