@@ -1,43 +1,69 @@
-.navBar {
-  background-color:  transparent;
+/* Estilos para la barra de navegación */
+.navBar1 {
+  background-color: transparent; /* Fondo transparente */
   font-size: large;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  display: flex;
-  justify-content: center;
-}
-
-
-.navColor {
-  color:aqua;
+  color: rgb(0, 0, 0); /* Color del texto */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex; /* Usa flexbox para el diseño */
+  justify-content: center; /* Centra los elementos horizontalmente */
 }
 
 .navBardrop1,
 .navBardrop2 {
-  background-color:transparent;
-  border: none;
-  justify-content: center;
-  color:aqua;
-  font-size: large;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  color: aqua; /* Color del texto */
 }
 
 .navBardrop2 {
-  font-size: large;
+  font-size: large; /* Tamaño del texto */
 }
 
-
+/* Estilos para el enlace del menú al pasar el mouse */
 .menu-link:hover {
-  color: white;
-  /* Cambia el color a blanco al pasar el mouse */
+  color: rgb(255, 255, 255); /* Cambia el color del texto a blanco al pasar el mouse */
 }
 
+/* Oculta la flecha después de los elementos del menú desplegable */
 .navBardrop2.dropdown-toggle.menu-link::after {
   display: none;
 }
 
-
+/* Estilos para el encabezado */
 .encabezado {
-  background-color: transparent;
-  align-items: center;
-  margin-top: 10px;
+  background-color: transparent; /* Fondo transparente */
+  align-items: center; /* Centra los elementos verticalmente */
+  margin-top: 10px; /* Margen superior */
+}
+
+/* CSS personalizado para ocultar la flecha del dropdown */
+.no-caret::after {
+  display: none;
+}
+
+
+.navbar-toggler {
+  background-color: transparent; /* Fondo transparente */
+}
+
+
+/* Estilos para el contenedor del menú */
+.menu-container {
+  display: flex; /* Usa flexbox para el diseño */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+}
+
+/* Estilos para el botón de menú hamburguesa */
+.navbar-toggler .navbar-toggler-icon {
+  background-color: rgba(0, 255, 255, 0.47);
+  border-radius: 2px; /* Ajusta el radio de borde */
+}
+
+/* Estilos para la imagen al costado del menú hamburguesa */
+.side-icon {
+  width: 70px; /* Ajusta el ancho de la imagen */
+  height: auto; /* Ajusta la altura automáticamente */
+  position: sticky; /* Posiciona la imagen */
 }

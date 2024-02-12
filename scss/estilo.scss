@@ -1,1 +1,26 @@
-@import "body", "footer", "header", "main", "mixin", "responsive";
+/*   @import "body", "footer", "header", "main", "mixin", "responsive"; "gridestructura"; (es lo mismo que abajo) */
+
+
+
+
+/* Estilos del cuerpo de la página */
+@import "body";
+
+/* Estilos del pie de página */
+@import "footer";
+
+/* Estilos del encabezado de la página */
+@import "header";
+
+/* Estilos del contenido principal de la página */
+@import "main";
+
+/* Definiciones de mixins reutilizables */
+@import "mixin";
+
+/* Estilos responsivos para diferentes tamaños de pantalla */
+@import "responsive";
+
+/* Estilos responsivos para diferentes tamaños de pantalla */
+@import "gridestructura";
+

@@ -1,3 +1,15 @@
+// Ajustes para el cuerpo (BODY)
+
+/* Cambiar el tamaño del fondo a 100% para pantallas más pequeñas */
+@media (max-width: 768px) {
+  body {
+    background-size: 100%;
+  }
+}
+
+/* Ajustes para el footer en diferentes tamaños de pantalla */
+
+/* Para pantallas menores o iguales a 420px */
 @media screen and (max-width: 420px) {
   .linksFooter div {
     margin-right: 0.3rem;
@@ -5,6 +17,7 @@
   }
 }
 
+/* Para pantallas entre 421px y 767px */
 @media screen and (min-width: 421px) and (max-width: 767px) {
   .linksFooter div {
     margin-right: 1rem;
@@ -12,6 +25,7 @@
   }
 }
 
+/* Para pantallas menores o iguales a 767px */
 @media screen and (max-width: 767px) {
   .footerElements {
     flex-direction: column;
@@ -35,37 +49,32 @@
   }
 }
 
-
+/* Ajustes para el título (h1Titulo) en pantallas menores o iguales a 768px */
 @media (max-width: 768px) {
   .h1Titulo {
     font-size: 1.2em;
   }
 }
 
+/* Ajustes para el número de teléfono (telefonoWhattsapp) en diferentes tamaños de pantalla */
 
-
+/* Para pantallas menores o iguales a 992px */
 @media (max-width: 992px) {
   #telefonoWhattsapp {
     font-size: 1em;
-  
   }
 }
 
+/* Para pantallas menores o iguales a 768px */
 @media (max-width: 768px) {
   #telefonoWhattsapp {
     font-size: 1.2em;
-  
   }
 }
 
+// Ajustes para textos en diferentes tamaños de pantalla
 
-
-
-//----------textos---------///
-
-
-
-
+/* Para pantallas menores o iguales a 600px */
 @media only screen and (max-width: 600px) {
   h1 {
     font-size: medium;
@@ -80,35 +89,26 @@
   }
 }
 
+// Ajustes para el menú de navegación (nav) en diferentes tamaños de pantalla
 
-
-
-//-----------nav--------------//
-
-
-
+/* Para pantallas menores o iguales a 600px */
 @media only screen and (max-width: 600px) {
   .navBar {
     font-size: large;
   }
 
   .navBardrop1 {
-    font-size: large
+    font-size: large;
   }
 
   .navBardrop2 {
-    font-size: medium
+    font-size: medium;
   }
 }
 
+// Ajustes para botones en diferentes tamaños de pantalla
 
-
-
-//--------botones--------//
-
-
-
-
+/* Para pantallas menores o iguales a 600px */
 @media only screen and (max-width: 600px) {
   .botonEnviar {
     font-size: 14px;
@@ -119,11 +119,9 @@
   }
 }
 
-
-
+/* Para pantallas menores o iguales a 768px */
 @media only screen and (max-width: 768px) {
   .carruselContainer {
     display: none;
-
   }
 }

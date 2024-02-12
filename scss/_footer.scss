@@ -1,30 +1,37 @@
+/* Estilos para el pie de página */
 footer {
-  font-size: 12px;
-  padding: 1%;
-  background-color: transparent;
-  color: rgb(255, 255, 255);
- 
-  margin: 0;
-  text-align: center;
-  width: 100%;
+  font-size: 12px; /* Tamaño de fuente */
+  padding: 1%; /* Relleno */
+  background-color: transparent; /* Color de fondo */
+  border: none;
+  color: rgb(255, 255, 255); /* Color de texto */
+  margin: 0; /* Margen */
+  text-align: center; /* Alineación del texto */
+  width: 100%; /* Ancho */
 }
 
+
+
+
+
+/* Estilos para los elementos del pie de página */
 .footerElements {
-  display: flex;
-  justify-content: center;
-  text-align: center;
+  display: flex; /* Usa flexbox para el diseño */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  text-align: center; /* Alineación del texto */
 }
 
+/* Estilos para los enlaces en el pie de página */
 .linksFooter {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 5rem; // Reduciendo el margen izquierdo y derecho
+  display: flex; /* Usa flexbox para el diseño */
+  flex-direction: column; /* Dirección de los elementos */
+  justify-content: center; /* Centra los elementos verticalmente */
+  margin: 0 5rem; /* Margen izquierdo y derecho */
+}
 
-  div {
-    list-style: none;
-  }
+/* Estilos para los elementos de lista en el pie de página */
+.linksFooter div {
+  list-style: none; /* Sin viñetas */
 }
 
 
-//--------------------------------------//
