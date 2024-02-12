@@ -193,11 +193,14 @@ footer {
   display: none;
 }
 
-/* Estilos para el encabezado */
+/* Estilos para el encabezado menu*/
 .encabezado {
   background-color: transparent; /* Fondo transparente */
+  display: flex;
+  justify-content: center;
   align-items: center; /* Centra los elementos verticalmente */
   margin-top: 10px; /* Margen superior */
+  border: none;
 }
 
 /* CSS personalizado para ocultar la flecha del dropdown */
@@ -207,13 +210,7 @@ footer {
 
 .navbar-toggler {
   background-color: transparent; /* Fondo transparente */
-}
-
-/* Estilos para el contenedor del menú */
-.menu-container {
-  display: flex; /* Usa flexbox para el diseño */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
+  border: 2px aqua solid;
 }
 
 /* Estilos para el botón de menú hamburguesa */
