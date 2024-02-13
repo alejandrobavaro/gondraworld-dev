@@ -4,15 +4,15 @@ body {
   background-color: rgb(0, 0, 0); /* Color de fondo */
   background-repeat: no-repeat; /* No repetir la imagen de fondo */
   background-position: center; /* Posición de la imagen de fondo */
-  background-size:contain; /* 
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Familia de fuentes */
   background-size: cover; /* Ajusta la imagen al tamaño del body */
+  background-attachment: fixed; /* Fija la imagen de fondo */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Familia de fuentes */
   }
 
   /* Estilos para el fondo negro en pantallas pequeñas */
   @media screen and (max-width: 578px) {
     body {
-      background-image: url(../img/00-fondos/fondo5c.jpg);  /* Elimina la imagen de fondo */
+      background-image: url(../img/00-fondos/fondo5a.jpg);  /* Elimina la imagen de fondo */
       background-repeat: no-repeat; /* No repetir la imagen de fondo */
       background-position: center; /* Posición de la imagen de fondo */
       background-size: cover; /* Ajusta la imagen al tamaño del body */

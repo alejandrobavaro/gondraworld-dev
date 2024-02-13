@@ -1,12 +1,33 @@
 /* Estilos para la barra de navegación */
-.navBar1 {
-  background-color: transparent; /* Fondo transparente */
-  font-size: large;
-  color: rgb(0, 0, 0); /* Color del texto */
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  display: flex; /* Usa flexbox para el diseño */
-  justify-content: center; /* Centra los elementos horizontalmente */
+
+
+  /* Estilos adicionales */
+  .navbar-nav {
+    flex-direction: row; /* Asegura que los elementos del menú se alineen en una fila */
 }
+
+.navbar-nav .nav-link {
+    padding-right: 1rem; /* Espacio adicional entre elementos del menú */
+    padding-left: 1rem; /* Espacio adicional entre elementos del menú */
+}
+
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        margin-top: 1rem; /* Espacio adicional en la parte superior del menú para evitar superposiciones */
+        flex-direction: column; /* Cambia la dirección de los elementos del menú a columna */
+        text-align: center; /* Centra los elementos del menú cuando se coloca en una columna */
+    }
+
+    .navbar-nav .nav-link {
+        padding-right: 0; /* Elimina el espacio adicional entre elementos del menú en dispositivos móviles */
+        padding-left: 0; /* Elimina el espacio adicional entre elementos del menú en dispositivos móviles */
+        font-size: 18px; /* Tamaño de fuente para el menú principal */
+
+    }
+}
+
+
+
 
 .navBardrop1,
 .navBardrop2 {
@@ -23,12 +44,22 @@
 /* Estilos para el enlace del menú al pasar el mouse */
 .menu-link:hover {
   color: rgb(255, 255, 255); /* Cambia el color del texto a blanco al pasar el mouse */
+  
 }
 
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item.active .nav-link:hover {
+    color: rgb(255, 255, 255); /* Color del texto activo y al pasar el mouse */
+}
+
+
+
+
 /* Oculta la flecha después de los elementos del menú desplegable */
-.navBardrop2.dropdown-toggle.menu-link::after {
+.dropdown-toggle::after {
   display: none;
 }
+
 
 /* Estilos para el encabezado menu*/
 .encabezado {
@@ -41,10 +72,6 @@
 }
 
 
-
-
-
-
 /* CSS personalizado para ocultar la flecha del dropdown */
 .no-caret::after {
   display: none;
@@ -52,8 +79,13 @@
 
 
 .navbar-toggler {
+  position:relative; /* Establece el posicionamiento absoluto */
+  top: 50%; /* Coloca el botón en la mitad superior del contenedor */
+  left: 50%; /* Coloca el botón en la mitad izquierda del contenedor */
+  transform: translate(-50%, -50%); /* Centra el botón tanto horizontal como verticalmente */
   background-color: transparent; /* Fondo transparente */
-  border: 2px aqua solid;
+  border: 2px rgba(0, 255, 255, 0.389) solid;
+  margin-top: 20px; /* Ajusta este valor según la distancia deseada */
 }
 
 
@@ -74,3 +106,21 @@
   
 }
 
+
+
+.dropdown-menu {
+    background-color: rgba(25, 95, 93, 0.201); /* Ajusta el color de fondo y la transparencia */
+    border: none; /* Elimina el borde */
+
+}
+
+.dropdown-menu .dropdown-item {
+    color: rgba(255, 255, 255, 0.694); /* Color del texto */
+    font-size: 16px; /* Tamaño de fuente para el menú desplegable */
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Cambia el color de fondo al pasar el cursor */
+}
