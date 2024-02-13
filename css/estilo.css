@@ -3,7 +3,7 @@
 /* Estilos del cuerpo de la página */
 /* Estilos para el cuerpo de la página */
 body {
-  background-image: url(../img/00-fondos/fondo4tvvieja1b.jpg); /* Imagen de fondo */
+  background-image: url(../img/00-fondos/fondo4tvvieja1c.jpg); /* Imagen de fondo */
   background-color: rgb(0, 0, 0); /* Color de fondo */
   background-repeat: no-repeat; /* No repetir la imagen de fondo */
   background-position: center; /* Posición de la imagen de fondo */
@@ -162,6 +162,13 @@ footer {
 
 /* Estilos del encabezado de la página */
 /* Estilos para la barra de navegación */
+.navBar1 {
+  background-color: transparent; /* Fondo transparente */
+  font-size: large;
+  color: rgb(0, 0, 0); /* Color del texto */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 /* Estilos adicionales */
 .navbar-nav {
   flex-direction: row; /* Asegura que los elementos del menú se alineen en una fila */
