@@ -18,11 +18,22 @@ main {
   border-radius: 20px; /* Radio del borde */
   }
 
+/* Estilos para las imágenes limitadas */
+.imagen-limitada3 {
+  width: 5%; /* Ancho */
+  height: auto; /* Altura automática */
+  border: none; /* Borde */
+  border-radius: 20px; /* Radio del borde */
+  }
+
+
 .h1Titulo {
   background: linear-gradient(black, black, black, aqua);
   border: none;
   border-radius: 20px;
 }
+
+.objetoCentrado
 
 .objetoCentrado1 {
   display: flex;
@@ -35,8 +46,8 @@ main {
 }
 
 .tituloImportante1 {
-  color: rgba(178, 212, 212, 0.843);
-  font-size: medium;
+  color: aqua;
+  font-size: large;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   text-decoration: underline;

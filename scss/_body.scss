@@ -9,15 +9,15 @@ body {
   font-family: 'Courier New', Courier, monospace; /* Familia de fuentes */
   }
 
-  // /* Estilos para el fondo negro en pantallas pequeñas */
-  // @media screen and (max-width: 578px) {
-  //   body {
-  //     background-image: url(../img/00-fondos/fondo5a.jpg);  /* Elimina la imagen de fondo */
-  //     background-repeat: no-repeat; /* No repetir la imagen de fondo */
-  //     background-position: center; /* Posición de la imagen de fondo */
-  //     background-size: cover; /* Ajusta la imagen al tamaño del body */
-  //   }
-  // }
+/* Estilos para el fondo negro en pantallas pequeñas */
+@media screen and (max-width: 578px) {
+  body {
+   background-image: url(../img/00-fondos/fondo5a.jpg);  /* Elimina la imagen de fondo */
+   background-repeat: no-repeat; /* No repetir la imagen de fondo */
+  background-position: center; /* Posición de la imagen de fondo */
+  background-size: cover; /* Ajusta la imagen al tamaño del body */
+ }
+  }
 
 p {
   color: rgb(241, 225, 192); /* Color de texto */

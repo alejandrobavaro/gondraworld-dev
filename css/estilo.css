@@ -12,6 +12,15 @@ body {
   font-family: "Courier New", Courier, monospace; /* Familia de fuentes */
 }
 
+/* Estilos para el fondo negro en pantallas pequeñas */
+@media screen and (max-width: 578px) {
+  body {
+    background-image: url(../img/00-fondos/fondo5a.jpg); /* Elimina la imagen de fondo */
+    background-repeat: no-repeat; /* No repetir la imagen de fondo */
+    background-position: center; /* Posición de la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen al tamaño del body */
+  }
+}
 p {
   color: rgb(241, 225, 192); /* Color de texto */
   font-size: medium; /* Tamaño de fuente */
@@ -242,13 +251,21 @@ footer {
   border-radius: 20px; /* Radio del borde */
 }
 
+/* Estilos para las imágenes limitadas */
+.imagen-limitada3 {
+  width: 5%; /* Ancho */
+  height: auto; /* Altura automática */
+  border: none; /* Borde */
+  border-radius: 20px; /* Radio del borde */
+}
+
 .h1Titulo {
   background: linear-gradient(black, black, black, aqua);
   border: none;
   border-radius: 20px;
 }
 
-.objetoCentrado1 {
+.objetoCentrado .objetoCentrado1 {
   display: flex;
   justify-content: center;
 }
@@ -259,8 +276,8 @@ footer {
 }
 
 .tituloImportante1 {
-  color: rgba(178, 212, 212, 0.843);
-  font-size: medium;
+  color: aqua;
+  font-size: large;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   text-decoration: underline;
@@ -409,7 +426,7 @@ footer {
   justify-content: center;
   align-items: center;
   /* Centra verticalmente el contenido */
-  margin: 50px auto; /* Para centrar el grid horizontalmente */
+  margin: 0px auto; /* Para centrar el grid horizontalmente */
   max-width: 1168px; /* Establece un ancho máximo para evitar que el grid se expanda demasiado en pantallas más grandes */
   margin-top: 0px; /* Ajusta este valor según la distancia deseada */
 }
@@ -452,7 +469,6 @@ footer {
   border-radius: 20px;
   font-size: small;
   padding: 10px;
-  border: 2px rgba(255, 68, 0, 0.476) solid;
 }
 
 .card {
@@ -491,24 +507,6 @@ footer {
 }
 
 /* Estilos para el formulario de contacto */
-.formularioContacto {
-  color: #b2fcff; /* Color del texto */
-  text-align: center; /* Alineación del texto */
-  font-size: medium; /* Tamaño de fuente */
-  font-weight: bold; /* Peso de la fuente */
-  max-width: 100%; /* Ancho máximo */
-}
-
-/* Estilos para el formulario */
-form {
-  background-color: transparent; /* Color de fondo */
-  width: 50%; /* Ancho del formulario */
-  height: auto; /* Altura del formulario */
-  padding: 20px; /* Relleno */
-  border: none; /* Sin borde */
-  border-radius: 20px; /* Radio del borde */
-}
-
 /* Estilos para el botón de enviar del formulario */
 .botonEnviar {
   background-color: #565656; /* Color de fondo */
@@ -572,7 +570,7 @@ form {
 
 /* Estilos para el teléfono de WhatsApp */
 .telefonoWhattsapp {
-  font-size: 1.1em; /* Tamaño de fuente */
+  font-size: small; /* Tamaño de fuente */
   font-weight: bold; /* Peso de la fuente */
   text-align: center; /* Alineación del texto */
   white-space: nowrap; /* Evita que el texto se envuelva */
