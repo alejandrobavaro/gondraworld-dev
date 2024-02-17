@@ -1,8 +1,5 @@
 /*   @import "body", "footer", "header", "main", "mixin", "responsive"; "gridestructura"; (es lo mismo que abajo) */
 
-
-
-
 /* Estilos del cuerpo de la página */
 @import "body";
 
@@ -24,5 +21,17 @@
 /* Estilos responsivos para diferentes tamaños de pantalla */
 @import "gridestructura";
 
-// @import "main2";
+// @import "tienda";
+@import "tienda";
 
+// @import "cards";
+@import "cards";
+
+// @import "formularios";
+@import "formularios";
+
+// @import "contactos";
+@import "contactos";
+
+// @import "animaciones";
+@import "animaciones";

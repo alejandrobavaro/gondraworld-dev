@@ -6,57 +6,42 @@ body {
   background-position: center; /* Posición de la imagen de fondo */
   background-size: cover; /* Ajusta la imagen al tamaño del body */
   background-attachment: fixed; /* Fija la imagen de fondo */
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Familia de fuentes */
+  font-family: 'Courier New', Courier, monospace; /* Familia de fuentes */
   }
 
-  /* Estilos para el fondo negro en pantallas pequeñas */
-  @media screen and (max-width: 578px) {
-    body {
-      background-image: url(../img/00-fondos/fondo5a.jpg);  /* Elimina la imagen de fondo */
-      background-repeat: no-repeat; /* No repetir la imagen de fondo */
-      background-position: center; /* Posición de la imagen de fondo */
-      background-size: cover; /* Ajusta la imagen al tamaño del body */
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Familia de fuentes */
-    }
-  }
+  // /* Estilos para el fondo negro en pantallas pequeñas */
+  // @media screen and (max-width: 578px) {
+  //   body {
+  //     background-image: url(../img/00-fondos/fondo5a.jpg);  /* Elimina la imagen de fondo */
+  //     background-repeat: no-repeat; /* No repetir la imagen de fondo */
+  //     background-position: center; /* Posición de la imagen de fondo */
+  //     background-size: cover; /* Ajusta la imagen al tamaño del body */
+  //   }
+  // }
 
-
-
-/* Estilos para los párrafos */
 p {
   color: rgb(241, 225, 192); /* Color de texto */
   font-size: medium; /* Tamaño de fuente */
-  text-align: justify; /* Alineación del texto */
 }
 
-/* Estilos para los títulos h1 */
 h1 {
-  font-size: large; /* Tamaño de fuente */
-}
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
 
-/* Estilos para los títulos h2 */
 h2 {
-  color: aquamarine; /* Color de texto */
-  font-size: medium; /* Tamaño de fuente */
+  color: rgb(255, 255, 255); /* Color de texto */
 }
 
-/* Estilos para los títulos h3 */
 h3 {
-  color: rgb(255, 111, 0); /* Color de texto */
+  color: rgb(224, 205, 190); /* Color de texto */
 }
 
-/* Estilos para los títulos h4 */
 h4 {
   color: #e3baa5; /* Color de texto */
 }
 
-/* Estilos para los títulos h5 */
 h5 {
   color: rgb(255, 255, 255); /* Color de texto */
-  font-style: normal; /* Estilo de fuente */
-  margin-top: 11px; /* Margen superior */
-  padding-right: 15px; /* Relleno derecho */
-  padding-left: 15px; /* Relleno izquierdo */
 }
 
 /* Estilos para los títulos h6 */
@@ -67,8 +52,6 @@ h6 {
 
 /* Estilos para las listas */
 li {
-  color: white; /* Color de texto */
-  font-size: medium; /* Tamaño de fuente */
   list-style-type: none; /* Tipo de viñetas */
 }
 
@@ -89,37 +72,4 @@ a {
     color: rgba(0, 255, 255, 0.816); /* Color de texto */
     text-decoration: none; /* Sin subrayado */
   }
-}
-
-/* Estilos para los videos */
-.videos1 {
-  width: 100px; /* Ancho del video */
-  height: 100px; /* Alto del video */
-}
-
-/* Estilos para el formulario */
-form {
-  background-color: rgba(255, 98, 0, 0.448); /* Color de fondo */
-  width: 50%; /* Ancho del formulario */
-  height: auto; /* Altura del formulario */
-  padding: 20px; /* Relleno */
-  border: none; /* Sin borde */
-  border-radius: 20px; /* Radio del borde */
-}
-
-/* Estilos para el botón de enviar */
-.botonEnviar {
-  background-color: white; /* Color de fondo */
-  border-style: none; /* Sin estilo de borde */
-  font-weight: bold; /* Peso de la fuente */
-  color: orangered; /* Color de texto */
-  margin-top: 30px; /* Margen superior */
-  border: none; /* Sin borde */
-}
-
-/* Estilos para el párrafo de contacto */
-.parrafoContacto {
-  font-size: large; /* Tamaño de fuente */
-  color: aqua; /* Color de texto */
-  text-align: center; /* Alineación del texto */
 }

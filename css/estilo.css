@@ -9,54 +9,32 @@ body {
   background-position: center; /* Posición de la imagen de fondo */
   background-size: cover; /* Ajusta la imagen al tamaño del body */
   background-attachment: fixed; /* Fija la imagen de fondo */
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; /* Familia de fuentes */
+  font-family: "Courier New", Courier, monospace; /* Familia de fuentes */
 }
 
-/* Estilos para el fondo negro en pantallas pequeñas */
-@media screen and (max-width: 578px) {
-  body {
-    background-image: url(../img/00-fondos/fondo5a.jpg); /* Elimina la imagen de fondo */
-    background-repeat: no-repeat; /* No repetir la imagen de fondo */
-    background-position: center; /* Posición de la imagen de fondo */
-    background-size: cover; /* Ajusta la imagen al tamaño del body */
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; /* Familia de fuentes */
-  }
-}
-/* Estilos para los párrafos */
 p {
   color: rgb(241, 225, 192); /* Color de texto */
   font-size: medium; /* Tamaño de fuente */
-  text-align: justify; /* Alineación del texto */
 }
 
-/* Estilos para los títulos h1 */
 h1 {
-  font-size: large; /* Tamaño de fuente */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* Estilos para los títulos h2 */
 h2 {
-  color: aquamarine; /* Color de texto */
-  font-size: medium; /* Tamaño de fuente */
+  color: rgb(255, 255, 255); /* Color de texto */
 }
 
-/* Estilos para los títulos h3 */
 h3 {
-  color: rgb(255, 111, 0); /* Color de texto */
+  color: rgb(224, 205, 190); /* Color de texto */
 }
 
-/* Estilos para los títulos h4 */
 h4 {
   color: #e3baa5; /* Color de texto */
 }
 
-/* Estilos para los títulos h5 */
 h5 {
   color: rgb(255, 255, 255); /* Color de texto */
-  font-style: normal; /* Estilo de fuente */
-  margin-top: 11px; /* Margen superior */
-  padding-right: 15px; /* Relleno derecho */
-  padding-left: 15px; /* Relleno izquierdo */
 }
 
 /* Estilos para los títulos h6 */
@@ -67,8 +45,6 @@ h6 {
 
 /* Estilos para las listas */
 li {
-  color: white; /* Color de texto */
-  font-size: medium; /* Tamaño de fuente */
   list-style-type: none; /* Tipo de viñetas */
 }
 
@@ -91,46 +67,12 @@ a:visited {
   text-decoration: none; /* Sin subrayado */
 }
 
-/* Estilos para los videos */
-.videos1 {
-  width: 100px; /* Ancho del video */
-  height: 100px; /* Alto del video */
-}
-
-/* Estilos para el formulario */
-form {
-  background-color: rgba(255, 98, 0, 0.448); /* Color de fondo */
-  width: 50%; /* Ancho del formulario */
-  height: auto; /* Altura del formulario */
-  padding: 20px; /* Relleno */
-  border: none; /* Sin borde */
-  border-radius: 20px; /* Radio del borde */
-}
-
-/* Estilos para el botón de enviar */
-.botonEnviar {
-  background-color: white; /* Color de fondo */
-  border-style: none; /* Sin estilo de borde */
-  font-weight: bold; /* Peso de la fuente */
-  color: orangered; /* Color de texto */
-  margin-top: 30px; /* Margen superior */
-  border: none; /* Sin borde */
-}
-
-/* Estilos para el párrafo de contacto */
-.parrafoContacto {
-  font-size: large; /* Tamaño de fuente */
-  color: aqua; /* Color de texto */
-  text-align: center; /* Alineación del texto */
-}
-
 /* Estilos del pie de página */
 /* Estilos para el pie de página */
 footer {
   font-size: 12px; /* Tamaño de fuente */
   padding: 1%; /* Relleno */
-  background-color: transparent; /* Color de fondo */
-  border: none;
+  background-color: rgba(0, 0, 0, 0.78); /* Color de fondo */
   color: rgb(255, 255, 255); /* Color de texto */
   margin: 0; /* Margen */
   text-align: center; /* Alineación del texto */
@@ -159,55 +101,50 @@ footer {
 
 /* Estilos del encabezado de la página */
 /* Estilos para la barra de navegación */
-.navBar1 {
-  background-color: transparent; /* Fondo transparente */
+.navBar {
+  background-color: transparent;
+  /* Fondo transparente */
   font-size: large;
-  color: rgb(0, 0, 0); /* Color del texto */
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-/* Estilos adicionales */
-.navbar-nav {
-  flex-direction: row; /* Asegura que los elementos del menú se alineen en una fila */
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  flex-direction: row;
+  /* Asegura que los elementos del menú se alineen en una fila */
 }
 
 .navbar-nav .nav-link {
-  padding-right: 1rem; /* Espacio adicional entre elementos del menú */
-  padding-left: 1rem; /* Espacio adicional entre elementos del menú */
+  padding-right: 1rem;
+  /* Espacio adicional entre elementos del menú */
+  padding-left: 1rem;
+  /* Espacio adicional entre elementos del menú */
 }
 
-@media (max-width: 991.98px) {
-  .navbar-nav {
-    margin-top: 1rem; /* Espacio adicional en la parte superior del menú para evitar superposiciones */
-    flex-direction: column; /* Cambia la dirección de los elementos del menú a columna */
-    text-align: center; /* Centra los elementos del menú cuando se coloca en una columna */
-  }
-  .navbar-nav .nav-link {
-    padding-right: 0; /* Elimina el espacio adicional entre elementos del menú en dispositivos móviles */
-    padding-left: 0; /* Elimina el espacio adicional entre elementos del menú en dispositivos móviles */
-    font-size: 18px; /* Tamaño de fuente para el menú principal */
-  }
-}
 .navBardrop1,
 .navBardrop2 {
-  background-color: transparent; /* Fondo transparente */
-  border: none; /* Sin borde */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  color: aqua; /* Color del texto */
+  background-color: transparent;
+  /* Fondo transparente */
+  border: none;
+  /* Sin borde */
+  justify-content: center;
+  /* Centra el contenido horizontalmente */
+  color: aqua;
+  /* Color del texto */
 }
 
 .navBardrop2 {
-  font-size: slarge; /* Tamaño del texto */
+  font-size: slarge;
+  /* Tamaño del texto */
 }
 
 /* Estilos para el enlace del menú al pasar el mouse */
 .menu-link:hover {
-  color: rgb(255, 255, 255); /* Cambia el color del texto a blanco al pasar el mouse */
+  color: rgb(255, 255, 255);
+  /* Cambia el color del texto a blanco al pasar el mouse */
 }
 
 .navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-item.active .nav-link:hover {
-  color: rgb(255, 255, 255); /* Color del texto activo y al pasar el mouse */
+  color: rgb(255, 255, 255);
+  /* Color del texto activo y al pasar el mouse */
 }
 
 /* Oculta la flecha después de los elementos del menú desplegable */
@@ -217,11 +154,14 @@ footer {
 
 /* Estilos para el encabezado menu*/
 .encabezado {
-  background-color: transparent; /* Fondo transparente */
+  background-color: transparent;
+  /* Fondo transparente */
   display: flex;
   justify-content: center;
-  align-items: center; /* Centra los elementos verticalmente */
-  margin-top: 10px; /* Margen superior */
+  align-items: center;
+  /* Centra los elementos verticalmente */
+  margin-top: 10px;
+  /* Margen superior */
   border: none;
 }
 
@@ -231,235 +171,99 @@ footer {
 }
 
 .navbar-toggler {
-  position: relative; /* Establece el posicionamiento absoluto */
-  top: 50%; /* Coloca el botón en la mitad superior del contenedor */
-  left: 50%; /* Coloca el botón en la mitad izquierda del contenedor */
-  transform: translate(-50%, -50%); /* Centra el botón tanto horizontal como verticalmente */
-  background-color: transparent; /* Fondo transparente */
+  position: relative;
+  /* Establece el posicionamiento absoluto */
+  top: 50%;
+  /* Coloca el botón en la mitad superior del contenedor */
+  left: 50%;
+  /* Coloca el botón en la mitad izquierda del contenedor */
+  transform: translate(-50%, -50%);
+  /* Centra el botón tanto horizontal como verticalmente */
+  background-color: transparent;
+  /* Fondo transparente */
   border: 2px rgba(0, 255, 255, 0.389) solid;
-  margin-top: 20px; /* Ajusta este valor según la distancia deseada */
+  margin-top: 20px;
+  /* Ajusta este valor según la distancia deseada */
 }
 
 /* Estilos para el botón de menú hamburguesa */
 .navbar-toggler .navbar-toggler-icon {
   background-color: rgba(0, 255, 255, 0.47);
-  border-radius: 2px; /* Ajusta el radio de borde */
+  border-radius: 2px;
+  /* Ajusta el radio de borde */
 }
 
 /* Estilos para la imagen al costado del menú hamburguesa */
 .side-icon {
-  width: 70px; /* Ajusta el ancho de la imagen */
-  height: auto; /* Ajusta la altura automáticamente */
-  position: sticky; /* Posiciona la imagen */
+  width: 70px;
+  /* Ajusta el ancho de la imagen */
+  height: auto;
+  /* Ajusta la altura automáticamente */
+  position: sticky;
+  /* Posiciona la imagen */
 }
 
 .dropdown-menu {
-  background-color: rgba(25, 95, 93, 0.201); /* Ajusta el color de fondo y la transparencia */
-  border: none; /* Elimina el borde */
+  background-color: rgba(25, 95, 93, 0.201);
+  /* Ajusta el color de fondo y la transparencia */
+  border: none;
+  /* Elimina el borde */
 }
 
 .dropdown-menu .dropdown-item {
-  color: rgba(255, 255, 255, 0.694); /* Color del texto */
-  font-size: 16px; /* Tamaño de fuente para el menú desplegable */
+  color: rgba(255, 255, 255, 0.694);
+  /* Color del texto */
+  font-size: 16px;
+  /* Tamaño de fuente para el menú desplegable */
   display: flex;
   align-items: center;
 }
 
 .dropdown-menu .dropdown-item:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Cambia el color de fondo al pasar el cursor */
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Cambia el color de fondo al pasar el cursor */
 }
 
 /* Estilos del contenido principal de la página */
 /* Estilos para el contenido principal */
-main {
-  border: 10px rgb(255, 255, 255); /* Borde */
-  align-items: center; /* Alineación de los elementos */
-}
-
-/* Estilos para la imagen de datos */
-.imgData1 {
-  color: aquamarine; /* Color del texto */
-  font-family: Haettenschweiler, "Arial Narrow Bold", sans-serif; /* Familia de fuentes */
-  text-transform: uppercase; /* Transformación del texto a mayúsculas */
-  font-size: medium; /* Tamaño de fuente */
-  border: 2px orangered solid; /* Borde */
-  border-radius: 20px; /* Radio del borde */
-  padding: 5px; /* Relleno */
-  display: flex; /* Usa flexbox para el diseño */
-  justify-content: center; /* Centra horizontalmente */
-}
-
-/* Estilos para las imágenes centradas */
-.imagenCentro {
-  border: 3px orangered solid; /* Borde */
-  margin: 10px 80px; /* Margen */
-}
-
-/* Estilos para el formulario */
-.estiloFormulario {
-  background-color: transparent; /* Color de fondo */
-  width: 100%; /* Ancho */
+/* Estilos para las imágenes limitadas */
+.imagen-limitada1 {
+  width: 50%; /* Ancho */
   height: auto; /* Altura automática */
-  font-family: "Cambria", "Cochin", "Georgia", "Times", "Times New Roman", serif; /* Familia de fuentes */
-  font-size: 18px; /* Tamaño de fuente */
-  color: rgb(212, 211, 211); /* Color del texto */
-  font-weight: bold; /* Peso de la fuente */
-  border: 3px solid #a2a1a1; /* Borde */
+  border: none; /* Borde */
   border-radius: 20px; /* Radio del borde */
-  padding: 20px; /* Relleno */
-  margin-top: 20px; /* Margen superior */
-}
-
-/* Estilos para los campos de entrada del formulario */
-.estiloFormulario input {
-  background-color: rgba(212, 208, 208, 0.6549019608); /* Color de fondo */
-  font-style: italic; /* Estilo de fuente */
-  color: #FFF; /* Color del texto */
-  border: none; /* Borde */
-  border-radius: 10px; /* Radio del borde */
-  padding: 10px; /* Relleno */
-  margin-bottom: 10px; /* Margen inferior */
-}
-
-/* Estilos para las áreas de texto del formulario */
-.estiloFormulario textarea {
-  background-color: rgba(212, 208, 208, 0.6549019608); /* Color de fondo */
-  color: #FFF; /* Color del texto */
-  font-style: italic; /* Estilo de fuente */
-  border: none; /* Borde */
-  border-radius: 10px; /* Radio del borde */
-  padding: 10px; /* Relleno */
-  margin-bottom: 10px; /* Margen inferior */
-}
-
-/*******TIENDA********/
-.botonComprar {
-  padding: 8px 16px;
-  font-size: 16px;
-  border: none;
-  border-radius: 10px;
-  background-color: rgb(144, 67, 37);
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  float: right;
-  margin-top: 10px;
-}
-
-.botonComprar:hover {
-  background-color: #ff5e00;
-  color: #ffffff;
-  border: none;
-}
-
-.botonEnviar {
-  font-size: 18px;
-}
-
-.card4 {
-  background: transparent;
-  border-radius: 20px;
-  font-size: small;
-  padding: 10px;
-  border: 2px rgba(255, 68, 0, 0.476) solid;
-}
-
-.card {
-  text-align: justify;
-  background: transparent;
-  color: rgb(255, 255, 255);
-  border-radius: 20px;
-  border: none;
-}
-
-.tarjetaGaleria1 {
-  border-radius: 20px;
-}
-
-.card3 {
-  text-align: center;
-}
-
-.card-title {
-  color: white;
-  text-transform: uppercase;
-  font-size: small;
-  text-align: center;
-}
-
-.card-title2 {
-  text-transform: normal;
-  font-size: small;
-  text-align: center;
-}
-
-.imagenCard {
-  background: transparent;
-  border: none;
-  border-radius: 20px;
-}
-
-/* Estilos para el botón de enviar del formulario */
-.botonEnviar {
-  background-color: #565656; /* Color de fondo */
-  color: #ccbfb4; /* Color del texto */
-  border: none; /* Borde */
-  border-radius: 10px; /* Radio del borde */
-  padding: 10px 20px; /* Relleno */
-  font-weight: bold; /* Peso de la fuente */
-}
-
-/* Cambio de color al pasar el mouse sobre el botón de enviar */
-.botonEnviar:hover {
-  background-color: #4e4e4e; /* Color de fondo */
-  color: #ffffff; /* Color del texto */
-  border: none; /* Borde */
 }
 
 /* Estilos para las imágenes limitadas */
-.imagen-limitada {
-  width: 100%; /* Ancho */
+.imagen-limitada2 {
+  width: 60%; /* Ancho */
   height: auto; /* Altura automática */
   border: none; /* Borde */
   border-radius: 20px; /* Radio del borde */
 }
 
-/* Estilos para el formulario de contacto */
-.formularioContacto {
-  color: #b2fcff; /* Color del texto */
-  text-align: center; /* Alineación del texto */
-  font-size: medium; /* Tamaño de fuente */
-  font-weight: bold; /* Peso de la fuente */
-  max-width: 100%; /* Ancho máximo */
+.h1Titulo {
+  background: linear-gradient(black, black, black, aqua);
+  border: none;
+  border-radius: 20px;
 }
 
-/* Estilos para el teléfono de WhatsApp */
-#telefonoWhattsapp {
-  font-size: 1.1em; /* Tamaño de fuente */
-  font-weight: bold; /* Peso de la fuente */
-  text-align: center; /* Alineación del texto */
-  white-space: nowrap; /* Evita que el texto se envuelva */
+.objetoCentrado1 {
+  display: flex;
+  justify-content: center;
 }
 
-/**LOGO WHATSAPP**/
-.logoWhats {
-  width: 150px;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+.objetoCentrado2 {
+  display: flex;
+  justify-content: center;
 }
 
-/* Estilos para el mapa */
-.mapaEstilo {
-  background-color: transparent; /* Color de fondo */
-  color: rgb(255, 255, 255); /* Color del texto */
-  font-style: normal; /* Estilo de fuente */
-  font-size: 20px; /* Tamaño de fuente */
-  width: "100%"; /* Ancho */
-  height: "600px"; /* Altura */
-  padding: 20px; /* Relleno */
-  border-radius: 20px; /* Radio del borde */
-  border: 5px orangered solid; /* Borde */
+.tituloImportante1 {
+  color: rgba(178, 212, 212, 0.843);
+  font-size: medium;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 /* Definiciones de mixins reutilizables */
@@ -489,6 +293,18 @@ main {
 @media screen and (min-width: 1604px) {
   .teleGondra1 img {
     width: 45%; /* Aumenta el ancho de la imagen al doble */
+  }
+}
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    margin-top: 1rem; /* Espacio adicional en la parte superior del menú para evitar superposiciones */
+    flex-direction: column; /* Cambia la dirección de los elementos del menú a columna */
+    text-align: center; /* Centra los elementos del menú cuando se coloca en una columna */
+  }
+  .navbar-nav .nav-link {
+    padding-right: 0; /* Elimina el espacio adicional entre elementos del menú en dispositivos móviles */
+    padding-left: 0; /* Elimina el espacio adicional entre elementos del menú en dispositivos móviles */
+    font-size: 18px; /* Tamaño de fuente para el menú principal */
   }
 }
 /* Ajustes para el footer en diferentes tamaños de pantalla */
@@ -595,8 +411,7 @@ main {
   /* Centra verticalmente el contenido */
   margin: 50px auto; /* Para centrar el grid horizontalmente */
   max-width: 1168px; /* Establece un ancho máximo para evitar que el grid se expanda demasiado en pantallas más grandes */
-  margin-top: 50px; /* Ajusta este valor según la distancia deseada */
-  /* Ajusta el valor de los márgenes según tu preferencia */
+  margin-top: 0px; /* Ajusta este valor según la distancia deseada */
 }
 
 .item {
@@ -606,6 +421,267 @@ main {
 .item img {
   max-width: 100%;
   height: auto;
+}
+
+/*******TIENDA********/
+.botonComprar {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(144, 67, 37);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  float: right;
+  margin-top: 10px;
+}
+
+.botonComprar:hover {
+  background-color: #ff5e00;
+  color: #ffffff;
+  border: none;
+}
+
+.botonEnviar {
+  font-size: 18px;
+}
+
+.card4 {
+  background: transparent;
+  border-radius: 20px;
+  font-size: small;
+  padding: 10px;
+  border: 2px rgba(255, 68, 0, 0.476) solid;
+}
+
+.card {
+  text-align: justify;
+  background: transparent;
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+  border: none;
+}
+
+.tarjetaGaleria1 {
+  border-radius: 20px;
+}
+
+.card3 {
+  text-align: center;
+}
+
+.card-title {
+  color: white;
+  text-transform: uppercase;
+  font-size: small;
+  text-align: center;
+}
+
+.card-title2 {
+  text-transform: normal;
+  font-size: small;
+  text-align: center;
+}
+
+.imagenCard {
+  background: transparent;
+  border: none;
+  border-radius: 20px;
+}
+
+/* Estilos para el formulario de contacto */
+.formularioContacto {
+  color: #b2fcff; /* Color del texto */
+  text-align: center; /* Alineación del texto */
+  font-size: medium; /* Tamaño de fuente */
+  font-weight: bold; /* Peso de la fuente */
+  max-width: 100%; /* Ancho máximo */
+}
+
+/* Estilos para el formulario */
+form {
+  background-color: transparent; /* Color de fondo */
+  width: 50%; /* Ancho del formulario */
+  height: auto; /* Altura del formulario */
+  padding: 20px; /* Relleno */
+  border: none; /* Sin borde */
+  border-radius: 20px; /* Radio del borde */
+}
+
+/* Estilos para el botón de enviar del formulario */
+.botonEnviar {
+  background-color: #565656; /* Color de fondo */
+  color: #ccbfb4; /* Color del texto */
+  border: none; /* Borde */
+  border-radius: 10px; /* Radio del borde */
+  padding: 10px 20px; /* Relleno */
+  font-weight: bold; /* Peso de la fuente */
+}
+
+/* Estilos para el párrafo de contacto */
+.parrafoContacto {
+  font-size: large; /* Tamaño de fuente */
+  color: rgb(42, 131, 131); /* Color de texto */
+  text-align: center; /* Alineación del texto */
+}
+
+/* Cambio de color al pasar el mouse sobre el botón de enviar */
+.botonEnviar:hover {
+  background-color: #4e4e4e; /* Color de fondo */
+  color: #ffffff; /* Color del texto */
+  border: none; /* Borde */
+}
+
+/* Estilos para el formulario */
+.estiloFormulario {
+  background-color: transparent; /* Color de fondo */
+  width: 100%; /* Ancho */
+  height: auto; /* Altura automática */
+  font-family: "Cambria", "Cochin", "Georgia", "Times", "Times New Roman", serif; /* Familia de fuentes */
+  font-size: 18px; /* Tamaño de fuente */
+  color: rgb(212, 211, 211); /* Color del texto */
+  font-weight: bold; /* Peso de la fuente */
+  border: 3px solid #a2a1a1; /* Borde */
+  border-radius: 20px; /* Radio del borde */
+  padding: 20px; /* Relleno */
+  margin-top: 20px; /* Margen superior */
+}
+
+/* Estilos para los campos de entrada del formulario */
+.estiloFormulario input {
+  background-color: rgba(212, 208, 208, 0.6549019608); /* Color de fondo */
+  font-style: italic; /* Estilo de fuente */
+  color: #FFF; /* Color del texto */
+  border: none; /* Borde */
+  border-radius: 10px; /* Radio del borde */
+  padding: 10px; /* Relleno */
+  margin-bottom: 10px; /* Margen inferior */
+}
+
+/* Estilos para las áreas de texto del formulario */
+.estiloFormulario textarea {
+  background-color: rgba(212, 208, 208, 0.6549019608); /* Color de fondo */
+  color: #FFF; /* Color del texto */
+  font-style: italic; /* Estilo de fuente */
+  border: none; /* Borde */
+  border-radius: 10px; /* Radio del borde */
+  padding: 10px; /* Relleno */
+  margin-bottom: 10px; /* Margen inferior */
+}
+
+/* Estilos para el teléfono de WhatsApp */
+.telefonoWhattsapp {
+  font-size: 1.1em; /* Tamaño de fuente */
+  font-weight: bold; /* Peso de la fuente */
+  text-align: center; /* Alineación del texto */
+  white-space: nowrap; /* Evita que el texto se envuelva */
+}
+
+/**LOGO WHATSAPP**/
+.logoWhats {
+  width: 150px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Estilos para el mapa */
+.mapaEstilo {
+  background-color: transparent; /* Color de fondo */
+  color: rgb(255, 255, 255); /* Color del texto */
+  font-style: normal; /* Estilo de fuente */
+  font-size: 20px; /* Tamaño de fuente */
+  width: "100%"; /* Ancho */
+  height: "600px"; /* Altura */
+  padding: 20px; /* Relleno */
+  border-radius: 20px; /* Radio del borde */
+  border: 5px orangered solid; /* Borde */
+}
+
+@keyframes moveLogo {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.logo {
+  animation: moveLogo 2s ease infinite;
+}
+
+@keyframes resizeWelcome {
+  0% {
+    transform: scale(1);
+  }
+  /* Tamaño original */
+  50% {
+    transform: scale(1.1);
+  }
+  /* Tamaño agrandado */
+  100% {
+    transform: scale(1);
+  }
+}
+.welcome {
+  animation: resizeWelcome 2s ease infinite;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(0);
+  }
+  /* Sin movimiento */
+  50% {
+    transform: translateX(2px);
+  }
+  /* Se mueve 10px hacia la derecha */
+  100% {
+    transform: translateX(0);
+  }
+}
+.textoMovimiento {
+  animation: moveText 2s ease infinite;
+}
+
+@keyframes shrinkLogo {
+  0% {
+    transform: scale(1);
+  }
+  /* Tamaño original */
+  50% {
+    transform: scale(0.9);
+  }
+  /* Se achica al 80% */
+  100% {
+    transform: scale(1);
+  }
+}
+/* Aplica la animación al logo */
+.navbar-brand img {
+  animation: shrinkLogo 2s ease infinite;
+}
+
+@keyframes shrinkLogo {
+  0% {
+    transform: scale(1);
+  }
+  /* Tamaño original */
+  50% {
+    transform: scale(0.8);
+  }
+  /* Se achica al 80% */
+  100% {
+    transform: scale(1);
+  }
+}
+/* Aplica la animación al logo */
+.logo-paypal {
+  animation: shrinkLogo 2s ease infinite;
 }
 
 /*# sourceMappingURL=estilo.css.map */

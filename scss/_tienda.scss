@@ -1,0 +1,27 @@
+
+/*******TIENDA********/
+
+.botonComprar {
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(144, 67, 37);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    float: right;
+    margin-top: 10px;
+  }
+  
+  .botonComprar:hover {
+    background-color: #ff5e00;
+    color: #ffffff;
+    border: none;
+  }
+  
+  
+  
+  .botonEnviar {
+    font-size: 18px;
+  }

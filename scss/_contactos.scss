@@ -1,0 +1,31 @@
+/* Estilos para el teléfono de WhatsApp */
+.telefonoWhattsapp {
+    font-size: 1.1em; /* Tamaño de fuente */
+    font-weight: bold; /* Peso de la fuente */
+    text-align: center; /* Alineación del texto */
+    white-space: nowrap; /* Evita que el texto se envuelva */
+  }
+ 
+  /**LOGO WHATSAPP**/
+  .logoWhats {
+    width: 150px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  /* Estilos para el mapa */
+  .mapaEstilo {
+    background-color: transparent; /* Color de fondo */
+    color: rgb(255, 255, 255); /* Color del texto */
+    font-style: normal; /* Estilo de fuente */
+    font-size: 20px; /* Tamaño de fuente */
+    width: "100%"; /* Ancho */
+    height: "600px"; /* Altura */
+    padding: 20px; /* Relleno */
+    border-radius: 20px; /* Radio del borde */
+    border: 5px orangered solid; /* Borde */
+  }
+  
+  
+  

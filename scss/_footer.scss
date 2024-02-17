@@ -2,17 +2,13 @@
 footer {
   font-size: 12px; /* Tamaño de fuente */
   padding: 1%; /* Relleno */
-  background-color: transparent; /* Color de fondo */
-  border: none;
+  background-color: rgba(0, 0, 0, 0.78); /* Color de fondo */
+  // border: 1px rgba(0, 255, 255, 0.407) solid;
   color: rgb(255, 255, 255); /* Color de texto */
   margin: 0; /* Margen */
   text-align: center; /* Alineación del texto */
   width: 100%; /* Ancho */
 }
-
-
-
-
 
 /* Estilos para los elementos del pie de página */
 .footerElements {

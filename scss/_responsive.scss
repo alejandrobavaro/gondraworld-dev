@@ -14,7 +14,19 @@
   }
 }
 
-
+//**---------------MENU NAV -------------------//
+@media (max-width: 991.98px) {
+  .navbar-nav {
+      margin-top: 1rem; /* Espacio adicional en la parte superior del menú para evitar superposiciones */
+      flex-direction: column; /* Cambia la dirección de los elementos del menú a columna */
+      text-align: center; /* Centra los elementos del menú cuando se coloca en una columna */
+  }
+  .navbar-nav .nav-link {
+    padding-right: 0; /* Elimina el espacio adicional entre elementos del menú en dispositivos móviles */
+    padding-left: 0; /* Elimina el espacio adicional entre elementos del menú en dispositivos móviles */
+    font-size: 18px; /* Tamaño de fuente para el menú principal */
+}
+}
 
 
 

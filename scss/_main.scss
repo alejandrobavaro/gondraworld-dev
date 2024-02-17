@@ -1,231 +1,43 @@
 /* Estilos para el contenido principal */
 main {
-  border: 10px rgb(255, 255, 255); /* Borde */
-  align-items: center; /* Alineación de los elementos */
-}
-
-/* Estilos para la imagen de datos */
-.imgData1 {
-  color: aquamarine; /* Color del texto */
-  font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Familia de fuentes */
-  text-transform: uppercase; /* Transformación del texto a mayúsculas */
-  font-size: medium; /* Tamaño de fuente */
-  border: 2px orangered solid; /* Borde */
-  border-radius: 20px; /* Radio del borde */
-  padding: 5px; /* Relleno */
-  display: flex; /* Usa flexbox para el diseño */
-  justify-content: center; /* Centra horizontalmente */
-}
-
-
-
-/* Estilos para las imágenes centradas */
-.imagenCentro {
-  border: 3px orangered solid; /* Borde */
-  margin: 10px 80px; /* Margen */
-}
-
-
-
-
-
-
-
-
-
-
-/* Estilos para el formulario */
-.estiloFormulario {
-  background-color: transparent; /* Color de fondo */
-  width: 100%; /* Ancho */
-  height: auto; /* Altura automática */
-  font-family: 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif; /* Familia de fuentes */
-  font-size: 18px; /* Tamaño de fuente */
-  color: rgb(212, 211, 211); /* Color del texto */
-  font-weight: bold; /* Peso de la fuente */
-  border: 3px solid #a2a1a1; /* Borde */
-  border-radius: 20px; /* Radio del borde */
-  padding: 20px; /* Relleno */
-  margin-top: 20px; /* Margen superior */
-}
-
-/* Estilos para los campos de entrada del formulario */
-.estiloFormulario input {
-  background-color: #d4d0d0a7; /* Color de fondo */
-  font-style: italic; /* Estilo de fuente */
-  color: #FFF; /* Color del texto */
-  border: none; /* Borde */
-  border-radius: 10px; /* Radio del borde */
-  padding: 10px; /* Relleno */
-  margin-bottom: 10px; /* Margen inferior */
-}
-
-/* Estilos para las áreas de texto del formulario */
-.estiloFormulario textarea {
-  background-color: #d4d0d0a7; /* Color de fondo */
-  color: #FFF; /* Color del texto */
-  font-style: italic; /* Estilo de fuente */
-  border: none; /* Borde */
-  border-radius: 10px; /* Radio del borde */
-  padding: 10px; /* Relleno */
-  margin-bottom: 10px; /* Margen inferior */
-}
-
-
-
-
-/*******TIENDA********/
-
-.botonComprar {
-  padding: 8px 16px;
-  font-size: 16px;
-  border: none;
-  border-radius: 10px;
-  background-color: rgb(144, 67, 37);
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  float: right;
-  margin-top: 10px;
-}
-
-.botonComprar:hover {
-  background-color: #ff5e00;
-  color: #ffffff;
-  border: none;
-}
-
-
-
-.botonEnviar {
-  font-size: 18px;
-}
-
-.card4 {
-  background: transparent;
-  border-radius: 20px; 
-  font-size: small;
-  padding: 10px;
-  border: 2px rgba(255, 68, 0, 0.476) solid;
-}
-
-.card {
-  text-align: justify;
-  background: transparent;
-  color: rgb(255, 255, 255); 
-  border-radius: 20px; 
-  border: none;
-  
-}
-
-.tarjetaGaleria1 {
-  border-radius: 20px;
-  
-}
-
-.card3{
-  text-align: center;
-}
-
-
-.card-title {
-  color: white;
-  text-transform: uppercase;
-  font-size: small;
-  text-align: center;
-}
-
-.card-title2 {
-  text-transform: normal;
-  font-size: small;
-  text-align: center;
-}
-
-.imagenCard {
-    background: transparent;
-   border: none;
-  border-radius: 20px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Estilos para el botón de enviar del formulario */
-.botonEnviar {
-  background-color: #565656; /* Color de fondo */
-  color: #ccbfb4; /* Color del texto */
-  border: none; /* Borde */
-  border-radius: 10px; /* Radio del borde */
-  padding: 10px 20px; /* Relleno */
-  font-weight: bold; /* Peso de la fuente */
-}
-
-/* Cambio de color al pasar el mouse sobre el botón de enviar */
-.botonEnviar:hover {
-  background-color: #4e4e4e; /* Color de fondo */
-  color: #ffffff; /* Color del texto */
-  border: none; /* Borde */
 }
 
 /* Estilos para las imágenes limitadas */
-.imagen-limitada {
-  width: 100%; /* Ancho */
+.imagen-limitada1 {
+  width: 50%; /* Ancho */
   height: auto; /* Altura automática */
   border: none; /* Borde */
   border-radius: 20px; /* Radio del borde */
 }
 
-/* Estilos para el formulario de contacto */
-.formularioContacto {
-  color: #b2fcff; /* Color del texto */
-  text-align: center; /* Alineación del texto */
-  font-size: medium; /* Tamaño de fuente */
-  font-weight: bold; /* Peso de la fuente */
-  max-width: 100%; /* Ancho máximo */
-}
-
-/* Estilos para el teléfono de WhatsApp */
-#telefonoWhattsapp {
-  font-size: 1.1em; /* Tamaño de fuente */
-  font-weight: bold; /* Peso de la fuente */
-  text-align: center; /* Alineación del texto */
-  white-space: nowrap; /* Evita que el texto se envuelva */
-}
-
-
-
-/**LOGO WHATSAPP**/
-
-.logoWhats {
-  width: 150px;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
-
-/* Estilos para el mapa */
-.mapaEstilo {
-  background-color: transparent; /* Color de fondo */
-  color: rgb(255, 255, 255); /* Color del texto */
-  font-style: normal; /* Estilo de fuente */
-  font-size: 20px; /* Tamaño de fuente */
-  width: "100%"; /* Ancho */
-  height: "600px"; /* Altura */
-  padding: 20px; /* Relleno */
+/* Estilos para las imágenes limitadas */
+.imagen-limitada2 {
+  width: 60%; /* Ancho */
+  height: auto; /* Altura automática */
+  border: none; /* Borde */
   border-radius: 20px; /* Radio del borde */
-  border: 5px orangered solid; /* Borde */
+  }
+
+.h1Titulo {
+  background: linear-gradient(black, black, black, aqua);
+  border: none;
+  border-radius: 20px;
+}
+
+.objetoCentrado1 {
+  display: flex;
+  justify-content: center;
+}
+
+.objetoCentrado2 {
+  display: flex;
+  justify-content: center;
+}
+
+.tituloImportante1 {
+  color: rgba(178, 212, 212, 0.843);
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  text-decoration: underline;
 }

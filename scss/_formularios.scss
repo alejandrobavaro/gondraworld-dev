@@ -1,0 +1,79 @@
+/* Estilos para el formulario de contacto */
+.formularioContacto {
+  color: #b2fcff; /* Color del texto */
+  text-align: center; /* Alineación del texto */
+  font-size: medium; /* Tamaño de fuente */
+  font-weight: bold; /* Peso de la fuente */
+  max-width: 100%; /* Ancho máximo */
+}
+
+/* Estilos para el formulario */
+form {
+  background-color: transparent; /* Color de fondo */
+  width: 50%; /* Ancho del formulario */
+  height: auto; /* Altura del formulario */
+  padding: 20px; /* Relleno */
+  border: none; /* Sin borde */
+  border-radius: 20px; /* Radio del borde */
+}
+
+/* Estilos para el botón de enviar del formulario */
+.botonEnviar {
+  background-color: #565656; /* Color de fondo */
+  color: #ccbfb4; /* Color del texto */
+  border: none; /* Borde */
+  border-radius: 10px; /* Radio del borde */
+  padding: 10px 20px; /* Relleno */
+  font-weight: bold; /* Peso de la fuente */
+}
+
+/* Estilos para el párrafo de contacto */
+.parrafoContacto {
+  font-size: large; /* Tamaño de fuente */
+  color: rgb(42, 131, 131); /* Color de texto */
+  text-align: center; /* Alineación del texto */
+}
+
+/* Cambio de color al pasar el mouse sobre el botón de enviar */
+.botonEnviar:hover {
+  background-color: #4e4e4e; /* Color de fondo */
+  color: #ffffff; /* Color del texto */
+  border: none; /* Borde */
+}
+
+/* Estilos para el formulario */
+.estiloFormulario {
+  background-color: transparent; /* Color de fondo */
+  width: 100%; /* Ancho */
+  height: auto; /* Altura automática */
+  font-family: 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif; /* Familia de fuentes */
+  font-size: 18px; /* Tamaño de fuente */
+  color: rgb(212, 211, 211); /* Color del texto */
+  font-weight: bold; /* Peso de la fuente */
+  border: 3px solid #a2a1a1; /* Borde */
+  border-radius: 20px; /* Radio del borde */
+  padding: 20px; /* Relleno */
+  margin-top: 20px; /* Margen superior */
+}
+
+/* Estilos para los campos de entrada del formulario */
+.estiloFormulario input {
+  background-color: #d4d0d0a7; /* Color de fondo */
+  font-style: italic; /* Estilo de fuente */
+  color: #FFF; /* Color del texto */
+  border: none; /* Borde */
+  border-radius: 10px; /* Radio del borde */
+  padding: 10px; /* Relleno */
+  margin-bottom: 10px; /* Margen inferior */
+}
+
+/* Estilos para las áreas de texto del formulario */
+.estiloFormulario textarea {
+  background-color: #d4d0d0a7; /* Color de fondo */
+  color: #FFF; /* Color del texto */
+  font-style: italic; /* Estilo de fuente */
+  border: none; /* Borde */
+  border-radius: 10px; /* Radio del borde */
+  padding: 10px; /* Relleno */
+  margin-bottom: 10px; /* Margen inferior */
+}
