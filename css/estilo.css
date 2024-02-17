@@ -61,11 +61,8 @@ h5 {
 
 /* Estilos para los títulos h6 */
 h6 {
-  color: rgb(237, 228, 204); /* Color de texto */
-  font-style: normal; /* Estilo de fuente */
-  margin-top: 11px; /* Margen superior */
-  padding-right: 15px; /* Relleno derecho */
-  padding-left: 15px; /* Relleno izquierdo */
+  color: rgb(167, 222, 219); /* Color de texto */
+  font-size: x-small; /* Estilo de fuente */
 }
 
 /* Estilos para las listas */
@@ -200,7 +197,7 @@ footer {
 }
 
 .navBardrop2 {
-  font-size: large; /* Tamaño del texto */
+  font-size: slarge; /* Tamaño del texto */
 }
 
 /* Estilos para el enlace del menú al pasar el mouse */
@@ -333,6 +330,73 @@ main {
   border-radius: 10px; /* Radio del borde */
   padding: 10px; /* Relleno */
   margin-bottom: 10px; /* Margen inferior */
+}
+
+/*******TIENDA********/
+.botonComprar {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(144, 67, 37);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  float: right;
+  margin-top: 10px;
+}
+
+.botonComprar:hover {
+  background-color: #ff5e00;
+  color: #ffffff;
+  border: none;
+}
+
+.botonEnviar {
+  font-size: 18px;
+}
+
+.card4 {
+  background: transparent;
+  border-radius: 20px;
+  font-size: small;
+  padding: 10px;
+  border: 2px rgba(255, 68, 0, 0.476) solid;
+}
+
+.card {
+  text-align: justify;
+  background: transparent;
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+  border: none;
+}
+
+.tarjetaGaleria1 {
+  border-radius: 20px;
+}
+
+.card3 {
+  text-align: center;
+}
+
+.card-title {
+  color: white;
+  text-transform: uppercase;
+  font-size: small;
+  text-align: center;
+}
+
+.card-title2 {
+  text-transform: normal;
+  font-size: small;
+  text-align: center;
+}
+
+.imagenCard {
+  background: transparent;
+  border: none;
+  border-radius: 20px;
 }
 
 /* Estilos para el botón de enviar del formulario */
