@@ -1,10 +1,22 @@
-/*   @import "body", "footer", "header", "main", "mixin", "responsive"; "gridestructura"; (es lo mismo que abajo) */
+/* AQUI SE IMPORTA EL SASS AL CSS */
+
+// @import "animaciones";
+@import "animaciones";
 
 /* Estilos del cuerpo de la página */
 @import "body";
 
+// @import "cards";
+@import "cards";
+
+// @import "contacto";
+@import "contacto";
+
 /* Estilos del pie de página */
 @import "footer";
+
+// @import "formularios";
+@import "formularios";
 
 /* Estilos del encabezado de la página */
 @import "header";
@@ -18,20 +30,11 @@
 /* Estilos responsivos para diferentes tamaños de pantalla */
 @import "responsive";
 
-/* Estilos responsivos para diferentes tamaños de pantalla */
-@import "gridestructura";
-
 // @import "tienda";
 @import "tienda";
 
-// @import "cards";
-@import "cards";
+/* Estilos responsivos para diferentes tamaños de pantalla */
+@import "gridestructura";
 
-// @import "formularios";
-@import "formularios";
 
-// @import "contactos";
-@import "contactos";
 
-// @import "animaciones";
-@import "animaciones";
