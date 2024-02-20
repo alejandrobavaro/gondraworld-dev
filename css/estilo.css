@@ -1,5 +1,90 @@
 @charset "UTF-8";
-/*   @import "body", "footer", "header", "main", "mixin", "responsive"; "gridestructura"; (es lo mismo que abajo) */
+/* AQUI SE IMPORTA EL SASS AL CSS */
+@keyframes moveLogo {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.logo {
+  animation: moveLogo 2s ease infinite;
+}
+
+@keyframes resizeWelcome {
+  0% {
+    transform: scale(1);
+  }
+  /* Tamaño original */
+  50% {
+    transform: scale(1.1);
+  }
+  /* Tamaño agrandado */
+  100% {
+    transform: scale(1);
+  }
+}
+.welcome {
+  animation: resizeWelcome 2s ease infinite;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(0);
+  }
+  /* Sin movimiento */
+  50% {
+    transform: translateX(2px);
+  }
+  /* Se mueve 10px hacia la derecha */
+  100% {
+    transform: translateX(0);
+  }
+}
+.textoMovimiento {
+  animation: moveText 2s ease infinite;
+}
+
+@keyframes shrinkLogo {
+  0% {
+    transform: scale(1);
+  }
+  /* Tamaño original */
+  50% {
+    transform: scale(0.9);
+  }
+  /* Se achica al 80% */
+  100% {
+    transform: scale(1);
+  }
+}
+/* Aplica la animación al logo */
+.navbar-brand img {
+  animation: shrinkLogo 2s ease infinite;
+}
+
+@keyframes shrinkLogo {
+  0% {
+    transform: scale(1);
+  }
+  /* Tamaño original */
+  50% {
+    transform: scale(0.8);
+  }
+  /* Se achica al 80% */
+  100% {
+    transform: scale(1);
+  }
+}
+/* Aplica la animación al logo */
+.logo-paypal {
+  animation: shrinkLogo 2s ease infinite;
+}
+
 /* Estilos del cuerpo de la página */
 /* Estilos para el cuerpo de la página */
 body {
@@ -76,6 +161,77 @@ a:visited {
   text-decoration: none; /* Sin subrayado */
 }
 
+.card4 {
+  background: transparent;
+  border-radius: 20px;
+  font-size: small;
+  padding: 10px;
+}
+
+.card {
+  text-align: justify;
+  background: transparent;
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+  border: none;
+}
+
+.tarjetaGaleria1 {
+  border-radius: 20px;
+}
+
+.card3 {
+  text-align: center;
+}
+
+.card-title {
+  color: white;
+  text-transform: uppercase;
+  font-size: small;
+  text-align: center;
+}
+
+.card-title2 {
+  text-transform: normal;
+  font-size: small;
+  text-align: center;
+}
+
+.imagenCard {
+  background: transparent;
+  border: none;
+  border-radius: 20px;
+}
+
+/* Estilos para el teléfono de WhatsApp */
+.telefonoWhattsapp {
+  font-size: small; /* Tamaño de fuente */
+  font-weight: bold; /* Peso de la fuente */
+  text-align: center; /* Alineación del texto */
+  white-space: nowrap; /* Evita que el texto se envuelva */
+}
+
+/**LOGO WHATSAPP**/
+.logoWhats {
+  width: 150px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Estilos para el mapa */
+.mapaEstilo {
+  background-color: transparent; /* Color de fondo */
+  color: rgb(255, 255, 255); /* Color del texto */
+  font-style: normal; /* Estilo de fuente */
+  font-size: 20px; /* Tamaño de fuente */
+  width: "100%"; /* Ancho */
+  height: "600px"; /* Altura */
+  padding: 20px; /* Relleno */
+  border-radius: 20px; /* Radio del borde */
+  border: 5px orangered solid; /* Borde */
+}
+
 /* Estilos del pie de página */
 /* Estilos para el pie de página */
 footer {
@@ -106,6 +262,68 @@ footer {
 /* Estilos para los elementos de lista en el pie de página */
 .linksFooter div {
   list-style: none; /* Sin viñetas */
+}
+
+/* Estilos para el formulario de contacto */
+/* Estilos para el botón de enviar del formulario */
+.botonEnviar {
+  background-color: #565656; /* Color de fondo */
+  color: #ccbfb4; /* Color del texto */
+  border: none; /* Borde */
+  border-radius: 10px; /* Radio del borde */
+  padding: 10px 20px; /* Relleno */
+  font-weight: bold; /* Peso de la fuente */
+}
+
+/* Estilos para el párrafo de contacto */
+.parrafoContacto {
+  font-size: large; /* Tamaño de fuente */
+  color: rgb(42, 131, 131); /* Color de texto */
+  text-align: center; /* Alineación del texto */
+}
+
+/* Cambio de color al pasar el mouse sobre el botón de enviar */
+.botonEnviar:hover {
+  background-color: #4e4e4e; /* Color de fondo */
+  color: #ffffff; /* Color del texto */
+  border: none; /* Borde */
+}
+
+/* Estilos para el formulario */
+.estiloFormulario {
+  background-color: transparent; /* Color de fondo */
+  width: 100%; /* Ancho */
+  height: auto; /* Altura automática */
+  font-family: "Cambria", "Cochin", "Georgia", "Times", "Times New Roman", serif; /* Familia de fuentes */
+  font-size: 18px; /* Tamaño de fuente */
+  color: rgb(212, 211, 211); /* Color del texto */
+  font-weight: bold; /* Peso de la fuente */
+  border: 3px solid #a2a1a1; /* Borde */
+  border-radius: 20px; /* Radio del borde */
+  padding: 20px; /* Relleno */
+  margin-top: 20px; /* Margen superior */
+}
+
+/* Estilos para los campos de entrada del formulario */
+.estiloFormulario input {
+  background-color: rgba(212, 208, 208, 0.6549019608); /* Color de fondo */
+  font-style: italic; /* Estilo de fuente */
+  color: #FFF; /* Color del texto */
+  border: none; /* Borde */
+  border-radius: 10px; /* Radio del borde */
+  padding: 10px; /* Relleno */
+  margin-bottom: 10px; /* Margen inferior */
+}
+
+/* Estilos para las áreas de texto del formulario */
+.estiloFormulario textarea {
+  background-color: rgba(212, 208, 208, 0.6549019608); /* Color de fondo */
+  color: #FFF; /* Color del texto */
+  font-style: italic; /* Estilo de fuente */
+  border: none; /* Borde */
+  border-radius: 10px; /* Radio del borde */
+  padding: 10px; /* Relleno */
+  margin-bottom: 10px; /* Margen inferior */
 }
 
 /* Estilos del encabezado de la página */
@@ -140,7 +358,7 @@ footer {
 }
 
 .navBardrop2 {
-  font-size: slarge;
+  font-size: large;
   /* Tamaño del texto */
 }
 
@@ -259,8 +477,15 @@ footer {
   border-radius: 20px; /* Radio del borde */
 }
 
+/* Estilos para las imágenes limitadas */
+.imagen-limitada4 {
+  width: 10%; /* Ancho */
+  height: auto; /* Altura automática */
+  border: none; /* Borde */
+  border-radius: 20px; /* Radio del borde */
+}
+
 .h1Titulo {
-  background: linear-gradient(black, black, black, aqua);
   border: none;
   border-radius: 20px;
 }
@@ -277,10 +502,9 @@ footer {
 
 .tituloImportante1 {
   color: aqua;
-  font-size: large;
+  font-size: 20px;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
-  text-decoration: underline;
 }
 
 /* Definiciones de mixins reutilizables */
@@ -417,29 +641,6 @@ footer {
     display: none;
   }
 }
-/* Estilos responsivos para diferentes tamaños de pantalla */
-/* GRID */
-.gridPadre {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  /* Centra verticalmente el contenido */
-  margin: 0px auto; /* Para centrar el grid horizontalmente */
-  max-width: 1168px; /* Establece un ancho máximo para evitar que el grid se expanda demasiado en pantallas más grandes */
-  margin-top: 0px; /* Ajusta este valor según la distancia deseada */
-}
-
-.item {
-  text-align: center;
-}
-
-.item img {
-  max-width: 100%;
-  height: auto;
-}
-
 /*******TIENDA********/
 .botonComprar {
   padding: 8px 16px;
@@ -464,222 +665,27 @@ footer {
   font-size: 18px;
 }
 
-.card4 {
-  background: transparent;
-  border-radius: 20px;
-  font-size: small;
-  padding: 10px;
+/* Estilos responsivos para diferentes tamaños de pantalla */
+/* GRID */
+.gridPadre {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  /* Centra verticalmente el contenido */
+  margin: 0px auto; /* Para centrar el grid horizontalmente */
+  max-width: 1168px; /* Establece un ancho máximo para evitar que el grid se expanda demasiado en pantallas más grandes */
+  margin-top: 0px; /* Ajusta este valor según la distancia deseada */
 }
 
-.card {
-  text-align: justify;
-  background: transparent;
-  color: rgb(255, 255, 255);
-  border-radius: 20px;
-  border: none;
-}
-
-.tarjetaGaleria1 {
-  border-radius: 20px;
-}
-
-.card3 {
+.item {
   text-align: center;
 }
 
-.card-title {
-  color: white;
-  text-transform: uppercase;
-  font-size: small;
-  text-align: center;
-}
-
-.card-title2 {
-  text-transform: normal;
-  font-size: small;
-  text-align: center;
-}
-
-.imagenCard {
-  background: transparent;
-  border: none;
-  border-radius: 20px;
-}
-
-/* Estilos para el formulario de contacto */
-/* Estilos para el botón de enviar del formulario */
-.botonEnviar {
-  background-color: #565656; /* Color de fondo */
-  color: #ccbfb4; /* Color del texto */
-  border: none; /* Borde */
-  border-radius: 10px; /* Radio del borde */
-  padding: 10px 20px; /* Relleno */
-  font-weight: bold; /* Peso de la fuente */
-}
-
-/* Estilos para el párrafo de contacto */
-.parrafoContacto {
-  font-size: large; /* Tamaño de fuente */
-  color: rgb(42, 131, 131); /* Color de texto */
-  text-align: center; /* Alineación del texto */
-}
-
-/* Cambio de color al pasar el mouse sobre el botón de enviar */
-.botonEnviar:hover {
-  background-color: #4e4e4e; /* Color de fondo */
-  color: #ffffff; /* Color del texto */
-  border: none; /* Borde */
-}
-
-/* Estilos para el formulario */
-.estiloFormulario {
-  background-color: transparent; /* Color de fondo */
-  width: 100%; /* Ancho */
-  height: auto; /* Altura automática */
-  font-family: "Cambria", "Cochin", "Georgia", "Times", "Times New Roman", serif; /* Familia de fuentes */
-  font-size: 18px; /* Tamaño de fuente */
-  color: rgb(212, 211, 211); /* Color del texto */
-  font-weight: bold; /* Peso de la fuente */
-  border: 3px solid #a2a1a1; /* Borde */
-  border-radius: 20px; /* Radio del borde */
-  padding: 20px; /* Relleno */
-  margin-top: 20px; /* Margen superior */
-}
-
-/* Estilos para los campos de entrada del formulario */
-.estiloFormulario input {
-  background-color: rgba(212, 208, 208, 0.6549019608); /* Color de fondo */
-  font-style: italic; /* Estilo de fuente */
-  color: #FFF; /* Color del texto */
-  border: none; /* Borde */
-  border-radius: 10px; /* Radio del borde */
-  padding: 10px; /* Relleno */
-  margin-bottom: 10px; /* Margen inferior */
-}
-
-/* Estilos para las áreas de texto del formulario */
-.estiloFormulario textarea {
-  background-color: rgba(212, 208, 208, 0.6549019608); /* Color de fondo */
-  color: #FFF; /* Color del texto */
-  font-style: italic; /* Estilo de fuente */
-  border: none; /* Borde */
-  border-radius: 10px; /* Radio del borde */
-  padding: 10px; /* Relleno */
-  margin-bottom: 10px; /* Margen inferior */
-}
-
-/* Estilos para el teléfono de WhatsApp */
-.telefonoWhattsapp {
-  font-size: small; /* Tamaño de fuente */
-  font-weight: bold; /* Peso de la fuente */
-  text-align: center; /* Alineación del texto */
-  white-space: nowrap; /* Evita que el texto se envuelva */
-}
-
-/**LOGO WHATSAPP**/
-.logoWhats {
-  width: 150px;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
-
-/* Estilos para el mapa */
-.mapaEstilo {
-  background-color: transparent; /* Color de fondo */
-  color: rgb(255, 255, 255); /* Color del texto */
-  font-style: normal; /* Estilo de fuente */
-  font-size: 20px; /* Tamaño de fuente */
-  width: "100%"; /* Ancho */
-  height: "600px"; /* Altura */
-  padding: 20px; /* Relleno */
-  border-radius: 20px; /* Radio del borde */
-  border: 5px orangered solid; /* Borde */
-}
-
-@keyframes moveLogo {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(10px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-.logo {
-  animation: moveLogo 2s ease infinite;
-}
-
-@keyframes resizeWelcome {
-  0% {
-    transform: scale(1);
-  }
-  /* Tamaño original */
-  50% {
-    transform: scale(1.1);
-  }
-  /* Tamaño agrandado */
-  100% {
-    transform: scale(1);
-  }
-}
-.welcome {
-  animation: resizeWelcome 2s ease infinite;
-}
-
-@keyframes moveText {
-  0% {
-    transform: translateX(0);
-  }
-  /* Sin movimiento */
-  50% {
-    transform: translateX(2px);
-  }
-  /* Se mueve 10px hacia la derecha */
-  100% {
-    transform: translateX(0);
-  }
-}
-.textoMovimiento {
-  animation: moveText 2s ease infinite;
-}
-
-@keyframes shrinkLogo {
-  0% {
-    transform: scale(1);
-  }
-  /* Tamaño original */
-  50% {
-    transform: scale(0.9);
-  }
-  /* Se achica al 80% */
-  100% {
-    transform: scale(1);
-  }
-}
-/* Aplica la animación al logo */
-.navbar-brand img {
-  animation: shrinkLogo 2s ease infinite;
-}
-
-@keyframes shrinkLogo {
-  0% {
-    transform: scale(1);
-  }
-  /* Tamaño original */
-  50% {
-    transform: scale(0.8);
-  }
-  /* Se achica al 80% */
-  100% {
-    transform: scale(1);
-  }
-}
-/* Aplica la animación al logo */
-.logo-paypal {
-  animation: shrinkLogo 2s ease infinite;
+.item img {
+  max-width: 100%;
+  height: auto;
 }
 
 /*# sourceMappingURL=estilo.css.map */

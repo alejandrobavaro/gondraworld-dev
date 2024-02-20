@@ -26,9 +26,18 @@ main {
   border-radius: 20px; /* Radio del borde */
   }
 
+/* Estilos para las imágenes limitadas */
+.imagen-limitada4 {
+  width: 10%; /* Ancho */
+  height: auto; /* Altura automática */
+  border: none; /* Borde */
+  border-radius: 20px; /* Radio del borde */
+  }
+
+
 
 .h1Titulo {
-  background: linear-gradient(black, black, black, aqua);
+  // background: linear-gradient(black, black, black, aqua);
   border: none;
   border-radius: 20px;
 }
@@ -47,8 +56,8 @@ main {
 
 .tituloImportante1 {
   color: aqua;
-  font-size: large;
+  font-size: 20px;
   font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-  text-decoration: underline;
+   font-weight: bold;
+  // text-decoration: underline;
 }
