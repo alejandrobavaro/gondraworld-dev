@@ -486,7 +486,7 @@ footer {
 }
 
 .gif-limitado1 {
-  width: 40%; /* Ancho */
+  width: 60%; /* Ancho */
   height: auto; /* Altura automática */
   border: rgba(156, 223, 202, 0.592) 10px solid; /* Borde */
   border-radius: 20px; /* Radio del borde */
