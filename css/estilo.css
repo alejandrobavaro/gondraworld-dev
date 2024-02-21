@@ -485,6 +485,15 @@ footer {
   border-radius: 20px; /* Radio del borde */
 }
 
+.gif-limitado1 {
+  width: 40%; /* Ancho */
+  height: auto; /* Altura automática */
+  border: rgba(156, 223, 202, 0.592) 10px solid; /* Borde */
+  border-radius: 20px; /* Radio del borde */
+  padding: 0px;
+  margin-bottom: 40px;
+}
+
 .h1Titulo {
   border: none;
   border-radius: 20px;
