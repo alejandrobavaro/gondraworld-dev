@@ -499,7 +499,16 @@ footer {
   border-radius: 20px;
 }
 
-.objetoCentrado .objetoCentrado1 {
+.objetoCentrado {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Centra los elementos verticalmente */
+  margin-top: 0px;
+}
+
+.objetoCentrado1 {
   display: flex;
   justify-content: center;
 }
@@ -514,6 +523,12 @@ footer {
   font-size: 20px;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
+}
+
+.banner1 {
+  width: 500px;
+  height: 80px;
+  border-color: aqua 5px solid;
 }
 
 /* Definiciones de mixins reutilizables */
