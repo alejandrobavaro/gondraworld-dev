@@ -62,11 +62,6 @@
     transform: scale(1);
   }
 }
-/* Aplica la animación al logo */
-.navbar-brand img {
-  animation: shrinkLogo 2s ease infinite;
-}
-
 @keyframes shrinkLogo {
   0% {
     transform: scale(1);
@@ -265,9 +260,17 @@ footer {
 }
 
 /* Estilos para el formulario de contacto */
+.formularioContacto {
+  color: #b2fcff; /* Color del texto */
+  text-align: center; /* Alineación del texto */
+  font-size: medium; /* Tamaño de fuente */
+  font-weight: bold; /* Peso de la fuente */
+  max-width: 100%; /* Ancho máximo */
+}
+
 /* Estilos para el botón de enviar del formulario */
 .botonEnviar {
-  background-color: #565656; /* Color de fondo */
+  background-color: rgba(86, 86, 86, 0.2862745098); /* Color de fondo */
   color: #ccbfb4; /* Color del texto */
   border: none; /* Borde */
   border-radius: 10px; /* Radio del borde */
@@ -277,7 +280,7 @@ footer {
 
 /* Estilos para el párrafo de contacto */
 .parrafoContacto {
-  font-size: large; /* Tamaño de fuente */
+  font-size: small; /* Tamaño de fuente */
   color: rgb(42, 131, 131); /* Color de texto */
   text-align: center; /* Alineación del texto */
 }
@@ -295,10 +298,10 @@ footer {
   width: 100%; /* Ancho */
   height: auto; /* Altura automática */
   font-family: "Cambria", "Cochin", "Georgia", "Times", "Times New Roman", serif; /* Familia de fuentes */
-  font-size: 18px; /* Tamaño de fuente */
-  color: rgb(212, 211, 211); /* Color del texto */
+  font-size: 16px; /* Tamaño de fuente */
+  color: rgba(212, 211, 211, 0.411); /* Color del texto */
   font-weight: bold; /* Peso de la fuente */
-  border: 3px solid #a2a1a1; /* Borde */
+  border: 3px solid rgba(0, 221, 255, 0.1843137255); /* Borde */
   border-radius: 20px; /* Radio del borde */
   padding: 20px; /* Relleno */
   margin-top: 20px; /* Margen superior */
@@ -335,7 +338,14 @@ footer {
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   flex-direction: row;
+  padding-bottom: 30px;
   /* Asegura que los elementos del menú se alineen en una fila */
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
 }
 
 .navbar-nav .nav-link {
@@ -343,6 +353,17 @@ footer {
   /* Espacio adicional entre elementos del menú */
   padding-left: 1rem;
   /* Espacio adicional entre elementos del menú */
+}
+
+.nav-link {
+  padding: 0.5rem 1rem; /* Ajusta el padding */
+  width: 100px; /* Ancho fijo para evitar cambios al desplegar el menú */
+  text-align: center; /* Centra horizontalmente */
+}
+
+.nav-link:hover + .dropdown-menu,
+.dropdown-menu:hover {
+  display: block; /* Muestra el menú desplegable al pasar el mouse */
 }
 
 .navBardrop1,
@@ -387,7 +408,7 @@ footer {
   justify-content: center;
   align-items: center;
   /* Centra los elementos verticalmente */
-  margin-top: 10px;
+  margin-top: 0px;
   /* Margen superior */
   border: none;
 }
@@ -408,7 +429,7 @@ footer {
   /* Centra el botón tanto horizontal como verticalmente */
   background-color: transparent;
   /* Fondo transparente */
-  border: 2px rgba(0, 255, 255, 0.389) solid;
+  border: 1px rgba(0, 255, 255, 0.389) solid;
   margin-top: 20px;
   /* Ajusta este valor según la distancia deseada */
 }
@@ -416,7 +437,7 @@ footer {
 /* Estilos para el botón de menú hamburguesa */
 .navbar-toggler .navbar-toggler-icon {
   background-color: rgba(0, 255, 255, 0.47);
-  border-radius: 2px;
+  border-radius: 1px;
   /* Ajusta el radio de borde */
 }
 
@@ -431,7 +452,7 @@ footer {
 }
 
 .dropdown-menu {
-  background-color: rgba(25, 95, 93, 0.201);
+  background-color: rgba(82, 170, 167, 0.309);
   /* Ajusta el color de fondo y la transparencia */
   border: none;
   /* Elimina el borde */
@@ -443,6 +464,7 @@ footer {
   font-size: 16px;
   /* Tamaño de fuente para el menú desplegable */
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -486,12 +508,12 @@ footer {
 }
 
 .gif-limitado1 {
-  width: 60%; /* Ancho */
+  width: 40%; /* Ancho */
   height: auto; /* Altura automática */
   border: rgba(156, 223, 202, 0.592) 10px solid; /* Borde */
   border-radius: 20px; /* Radio del borde */
   padding: 0px;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 .h1Titulo {
@@ -671,7 +693,7 @@ footer {
   font-size: 16px;
   border: none;
   border-radius: 10px;
-  background-color: rgb(144, 67, 37);
+  background-color: rgba(255, 255, 255, 0.199);
   color: rgb(255, 255, 255);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -680,7 +702,7 @@ footer {
 }
 
 .botonComprar:hover {
-  background-color: #ff5e00;
+  background-color: rgba(22, 72, 77, 0.5764705882);
   color: #ffffff;
   border: none;
 }
@@ -701,6 +723,9 @@ footer {
   margin: 0px auto; /* Para centrar el grid horizontalmente */
   max-width: 1168px; /* Establece un ancho máximo para evitar que el grid se expanda demasiado en pantallas más grandes */
   margin-top: 0px; /* Ajusta este valor según la distancia deseada */
+  border: 1px rgba(0, 255, 255, 0.101) solid;
+  border-radius: 30px;
+  padding: 50px;
 }
 
 .item {

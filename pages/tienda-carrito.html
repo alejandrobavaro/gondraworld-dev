@@ -51,6 +51,7 @@
 
 
 
+
     <!------------------------HEADER ------------------------>
 
     <header class="encabezado">
@@ -64,32 +65,52 @@
             <!-- Botón de menú hamburguesa -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
               aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <a class="navbar-brand" href="../index.html"> <img src="../img/02-logos/dragonpequeñomenu1.png"
-                  alt="loguitopequeñoalmangomenu2"></a>
+              <a class="navbar-brand" href="../index.html"> <img src="../img/02-logos/logogondraworld1.png"
+                  alt="logogondraworld1"></a>
               <span class="navbar-toggler-icon"></span>
             </button>
+
             <!-- Contenido del menú -->
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-            <!-- Elementos del menú -->
-            <a class="nav-link menu-link" aria-current="page" href="../index.html">HOME</a>
-            <!-- <a class="nav-link menu-link" href="../pages/data.html">DATA</a> -->
-            <a class="nav-link menu-link" href="../pages/tienda.html">TIENDA</a>
-            <!-- <a class="nav-link menu-link" aria-current="page" href="../pages/colabora.html">COLABORÁ</a>
-            <a class="nav-link menu-link" aria-current="page" href="../pages/trabajos.html">TRABAJOS</a> -->
-            <a class="nav-link menu-link" aria-current="page" href="../pages/contacto.html">CONTACTO</a>
+
+                <!-- Elementos del menú -->
+                <a class="nav-link menu-link" aria-current="page" href="../index.html">HOME</a>
+
+                <li class="nav-link nav-item dropdown">
+                  <button class="nav-link menu-link navBardrop1 dropdown-toggle " data-bs-toggle="dropdown"
+                    aria-expanded="false">PROYECTOS</button>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="navBardrop2 dropdown-item" href="./proyectospropios.html">PROPIOS</a></li>
+                    <li><a class="navBardrop2 dropdown-item" href="./otrostrabajos.html">OTROS</a></li>
+                  </ul>
+                </li>
+
+                <!-- LOGO arriba derecha -->
+                <div class="encabezado">
+                  <a href="../index.html"> <img class="container-fluid" src="../img/02-logos/logogondraworld1.png"
+                      alt="dragonpequeñomenu1" /></a>
+                </div>
+
+                <li class="nav-link nav-item dropdown">
+                  <button class="nav-link menu-link navBardrop1 dropdown-toggle " data-bs-toggle="dropdown"
+                    aria-expanded="false">DATA-CV</button>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="navBardrop2 dropdown-item" href="./curriculum.html">CURRICULUM</a></li>
+                    <li><a class="navBardrop2 dropdown-item" href="./contacto.html">CONTACTO</a></li>
+                  </ul>
+                </li>
+
+                <a class="nav-link menu-link" href="../pages/tienda.html">TIENDA</a>
+
               </div>
-              <!-- LOGO arriba derecha -->
-              <div class="encabezado">
-                <a href="../index.html"> <img class="container-fluid" src="../img/02-logos/logogondraworld1.png"
-                    alt="dragonpequeñomenu1" /></a>
-              </div>
+
+
             </div>
           </div>
         </nav>
       </div>
     </header>
-
 
 
 

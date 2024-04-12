@@ -11,7 +11,9 @@
     margin: 0px auto; /* Para centrar el grid horizontalmente */
     max-width: 1168px; /* Establece un ancho máximo para evitar que el grid se expanda demasiado en pantallas más grandes */
     margin-top: 0px; /* Ajusta este valor según la distancia deseada */
-    // border: 1px rgba(0, 255, 255, 0.407) solid;
+    border: 1px rgba(0, 255, 255, 0.101) solid;
+    border-radius: 30px;
+    padding: 50px;
      }
   
 .item {

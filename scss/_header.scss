@@ -1,3 +1,4 @@
+
 /* Estilos para la barra de navegación */
 .navBar {
   background-color: transparent;
@@ -6,7 +7,15 @@
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   flex-direction: row;
+  padding-bottom: 30px;
   /* Asegura que los elementos del menú se alineen en una fila */
+}
+
+
+.navbar-nav {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
 }
 
 .navbar-nav .nav-link {
@@ -14,6 +23,17 @@
   /* Espacio adicional entre elementos del menú */
   padding-left: 1rem;
   /* Espacio adicional entre elementos del menú */
+}
+
+.nav-link {
+  padding: 0.5rem 1rem; /* Ajusta el padding */
+  width: 100px; /* Ancho fijo para evitar cambios al desplegar el menú */
+  text-align: center; /* Centra horizontalmente */
+}
+
+.nav-link:hover + .dropdown-menu,
+.dropdown-menu:hover {
+  display: block; /* Muestra el menú desplegable al pasar el mouse */
 }
 
 .navBardrop1,
@@ -27,6 +47,7 @@
   color: aqua;
   /* Color del texto */
 }
+
 
 .navBardrop2 {
   font-size: large;
@@ -58,7 +79,7 @@
   justify-content: center;
   align-items: center;
   /* Centra los elementos verticalmente */
-  margin-top: 10px;
+  margin-top: 0px;
   /* Margen superior */
   border: none;
 }
@@ -79,7 +100,7 @@
   /* Centra el botón tanto horizontal como verticalmente */
   background-color: transparent;
   /* Fondo transparente */
-  border: 2px rgba(0, 255, 255, 0.389) solid;
+  border: 1px rgba(0, 255, 255, 0.389) solid;
   margin-top: 20px;
   /* Ajusta este valor según la distancia deseada */
 }
@@ -87,7 +108,7 @@
 /* Estilos para el botón de menú hamburguesa */
 .navbar-toggler .navbar-toggler-icon {
   background-color: rgba(0, 255, 255, 0.47);
-  border-radius: 2px;
+  border-radius: 1px;
   /* Ajusta el radio de borde */
 }
 
@@ -102,10 +123,11 @@
 }
 
 .dropdown-menu {
-  background-color: rgba(25, 95, 93, 0.201);
+  background-color: rgba(82, 170, 167, 0.309);
   /* Ajusta el color de fondo y la transparencia */
   border: none;
   /* Elimina el borde */
+  
 }
 
 .dropdown-menu .dropdown-item {
@@ -114,6 +136,7 @@
   font-size: 16px;
   /* Tamaño de fuente para el menú desplegable */
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
