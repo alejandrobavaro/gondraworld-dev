@@ -378,6 +378,10 @@ footer {
   /* Color del texto */
 }
 
+.navBardrop1 {
+  color: aqua; /* Color del texto original */
+}
+
 .navBardrop2 {
   font-size: large;
   /* Tamaño del texto */
@@ -408,9 +412,10 @@ footer {
   justify-content: center;
   align-items: center;
   /* Centra los elementos verticalmente */
-  margin-top: 0px;
+  margin-top: 20px;
   /* Margen superior */
   border: none;
+  padding-bottom: 0px;
 }
 
 /* CSS personalizado para ocultar la flecha del dropdown */
@@ -430,13 +435,13 @@ footer {
   background-color: transparent;
   /* Fondo transparente */
   border: 1px rgba(0, 255, 255, 0.389) solid;
-  margin-top: 20px;
+  margin-top: 10px;
   /* Ajusta este valor según la distancia deseada */
 }
 
 /* Estilos para el botón de menú hamburguesa */
 .navbar-toggler .navbar-toggler-icon {
-  background-color: rgba(0, 255, 255, 0.47);
+  background-color: rgba(0, 255, 255, 0.417);
   border-radius: 1px;
   /* Ajusta el radio de borde */
 }
@@ -451,26 +456,18 @@ footer {
   /* Posiciona la imagen */
 }
 
-.dropdown-menu {
-  background-color: rgba(82, 170, 167, 0.309);
-  /* Ajusta el color de fondo y la transparencia */
-  border: none;
-  /* Elimina el borde */
-}
-
 .dropdown-menu .dropdown-item {
-  color: rgba(255, 255, 255, 0.694);
-  /* Color del texto */
-  font-size: 16px;
-  /* Tamaño de fuente para el menú desplegable */
+  color: rgba(255, 255, 255, 0.694); /* Color del texto */
+  font-size: 16px; /* Tamaño de fuente para el menú desplegable */
+  font-weight: bold; /* Opcional: Mantener el texto en negrita */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .dropdown-menu .dropdown-item:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  /* Cambia el color de fondo al pasar el cursor */
+  background-color: rgb(40, 181, 188); /* Cambia el color de fondo al pasar el cursor */
+  color: rgb(255, 255, 255); /* Color del texto */
 }
 
 /* Estilos del contenido principal de la página */
