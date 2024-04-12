@@ -198,6 +198,17 @@ a:visited {
   border-radius: 20px;
 }
 
+.card-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+
+.card {
+  width: 300px; /* Ancho de la tarjeta */
+  /* Otros estilos de la tarjeta */
+}
+
 /* Estilos para el teléfono de WhatsApp */
 .telefonoWhattsapp {
   font-size: small; /* Tamaño de fuente */
@@ -468,6 +479,10 @@ footer {
 .dropdown-menu .dropdown-item:hover {
   background-color: rgb(40, 181, 188); /* Cambia el color de fondo al pasar el cursor */
   color: rgb(255, 255, 255); /* Color del texto */
+}
+
+.carritoEnHeader {
+  background-color: rgba(111, 0, 255, 0.163);
 }
 
 /* Estilos del contenido principal de la página */

@@ -41,3 +41,16 @@
     border: none;
     border-radius: 20px;
 }
+
+
+.card-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+
+  }
+  
+  .card {
+    width: 300px; /* Ancho de la tarjeta */
+    /* Otros estilos de la tarjeta */
+  }
