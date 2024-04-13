@@ -12,6 +12,22 @@
     color: rgb(255, 255, 255);
     border-radius: 20px;
     border: none;
+  }
+
+  .card-body {
+    padding: 10px;
+  }
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.bannerCarrusel1 {
+    margin-right: 0;
 }
 
 
@@ -48,9 +64,4 @@
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
 
-  }
-  
-  .card {
-    width: 300px; /* Ancho de la tarjeta */
-    /* Otros estilos de la tarjeta */
   }

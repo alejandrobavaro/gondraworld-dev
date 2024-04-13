@@ -1,61 +1,24 @@
-
 /* Estilos para la barra de navegación */
-.navBar {
+.navbar {
   background-color: transparent;
   /* Fondo transparente */
   font-size: large;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
   flex-direction: row;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   /* Asegura que los elementos del menú se alineen en una fila */
 }
-
 
 .navbar-nav {
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
+  font-family: "Fredericka the Great", serif;
 }
 
 .navbar-nav .nav-link {
-  padding-right: 1rem;
-  /* Espacio adicional entre elementos del menú */
-  padding-left: 1rem;
-  /* Espacio adicional entre elementos del menú */
-}
-
-.nav-link {
-  padding: 0.5rem 1rem; /* Ajusta el padding */
-  width: 100px; /* Ancho fijo para evitar cambios al desplegar el menú */
   text-align: center; /* Centra horizontalmente */
 }
 
-.nav-link:hover + .dropdown-menu,
-.dropdown-menu:hover {
-  display: block; /* Muestra el menú desplegable al pasar el mouse */
-}
-
-.navBardrop1,
-.navBardrop2 {
-  background-color: transparent;
-  /* Fondo transparente */
-  border: none;
-  /* Sin borde */
-  justify-content: center;
-  /* Centra el contenido horizontalmente */
-  color: aqua;
-  /* Color del texto */
-}
-
-.navBardrop1 {
-  color: aqua; /* Color del texto original */
-}
-
-.navBardrop2 {
-  font-size: large;
-  /* Tamaño del texto */
-}
 
 /* Estilos para el enlace del menú al pasar el mouse */
 .menu-link:hover {
@@ -69,12 +32,7 @@
   /* Color del texto activo y al pasar el mouse */
 }
 
-/* Oculta la flecha después de los elementos del menú desplegable */
-.dropdown-toggle::after {
-  display: none;
-}
-
-/* Estilos para el encabezado menu*/
+/* Estilos para el encabezado */
 .encabezado {
   background-color: transparent;
   /* Fondo transparente */
@@ -86,11 +44,6 @@
   /* Margen superior */
   border: none;
   padding-bottom: 0px;
-}
-
-/* CSS personalizado para ocultar la flecha del dropdown */
-.no-caret::after {
-  display: none;
 }
 
 .navbar-toggler {
@@ -116,6 +69,22 @@
   /* Ajusta el radio de borde */
 }
 
+.navbar-toggler {
+  position: relative;
+  /* Establece el posicionamiento absoluto */
+  top: 50%;
+  /* Coloca el botón en la mitad superior del contenedor */
+  left: 50%;
+  /* Coloca el botón en la mitad izquierda del contenedor */
+  transform: translate(-50%, -50%);
+  /* Centra el botón tanto horizontal como verticalmente */
+  background-color: transparent;
+  /* Fondo transparente */
+  border: 1px rgba(0, 255, 255, 0.389) solid;
+  margin-top: 10px;
+  /* Ajusta este valor según la distancia deseada */
+}
+
 /* Estilos para la imagen al costado del menú hamburguesa */
 .side-icon {
   width: 70px;
@@ -126,21 +95,16 @@
   /* Posiciona la imagen */
 }
 
-.dropdown-menu .dropdown-item {
-  color: rgba(255, 255, 255, 0.694); /* Color del texto */
-  font-size: 16px; /* Tamaño de fuente para el menú desplegable */
-  font-weight: bold; /* Opcional: Mantener el texto en negrita */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+
+/* Estilos para la imagen en el header */
+.imagenHeader1 {
+  width: 35%; /* Ancho */
+  height: auto; /* Altura automática */
 }
 
-.dropdown-menu .dropdown-item:hover {
-  background-color: rgb(40, 181, 188); /* Cambia el color de fondo al pasar el cursor */
-  color: rgb(255, 255, 255); /* Color del texto */
-}
-
-
-.carritoEnHeader {
-  background-color: rgba(111, 0, 255, 0.163);
+.menu-logo {
+  width: 70%; /* Ancho deseado */
+  height: auto; /* Altura automática */
+  margin-right: 10px; /* Espacio entre la imagen y el ícono de menú */
 }

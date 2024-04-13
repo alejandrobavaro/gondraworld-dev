@@ -1,18 +1,7 @@
-// Ajustes para el cuerpo (BODY)
 
-/* Cambiar el tamaño del fondo a 100% para pantallas más pequeñas */
-@media (max-width: 578px) {
-  body {
-    background-size: 100%;
-  }
-}
 
 /* Ajustes para la imagen después de los 1704px */
-@media screen and (min-width: 1604px) {
-  .teleGondra1 img {
-    width: 45%; /* Aumenta el ancho de la imagen al doble */
-  }
-}
+
 
 //**---------------MENU NAV -------------------//
 @media (max-width: 991.98px) {
@@ -27,9 +16,6 @@
     font-size: 18px; /* Tamaño de fuente para el menú principal */
 }
 }
-
-
-
 
 
 
@@ -57,16 +43,8 @@
     flex-direction: column;
   }
 
-
-
-
-
-
-
-
-
   .linksFooter {
-    flex-direction: row;
+    flex-direction:column;
     align-items: center;
     flex-wrap: wrap;
     margin-left: 0rem;
@@ -76,6 +54,7 @@
   .img2Footer {
     display: none;
   }
+  
 
   .img1Footer img {
     max-height: 2rem;
@@ -137,7 +116,11 @@
 
   .navBardrop2 {
     font-size: medium;
+    
   }
+
+ 
+  
 }
 
 // Ajustes para botones en diferentes tamaños de pantalla
@@ -160,3 +143,19 @@
   }
 }
 
+
+
+//Ajuste clase item//
+/* Ajuste para dispositivos móviles */
+@media (max-width: 768px) {
+  .item img {
+      max-width: 80%; /* Porcentaje del ancho del contenedor */
+  }
+}
+
+
+@media (max-width: 991.98px) {
+  .imagenHeader1 {
+    display: none; /* Oculta la imagen en pantallas más pequeñas */
+  }
+}

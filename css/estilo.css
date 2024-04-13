@@ -1,85 +1,63 @@
 @charset "UTF-8";
 /* AQUI SE IMPORTA EL SASS AL CSS */
-@keyframes moveLogo {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(10px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-.logo {
-  animation: moveLogo 2s ease infinite;
-}
-
-@keyframes resizeWelcome {
-  0% {
-    transform: scale(1);
-  }
-  /* Tamaño original */
-  50% {
-    transform: scale(1.1);
-  }
-  /* Tamaño agrandado */
-  100% {
-    transform: scale(1);
-  }
-}
-.welcome {
-  animation: resizeWelcome 2s ease infinite;
-}
-
 @keyframes moveText {
   0% {
-    transform: translateX(0);
+    transform: translateY(0); /* Sin movimiento en el eje Y */
   }
-  /* Sin movimiento */
   50% {
-    transform: translateX(2px);
+    transform: translateY(1px); /* Se mueve 2px hacia abajo */
   }
-  /* Se mueve 10px hacia la derecha */
   100% {
-    transform: translateX(0);
+    transform: translateY(0); /* Vuelve a la posición inicial */
   }
 }
 .textoMovimiento {
   animation: moveText 2s ease infinite;
 }
 
-@keyframes shrinkLogo {
-  0% {
-    transform: scale(1);
+/* Definición de la animación */
+@keyframes growAndShrink {
+  0%, 100% {
+    transform: scale(1.8) translateX(0); /* Tamaño normal y sin movimiento lateral */
   }
-  /* Tamaño original */
-  50% {
-    transform: scale(0.9);
+  90% {
+    transform: scale(1.6) translateX(10px); /* Tamaño agrandado y movimiento hacia la derecha */
   }
-  /* Se achica al 80% */
   100% {
-    transform: scale(1);
+    transform: scale(1.8) translateX(0); /* Tamaño normal y vuelta al lugar original */
   }
 }
-@keyframes shrinkLogo {
-  0% {
-    transform: scale(1);
-  }
-  /* Tamaño original */
-  50% {
-    transform: scale(0.8);
-  }
-  /* Se achica al 80% */
-  100% {
-    transform: scale(1);
-  }
-}
-/* Aplica la animación al logo */
-.logo-paypal {
-  animation: shrinkLogo 2s ease infinite;
+/* Aplicación de la animación al logo del menú */
+.menu-logo {
+  animation: growAndShrink 20s linear infinite; /* Aplica la animación */
 }
 
+/* Estilos para el enlace del menú al pasar el mouse */
+.menu-link:hover {
+  color: rgb(255, 255, 255);
+  /* Cambia el color del texto a blanco al pasar el mouse */
+  animation: shake 0.5s ease;
+  /* Aplica la animación shake al pasar el mouse */
+}
+
+/* Animación shake */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-1px);
+  }
+  50% {
+    transform: translateX(1px);
+  }
+  75% {
+    transform: translateX(-1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 /* Estilos del cuerpo de la página */
 /* Estilos para el cuerpo de la página */
 body {
@@ -87,23 +65,15 @@ body {
   background-color: rgb(0, 0, 0); /* Color de fondo */
   background-repeat: no-repeat; /* No repetir la imagen de fondo */
   background-position: center; /* Posición de la imagen de fondo */
-  background-size: cover; /* Ajusta la imagen al tamaño del body */
+  background-size: auto; /* Ajusta la imagen al tamaño del body */
   background-attachment: fixed; /* Fija la imagen de fondo */
-  font-family: "Courier New", Courier, monospace; /* Familia de fuentes */
+  font-family: "Space Grotesk", sans-serif;
 }
 
-/* Estilos para el fondo negro en pantallas pequeñas */
-@media screen and (max-width: 578px) {
-  body {
-    background-image: url(../img/00-fondos/fondo5a.jpg); /* Elimina la imagen de fondo */
-    background-repeat: no-repeat; /* No repetir la imagen de fondo */
-    background-position: center; /* Posición de la imagen de fondo */
-    background-size: cover; /* Ajusta la imagen al tamaño del body */
-  }
-}
 p {
   color: rgb(241, 225, 192); /* Color de texto */
-  font-size: medium; /* Tamaño de fuente */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: small; /* Tamaño de fuente */
 }
 
 h1 {
@@ -171,6 +141,20 @@ a:visited {
   border: none;
 }
 
+.card-body {
+  padding: 10px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bannerCarrusel1 {
+  margin-right: 0;
+}
+
 .tarjetaGaleria1 {
   border-radius: 20px;
 }
@@ -202,11 +186,6 @@ a:visited {
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
-}
-
-.card {
-  width: 300px; /* Ancho de la tarjeta */
-  /* Otros estilos de la tarjeta */
 }
 
 /* Estilos para el teléfono de WhatsApp */
@@ -241,9 +220,9 @@ a:visited {
 /* Estilos del pie de página */
 /* Estilos para el pie de página */
 footer {
-  font-size: 12px; /* Tamaño de fuente */
+  font-family: "Sedan", serif;
+  font-size: 10px; /* Tamaño de fuente */
   padding: 1%; /* Relleno */
-  background-color: rgba(0, 0, 0, 0.78); /* Color de fondo */
   color: rgb(255, 255, 255); /* Color de texto */
   margin: 0; /* Margen */
   text-align: center; /* Alineación del texto */
@@ -274,7 +253,7 @@ footer {
 .formularioContacto {
   color: #b2fcff; /* Color del texto */
   text-align: center; /* Alineación del texto */
-  font-size: medium; /* Tamaño de fuente */
+  font-size: small; /* Tamaño de fuente reducido */
   font-weight: bold; /* Peso de la fuente */
   max-width: 100%; /* Ancho máximo */
 }
@@ -285,22 +264,16 @@ footer {
   color: #ccbfb4; /* Color del texto */
   border: none; /* Borde */
   border-radius: 10px; /* Radio del borde */
-  padding: 10px 20px; /* Relleno */
+  padding: 8px 16px; /* Relleno reducido */
   font-weight: bold; /* Peso de la fuente */
+  font-size: small; /* Tamaño de fuente reducido */
 }
 
 /* Estilos para el párrafo de contacto */
 .parrafoContacto {
-  font-size: small; /* Tamaño de fuente */
+  font-size: xx-small; /* Tamaño de fuente reducido */
   color: rgb(42, 131, 131); /* Color de texto */
   text-align: center; /* Alineación del texto */
-}
-
-/* Cambio de color al pasar el mouse sobre el botón de enviar */
-.botonEnviar:hover {
-  background-color: #4e4e4e; /* Color de fondo */
-  color: #ffffff; /* Color del texto */
-  border: none; /* Borde */
 }
 
 /* Estilos para el formulario */
@@ -309,12 +282,12 @@ footer {
   width: 100%; /* Ancho */
   height: auto; /* Altura automática */
   font-family: "Cambria", "Cochin", "Georgia", "Times", "Times New Roman", serif; /* Familia de fuentes */
-  font-size: 16px; /* Tamaño de fuente */
+  font-size: xx-small; /* Tamaño de fuente reducido */
   color: rgba(212, 211, 211, 0.411); /* Color del texto */
   font-weight: bold; /* Peso de la fuente */
   border: 3px solid rgba(0, 221, 255, 0.1843137255); /* Borde */
   border-radius: 20px; /* Radio del borde */
-  padding: 20px; /* Relleno */
+  padding: 12px; /* Relleno reducido */
   margin-top: 20px; /* Margen superior */
 }
 
@@ -325,8 +298,8 @@ footer {
   color: #FFF; /* Color del texto */
   border: none; /* Borde */
   border-radius: 10px; /* Radio del borde */
-  padding: 10px; /* Relleno */
-  margin-bottom: 10px; /* Margen inferior */
+  padding: 8px; /* Relleno reducido */
+  margin-bottom: 8px; /* Margen inferior reducido */
 }
 
 /* Estilos para las áreas de texto del formulario */
@@ -336,20 +309,18 @@ footer {
   font-style: italic; /* Estilo de fuente */
   border: none; /* Borde */
   border-radius: 10px; /* Radio del borde */
-  padding: 10px; /* Relleno */
-  margin-bottom: 10px; /* Margen inferior */
+  padding: 8px; /* Relleno reducido */
+  margin-bottom: 8px; /* Margen inferior reducido */
 }
 
 /* Estilos del encabezado de la página */
 /* Estilos para la barra de navegación */
-.navBar {
+.navbar {
   background-color: transparent;
   /* Fondo transparente */
   font-size: large;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
   flex-direction: row;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   /* Asegura que los elementos del menú se alineen en una fila */
 }
 
@@ -357,45 +328,11 @@ footer {
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
+  font-family: "Fredericka the Great", serif;
 }
 
 .navbar-nav .nav-link {
-  padding-right: 1rem;
-  /* Espacio adicional entre elementos del menú */
-  padding-left: 1rem;
-  /* Espacio adicional entre elementos del menú */
-}
-
-.nav-link {
-  padding: 0.5rem 1rem; /* Ajusta el padding */
-  width: 100px; /* Ancho fijo para evitar cambios al desplegar el menú */
   text-align: center; /* Centra horizontalmente */
-}
-
-.nav-link:hover + .dropdown-menu,
-.dropdown-menu:hover {
-  display: block; /* Muestra el menú desplegable al pasar el mouse */
-}
-
-.navBardrop1,
-.navBardrop2 {
-  background-color: transparent;
-  /* Fondo transparente */
-  border: none;
-  /* Sin borde */
-  justify-content: center;
-  /* Centra el contenido horizontalmente */
-  color: aqua;
-  /* Color del texto */
-}
-
-.navBardrop1 {
-  color: aqua; /* Color del texto original */
-}
-
-.navBardrop2 {
-  font-size: large;
-  /* Tamaño del texto */
 }
 
 /* Estilos para el enlace del menú al pasar el mouse */
@@ -410,12 +347,7 @@ footer {
   /* Color del texto activo y al pasar el mouse */
 }
 
-/* Oculta la flecha después de los elementos del menú desplegable */
-.dropdown-toggle::after {
-  display: none;
-}
-
-/* Estilos para el encabezado menu*/
+/* Estilos para el encabezado */
 .encabezado {
   background-color: transparent;
   /* Fondo transparente */
@@ -427,11 +359,6 @@ footer {
   /* Margen superior */
   border: none;
   padding-bottom: 0px;
-}
-
-/* CSS personalizado para ocultar la flecha del dropdown */
-.no-caret::after {
-  display: none;
 }
 
 .navbar-toggler {
@@ -457,6 +384,22 @@ footer {
   /* Ajusta el radio de borde */
 }
 
+.navbar-toggler {
+  position: relative;
+  /* Establece el posicionamiento absoluto */
+  top: 50%;
+  /* Coloca el botón en la mitad superior del contenedor */
+  left: 50%;
+  /* Coloca el botón en la mitad izquierda del contenedor */
+  transform: translate(-50%, -50%);
+  /* Centra el botón tanto horizontal como verticalmente */
+  background-color: transparent;
+  /* Fondo transparente */
+  border: 1px rgba(0, 255, 255, 0.389) solid;
+  margin-top: 10px;
+  /* Ajusta este valor según la distancia deseada */
+}
+
 /* Estilos para la imagen al costado del menú hamburguesa */
 .side-icon {
   width: 70px;
@@ -467,22 +410,16 @@ footer {
   /* Posiciona la imagen */
 }
 
-.dropdown-menu .dropdown-item {
-  color: rgba(255, 255, 255, 0.694); /* Color del texto */
-  font-size: 16px; /* Tamaño de fuente para el menú desplegable */
-  font-weight: bold; /* Opcional: Mantener el texto en negrita */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Estilos para la imagen en el header */
+.imagenHeader1 {
+  width: 35%; /* Ancho */
+  height: auto; /* Altura automática */
 }
 
-.dropdown-menu .dropdown-item:hover {
-  background-color: rgb(40, 181, 188); /* Cambia el color de fondo al pasar el cursor */
-  color: rgb(255, 255, 255); /* Color del texto */
-}
-
-.carritoEnHeader {
-  background-color: rgba(111, 0, 255, 0.163);
+.menu-logo {
+  width: 70%; /* Ancho deseado */
+  height: auto; /* Altura automática */
+  margin-right: 10px; /* Espacio entre la imagen y el ícono de menú */
 }
 
 /* Estilos del contenido principal de la página */
@@ -497,7 +434,7 @@ footer {
 
 /* Estilos para las imágenes limitadas */
 .imagen-limitada2 {
-  width: 60%; /* Ancho */
+  width: 35%; /* Ancho */
   height: auto; /* Altura automática */
   border: none; /* Borde */
   border-radius: 20px; /* Radio del borde */
@@ -519,6 +456,12 @@ footer {
   border-radius: 20px; /* Radio del borde */
 }
 
+/* Estilos para las imágenes limitadas */
+.imagen-limitada5 {
+  width: 25%; /* Ancho */
+  height: auto; /* Altura automática */
+}
+
 .gif-limitado1 {
   width: 40%; /* Ancho */
   height: auto; /* Altura automática */
@@ -526,6 +469,15 @@ footer {
   border-radius: 20px; /* Radio del borde */
   padding: 0px;
   margin-bottom: 0px;
+}
+
+.gifLimitado2 {
+  text-align: center; /* Centra horizontalmente el contenido */
+}
+
+.gifLimitado2 .logoGondraWorld1 img {
+  max-width: 10%; /* Ajusta el ancho máximo de la imagen */
+  height: auto; /* Permite que la altura se ajuste automáticamente según el ancho */
 }
 
 .h1Titulo {
@@ -553,8 +505,8 @@ footer {
 }
 
 .tituloImportante1 {
-  color: aqua;
-  font-size: 20px;
+  color: rgba(255, 255, 255, 0.393);
+  font-size: medium;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
 }
@@ -565,35 +517,14 @@ footer {
   border-color: aqua 5px solid;
 }
 
-/* Definiciones de mixins reutilizables */
-/* Definición del mixin */
-/* Aplicando el mixin al título */
-.h1Titulo {
-  font-size: 16px; /* Tamaño de fuente */
-  color: rgb(255, 255, 255); /* Color del texto */
-  /* Incluye el mixin */
-}
-
-/* Aplicando el mixin al contenedor .tituloReproductores */
-.tituloReproductores {
-  font-size: 16px; /* Tamaño de fuente */
-  color: rgb(255, 255, 255); /* Color del texto */
-  /* Incluye el mixin */
+logoGondraWorld1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Estilos responsivos para diferentes tamaños de pantalla */
-/* Cambiar el tamaño del fondo a 100% para pantallas más pequeñas */
-@media (max-width: 578px) {
-  body {
-    background-size: 100%;
-  }
-}
 /* Ajustes para la imagen después de los 1704px */
-@media screen and (min-width: 1604px) {
-  .teleGondra1 img {
-    width: 45%; /* Aumenta el ancho de la imagen al doble */
-  }
-}
 @media (max-width: 991.98px) {
   .navbar-nav {
     margin-top: 1rem; /* Espacio adicional en la parte superior del menú para evitar superposiciones */
@@ -627,7 +558,7 @@ footer {
     flex-direction: column;
   }
   .linksFooter {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
     margin-left: 0rem;
@@ -699,6 +630,17 @@ footer {
     display: none;
   }
 }
+/* Ajuste para dispositivos móviles */
+@media (max-width: 768px) {
+  .item img {
+    max-width: 80%; /* Porcentaje del ancho del contenedor */
+  }
+}
+@media (max-width: 991.98px) {
+  .imagenHeader1 {
+    display: none; /* Oculta la imagen en pantallas más pequeñas */
+  }
+}
 /*******TIENDA********/
 .botonComprar {
   padding: 8px 16px;
@@ -727,25 +669,52 @@ footer {
 /* GRID */
 .gridPadre {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 10px;
   justify-content: center;
   align-items: center;
   /* Centra verticalmente el contenido */
-  margin: 0px auto; /* Para centrar el grid horizontalmente */
-  max-width: 1168px; /* Establece un ancho máximo para evitar que el grid se expanda demasiado en pantallas más grandes */
-  margin-top: 0px; /* Ajusta este valor según la distancia deseada */
+  margin: 0px auto;
+  /* Para centrar el grid horizontalmente */
+  max-width: 1168px;
+  /* Establece un ancho máximo para evitar que el grid se expanda demasiado en pantallas más grandes */
+  margin-top: 0px;
+  /* Ajusta este valor según la distancia deseada */
   border: 1px rgba(0, 255, 255, 0.101) solid;
   border-radius: 30px;
-  padding: 50px;
+  padding: 10px;
+}
+
+.gridPadreCarrito1 {
+  display: grid;
+  background-color: rgba(0, 128, 255, 0.177);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Centra verticalmente el contenido */
+  margin: 0px auto;
+  /* Para centrar el grid horizontalmente */
+  max-width: 1168px;
+  /* Establece un ancho máximo para evitar que el grid se expanda demasiado en pantallas más grandes */
+  margin-top: 0px;
+  /* Ajusta este valor según la distancia deseada */
+  border: 1px rgba(255, 255, 255, 0.27) solid;
+  border-radius: 30px;
+  padding: 10px;
 }
 
 .item {
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
 
 .item img {
-  max-width: 100%;
+  min-width: 250px;
+  /* Tamaño mínimo deseado para la imagen */
+  width: 75%;
   height: auto;
 }
 

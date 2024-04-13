@@ -2,12 +2,10 @@
 .formularioContacto {
   color: #b2fcff; /* Color del texto */
   text-align: center; /* Alineación del texto */
-  font-size: medium; /* Tamaño de fuente */
+  font-size: small; /* Tamaño de fuente reducido */
   font-weight: bold; /* Peso de la fuente */
   max-width: 100%; /* Ancho máximo */
 }
-
-
 
 /* Estilos para el botón de enviar del formulario */
 .botonEnviar {
@@ -15,22 +13,16 @@
   color: #ccbfb4; /* Color del texto */
   border: none; /* Borde */
   border-radius: 10px; /* Radio del borde */
-  padding: 10px 20px; /* Relleno */
+  padding: 8px 16px; /* Relleno reducido */
   font-weight: bold; /* Peso de la fuente */
+  font-size: small; /* Tamaño de fuente reducido */
 }
 
 /* Estilos para el párrafo de contacto */
 .parrafoContacto {
-  font-size: small; /* Tamaño de fuente */
+  font-size:xx-small; /* Tamaño de fuente reducido */
   color: rgb(42, 131, 131); /* Color de texto */
   text-align: center; /* Alineación del texto */
-}
-
-/* Cambio de color al pasar el mouse sobre el botón de enviar */
-.botonEnviar:hover {
-  background-color: #4e4e4e; /* Color de fondo */
-  color: #ffffff; /* Color del texto */
-  border: none; /* Borde */
 }
 
 /* Estilos para el formulario */
@@ -39,12 +31,12 @@
   width: 100%; /* Ancho */
   height: auto; /* Altura automática */
   font-family: 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif; /* Familia de fuentes */
-  font-size: 16px; /* Tamaño de fuente */
+  font-size: xx-small; /* Tamaño de fuente reducido */
   color: rgba(212, 211, 211, 0.411); /* Color del texto */
   font-weight: bold; /* Peso de la fuente */
   border: 3px solid #00ddff2f; /* Borde */
   border-radius: 20px; /* Radio del borde */
-  padding: 20px; /* Relleno */
+  padding: 12px; /* Relleno reducido */
   margin-top: 20px; /* Margen superior */
 }
 
@@ -55,8 +47,8 @@
   color: #FFF; /* Color del texto */
   border: none; /* Borde */
   border-radius: 10px; /* Radio del borde */
-  padding: 10px; /* Relleno */
-  margin-bottom: 10px; /* Margen inferior */
+  padding: 8px; /* Relleno reducido */
+  margin-bottom: 8px; /* Margen inferior reducido */
 }
 
 /* Estilos para las áreas de texto del formulario */
@@ -66,6 +58,6 @@
   font-style: italic; /* Estilo de fuente */
   border: none; /* Borde */
   border-radius: 10px; /* Radio del borde */
-  padding: 10px; /* Relleno */
-  margin-bottom: 10px; /* Margen inferior */
+  padding: 8px; /* Relleno reducido */
+  margin-bottom: 8px; /* Margen inferior reducido */
 }
