@@ -19,6 +19,7 @@
 
 
 
+
 /* Ajustes para el footer en diferentes tamaños de pantalla */
 
 /* Para pantallas menores o iguales a 420px */
@@ -157,5 +158,41 @@
 @media (max-width: 991.98px) {
   .imagenHeader1 {
     display: none; /* Oculta la imagen en pantallas más pequeñas */
+  }
+}
+
+
+
+
+/* Media query para dispositivos de escritorio */
+@media only screen and (max-width: 992px) {
+  .estiloFormulario {
+    width: 70%; /* Cambia el ancho del formulario en dispositivos de escritorio */
+  }
+}
+
+/* Media query para dispositivos móviles */
+@media only screen and (max-width: 767px) {
+  .estiloFormulario {
+    width: 80%; /* Establece el ancho del formulario al 100% en dispositivos móviles */
+    padding: 20px; /* Ajusta el relleno para dispositivos móviles */
+  }
+}
+
+
+
+
+
+/* Media query para dispositivos con un ancho máximo de 992px (escritorio) */
+@media only screen and (max-width: 992px) {
+  .imagen-limitada5 {
+    width: 100%; /* Ancho al 100% en dispositivos de escritorio */
+  }
+}
+
+/* Media query para dispositivos con un ancho máximo de 767px (móvil) */
+@media only screen and (max-width: 767px) {
+  .imagen-limitada5 {
+    width: 80%; /* Ancho al 50% en dispositivos móviles */
   }
 }

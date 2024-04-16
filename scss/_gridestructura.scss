@@ -1,8 +1,9 @@
 /* GRID */
 
 .gridPadre {
+   
     display: grid;
-    // background-color: rgba(0, 0, 0, 0.443);
+    background-color: rgba(0, 0, 0, 0.687);
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 10px;
     justify-content: center;

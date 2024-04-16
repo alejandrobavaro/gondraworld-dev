@@ -63,21 +63,16 @@
 body {
   background-image: url(../img/00-fondos/fondo4tvvieja1c.jpg); /* Imagen de fondo */
   background-color: rgb(0, 0, 0); /* Color de fondo */
-  background-repeat: no-repeat; /* No repetir la imagen de fondo */
+  background-repeat: repeat; /* No repetir la imagen de fondo */
   background-position: center; /* Posición de la imagen de fondo */
-  background-size: auto; /* Ajusta la imagen al tamaño del body */
+  background-size: contain; /* Ajusta la imagen al tamaño del body */
   background-attachment: fixed; /* Fija la imagen de fondo */
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Caveat", cursive;
 }
 
 p {
   color: rgb(241, 225, 192); /* Color de texto */
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: small; /* Tamaño de fuente */
-}
-
-h1 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: medium; /* Tamaño de fuente */
 }
 
 h2 {
@@ -131,14 +126,14 @@ a:visited {
   border-radius: 20px;
   font-size: small;
   padding: 10px;
+  border: 1px rgba(0, 255, 255, 0.419) solid;
 }
 
 .card {
   text-align: justify;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.173);
   color: rgb(255, 255, 255);
   border-radius: 20px;
-  border: none;
 }
 
 .card-body {
@@ -176,12 +171,6 @@ a:visited {
   text-align: center;
 }
 
-.imagenCard {
-  background: transparent;
-  border: none;
-  border-radius: 20px;
-}
-
 .card-container {
   display: flex;
   justify-content: center; /* Centra horizontalmente */
@@ -204,23 +193,15 @@ a:visited {
   right: 20px;
 }
 
-/* Estilos para el mapa */
-.mapaEstilo {
-  background-color: transparent; /* Color de fondo */
-  color: rgb(255, 255, 255); /* Color del texto */
-  font-style: normal; /* Estilo de fuente */
-  font-size: 20px; /* Tamaño de fuente */
-  width: "100%"; /* Ancho */
-  height: "600px"; /* Altura */
-  padding: 20px; /* Relleno */
-  border-radius: 20px; /* Radio del borde */
-  border: 5px orangered solid; /* Borde */
+.estiloContacto1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Estilos del pie de página */
 /* Estilos para el pie de página */
 footer {
-  font-family: "Sedan", serif;
   font-size: 10px; /* Tamaño de fuente */
   padding: 1%; /* Relleno */
   color: rgb(255, 255, 255); /* Color de texto */
@@ -249,68 +230,102 @@ footer {
   list-style: none; /* Sin viñetas */
 }
 
-/* Estilos para el formulario de contacto */
-.formularioContacto {
-  color: #b2fcff; /* Color del texto */
-  text-align: center; /* Alineación del texto */
-  font-size: small; /* Tamaño de fuente reducido */
-  font-weight: bold; /* Peso de la fuente */
-  max-width: 100%; /* Ancho máximo */
+/* Estilos para el formulario */
+.estiloFormulario {
+  background-color: rgba(0, 0, 0, 0.687);
+  /* Color de fondo */
+  width: 30%;
+  /* Ancho del formulario en dispositivos de escritorio */
+  font-size: small;
+  /* Tamaño de fuente reducido */
+  color: rgba(212, 211, 211, 0.411);
+  /* Color del texto */
+  font-weight: bold;
+  /* Peso de la fuente */
+  border: 3px solid rgba(0, 221, 255, 0.1843137255);
+  /* Borde */
+  border-radius: 20px;
+  /* Radio del borde */
+  padding: 20px;
+  /* Relleno reducido */
+  margin-top: 10px;
+  /* Margen superior */
+}
+
+.formularioCentrado1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Estilos para el botón de enviar del formulario */
 .botonEnviar {
-  background-color: rgba(86, 86, 86, 0.2862745098); /* Color de fondo */
-  color: #ccbfb4; /* Color del texto */
-  border: none; /* Borde */
-  border-radius: 10px; /* Radio del borde */
-  padding: 8px 16px; /* Relleno reducido */
-  font-weight: bold; /* Peso de la fuente */
-  font-size: small; /* Tamaño de fuente reducido */
+  background-color: rgba(86, 86, 86, 0.2862745098);
+  /* Color de fondo */
+  color: #ffffff;
+  /* Color del texto */
+  border: none;
+  /* Borde */
+  font-size: medium;
+  border-radius: 10px;
+  /* Radio del borde */
+  padding: 8px 16px;
+  /* Relleno reducido */
+  font-weight: bold;
+  /* Peso de la fuente */
+}
+
+.botonEnviar:hover {
+  color: rgb(130, 233, 211);
+  background-color: rgba(88, 82, 82, 0.352);
 }
 
 /* Estilos para el párrafo de contacto */
 .parrafoContacto {
-  font-size: xx-small; /* Tamaño de fuente reducido */
-  color: rgb(42, 131, 131); /* Color de texto */
-  text-align: center; /* Alineación del texto */
-}
-
-/* Estilos para el formulario */
-.estiloFormulario {
-  background-color: transparent; /* Color de fondo */
-  width: 100%; /* Ancho */
-  height: auto; /* Altura automática */
-  font-family: "Cambria", "Cochin", "Georgia", "Times", "Times New Roman", serif; /* Familia de fuentes */
-  font-size: xx-small; /* Tamaño de fuente reducido */
-  color: rgba(212, 211, 211, 0.411); /* Color del texto */
-  font-weight: bold; /* Peso de la fuente */
-  border: 3px solid rgba(0, 221, 255, 0.1843137255); /* Borde */
-  border-radius: 20px; /* Radio del borde */
-  padding: 12px; /* Relleno reducido */
-  margin-top: 20px; /* Margen superior */
+  font-size: small;
+  /* Tamaño de fuente reducido */
+  color: rgb(42, 131, 131);
+  /* Color de texto */
+  text-align: center;
+  /* Alineación del texto */
 }
 
 /* Estilos para los campos de entrada del formulario */
 .estiloFormulario input {
-  background-color: rgba(212, 208, 208, 0.6549019608); /* Color de fondo */
-  font-style: italic; /* Estilo de fuente */
-  color: #FFF; /* Color del texto */
-  border: none; /* Borde */
-  border-radius: 10px; /* Radio del borde */
-  padding: 8px; /* Relleno reducido */
-  margin-bottom: 8px; /* Margen inferior reducido */
+  background-color: rgba(212, 208, 208, 0.8784313725);
+  /* Color de fondo */
+  font-weight: bolder;
+  font-style: italic;
+  /* Estilo de fuente */
+  color: #FFF;
+  /* Color del texto */
+  border: none;
+  /* Borde */
+  border-radius: 10px;
+  /* Radio del borde */
+  padding: 8px;
+  /* Relleno reducido */
+  margin-bottom: 8px;
+  /* Margen inferior reducido */
 }
 
 /* Estilos para las áreas de texto del formulario */
 .estiloFormulario textarea {
-  background-color: rgba(212, 208, 208, 0.6549019608); /* Color de fondo */
-  color: #FFF; /* Color del texto */
-  font-style: italic; /* Estilo de fuente */
-  border: none; /* Borde */
-  border-radius: 10px; /* Radio del borde */
-  padding: 8px; /* Relleno reducido */
-  margin-bottom: 8px; /* Margen inferior reducido */
+  background-color: rgba(212, 208, 208, 0.8784313725);
+  /* Color de fondo */
+  color: #FFF;
+  /* Color del texto */
+  font-style: italic;
+  /* Estilo de fuente */
+  font-weight: bolder;
+  border: none;
+  /* Borde */
+  border-radius: 10px;
+  /* Radio del borde */
+  padding: 5px;
+  /* Relleno reducido */
+  margin-bottom: 8px;
+  /* Margen inferior reducido */
 }
 
 /* Estilos del encabezado de la página */
@@ -328,7 +343,8 @@ footer {
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
-  font-family: "Fredericka the Great", serif;
+  font-size: x-large;
+  font-weight: bolder;
 }
 
 .navbar-nav .nav-link {
@@ -361,20 +377,10 @@ footer {
   padding-bottom: 0px;
 }
 
-.navbar-toggler {
-  position: relative;
-  /* Establece el posicionamiento absoluto */
-  top: 50%;
-  /* Coloca el botón en la mitad superior del contenedor */
-  left: 50%;
-  /* Coloca el botón en la mitad izquierda del contenedor */
-  transform: translate(-50%, -50%);
-  /* Centra el botón tanto horizontal como verticalmente */
-  background-color: transparent;
-  /* Fondo transparente */
-  border: 1px rgba(0, 255, 255, 0.389) solid;
-  margin-top: 10px;
-  /* Ajusta este valor según la distancia deseada */
+/* Estilos para la imagen dentro del botón del menú hamburguesa en pantallas pequeñas */
+.menu-logo {
+  width: 70%; /* Ajusta el ancho deseado */
+  height: auto; /* Ajusta la altura automáticamente */
 }
 
 /* Estilos para el botón de menú hamburguesa */
@@ -400,6 +406,13 @@ footer {
   /* Ajusta este valor según la distancia deseada */
 }
 
+/* Ajustes para la imagen dentro del botón del menú hamburguesa en pantallas más pequeñas */
+.navbar-toggler .menu-logo {
+  width: 30%; /* Ajusta el ancho de la imagen al 100% del tamaño del botón */
+  height: auto; /* Ajusta la altura automáticamente */
+  margin: 15px; /* Elimina cualquier margen que pueda estar causando problemas */
+}
+
 /* Estilos para la imagen al costado del menú hamburguesa */
 .side-icon {
   width: 70px;
@@ -414,12 +427,6 @@ footer {
 .imagenHeader1 {
   width: 35%; /* Ancho */
   height: auto; /* Altura automática */
-}
-
-.menu-logo {
-  width: 70%; /* Ancho deseado */
-  height: auto; /* Altura automática */
-  margin-right: 10px; /* Espacio entre la imagen y el ícono de menú */
 }
 
 /* Estilos del contenido principal de la página */
@@ -458,7 +465,7 @@ footer {
 
 /* Estilos para las imágenes limitadas */
 .imagen-limitada5 {
-  width: 25%; /* Ancho */
+  width: 40%; /* Ancho por defecto */
   height: auto; /* Altura automática */
 }
 
@@ -641,6 +648,31 @@ logoGondraWorld1 {
     display: none; /* Oculta la imagen en pantallas más pequeñas */
   }
 }
+/* Media query para dispositivos de escritorio */
+@media only screen and (max-width: 992px) {
+  .estiloFormulario {
+    width: 70%; /* Cambia el ancho del formulario en dispositivos de escritorio */
+  }
+}
+/* Media query para dispositivos móviles */
+@media only screen and (max-width: 767px) {
+  .estiloFormulario {
+    width: 80%; /* Establece el ancho del formulario al 100% en dispositivos móviles */
+    padding: 20px; /* Ajusta el relleno para dispositivos móviles */
+  }
+}
+/* Media query para dispositivos con un ancho máximo de 992px (escritorio) */
+@media only screen and (max-width: 992px) {
+  .imagen-limitada5 {
+    width: 100%; /* Ancho al 100% en dispositivos de escritorio */
+  }
+}
+/* Media query para dispositivos con un ancho máximo de 767px (móvil) */
+@media only screen and (max-width: 767px) {
+  .imagen-limitada5 {
+    width: 80%; /* Ancho al 50% en dispositivos móviles */
+  }
+}
 /*******TIENDA********/
 .botonComprar {
   padding: 8px 16px;
@@ -661,14 +693,11 @@ logoGondraWorld1 {
   border: none;
 }
 
-.botonEnviar {
-  font-size: 18px;
-}
-
 /* Estilos responsivos para diferentes tamaños de pantalla */
 /* GRID */
 .gridPadre {
   display: grid;
+  background-color: rgba(0, 0, 0, 0.687);
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 10px;
   justify-content: center;

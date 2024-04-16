@@ -3,16 +3,15 @@
     border-radius: 20px;
     font-size: small;
     padding: 10px;
-    // border: 1px rgba(0, 255, 255, 0.419) solid;
+    border: 1px rgba(0, 255, 255, 0.419) solid;
 }
 
 .card {
     text-align: justify;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.173);
     color: rgb(255, 255, 255);
     border-radius: 20px;
-    border: none;
-  }
+    }
 
   .card-body {
     padding: 10px;
@@ -50,12 +49,6 @@
     text-transform: normal;
     font-size: small;
     text-align: center;
-}
-
-.imagenCard {
-    background: transparent;
-    border: none;
-    border-radius: 20px;
 }
 
 

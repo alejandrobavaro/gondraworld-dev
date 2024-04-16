@@ -12,7 +12,8 @@
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
-  font-family: "Fredericka the Great", serif;
+  font-size: x-large;
+  font-weight: bolder;
 }
 
 .navbar-nav .nav-link {
@@ -46,21 +47,12 @@
   padding-bottom: 0px;
 }
 
-.navbar-toggler {
-  position: relative;
-  /* Establece el posicionamiento absoluto */
-  top: 50%;
-  /* Coloca el botón en la mitad superior del contenedor */
-  left: 50%;
-  /* Coloca el botón en la mitad izquierda del contenedor */
-  transform: translate(-50%, -50%);
-  /* Centra el botón tanto horizontal como verticalmente */
-  background-color: transparent;
-  /* Fondo transparente */
-  border: 1px rgba(0, 255, 255, 0.389) solid;
-  margin-top: 10px;
-  /* Ajusta este valor según la distancia deseada */
+/* Estilos para la imagen dentro del botón del menú hamburguesa en pantallas pequeñas */
+.menu-logo {
+  width: 70%; /* Ajusta el ancho deseado */
+  height: auto; /* Ajusta la altura automáticamente */
 }
+
 
 /* Estilos para el botón de menú hamburguesa */
 .navbar-toggler .navbar-toggler-icon {
@@ -85,6 +77,14 @@
   /* Ajusta este valor según la distancia deseada */
 }
 
+/* Ajustes para la imagen dentro del botón del menú hamburguesa en pantallas más pequeñas */
+.navbar-toggler .menu-logo {
+  width: 30%; /* Ajusta el ancho de la imagen al 100% del tamaño del botón */
+  height: auto; /* Ajusta la altura automáticamente */
+  margin: 15px; /* Elimina cualquier margen que pueda estar causando problemas */
+}
+
+
 /* Estilos para la imagen al costado del menú hamburguesa */
 .side-icon {
   width: 70px;
@@ -103,8 +103,3 @@
   height: auto; /* Altura automática */
 }
 
-.menu-logo {
-  width: 70%; /* Ancho deseado */
-  height: auto; /* Altura automática */
-  margin-right: 10px; /* Espacio entre la imagen y el ícono de menú */
-}

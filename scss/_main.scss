@@ -33,12 +33,11 @@
   border-radius: 20px; /* Radio del borde */
   }
 
-  /* Estilos para las imágenes limitadas */
+/* Estilos para las imágenes limitadas */
 .imagen-limitada5 {
-  width: 25%; /* Ancho */
+  width: 40%; /* Ancho por defecto */
   height: auto; /* Altura automática */
-  }
-
+}
 
 
  .gif-limitado1 {
@@ -84,6 +83,8 @@
   display: flex;
   justify-content: center;
 }
+
+
 
 .tituloImportante1 {
   color: rgba(255, 255, 255, 0.393);
