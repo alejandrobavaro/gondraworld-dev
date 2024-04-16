@@ -22,7 +22,7 @@
 
 .gridPadreCarrito1 {
     display: grid;
-    background-color: rgba(0, 128, 255, 0.177);
+    background-color: rgba(58, 60, 60, 0.1);
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 10px;
     display: flex;
@@ -35,7 +35,7 @@
     /* Establece un ancho máximo para evitar que el grid se expanda demasiado en pantallas más grandes */
     margin-top: 0px;
     /* Ajusta este valor según la distancia deseada */
-    border: 1px rgba(255, 255, 255, 0.27) solid;
+    border: 1px rgba(0, 255, 255, 0.21) solid;
     border-radius: 30px;
     padding: 10px;
 }
@@ -44,6 +44,7 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    
 }
 
 .item img {

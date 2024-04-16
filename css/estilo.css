@@ -63,11 +63,10 @@
 body {
   background-image: url(../img/00-fondos/fondo4tvvieja1c.jpg); /* Imagen de fondo */
   background-color: rgb(0, 0, 0); /* Color de fondo */
-  background-repeat: repeat; /* No repetir la imagen de fondo */
+  background-repeat: no-repeat; /* No repetir la imagen de fondo */
   background-position: center; /* Posición de la imagen de fondo */
-  background-size: contain; /* Ajusta la imagen al tamaño del body */
+  background-size: cover; /* Ajusta la imagen al tamaño del body */
   background-attachment: fixed; /* Fija la imagen de fondo */
-  font-family: "Caveat", cursive;
 }
 
 p {
@@ -93,8 +92,8 @@ h5 {
 
 /* Estilos para los títulos h6 */
 h6 {
-  color: rgb(167, 222, 219); /* Color de texto */
-  font-size: x-small; /* Estilo de fuente */
+  color: rgba(174, 218, 216, 0.766); /* Color de texto */
+  font-size: xx-small; /* Estilo de fuente */
 }
 
 /* Estilos para las listas */
@@ -113,44 +112,18 @@ a {
   /* Enlace visitado */
 }
 a:link {
-  color: aqua; /* Color de texto */
+  color: rgba(135, 214, 205, 0.78); /* Color de texto */
   text-decoration: none; /* Sin subrayado */
 }
 a:visited {
-  color: rgba(0, 255, 255, 0.816); /* Color de texto */
+  color: rgba(158, 207, 201, 0.78); /* Color de texto */
   text-decoration: none; /* Sin subrayado */
-}
-
-.card4 {
-  background: transparent;
-  border-radius: 20px;
-  font-size: small;
-  padding: 10px;
-  border: 1px rgba(0, 255, 255, 0.419) solid;
 }
 
 .card {
   text-align: justify;
-  background: rgba(255, 255, 255, 0.173);
+  background: rgba(27, 140, 130, 0.039);
   color: rgb(255, 255, 255);
-  border-radius: 20px;
-}
-
-.card-body {
-  padding: 10px;
-}
-
-.card-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bannerCarrusel1 {
-  margin-right: 0;
-}
-
-.tarjetaGaleria1 {
   border-radius: 20px;
 }
 
@@ -158,10 +131,17 @@ a:visited {
   text-align: center;
 }
 
+.card4 {
+  background: transparent;
+  border-radius: 20px;
+  font-size: xx-small;
+  padding: 10px;
+}
+
 .card-title {
-  color: white;
+  color: rgba(249, 246, 156, 0.627);
   text-transform: uppercase;
-  font-size: small;
+  font-size: xx-small;
   text-align: center;
 }
 
@@ -171,10 +151,22 @@ a:visited {
   text-align: center;
 }
 
+.card-body {
+  padding: 10px;
+}
+
 .card-container {
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
+}
+
+.bannerCarrusel1 {
+  margin-right: 0;
+}
+
+.tarjetaGaleria1 {
+  border-radius: 20px;
 }
 
 /* Estilos para el teléfono de WhatsApp */
@@ -202,32 +194,49 @@ a:visited {
 /* Estilos del pie de página */
 /* Estilos para el pie de página */
 footer {
-  font-size: 10px; /* Tamaño de fuente */
-  padding: 1%; /* Relleno */
-  color: rgb(255, 255, 255); /* Color de texto */
-  margin: 0; /* Margen */
-  text-align: center; /* Alineación del texto */
-  width: 100%; /* Ancho */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: xx-small;
+  /* Tamaño de fuente */
+  padding: 10%;
+  /* Relleno */
+  background-color: rgba(0, 0, 0, 0.337);
+  /* Color de fondo */
+  border: 1px rgba(0, 255, 255, 0.407) solid;
+  border-radius: 30px;
+  color: rgb(255, 255, 255);
+  /* Color de texto */
+  margin: 0;
+  /* Margen */
+  width: 50%;
+  /* Ancho */
 }
 
 /* Estilos para los elementos del pie de página */
 .footerElements {
-  display: flex; /* Usa flexbox para el diseño */
-  justify-content: center; /* Centra los elementos horizontalmente */
-  text-align: center; /* Alineación del texto */
+  display: flex;
+  /* Usa flexbox para el diseño */
+  justify-content: center;
+  /* Centra los elementos horizontalmente */
+  text-align: center;
+  /* Alineación del texto */
 }
 
 /* Estilos para los enlaces en el pie de página */
 .linksFooter {
-  display: flex; /* Usa flexbox para el diseño */
-  flex-direction: column; /* Dirección de los elementos */
-  justify-content: center; /* Centra los elementos verticalmente */
-  margin: 0 5rem; /* Margen izquierdo y derecho */
+  display: flex;
+  /* Usa flexbox para el diseño */
+  flex-direction: column;
+  /* Dirección de los elementos */
+  justify-content: center;
+  /* Centra los elementos verticalmente */
+  margin: 0 5rem;
+  /* Margen izquierdo y derecho */
 }
 
 /* Estilos para los elementos de lista en el pie de página */
 .linksFooter div {
-  list-style: none; /* Sin viñetas */
+  list-style: none;
+  /* Sin viñetas */
 }
 
 /* Estilos para el formulario */
@@ -331,9 +340,7 @@ footer {
 /* Estilos del encabezado de la página */
 /* Estilos para la barra de navegación */
 .navbar {
-  background-color: transparent;
-  /* Fondo transparente */
-  font-size: large;
+  border-radius: 20px;
   flex-direction: row;
   padding-bottom: 20px;
   /* Asegura que los elementos del menú se alineen en una fila */
@@ -343,8 +350,7 @@ footer {
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
-  font-size: x-large;
-  font-weight: bolder;
+  font-size: medium;
 }
 
 .navbar-nav .nav-link {
@@ -676,11 +682,11 @@ logoGondraWorld1 {
 /*******TIENDA********/
 .botonComprar {
   padding: 8px 16px;
-  font-size: 16px;
+  font-size: small;
   border: none;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.199);
-  color: rgb(255, 255, 255);
+  background-color: rgba(22, 72, 77, 0.5764705882);
+  color: rgba(254, 254, 232, 0.665);
   cursor: pointer;
   transition: all 0.3s ease;
   float: right;
@@ -688,7 +694,7 @@ logoGondraWorld1 {
 }
 
 .botonComprar:hover {
-  background-color: rgba(22, 72, 77, 0.5764705882);
+  background-color: rgba(255, 255, 255, 0.199);
   color: #ffffff;
   border: none;
 }
@@ -716,7 +722,7 @@ logoGondraWorld1 {
 
 .gridPadreCarrito1 {
   display: grid;
-  background-color: rgba(0, 128, 255, 0.177);
+  background-color: rgba(58, 60, 60, 0.1);
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 10px;
   display: flex;
@@ -729,7 +735,7 @@ logoGondraWorld1 {
   /* Establece un ancho máximo para evitar que el grid se expanda demasiado en pantallas más grandes */
   margin-top: 0px;
   /* Ajusta este valor según la distancia deseada */
-  border: 1px rgba(255, 255, 255, 0.27) solid;
+  border: 1px rgba(0, 255, 255, 0.21) solid;
   border-radius: 30px;
   padding: 10px;
 }

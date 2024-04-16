@@ -3,11 +3,11 @@
 
 .botonComprar {
     padding: 8px 16px;
-    font-size: 16px;
+    font-size: small;
     border: none;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.199);
-    color: rgb(255, 255, 255);
+    background-color: #16484d93;
+    color: rgba(254, 254, 232, 0.665);
     cursor: pointer;
     transition: all 0.3s ease;
     float: right;
@@ -15,7 +15,8 @@
   }
   
   .botonComprar:hover {
-    background-color: #16484d93;
+
+    background-color: rgba(255, 255, 255, 0.199);
     color: #ffffff;
     border: none;
   }

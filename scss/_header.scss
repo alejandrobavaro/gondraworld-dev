@@ -1,9 +1,9 @@
 /* Estilos para la barra de navegación */
 .navbar {
-  background-color: transparent;
-  /* Fondo transparente */
-  font-size: large;
-  flex-direction: row;
+  // background-color: rgba(127, 255, 212, 0.268);
+  // border: 1px solid aqua;
+  border-radius: 20px;
+   flex-direction: row;
   padding-bottom: 20px;
   /* Asegura que los elementos del menú se alineen en una fila */
 }
@@ -12,8 +12,9 @@
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
-  font-size: x-large;
-  font-weight: bolder;
+  // font-family: 'Fredericka the Great';
+  font-size: medium;
+  // font-weight: bolder;
 }
 
 .navbar-nav .nav-link {
