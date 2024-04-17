@@ -179,35 +179,39 @@ a:visited {
 
 /**LOGO WHATSAPP**/
 .logoWhats {
-  width: 150px;
+  width: 100px;
   position: fixed;
   bottom: 20px;
   right: 20px;
 }
 
 .estiloContacto1 {
+  font-size: large;
+  font-family: "Caveat", cursive;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.estiloContacto1 a {
+  color: rgb(156, 217, 209);
+}
+
 /* Estilos del pie de página */
 /* Estilos para el pie de página */
 footer {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: xx-small;
   /* Tamaño de fuente */
   padding: 10%;
   /* Relleno */
-  background-color: rgba(0, 0, 0, 0.337);
   /* Color de fondo */
-  border: 1px rgba(0, 255, 255, 0.407) solid;
   border-radius: 30px;
   color: rgb(255, 255, 255);
   /* Color de texto */
   margin: 0;
   /* Margen */
-  width: 50%;
+  width: 40%;
   /* Ancho */
 }
 
@@ -243,6 +247,7 @@ footer {
 .estiloFormulario {
   background-color: rgba(0, 0, 0, 0.687);
   /* Color de fondo */
+  font-family: "Caveat", cursive;
   width: 30%;
   /* Ancho del formulario en dispositivos de escritorio */
   font-size: small;
@@ -340,6 +345,7 @@ footer {
 /* Estilos del encabezado de la página */
 /* Estilos para la barra de navegación */
 .navbar {
+  font-family: "Caveat", cursive;
   border-radius: 20px;
   flex-direction: row;
   padding-bottom: 20px;
@@ -350,7 +356,8 @@ footer {
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
-  font-size: medium;
+  font-size: x-large;
+  font-weight: bolder;
 }
 
 .navbar-nav .nav-link {
@@ -471,7 +478,7 @@ footer {
 
 /* Estilos para las imágenes limitadas */
 .imagen-limitada5 {
-  width: 40%; /* Ancho por defecto */
+  width: 30%; /* Ancho por defecto */
   height: auto; /* Altura automática */
 }
 
@@ -518,10 +525,24 @@ footer {
 }
 
 .tituloImportante1 {
-  color: rgba(255, 255, 255, 0.393);
+  color: rgba(119, 255, 201, 0.857);
   font-size: medium;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
+}
+
+.tituloImportante2 {
+  color: rgb(255, 255, 255);
+  border: 2px rgba(255, 255, 255, 0.237) dotted;
+  font-size: large;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bolder;
+  padding: 1px;
+}
+
+.tituloPequeño1 {
+  color: rgba(241, 235, 200, 0.586);
+  font-size: x-small;
 }
 
 .banner1 {
@@ -697,6 +718,11 @@ logoGondraWorld1 {
   background-color: rgba(255, 255, 255, 0.199);
   color: #ffffff;
   border: none;
+}
+
+.tituloPrecio1 {
+  color: rgba(0, 255, 208, 0.409);
+  font-size: medium;
 }
 
 /* Estilos responsivos para diferentes tamaños de pantalla */

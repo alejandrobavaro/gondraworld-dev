@@ -2,6 +2,8 @@
 .navbar {
   // background-color: rgba(127, 255, 212, 0.268);
   // border: 1px solid aqua;
+  font-family: "Caveat", cursive;
+
   border-radius: 20px;
    flex-direction: row;
   padding-bottom: 20px;
@@ -13,8 +15,8 @@
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
   // font-family: 'Fredericka the Great';
-  font-size: medium;
-  // font-weight: bolder;
+  font-size: x-large;
+  font-weight: bolder;
 }
 
 .navbar-nav .nav-link {
