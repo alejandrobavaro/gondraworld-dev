@@ -15,8 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
   
-      // Array de productos (simulación, puedes obtenerlo de una API o base de datos)
-    // Array de productos (simulación, puedes obtenerlo de una API o base de datos)
+        // Array de productos (simulación)
   const productos = [
     {
       id: 1,
@@ -103,44 +102,120 @@ document.addEventListener("DOMContentLoaded", function () {
       color: "../img/06-tiendagondraworld/color1-verde.png",
     }
   ];
-    
+
+
   
-      // Encontrar el producto con el ID correspondiente
-      const productoEncontrado = productos.find((producto) => producto.id === parseInt(idProducto));
-  
-      if (!productoEncontrado) {
-        // Si no se encuentra el producto, redirigir a la tienda
-        window.location.href = "tienda.html";
-        return;
-      }
-  
-      // Mostrar la información del producto encontrado
-      const contenedorProducto = document.getElementById("imagenProducto");
-      contenedorProducto.innerHTML = `
-        <div class="card">
-          <div class="card-body card4">
-            <h5 class="card-title">${productoEncontrado.nombre}</h5>
-            <img src="${productoEncontrado.imagen}" class="card-img-top img-fluid" alt="${productoEncontrado.nombre}" />
-            <h4 class="objetoCentrado1 tituloPrecio1">Precio: $${productoEncontrado.precio.toFixed(2)}</h4>
-            <section class="objetoCentrado1">
-              <h6 class=" tituloPequeño1"></h6>
-              <img src="${productoEncontrado.color}" alt=""> COLOR DISPONIBLE <i class="bi bi-hand-index-thumb-fill"></i>
-            </section>
-            <button class="botonComprar">Agregar al carrito</button>
+    // Encontrar el producto con el ID correspondiente
+    const productoEncontrado = productos.find((producto) => producto.id === parseInt(idProducto));
+
+    if (!productoEncontrado) {
+      // Si no se encuentra el producto, redirigir a la tienda
+      window.location.href = "tienda.html";
+      return;
+    }
+
+    // Mostrar la información del producto encontrado
+    const contenedorProducto = document.getElementById("imagenProducto");
+    contenedorProducto.innerHTML = `
+      <div class="card">
+        <div class="card-body card4">
+          <h5 class="card-title">${productoEncontrado.nombre}</h5>
+          <img src="${productoEncontrado.imagen}" class="card-img-top img-fluid" alt="${productoEncontrado.nombre}" />
+          <h4 class="objetoCentrado1 tituloPrecio1">Precio: $${productoEncontrado.precio.toFixed(2)}</h4>
+          <section class="objetoCentrado1">
+            <h6 class=" tituloPequeño1"></h6>
+            <img src="${productoEncontrado.color}" alt=""> COLOR DISPONIBLE <i class="bi bi-hand-index-thumb-fill"></i>
+          </section>
+          <button class="botonComprar">Agregar al carrito</button>
+        </div>
+      </div>
+    `;
+
+    // Agregar evento al botón de agregar al carrito
+    const botonAgregarCarrito = document.querySelector(".botonComprar");
+    botonAgregarCarrito.addEventListener("click", function () {
+      agregarAlCarrito(productoEncontrado);
+    });
+  }
+
+  // Función para agregar un producto al carrito
+  function agregarAlCarrito(producto) {
+    // Obtener el carrito desde el almacenamiento local (si existe)
+    let carrito = localStorage.getItem("carrito");
+    if (!carrito) {
+      // Si no hay carrito en el almacenamiento local, crear uno vacío
+      carrito = [];
+    } else {
+      // Si hay carrito, convertirlo de JSON a objeto JavaScript
+      carrito = JSON.parse(carrito);
+    }
+
+    // Agregar el producto al carrito
+    carrito.push(producto);
+
+    // Guardar el carrito actualizado en el almacenamiento local
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    // Actualizar el contador de productos en el carrito
+    actualizarContadorCarrito(carrito.length);
+
+    // Volver a cargar los productos en el carrito
+    cargarProductosCarrito();
+  }
+
+  // Función para actualizar el contador de productos en el carrito
+  function actualizarContadorCarrito(cantidadProductos) {
+    const contadorCarrito = document.getElementById("contadorCarrito");
+    contadorCarrito.innerText = cantidadProductos;
+  }
+
+  // Función para cargar los productos en el carrito
+  function cargarProductosCarrito() {
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    const listaProductos = document.getElementById("listaProductos");
+    listaProductos.innerHTML = ""; // Limpiar la lista antes de volver a llenarla
+
+    carrito.forEach((producto, index) => {
+      const itemProducto = document.createElement("div");
+      itemProducto.classList.add("itemProducto");
+      itemProducto.innerHTML = `
+      <div class="card">
+      <div class="card-body card4"> 
+      <div class="productoCarrito">
+          <img class="imagen-limitada1" src="${producto.imagen}" alt="${producto.nombre}" class="imagenProductoCarrito">
+          <div class="infoProductoCarrito">
+            <h6 class="nombreProductoCarrito">${producto.nombre}</h6>
+            <p class="precioProductoCarrito">$${producto.precio.toFixed(2)}</p>
           </div>
         </div>
-      `;
-
-
-
+        <button class="botonEliminar botonComprar" data-index="${index}">Eliminar</button>
+        </div>
+        </div> `;
       
-    }
-  
+      listaProductos.appendChild(itemProducto);
+    });
 
+    // Agregar evento para el botón de eliminar
+    const botonesEliminar = document.querySelectorAll(".botonEliminar");
+    botonesEliminar.forEach((boton) => {
+      boton.addEventListener("click", function () {
+        const index = parseInt(boton.getAttribute("data-index"));
+        eliminarDelCarrito(index);
+      });
+    });
+  }
 
+  // Función para eliminar un producto del carrito
+  function eliminarDelCarrito(index) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    carrito.splice(index, 1); // Eliminar el producto en el índice especificado
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    cargarProductosCarrito(); // Volver a cargar la lista de productos en el carrito
+    actualizarContadorCarrito(carrito.length); // Actualizar el contador
+  }
 
-
-    // Llamar a la función para cargar y mostrar el producto cuando la página esté lista
-    cargarProducto();
-  });
-  
+  // Llamar a la función para cargar y mostrar el producto cuando la página esté lista
+  cargarProducto();
+  cargarProductosCarrito();
+});

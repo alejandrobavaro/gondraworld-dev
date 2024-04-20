@@ -48,15 +48,13 @@
 
 .seguirComprando1 {
   padding: 8px 16px;
-  font-size: xx-large;
-  border: 1px solid aquamarine;
-  border-radius: 10px;
-  background-color: #16484d93;
-  color: rgba(254, 254, 232, 0.665);
-  cursor: pointer;
-  transition: all 0.3s ease;
- 
-  margin-top: 10px;
+    font-size: small;
+    background-color: #00eaff93;
+    color: rgba(254, 254, 232, 0.665);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    float: right;
+    margin-top: 10px;
 }
 
 .seguirComprando1:hover {
@@ -70,4 +68,88 @@
 
 .producto.seleccionado {
   border: 2px solid #ff4081;
+}
+
+
+/* Estilo para cada producto en el carrito */
+.itemProducto {
+  width: 100%;
+  padding: 10px;
+}
+
+.itemProducto .productoCarrito {
+  display: flex;
+  align-items: center;
+}
+
+.itemProducto .imagenProductoCarrito {
+  width: 50px; /* Ajusta el tamaño de la imagen */
+  height: auto;
+  margin-right: 10px;
+}
+
+.itemProducto .infoProductoCarrito {
+  flex-grow: 1;
+}
+
+/* Botón de eliminar */
+.botonEliminar {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.botonEliminar:hover {
+  background-color: #d63031;
+}
+
+/* Estilos para las imágenes limitadas */
+.imagen-limitada5 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 2/1;
+  transition: 1s;
+}
+
+@media (min-width: 768px) {
+  .imagen-limitada5 {
+    width: 100%; /* Cambiar el ancho según necesites */
+  }
+}
+
+
+/* Estilos para las imágenes de producto */
+.producto-imagen {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Estilos para el nombre del producto */
+.producto-nombre {
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+/* Estilos para el precio del producto */
+.producto-precio {
+  font-size: 16px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Estilos para el botón de eliminar */
+.boton-eliminar {
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }

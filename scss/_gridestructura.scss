@@ -20,26 +20,30 @@
     padding: 10px;
 }
 
-
 .gridPadreCarrito1 {
     display: grid;
     background-color: rgba(58, 60, 60, 0.1);
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 1168px;
+    border-radius: 30px;
+    padding: 10px;
+  }
+  
+.gridPadreCarrito2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Centra verticalmente el contenido */
-    margin: 0px auto;
-    /* Para centrar el grid horizontalmente */
+    margin: 0 auto;
     max-width: 1168px;
-    /* Establece un ancho máximo para evitar que el grid se expanda demasiado en pantallas más grandes */
-    margin-top: 0px;
-    /* Ajusta este valor según la distancia deseada */
+    margin-top: 20px; /* Ajusta según necesites */
     border: 1px rgba(0, 255, 255, 0.21) solid;
     border-radius: 30px;
     padding: 10px;
-}
+  }
 
 .item {
     display: flex;
