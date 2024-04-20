@@ -37,8 +37,15 @@
 .imagen-limitada5 {
   width: 30%; /* Ancho por defecto */
   height: auto; /* Altura automática */
+  object-fit: cover;
+  aspect-ratio: 2/1;
+  transition: 1s;
 }
 
+imagen-limitada5:hover {
+  object-position: botton right;
+
+}
 
  .gif-limitado1 {
  width: 40%; /* Ancho */
@@ -91,7 +98,7 @@
   font-size: medium;
   font-family: 'Courier New', Courier, monospace;
    font-weight: bold;
-  // text-decoration: underline;
+   text-transform: uppercase;
 }
 
 .tituloImportante2 {

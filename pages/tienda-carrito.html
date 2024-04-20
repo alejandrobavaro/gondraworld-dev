@@ -11,8 +11,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Aquí tienes la Tienda de Productos del Gondra World">
-  <meta name="keywords"
-    content="E-commerce, Comprá produtos Gondra World, Tienda Gondra World, Tienda Pop">
+  <meta name="keywords" content="E-commerce, Comprá produtos Gondra World, Tienda Gondra World, Tienda Pop">
   <!-- <meta property="og:image" content="https://almangopopmusic.netlify.app/img/05-img-costados-larga/carrusellargo8.jpg"> -->
   <!--------------------------------------------------------------->
 
@@ -33,8 +32,11 @@
   <!--------------------------------------------------------------->
   <!-- TIPOGRAFIAS -->
   <!-- Enlaces a fuentes de Google Fonts y otros recursos de tipografía -->
-  <link href="https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Sedan:ital@0;1&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&family=Space+Grotesk:wght@300..700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Sedan:ital@0;1&family=Space+Grotesk:wght@300..700&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
   <!--------------------------------------------------------------->
 </head>
@@ -59,21 +61,21 @@
         <div class="container-fluid">
           <!-- Botón de menú hamburguesa -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <!-- Ícono de menú -->
-    <span class="navbar-toggler-icon"></span>
-    <!-- Imagen dentro del botón de menú -->
-    <img class="menu-logo" src="../img/02-logos/logogondraworld1.png" alt="Logo" class="menu-logo">
-  </button>
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- Ícono de menú -->
+            <span class="navbar-toggler-icon"></span>
+            <!-- Imagen dentro del botón de menú -->
+            <img class="menu-logo" src="../img/02-logos/logogondraworld1.png" alt="Logo" class="menu-logo">
+          </button>
           <!-- Contenido del menú -->
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                
+
               <!-- Elementos del menú -->
-             
+
               <div class="imagenHeader1">
-                <a href="../index.html"> <img class="container-fluid menu-logo" src="../img/02-logos/logogondraworld1.png"
-                    alt="dragonpequeñomenu1" /></a>
+                <a href="../index.html"> <img class="container-fluid menu-logo"
+                    src="../img/02-logos/logogondraworld1.png" alt="dragonpequeñomenu1" /></a>
               </div>
               <a class="nav-link menu-link" aria-current="page" href="../index.html">Home</a>
               <a class="nav-link menu-link" href="./proyectos.html">Proyectos</a>
@@ -111,7 +113,7 @@
 
 
 
-      
+
 
       <!------------------------------------------------------------>
 
@@ -119,32 +121,55 @@
       <!-- ICONO CARRITO -->
 
       <div class="gridPadreCarrito1">
+
+
+        <!-- PRODUCTOS -->
+        <div class="gridPadre">
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+
+            <!-- PRODUCTOS AGREGADOS EN JS -->
+
+            <!-- Contenedor para la imagen del producto -->
+            <div id="imagenProducto" class="objetoCentrado1"></div>
+
+
+          </div>
+        </div>
+
         <div class="item">
           <div class="objetoCentrado2">
-            <!-- Otros elementos del header -->
-            <a href="./tienda-carrito.html" id="carrito-icon">
-              <i class="bi bi-cart tamañoicono1"></i>
-              <span class="parrafoTitulo1" id="carrito-count"> 0 </span> Productos en el carrito
-            </a>
+            <div>
+              <h2 class="h1Titulo" id="carrito-icon">
+                <i class="bi bi-cart tamañoicono1"></i>
+                <span class="parrafoTitulo1 tituloPrecioCarrito">
+                  <div id="contadorCarrito" class="objetoCentrado2"></div>
+                  Productos en el carrito
+                </span>
+              </h2>
+
+              <hr>
+
+              <a class="seguirComprando1" href="./tienda.html">
+                <i class="bi bi-shift-fill"></i> Seguir Comprando
+                <i class="bi bi-shift-fill"></i>
+              </a>
+              <hr>
+              <div id="listaProductos" class="item card">Lista de Productos Agregados</div>
+              <hr>
+
+
+            </div>
           </div>
+
         </div>
+
       </div>
+
+
 
 
       <hr class="border border border-1 opacity-20" />
 
-      <!-- Carrito de compras -->
-      <div class="gridPadreCarrito1">
-        <div class="item">
-          <div id="carrito">
-            <h2>Carrito de Compras</h2>
-            <ul id="lista-carrito">
-              <!-- Aquí se mostrarán los productos en el carrito -->
-            </ul>
-            <p>Total: <span id="total-carrito">$0.00</span></p>
-          </div>
-        </div>
-      </div>
 
       <!-- ------------------------------------ -->
       <hr class="border border border-1 opacity-20" />
@@ -153,209 +178,12 @@
       <!-- ------------------------------------ -->
 
 
-      <!-- BOOTSTRAP CARD TIENDA -->
 
-
-      <div class="gridPadre">
-
-
-
-        <div class="gridPadreCarrito1">
-
-          <div class="container">
-            <div class="row" id="productos-container">
-              <!-- Los productos se agregarán aquí dinámicamente -->
-            </div>
-          </div>
-  
-        </div>
-
-
-
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-
-          <div class="col">
-            <div class="card">
-              <div class="card-body card4">
-                <img src="../img/06-tiendagondraworld/tienda1-.png" class="card-img-top img-fluid" alt="tienda1-" />
-                <h5 class="card-title">
-                  Remera Gondra World W-B-1
-                </h5>
-                <button class="botonComprar">
-                 Agregar al Carrito
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card">
-              <div class="card-body card4">
-                <img src="../img/06-tiendagondraworld/tienda2-.png" class="card-img-top img-fluid" alt="tienda2" />
-                <h5 class="card-title">
-                  Remera Almango A-G-1 Ponele Onda</h5>
-                  <button class="botonComprar">
-                    Agregar al Carrito
-                   </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card">
-              <div class="card-body card4">
-                <img src="../img/06-tiendagondraworld/tienda3-.png" class="card-img-top img-fluid" alt="tienda3" />
-                <h5 class="card-title">
-                  Remera Gondra World W-G-2
-                </h5>
-                <button class="botonComprar">
-                  Agregar al Carrito
-                 </button>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col">
-            <div class="card">
-              <div class="card-body card4">
-                <img src="../img/06-tiendagondraworld/tienda4-.png" class="card-img-top img-fluid" alt="tienda4-" />
-                <h5 class="card-title">
-                  Remera Almango A-B-2 Fundidos
-                </h5>
-                <button class="botonComprar">
-                  Agregar al Carrito
-                 </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card">
-              <div class="card-body card4">
-                <img src="../img/06-tiendagondraworld/tienda5-.png" class="card-img-top img-fluid" alt="tienda5" />
-                <h5 class="card-title">
-                  Remera Puchulita P-B-1</h5>
-                  <button class="botonComprar">
-                    Agregar al Carrito
-                   </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card">
-              <div class="card-body card4">
-                <img src="../img/06-tiendagondraworld/tienda6-.png" class="card-img-top img-fluid" alt="tienda6" />
-                <h5 class="card-title">
-                  Remera Almango D-2-C Fiesta
-                </h5>
-                <button class="botonComprar">
-                  Agregar al Carrito
-                 </button>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col">
-            <div class="card">
-              <div class="card-body card4">
-                <img src="../img/06-tiendagondraworld/tienda7-.png" class="card-img-top img-fluid" alt="tienda7" />
-                <h5 class="card-title">
-                  Remera Almango D-4-A Logo Antiguo
-                </h5>
-                <button class="botonComprar">
-                  Agregar al Carrito
-                 </button>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col">
-            <div class="card">
-              <div class="card-body card4">
-                <img src="../img/06-tiendagondraworld/tienda8-.png" class="card-img-top img-fluid" alt="tienda8" />
-                <h5 class="card-title">
-                  Remera Almango A-Gorro D-5-A
-                </h5>
-                <button class="botonComprar">
-                  Agregar al Carrito
-                 </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card">
-              <div class="card-body card4">
-                <img src="../img/06-tiendagondraworld/tienda9-.png" class="card-img-top img-fluid" alt="tienda9" />
-                <h5 class="card-title">
-                  Remera Gondra Estudio D-4-B</h5>
-                  <button class="botonComprar">
-                    Agregar al Carrito
-                   </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card">
-              <div class="card-body card4">
-                <img src="../img/06-tiendagondraworld/tienda10-.png" class="card-img-top img-fluid" alt="tienda10" />
-                <h5 class="card-title">
-                  Remera Almango D-6-A Logo Descontrol
-                </h5>
-                <button class="botonComprar">
-                  Agregar al Carrito
-                 </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card">
-              <div class="card-body card4">
-                <img src="../img/06-tiendagondraworld/tienda11-.png" class="card-img-top img-fluid" alt="tienda11" />
-                <h5 class="card-title">
-                  Remera Almango Ale Gondra D-3-B</h5>
-                  <button class="botonComprar">
-                    Agregar al Carrito
-                   </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card">
-              <div class="card-body card4">
-                <img src="../img/06-tiendagondraworld/tienda12-.png" class="card-img-top img-fluid" alt="tienda12" />
-                <h5 class="card-title">
-                  Remera Almango D-6-B Sexotica
-                </h5>
-                <button class="botonComprar">
-                  Agregar al Carrito
-                 </button>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-
-
-
-
-
-
-
-
-      <!------------------------------------------------------------>
-
-
-
+      <!------------------ TIENDA - CARRITO----------------->
+      <!-- TITULO -->
+      <section class="objetoCentrado1">
+        <h5 class="item">REMERAS - CAMISETAS</h5>
+      </section>
 
 
 
@@ -387,7 +215,7 @@
               <div class="carousel-item">
                 <img src="../img/02-logos/logofelitacollaresmascotas1.png" class="d-block w-100" alt="headcarrusel10a">
               </div>
-          
+
             </div>
 
           </div>
@@ -399,59 +227,59 @@
 
     <hr class="border border-1 opacity-20 ">
 
-  <!-- -------------FOOTER---------------- -->
+    <!-- -------------FOOTER---------------- -->
 
-  <footer class="gridPadre">
+    <footer class="gridPadre">
 
-    <div class="footerElements">
-      <div class="img1Footer">
-        <img src="../img/02-logos/dragonpequeñomenu1.png" class="img-fluid" alt="indexcarruselmedio3b-copia" />
+      <div class="footerElements">
+        <div class="img1Footer">
+          <img src="../img/02-logos/dragonpequeñomenu1.png" class="img-fluid" alt="indexcarruselmedio3b-copia" />
+        </div>
+
+        <div class="linksFooter">
+          <div>
+            <a href="#" target="_blank">
+              <i class="bi bi-instagram"></i> Instagram
+              <i class="bi bi-instagram"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" target="_blank">
+              <i class="bi bi-youtube"></i> Canal de Youtube
+              <i class="bi bi-youtube"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" target="_blank">
+              <i class="bi bi-facebook"></i> Facebook
+              <i class="bi bi-facebook"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" target="_blank">
+              <i class="bi bi-twitter"></i> X (Twitter)
+              <i class="bi bi-twitter-x"></i>
+            </a>
+          </div>
+          <h6>
+            <i class="bi bi-person-arms-up"></i> Desarrollo Gondra World Dev <i class="bi bi-person-arms-up"></i>
+          </h6>
+        </div>
+
+        <div class="img2Footer">
+          <img src="../img/02-logos/dragonpequeñomenu1.png" class="img-fluid" alt="indexcarruselmedio3b-copia" />
+        </div>
       </div>
-
-      <div class="linksFooter">
-        <div>
-          <a href="#" target="_blank">
-            <i class="bi bi-instagram"></i> Instagram
-            <i class="bi bi-instagram"></i>
-          </a>
-        </div>
-        <div>
-          <a href="#" target="_blank">
-            <i class="bi bi-youtube"></i> Canal de Youtube
-            <i class="bi bi-youtube"></i>
-          </a>
-        </div>
-        <div>
-          <a href="#" target="_blank">
-            <i class="bi bi-facebook"></i> Facebook
-            <i class="bi bi-facebook"></i>
-          </a>
-        </div>
-        <div>
-          <a href="#" target="_blank">
-            <i class="bi bi-twitter"></i> X (Twitter)
-            <i class="bi bi-twitter-x"></i>
-          </a>
-        </div>
-        <h6>
-          <i class="bi bi-person-arms-up"></i> Desarrollo Gondra World Dev <i class="bi bi-person-arms-up"></i>
-        </h6>
-      </div>
-
-      <div class="img2Footer">
-        <img src="../img/02-logos/dragonpequeñomenu1.png" class="img-fluid" alt="indexcarruselmedio3b-copia" />
-      </div>
-    </div>
-  </footer>
+    </footer>
   </div>
 
-    <!-- BOOTSTRAP DATA -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"></script>
+  <!-- BOOTSTRAP DATA -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 
- <!-- Enlace a tu archivo JavaScript -->
- <script src="../js/main-tienda.js"></script>
+  <!-- Enlace a tu archivo JavaScript -->
+  <script src="../js/tienda-carrito.js"></script>
 
 
 </body>

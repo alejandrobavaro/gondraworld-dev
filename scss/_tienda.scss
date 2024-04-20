@@ -21,8 +21,53 @@
     border: none;
   }
   
+.botonComprar1 {
+  padding: 8px 16px;
+  font-size: small;
+  border: none;
+  border-radius: 10px;
+  background-color: #16484d93;
+  color: rgba(254, 254, 232, 0.665);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  float: right;
+  margin-top: 10px;
+}
+  
   .tituloPrecio1 {
     // text-decoration: underline;
     color: rgba(0, 255, 208, 0.409);
     font-size: medium;
+}
+
+.tituloPrecioCarrito {
+  text-decoration: dotted;
+  color: rgb(0, 255, 208);
+  font-size: xx-large;
+}
+
+.seguirComprando1 {
+  padding: 8px 16px;
+  font-size: xx-large;
+  border: 1px solid aquamarine;
+  border-radius: 10px;
+  background-color: #16484d93;
+  color: rgba(254, 254, 232, 0.665);
+  cursor: pointer;
+  transition: all 0.3s ease;
+ 
+  margin-top: 10px;
+}
+
+.seguirComprando1:hover {
+
+  background-color: rgba(255, 255, 255, 0.199);
+  color: #ffffff;
+  border: none;
+}
+
+//EN TIENDA.JS//
+
+.producto.seleccionado {
+  border: 2px solid #ff4081;
 }
