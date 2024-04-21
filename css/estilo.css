@@ -128,7 +128,8 @@ a:visited {
 }
 
 .card3 {
-  text-align: center;
+  font-size: medium;
+  font-weight: bold;
 }
 
 .card4 {
@@ -149,6 +150,13 @@ a:visited {
   text-transform: normal;
   font-size: small;
   text-align: center;
+}
+
+.producto-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card-body {
@@ -482,6 +490,19 @@ footer {
   height: auto; /* Altura automática */
 }
 
+/* Estilos para las imágenes limitadas */
+.imagen-limitada6 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 2/1;
+  transition: 1s;
+}
+
+imagen-limitada5:hover {
+  object-position: botton right;
+}
+
 .gif-limitado1 {
   width: 40%; /* Ancho */
   height: auto; /* Altura automática */
@@ -517,6 +538,8 @@ footer {
 .objetoCentrado1 {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
 .objetoCentrado2 {
@@ -529,10 +552,11 @@ footer {
   font-size: medium;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .tituloImportante2 {
-  color: rgb(255, 255, 255);
+  color: rgba(207, 255, 252, 0.8235294118);
   border: 2px rgba(255, 255, 255, 0.237) dotted;
   font-size: large;
   font-family: "Courier New", Courier, monospace;
@@ -706,7 +730,7 @@ logoGondraWorld1 {
   font-size: small;
   border: none;
   border-radius: 10px;
-  background-color: rgba(22, 72, 77, 0.5764705882);
+  background-color: transparent;
   color: rgba(254, 254, 232, 0.665);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -715,14 +739,152 @@ logoGondraWorld1 {
 }
 
 .botonComprar:hover {
-  background-color: rgba(255, 255, 255, 0.199);
+  background-color: transparent;
+  color: #00f7ff;
+  border: none;
+}
+
+.botonComprar1 {
+  padding: 8px 16px;
+  font-size: small;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(22, 72, 77, 0.5764705882);
+  color: rgba(254, 254, 232, 0.665);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  float: right;
+  margin-top: 10px;
+}
+
+.botonComprar1:hover {
+  background-color: rgba(48, 156, 120, 0.563);
   color: #ffffff;
   border: none;
+}
+
+.seguirComprando1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: large;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(22, 72, 77, 0.5764705882);
+  color: rgba(254, 254, 232, 0.665);
+}
+
+.seguirComprando1:hover {
+  background-color: rgba(48, 156, 120, 0.563);
+  color: #ffffff;
+  border: none;
+}
+
+.iconitoCarrito1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  text-transform: uppercase;
+  font-size: small;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(0, 234, 255, 0.5764705882);
+  color: rgba(0, 0, 0, 0.665);
+}
+
+.tamañoicono1 {
+  font-size: 2rem;
+}
+
+/* Botón de eliminar */
+.botonEliminar {
+  padding: 8px 16px;
+  font-size: small;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(22, 72, 77, 0.5764705882);
+  color: rgba(254, 254, 232, 0.665);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  float: right;
+  margin-top: 10px;
+}
+
+.botonEliminar:hover {
+  background-color: rgba(48, 156, 120, 0.563);
+  color: #ffffff;
+  border: none;
+}
+
+.producto.seleccionado {
+  border: 2px solid #ff4081;
 }
 
 .tituloPrecio1 {
   color: rgba(0, 255, 208, 0.409);
   font-size: medium;
+}
+
+.tituloPrecioCarrito {
+  text-decoration: dotted;
+  color: rgb(0, 255, 208);
+  font-size: xx-large;
+}
+
+/* Estilo para cada producto en el carrito */
+.itemProducto {
+  width: 100%;
+  padding: 10px;
+}
+
+.itemProducto .productoCarrito {
+  display: flex;
+  align-items: center;
+}
+
+.itemProducto .imagenProductoCarrito {
+  width: 50px; /* Ajusta el tamaño de la imagen */
+  height: auto;
+  margin-right: 10px;
+}
+
+.itemProducto .infoProductoCarrito {
+  flex-grow: 1;
+}
+
+/* Estilos para las imágenes de producto */
+.producto-imagen {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Estilos para el nombre del producto */
+.producto-nombre {
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+/* Estilos para el precio del producto */
+.producto-precio {
+  font-size: 16px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.border-end {
+  border-right: 1px solid #dee2e6;
+}
+
+.border-start {
+  border-left: 1px solid #dee2e6;
 }
 
 /* Estilos responsivos para diferentes tamaños de pantalla */
@@ -749,21 +911,30 @@ logoGondraWorld1 {
 .gridPadreCarrito1 {
   display: grid;
   background-color: rgba(58, 60, 60, 0.1);
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 1168px;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.gridPadreCarrito2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Centra verticalmente el contenido */
-  margin: 0px auto;
-  /* Para centrar el grid horizontalmente */
+  margin: 0 auto;
   max-width: 1168px;
-  /* Establece un ancho máximo para evitar que el grid se expanda demasiado en pantallas más grandes */
-  margin-top: 0px;
-  /* Ajusta este valor según la distancia deseada */
+  margin-top: 20px; /* Ajusta según necesites */
   border: 1px rgba(0, 255, 255, 0.21) solid;
   border-radius: 30px;
   padding: 10px;
+}
+
+.gridPadreCarrito3 {
+  margin-top: 20px;
 }
 
 .item {

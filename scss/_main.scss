@@ -37,12 +37,16 @@
 .imagen-limitada5 {
   width: 30%; /* Ancho por defecto */
   height: auto; /* Altura automática */
+}
+
+/* Estilos para las imágenes limitadas */
+.imagen-limitada6 {
+  width: 100%;
+  height: auto;
   object-fit: cover;
   aspect-ratio: 2/1;
   transition: 1s;
 }
-
-
 
 imagen-limitada5:hover {
   object-position: botton right;
@@ -86,6 +90,8 @@ imagen-limitada5:hover {
 .objetoCentrado1 {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
 .objetoCentrado2 {
@@ -104,7 +110,7 @@ imagen-limitada5:hover {
 }
 
 .tituloImportante2 {
-  color: rgb(255, 255, 255);
+  color: #cffffcd2;
   border: 2px rgba(255, 255, 255, 0.237) dotted;
   font-size: large;
   font-family: 'Courier New', Courier, monospace;

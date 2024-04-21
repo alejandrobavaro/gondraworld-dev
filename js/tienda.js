@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
               </span></h4>
 
             <button class="botonComprar">
-                        <a class="botonComprar1" href="tienda-carrito.html?id=${producto.id}" class="btn btn-primary">    <i class="bi bi-shift-fill"></i>  Encargar  
+                        <a class="botonComprar1 btn btn-primary" href="tienda-carrito.html?id=${producto.id}">    <i class="bi bi-shift-fill"></i>  Encargar  
            <i class="bi bi-shift-fill"></i>
           </a>
           </button>
