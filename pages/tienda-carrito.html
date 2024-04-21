@@ -106,34 +106,41 @@
           </h1>
         </section>
 
-      <p class="card3 h1Titulo objetoCentrado1"><i class="bi bi-activity"></i> PRODUCTOS EXCLUSIVOS <i
+      <p class="card3 h1Titulo objetoCentrado1"><i class="bi bi-activity"></i> REALIZÁ TU PEDIDO <i
           class="bi bi-activity"></i>
       </p>
-      <section class="objetoCentrado1">
-      <h6 class="h1Titulo objetoCentrado1"><i class="bi bi-activity"></i> (Importante: Todos los productos son por
-        encargo) <i class="bi bi-activity"></i></h6>
-      </section>
+    
+   
       
 
       <!-------------------ICONO CARRITO---------------------------->
 
       <div class="gridPadreCarrito3">
         <div class="row row-cols-2 g-4 border-bottom">
-          <div class="col objetoCentrado1 border-end border-2">
-            <p class="card3">PRODUCTOS AGREGADOS</p>
-          </div>
+      
           <div class="col objetoCentrado1">
-            <p id="contadorCarrito" class="card3"><i class="bi bi-cart tamañoicono1"></i></p>
+            <h5 class="tituloImportante1">Cantidad de Productos Agregados <i class="bi bi-cart tamañoicono1"></i></h5> <p id="contadorCarrito" class="card3"></p>
           </div>
           <div class="col objetoCentrado1 border-start border-2">
-            <p class="card3">TOTAL: <span id="totalCarrito">$0.00</span></p>
+            <p class="tituloImportante1">TOTAL: <span id="totalCarrito">$0.00</span></p>
           </div>
         </div>
       </div>
       
+  
 
 
-      <hr>
+ <!-----------------MINI CARRITO DESPLEGABLE--------------------------->
+
+
+ <div class="mini-carrito tituloImportante1 ">
+  <h4>Resumen del Carrito</h4>
+  <ul id="listaMiniCarrito"></ul>
+  <p id="totalMiniCarrito">Total: $0.00</p>
+  <button id="botonPagar">Pagar</button>
+</div>
+
+
       <!-----------------CARRITO ------------------>
 
       <!-- PRODUCTOS -->
@@ -252,7 +259,8 @@
 
   <!-- Enlace a tu archivo JavaScript -->
   <script src="../js/tienda-carrito.js"></script>
-
+  <!-- Enlace a tu archivo JavaScript -->
+  <script src="../js/mini-carrito.js"></script>s
 
 </body>
 

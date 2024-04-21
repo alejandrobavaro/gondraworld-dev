@@ -581,6 +581,49 @@ logoGondraWorld1 {
   align-items: center;
 }
 
+/* Estilos mini-carrito */
+.mini-carrito {
+  position: sticky;
+  top: 80px;
+  right: 20px;
+  width: 250px;
+  background-color: rgba(16, 94, 76, 0.368627451);
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.mini-carrito h4 {
+  margin-top: 0;
+}
+
+#listaMiniCarrito {
+  padding: 5px;
+}
+
+#listaMiniCarrito li {
+  margin-bottom: 10px;
+}
+
+#totalMiniCarrito {
+  font-weight: bold;
+}
+
+#botonPagar {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#botonPagar:hover {
+  background-color: #0056b3;
+}
+
 /* Estilos responsivos para diferentes tamaños de pantalla */
 /* Ajustes para la imagen después de los 1704px */
 @media (max-width: 991.98px) {
