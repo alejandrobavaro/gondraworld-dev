@@ -15,7 +15,7 @@
   <!--------------------------------------------------------------->
 
   <!----------------------------TITULO----------------------------->
-  <title>Tienda - Gondra World</title>
+  <title>Tienda-Pago - Gondra World</title>
   <!--------------------------------------------------------------->
 
   <!----------------------------LINKS------------------------------->
@@ -93,146 +93,64 @@
 
     <main>
 
-      <!-- TITULO -->
-      <section class="objetoCentrado1">
-        <h1 class="tituloImportante2 textoMovimiento">
-          <i class="bi bi-cart"></i> CARRITO DE COMPRAS <i class="bi bi-cart"></i>
-        </h1>
-      </section>
-      <section class="objetoCentrado1">
-        <h4 class="item">
-          <i class="bi bi-activity"></i> PERSONALIZA TU PRENDA <i class="bi bi-activity"></i>
-        </h4>
-      </section>
 
-      <div class="col">
-        <div class="card-container">
-          <div class="mini-carrito tituloImportante1">
-            <div class="objetoCentrado1">
-              <!-- Aquí agregamos la imagen del carrito -->
-              <div class="carrito-imagen">
-                <img src="../img/06-tiendagondraworld/carritocompras1a.jpg" alt="Carrito de Compras">
-              </div>
-              <!-- Fin de la imagen del carrito -->
-              <p class="tituloImportante3 objetoCentrado1"> Carrito
-                <span class="card3"> <i class="bi bi-cart tamañoicono1"></i> </span>
-              </p>
-            </div>
+      
+<!-- TITULO -->
+<section class="objetoCentrado1">
+  <h1 class="tituloImportante2 textoMovimiento">
+    <i class="bi bi-cart"></i> TIENDA - PAGOS <i class="bi bi-cart"></i>
+  </h1>
+</section>
 
 
-            <div class="mini-carrito ">
-              <div class="row">
-                <!-- Columna para el mini carrito -->
-                <div class="col-md-8 ">
-                  <ul id="listaMiniCarrito" class="list-group list-group-flush "></ul>
-                  <p id="totalMiniCarrito" class="tituloImportante2 objetoCentrado1">Total: $0.00</p>
-                  <p id="contadorCarrito" class="totalImportante1 objetoCentrado1">Cantidad de Productos: 0</p>
-
-                  <div class="objetoCentrado1">
-
-                    <!-- Botón para redirigir a la página de pagos (tienda-pago.html) -->
-                    <div class="objetoCentrado1">
-                      <button class="btn botonSecundario botonComprar" id="btnComprar">
-                        <a href="tienda-pago.html" id="btnComprar" class="btn botonSecundario botonPagar">
-                          <h3 class="tituloImportante2 textoMovimiento">
-                            <i class="bi bi-shift-fill"></i> COMPRAR
-                          </h3>
-                        </a>
-                      </button>
-                    </div>
-
-
-                    <button class="btn botonSecundario botonEliminar tituloPequeño2 ml-3" id="btnVaciarCarrito">
-                      VACIAR CARRITO <i class="bi bi-shift-fill"></i>
-                    </button>
-                  </div>
-
-                </div>
-                <!-- Columna para detalles del producto agregado -->
-                <div class="col-md-4" id="detalleProductoAgregado"></div>
-
-              </div>
-            </div>
-          </div>
-          <!------------------ COMPRAR - PAGAR ----------------->
-        </div>
+<!-- CARRITO PARA PAGO CON RESUMEN COMPRA -->
+<div class="col">
+  <h3 class="objetoCentrado1 tituloImportante3">RESUMEN DE LA COMPRA:</h3>
+  <section class="objetoCentrado1">
+    <h4 class="item">
+      <i class="bi bi-activity"></i> REALIZA TU PAGO <i class="bi bi-activity"></i>
+    </h4>
+  </section>
+  <div class="card-container">
+    <div class="mini-carrito tituloImportante1">
+      <div class="objetoCentrado1" id="resumenCarrito">
+    
+        <ul id="listaCarrito" class="list-group"></ul>
+        
       </div>
-  </div>
-
-
-
-
-  <!------------------ TIENDA PRODUCTOS ----------------->
-
-  <!-- GRID -->
-  <!-- PRODUCTOS -->
-  <div class="gridPadre">
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-
-
-      <!-- PRODUCTOS AGREGADOS EN JS -->
-      <div class="col producto" id="producto1" data-id="1">
-        <!-- Contenido del producto -->
-      </div>
-
-      <div class="col producto" id="producto2" data-id="2">
-        <!-- Contenido del producto 2 -->
-      </div>
-
-      <div class="col producto" id="producto3" data-id="3">
-        <!-- Contenido del producto -->
-      </div>
-      <div class="col producto" id="producto4" data-id="4">
-        <!-- Contenido del producto -->
-      </div>
-      <div class="col producto" id="producto5" data-id="5">
-        <!-- Contenido del producto -->
-      </div>
-      <div class="col producto" id="producto6" data-id="6">
-        <!-- Contenido del producto -->
-      </div>
-      <div class="col producto" id="producto7" data-id="7">
-        <!-- Contenido del producto -->
-      </div>
-      <div class="col producto" id="producto8" data-id="8">
-        <!-- Contenido del producto -->
-      </div>
-      <div class="col producto" id="producto9" data-id="9">
-        <!-- Contenido del producto -->
-      </div>
-      <div class="col producto" id="producto10" data-id="10">
-        <!-- Contenido del producto -->
-      </div>
-      <div class="col producto" id="producto11" data-id="11">
-        <!-- Contenido del producto -->
-      </div>
-      <div class="col producto" id="producto12" data-id="12">
-        <!-- Contenido del producto -->
-      </div>
-
+   
     </div>
   </div>
-  </div>
+</div>
 
-  </div>
+<hr class="border border border-1 opacity-20" />
 
-  <!-- -------------LINK SEGUIR COMPRANDO------------------ -->
-
-  <hr class="border border border-1 opacity-20" />
-
-
-
-  <section class="seguirComprando1">
-    <a href="#arriba">
-      <i class="bi bi-shift-fill"></i> Seguir Comprando
-      <i class="bi bi-shift-fill"></i>
+   <!-- Botón para realizar el pago -->
+   <div class="objetoCentrado1">
+    <a href="https://www.paypal.com/paypalme/alegondramusic?country.x=AR&locale.x=es_XC" class="btn botonSecundario botonPagar" target="_blank">
+      <h3 class="tituloImportante2 textoMovimiento">
+        <i class="bi bi-shift-fill"></i> PAGAR
+      </h3>
     </a>
-  </section>
+  </div>
+  
 
+<!-- -------------LINK SEGUIR COMPRANDO------------------ -->
 
-  <hr class="border border-1 opacity-20 ">
+<hr class="border border border-2 opacity-50" />
 
+   <!-- Botón para realizar el pago -->
+   <div class="objetoCentrado1">
+    <button  class="seguirComprando1">
+      <a href="./tienda.html"  target="_blank">
+        <h3 class="tituloImportante2">
+          <i class="bi bi-shift-fill"></i> SEGUIR COMPRANDO  <i class="bi bi-shift-fill"></i>
+        </h3>
+      </a>
+    </button>
+  </div>
 
+  <hr class="border border border-2 opacity-50" />
 
 
 
@@ -317,12 +235,11 @@
   </div>
 
 
-
-
   <!-- Enlace a tu archivo JavaScript -->
   <script src="../js/tienda.js"></script>
   <!-- Enlace a tu archivo JavaScript -->
   <script src="../js/tienda-pago.js"></script>
+
 
   <!-- Scripts de Bootstrap (jQuery y Popper.js) -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

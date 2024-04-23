@@ -40,6 +40,29 @@
   margin-top: 20px;
 }
 
+.gridPadreCarrito4 {
+  display: flex;
+  flex-direction: row; /* Mostrar elementos en filas */
+  flex-wrap: wrap; /* Permitir que se envuelvan en varias filas */
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1168px;
+  margin-top: 20px;
+  border: 1px solid rgba(0, 255, 255, 0.21);
+  border-radius: 30px;
+  padding: 10px;
+}
+
+/* Estilo para cada elemento hijo dentro de .gridPadreCarrito4 */
+.gridPadreCarrito4 .elementoHijo {
+  flex-basis: calc(33.33% - 20px); /* Ancho de cada elemento, con margen */
+  margin: 10px; /* Espacio entre elementos */
+  max-width: 300px; /* Ancho máximo de cada elemento */
+}
+
+
+
 .item {
   display: flex;
   justify-content: center;
