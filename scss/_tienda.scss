@@ -118,7 +118,7 @@ select.form-select option {
   color: rgba(254, 254, 232, 0.665);
   cursor: pointer;
   transition: all 0.3s ease;
-  float: right;
+  // float: right;
   margin-top: 10px;
 }
 
@@ -135,7 +135,7 @@ select.form-select option {
 
 .tituloPrecio1 {
   // text-decoration: underline;
-  color: rgba(0, 255, 208, 0.409);
+  color: rgba(0, 255, 208, 0.672);
   font-size: medium;
 }
 
@@ -213,4 +213,10 @@ select.form-select option {
 
 .border-start {
   border-left: 1px solid #dee2e6;
+}
+
+
+/* CSS para la clase que define el fondo de la tarjeta */
+.fondoTarjeta {
+  background-color: #007dfa; /* Color de fondo que desees */
 }

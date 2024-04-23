@@ -112,44 +112,48 @@
 
 
 
-
-
-
-
-
-      <!-----------------MINI CARRITO DESPLEGABLE--------------------------->
-
-
-      <div class="card-container">
-        <div class="mini-carrito tituloImportante1">
-          <div class="objetoCentrado1">
-            <div class="mini-carrito">
-              <p class="tituloImportante3 objetoCentrado1">Mini Carrito
-              <h5 class="objetoCentrado1"> <i class="bi bi-cart tamañoicono1"></i></h5>
+      <div class="col">
+        <div class="card-container">
+          <div class="mini-carrito tituloImportante1">
+            <div class="objetoCentrado1">
+              <p class="tituloImportante3 objetoCentrado1">Carrito
+                <span class="objetoCentrado1 card3"> <i class="bi bi-cart tamañoicono1"></i> </span>
+                
               </p>
-              <ul id="listaMiniCarrito" class="list-group list-group-flush"></ul>
-              <p id="totalMiniCarrito" class="tituloImportante2 objetoCentrado1">Total: $0.00</p>
-              <p id="contadorCarrito" class="totalImportante1 objetoCentrado1">Cantidad de Productos: 0</p>
-              <section class="objetoCentrado1">
-                <button class="btn botonSecundario seguirComprando1 objetoCentrado1" id="btnVaciarCarrito">Vaciar
-                  Carrito</button>
+              
+              <div class="mini-carrito ">
+
+                <div class="row">
+                  <!-- Columna para el mini carrito -->
+                  <div class="col-md-8 ">
+                    <ul id="listaMiniCarrito" class="list-group list-group-flush "></ul>
+                    <p id="totalMiniCarrito" class="tituloImportante2 objetoCentrado1">Total: $0.00</p>
+                    <p id="contadorCarrito" class="totalImportante1 objetoCentrado1">Cantidad de Productos: 0</p>
+
+              
+                    <button class="seguirComprando1 objetoCentrado1">
+                      <i class="bi bi-shift-fill"></i> COMPRAR
+                      <i class="bi bi-shift-fill"></i>
+                    </button>
+                    <hr>
+                    <button class="btn botonSecundario botonEliminar tituloPequeño2" id="btnVaciarCarrito">VACIAR CARRITO</button>
+                
+                    
+                  </div>
+                  <!-- Columna para detalles del producto agregado -->
+                  <div class="col-md-4" id="detalleProductoAgregado"></div>
                   
-              </section>
+                </div>
+              </div>
             </div>
+            <!------------------ COMPRAR - PAGAR ----------------->
+
+
           </div>
 
-          <p class="card3 tituloImportante1 objetoCentrado1"><i class="bi bi-activity"></i> REALIZÁ TU PEDIDO <i
-              class="bi bi-activity"></i></p>
-          <h4 class="objetoCentrado1">Resumen del Carrito</h4>
-          <ul id="listaMiniCarrito">
-            <!-- Los productos del carrito se mostrarán aquí mediante JavaScript -->
-          </ul>
-
         </div>
+
       </div>
-
-
-
 
 
 
@@ -159,6 +163,7 @@
       <!-- PRODUCTOS -->
       <div class="gridPadre">
         <div class="row row-cols-1 row-cols-md-4 g-4">
+
 
           <!-- PRODUCTOS AGREGADOS EN JS -->
           <div class="col producto" id="producto1" data-id="1">
@@ -204,6 +209,7 @@
       </div>
   </div>
 
+  </div>
 
   <!-- -------------LINK SEGUIR COMPRANDO------------------ -->
 
@@ -212,19 +218,14 @@
 
 
   <section class="seguirComprando1">
-    <a href="#">
+    <a href="#arriba">
       <i class="bi bi-shift-fill"></i> Seguir Comprando
-      <i class="bi bi-shift-fill"></i> </a>
-
+      <i class="bi bi-shift-fill"></i>
+    </a>
   </section>
+
 
   <hr class="border border-1 opacity-20 ">
-
-  <section class="seguirComprando1">
-    <a href="#">
-      <i class="bi bi-shift-fill"></i> COMPRAR LO ENCARGADO
-      <i class="bi bi-shift-fill"></i> </a>
-  </section>
 
 
 

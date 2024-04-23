@@ -1,15 +1,13 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const contenedorProductos = document.querySelector(".row.row-cols-1.row-cols-md-4.g-4");
+  const listaMiniCarrito = document.getElementById("listaMiniCarrito");
+  const totalMiniCarrito = document.getElementById("totalMiniCarrito");
+  const contadorCarrito = document.getElementById("contadorCarrito");
+  const btnVaciarCarrito = document.getElementById("btnVaciarCarrito");
+  const detalleProductoAgregado = document.getElementById("detalleProductoAgregado");
 
-
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const contenedorProductos = document.querySelector(".row.row-cols-1.row-cols-md-4.g-4");
-    const listaMiniCarrito = document.getElementById("listaMiniCarrito");
-    const totalMiniCarrito = document.getElementById("totalMiniCarrito");
-    const contadorCarrito = document.getElementById("contadorCarrito");
-    const btnVaciarCarrito = document.getElementById("btnVaciarCarrito");
-  
-    // Array de productos (simulación, puedes obtenerlo de una API o base de datos)
-    const productos = [
+  // Array de productos (simulación, puedes obtenerlo de una API o base de datos)
+  const productos = [
       {
         id: 1,
         nombre: "Remera Gondra World W-B-1",
@@ -142,53 +140,95 @@
   // Llamar a la función para cargar los productos cuando la página esté lista
   cargarProductos();
 
-  
-    // Función para manejar clics en el botón "Encargar"
-    function handleEncargarClick(event) {
-      event.preventDefault();
-      const botonEncargar = event.target;
-      if (botonEncargar.classList.contains("botonEncargar")) {
-        const productoId = botonEncargar.getAttribute("data-producto-id");
-        const color = document.getElementById(`selectColor${productoId}`).value;
-        const talla = document.getElementById(`selectTalla${productoId}`).value;
-  
-        const productoSeleccionado = productos.find((producto) => producto.id == productoId);
-        if (productoSeleccionado) {
-          const productoEncargado = {
-            id: productoSeleccionado.id,
-            nombre: productoSeleccionado.nombre,
-            precio: productoSeleccionado.precio,
-            imagen: productoSeleccionado.imagen,
-            color: color,
-            talla: talla
-          };
-          agregarAlCarrito(productoEncargado);
-        } else {
-          console.error("Producto no encontrado");
-        }
+  // Función para manejar clics en el botón "Encargar"
+  function handleEncargarClick(event) {
+    event.preventDefault();
+    const botonEncargar = event.target;
+    if (botonEncargar.classList.contains("botonEncargar")) {
+      const productoId = botonEncargar.getAttribute("data-producto-id");
+      const color = document.getElementById(`selectColor${productoId}`).value;
+      const talla = document.getElementById(`selectTalla${productoId}`).value;
+
+      const productoSeleccionado = productos.find((producto) => producto.id == productoId);
+      if (productoSeleccionado) {
+        const productoEncargado = {
+          id: productoSeleccionado.id,
+          nombre: productoSeleccionado.nombre,
+          precio: productoSeleccionado.precio,
+          imagen: productoSeleccionado.imagen,
+          color: color,
+          talla: talla
+        };
+        agregarAlCarrito(productoEncargado);
+      } else {
+        console.error("Producto no encontrado");
       }
     }
-  
-    // Función para agregar un producto al mini carrito
-    function agregarAlCarrito(producto) {
-      let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-      carrito.push(producto);
-      localStorage.setItem("carrito", JSON.stringify(carrito));
-      actualizarCarrito();
-    }
-  
-    // Función para cargar el mini carrito
-    function cargarMiniCarrito() {
-      const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-      listaMiniCarrito.innerHTML = "";
-      let total = 0;
-      carrito.forEach((producto, index) => {
-        // Código para cada producto en el mini carrito...
-      });
-  
-      totalMiniCarrito.textContent = `Total: $${total.toFixed(2)}`;
-      contadorCarrito.textContent = `Cantidad de Productos: ${carrito.length}`;
-    }
+  }
+
+  // Escuchar clics en cualquier parte del documento y manejarlos
+  document.addEventListener("click", handleEncargarClick);
+    
+
+  // Función para agregar un producto al mini carrito
+  function agregarAlCarrito(producto) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    carrito.push(producto);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    actualizarCarrito();
+    mostrarDetalleProductoAgregado(producto);
+  }
+
+  // Función para mostrar los detalles del producto agregado en el mini carrito
+  function mostrarDetalleProductoAgregado(producto) {
+    const detalleProductoHTML = `
+      <div class="card">
+        <img src="${producto.imagen}" class="card-img-top img-fluid" alt="${producto.nombre}" />
+        <div class="card-body">
+          <h5 class="card-title">${producto.nombre}</h5>
+          <p class="card-text">Color: ${producto.color}</p>
+          <p class="card-text">Talla: ${producto.talla}</p>
+          <p class="card-text">Precio: $${producto.precio.toFixed(2)}</p>
+        </div>
+      </div>
+    `;
+    detalleProductoAgregado.innerHTML = detalleProductoHTML;
+  }
+
+// Función para cargar el mini carrito
+function cargarMiniCarrito() {
+  const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  listaMiniCarrito.innerHTML = "";
+  let total = 0;
+
+  carrito.forEach((producto, index) => {
+    // Crear elemento li para cada producto en el carrito
+    const itemHTML = `
+      <li class="list-group-item d-flex justify-content-between align-items-center bg-light border border-secondary rounded">
+        <div class="d-flex align-items-center">
+          <img src="${producto.imagen}" class="img-thumbnail me-3" alt="${producto.nombre}" style="max-width: 60px;">
+          <div>
+            <h6 class="mb-0">${producto.nombre}</h6>
+            <small class="text-muted">Color: ${producto.color}, Talla: ${producto.talla}</small>
+          </div>
+        </div>
+        <div>
+          <span class="badge bg-primary rounded-pill tituloImportante1">$${producto.precio.toFixed(2)}</span>
+          <button type="button" class="btn btn-sm btn-danger ms-2 btn-eliminar seguirComprando1" data-index="${index}">
+            <i class="bi bi-trash"></i>
+          </button>
+        </div>
+      </li>
+    `;
+
+    listaMiniCarrito.insertAdjacentHTML("beforeend", itemHTML);
+    total += producto.precio; // Sumar al total el precio de este producto
+  });
+
+  totalMiniCarrito.textContent = `Total: $${total.toFixed(2)}`;
+  contadorCarrito.textContent = `Cantidad de Productos: ${carrito.length}`;
+}
+
   
     // Función para eliminar un producto del carrito
     function eliminarDelCarrito(index) {
