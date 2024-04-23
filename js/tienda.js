@@ -8,81 +8,80 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Array de productos (simulación, puedes obtenerlo de una API o base de datos)
   const productos = [
-      {
-        id: 1,
-        nombre: "Remera Gondra World W-B-1",
-        precio: 20000.99,
-        imagen: "../img/06-tiendagondraworld/tienda1-.png",
-      },
-      {
-        id: 2,
-        nombre: "Remera Almango A-G-1 Ponele Onda",
-        precio: 18000.50,
-        imagen: "../img/06-tiendagondraworld/tienda2-.png",
-      },
-      {
-        id: 3,
-        nombre: "Remera Gondra World W-G-2",
-        imagen: "../img/06-tiendagondraworld/tienda3-.png",
-        precio: 11210,
-      },
-      {
-        id: 4,
-        nombre: "Remera Almango A-B-2 Fundidos",
-        imagen: "../img/06-tiendagondraworld/tienda4-.png",
-        precio: 16200,
-      },
-      {
-        id: 5,
-        nombre: "Remera Puchulita P-B-1",
-        imagen: "../img/06-tiendagondraworld/tienda5-.png",
-        precio: 15130,
-      },
-      {
-        id: 6,
-        nombre: "Remera Almango D-2-C Fiesta",
-        imagen: "../img/06-tiendagondraworld/tienda6-.png",
-        precio: 15200,
-      },
-      {
-        id: 7,
-        nombre: "Remera Almango D-4-A Logo Antiguo",
-        imagen: "../img/06-tiendagondraworld/tienda7-.png",
-        precio: 13250,
-      },
-      {
-        id: 8,
-        nombre: "Remera Almango A-Gorro D-5-A",
-        imagen: "../img/06-tiendagondraworld/tienda8-.png",
-        precio: 16200,
-      },
-      {
-        id: 9,
-        nombre: "Remera Gondra Estudio D-4-B",
-        imagen: "../img/06-tiendagondraworld/tienda9-.png",
-        precio: 17100,
-      },
-      {
-        id: 10,
-        nombre: "Remera Almango D-6-A Logo Descontrol",
-        imagen: "../img/06-tiendagondraworld/tienda10-.png",
-        precio: 13210,
-      },
-      {
-        id: 11,
-        nombre: "Remera Almango Ale Gondra D-3-B",
-        imagen: "../img/06-tiendagondraworld/tienda11-.png",
-        precio: 16540,
-      },
-      {
-        id: 12,
-        nombre: "Remera Almango D-6-B Sexotica",
-        imagen: "../img/06-tiendagondraworld/tienda12-.png",
-        precio: 15250,
-      }
-    ];
-  
-  
+    {
+      id: 1,
+      nombre: "Remera Gondra World W-B-1",
+      precio: 20000.99,
+      imagen: "../img/06-tiendagondraworld/tienda1-.png",
+    },
+    {
+      id: 2,
+      nombre: "Remera Almango A-G-1 Ponele Onda",
+      precio: 18000.50,
+      imagen: "../img/06-tiendagondraworld/tienda2-.png",
+    },
+    {
+      id: 3,
+      nombre: "Remera Gondra World W-G-2",
+      imagen: "../img/06-tiendagondraworld/tienda3-.png",
+      precio: 11210,
+    },
+    {
+      id: 4,
+      nombre: "Remera Almango A-B-2 Fundidos",
+      imagen: "../img/06-tiendagondraworld/tienda4-.png",
+      precio: 16200,
+    },
+    {
+      id: 5,
+      nombre: "Remera Puchulita P-B-1",
+      imagen: "../img/06-tiendagondraworld/tienda5-.png",
+      precio: 15130,
+    },
+    {
+      id: 6,
+      nombre: "Remera Almango D-2-C Fiesta",
+      imagen: "../img/06-tiendagondraworld/tienda6-.png",
+      precio: 15200,
+    },
+    {
+      id: 7,
+      nombre: "Remera Almango D-4-A Logo Antiguo",
+      imagen: "../img/06-tiendagondraworld/tienda7-.png",
+      precio: 13250,
+    },
+    {
+      id: 8,
+      nombre: "Remera Almango A-Gorro D-5-A",
+      imagen: "../img/06-tiendagondraworld/tienda8-.png",
+      precio: 16200,
+    },
+    {
+      id: 9,
+      nombre: "Remera Gondra Estudio D-4-B",
+      imagen: "../img/06-tiendagondraworld/tienda9-.png",
+      precio: 17100,
+    },
+    {
+      id: 10,
+      nombre: "Remera Almango D-6-A Logo Descontrol",
+      imagen: "../img/06-tiendagondraworld/tienda10-.png",
+      precio: 13210,
+    },
+    {
+      id: 11,
+      nombre: "Remera Almango Ale Gondra D-3-B",
+      imagen: "../img/06-tiendagondraworld/tienda11-.png",
+      precio: 16540,
+    },
+    {
+      id: 12,
+      nombre: "Remera Almango D-6-B Sexotica",
+      imagen: "../img/06-tiendagondraworld/tienda12-.png",
+      precio: 15250,
+    }
+  ];
+
   // Función para cargar los productos en el DOM
   function cargarProductos() {
     productos.forEach((producto) => {
@@ -140,11 +139,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Llamar a la función para cargar los productos cuando la página esté lista
   cargarProductos();
 
-  // Función para manejar clics en el botón "Encargar"
+  // Función para manejar clics en los botones "Encargar"
   function handleEncargarClick(event) {
     event.preventDefault();
-    const botonEncargar = event.target;
-    if (botonEncargar.classList.contains("botonEncargar")) {
+    const botonEncargar = event.target.closest('.botonEncargar');
+    if (botonEncargar) {
       const productoId = botonEncargar.getAttribute("data-producto-id");
       const color = document.getElementById(`selectColor${productoId}`).value;
       const talla = document.getElementById(`selectTalla${productoId}`).value;
@@ -166,7 +165,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
- 
+  // Agregar evento click para manejar clics en los botones "Encargar"
+  contenedorProductos.addEventListener('click', function (event) {
+    handleEncargarClick(event);
+  });
 
   // Función para agregar un producto al mini carrito
   function agregarAlCarrito(producto) {
@@ -192,114 +194,113 @@ document.addEventListener("DOMContentLoaded", function () {
     detalleProductoAgregado.innerHTML = detalleProductoHTML;
   }
 
-// Función para cargar el mini carrito
-function cargarMiniCarrito() {
-  const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-  listaMiniCarrito.innerHTML = "";
-  let total = 0;
+  // Función para cargar el mini carrito
+  function cargarMiniCarrito() {
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    listaMiniCarrito.innerHTML = "";
+    let total = 0;
 
-  carrito.forEach((producto, index) => {
-    // Crear elemento li para cada producto en el carrito
-    const itemHTML = `
-      <li class="list-group-item d-flex justify-content-between align-items-center bg-light border border-secondary rounded">
-        <div class="d-flex align-items-center">
-          <img src="${producto.imagen}" class="img-thumbnail me-3" alt="${producto.nombre}" style="max-width: 60px;">
-          <div>
-            <h6 class="mb-0">${producto.nombre}</h6>
-            <small class="text-muted">Color: ${producto.color}, Talla: ${producto.talla}</small>
+    carrito.forEach((producto, index) => {
+      // Crear elemento li para cada producto en el carrito
+      const itemHTML = `
+        <li class="list-group-item d-flex justify-content-between align-items-center bg-light border border-secondary rounded">
+          <div class="d-flex align-items-center">
+            <img src="${producto.imagen}" class="img-thumbnail me-3" alt="${producto.nombre}" style="max-width: 60px;">
+            <div>
+              <h6 class="mb-0">${producto.nombre}</h6>
+              <small class="text-muted">Color: ${producto.color}, Talla: ${producto.talla}</small>
+            </div>
           </div>
-        </div>
-        <div>
-          <span class="badge bg-primary rounded-pill tituloImportante1">$${producto.precio.toFixed(2)}</span>
-          <button type="button" class="btn btn-sm btn-danger ms-2 btn-eliminar seguirComprando1" data-index="${index}">
-            <i class="bi bi-trash"></i>
-          </button>
-        </div>
-      </li>
-    `;
+          <div>
+            <span class="badge bg-primary rounded-pill tituloImportante1">$${producto.precio.toFixed(2)}</span>
+            <button type="button" class="btn btn-sm btn-danger ms-2 btn-eliminar seguirComprando1" data-index="${index}">
+              <i class="bi bi-trash"></i>
+            </button>
+          </div>
+        </li>
+      `;
 
-    listaMiniCarrito.insertAdjacentHTML("beforeend", itemHTML);
-    total += producto.precio; // Sumar al total el precio de este producto
+      listaMiniCarrito.insertAdjacentHTML("beforeend", itemHTML);
+      total += producto.precio; // Sumar al total el precio de este producto
+    });
+
+    totalMiniCarrito.textContent = `Total: $${total.toFixed(2)}`;
+    contadorCarrito.textContent = `Cantidad de Productos: ${carrito.length}`;
+  }
+
+  // Función para eliminar un producto del carrito
+  function eliminarDelCarrito(index) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    carrito.splice(index, 1);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    actualizarCarrito();
+  }
+
+  // Función para vaciar el carrito
+  function vaciarCarrito() {
+    localStorage.removeItem("carrito");
+    actualizarCarrito();
+  }
+
+  // Función para actualizar el carrito
+  function actualizarCarrito() {
+    cargarMiniCarrito();
+    calcularTotalCarrito();
+  }
+
+  // Función para calcular el total del carrito
+  function calcularTotalCarrito() {
+    let total = 0;
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    carrito.forEach((producto) => {
+      total += producto.precio;
+    });
+    totalMiniCarrito.textContent = `Total: $${total.toFixed(2)}`;
+  }
+
+  // Escuchar clics en botones de eliminar y manejarlos
+  listaMiniCarrito.addEventListener("click", function (event) {
+    if (event.target.classList.contains("btn-eliminar")) {
+      const index = event.target.getAttribute("data-index");
+      eliminarDelCarrito(index);
+    }
   });
 
-  totalMiniCarrito.textContent = `Total: $${total.toFixed(2)}`;
-  contadorCarrito.textContent = `Cantidad de Productos: ${carrito.length}`;
-}
+  // Escuchar clics en botón Vaciar Carrito
+  btnVaciarCarrito.addEventListener("click", function () {
+    vaciarCarrito();
+  });
 
-  
-    // Función para eliminar un producto del carrito
-    function eliminarDelCarrito(index) {
-      let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-      carrito.splice(index, 1);
-      localStorage.setItem("carrito", JSON.stringify(carrito));
-      actualizarCarrito();
+  // Agregar evento click para alternar la clase seleccionado
+  contenedorProductos.addEventListener('click', function (event) {
+    const producto = event.target.closest('.producto');
+    if (producto) {
+      producto.classList.toggle('seleccionado');
     }
-  
-    // Función para vaciar el carrito
-    function vaciarCarrito() {
-      localStorage.removeItem("carrito");
-      actualizarCarrito();
-    }
-  
-    // Función para actualizar el carrito
-    function actualizarCarrito() {
-      cargarMiniCarrito();
-      calcularTotalCarrito();
-    }
-  
-    // Función para calcular el total del carrito
-    function calcularTotalCarrito() {
-      let total = 0;
+  });
+
+  // Función para manejar clics en el botón "COMPRAR"
+  function handleComprarClick(event) {
+    event.preventDefault();
+    const botonComprar = event.target.closest("#btnComprar");
+    if (botonComprar) {
+      // Obtener el carrito del localStorage
       const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-      carrito.forEach((producto) => {
-        total += producto.precio;
-      });
-      totalMiniCarrito.textContent = `Total: $${total.toFixed(2)}`;
-    }
-  
-    // Escuchar clics en botones de eliminar y manejarlos
-    listaMiniCarrito.addEventListener("click", function (event) {
-      if (event.target.classList.contains("btn-eliminar")) {
-        const index = event.target.getAttribute("data-index");
-        eliminarDelCarrito(index);
-      }
-    });
-  
-    // Escuchar clics en botón Vaciar Carrito
-    btnVaciarCarrito.addEventListener("click", function () {
-      vaciarCarrito();
-    });
-  
+      
+      // Verificar si el carrito tiene productos
+      if (carrito.length > 0) {
+        // Guardar el carrito en sessionStorage para enviarlo a tienda-pago.html
+        sessionStorage.setItem("carrito", JSON.stringify(carrito));
 
-    // Agregar evento click para alternar la clase seleccionado
-    contenedorProductos.addEventListener('click', function (event) {
-      const producto = event.target.closest('.producto');
-      if (producto) {
-        producto.classList.toggle('seleccionado');
+        // Redirigir a la página de pago después de agregar al carrito
+        window.location.href = "./tienda-pago.html";
+      } else {
+        console.error("No hay productos en el carrito para comprar.");
       }
-    });
-  
-  
-// Función para manejar clics en el botón "COMPRAR"
-function handleComprarClick(event) {
-  event.preventDefault();
-  const botonComprar = event.target.closest("#btnComprar");
-  if (botonComprar) {
-    // Obtener el carrito del localStorage
-    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-    
-    // Verificar si el carrito tiene productos
-    if (carrito.length > 0) {
-      // Guardar el carrito en sessionStorage para enviarlo a tienda-pago.html
-      sessionStorage.setItem("carrito", JSON.stringify(carrito));
-
-      // Redirigir a la página de pago después de agregar al carrito
-      window.location.href = "./tienda-pago.html";
-    } else {
-      console.error("No hay productos en el carrito para comprar.");
     }
   }
-}
 
-// Escuchar clics en el botón "COMPRAR" y manejarlos
-document.addEventListener("click", handleComprarClick);
+  // Escuchar clics en el botón "COMPRAR" y manejarlos
+  document.addEventListener("click", handleComprarClick);
+
+});
