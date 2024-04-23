@@ -1,42 +1,38 @@
 .mini-carrito {
-    position:sticky;
-    top: 80px;
-    right: 20px;
-    width: 250px;
-    background-color: #105e4c5e;
-    border: none;
-    border-radius: 20px;
-    padding: 10px;
-    z-index: 1000;
-  }
-  
-  .mini-carrito h4 {
-    margin-top: 0;
-  }
-  
-  #listaMiniCarrito {
-    padding: 5px;
-  }
-  
-  #listaMiniCarrito li {
-    margin-bottom: 10px;
-  }
-  
-  #totalMiniCarrito {
-    font-weight: bold;
-  }
-  
-  #botonPagar {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  #botonPagar:hover {
-    background-color: #0056b3;
-  }
-  
+  width: 800px;
+  background-color: #375c53a5;
+  // border: 1px solid rgba(255, 255, 255, 0.564);
+  border-radius: 20px;
+  padding: 40px;
+
+}
+
+.mini-carrito h4 {
+  margin-top: 0;
+}
+
+#listaMiniCarrito {
+  padding: 5px;
+}
+
+#listaMiniCarrito li {
+  margin-bottom: 10px;
+}
+
+#totalMiniCarrito {
+  font-weight: bold;
+}
+
+#botonPagar {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#botonPagar:hover {
+  background-color: #0056b3;
+}

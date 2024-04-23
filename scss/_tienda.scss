@@ -1,27 +1,6 @@
-
 /*******TIENDA********/
 
 .botonComprar {
-    padding: 8px 16px;
-    font-size: small;
-    border: none;
-    border-radius: 10px;
-    background-color: transparent;
-    color: rgba(254, 254, 232, 0.665);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    float: right;
-    margin-top: 10px;
-  }
-  
-  .botonComprar:hover {
-
-    background-color: transparent;
-    color: #00f7ff;
-    border: none;
-  }
-  
-.botonComprar1 {
   padding: 8px 16px;
   font-size: small;
   border: none;
@@ -34,11 +13,51 @@
   margin-top: 10px;
 }
 
+.botonComprar:hover {
+  background-color: rgba(48, 156, 120, 0.563);
+  color: #ffffff;
+  border: none;
+}
+
+.botonComprar1 {
+  padding: 8px 16px;
+  font-size: small;
+  border: none;
+  border-radius: 10px;
+  background-color: #16484d93;
+  color: rgba(254, 254, 232, 0.665);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  float: right;
+  margin-top: 30px;
+}
+
 .botonComprar1:hover {
   background-color: rgba(48, 156, 120, 0.563);
   color: #ffffff;
   border: none;
 }
+
+
+.botonEncargar {
+  padding: 8px 16px;
+  font-size: small;
+  border: none;
+  border-radius: 10px;
+  background-color: #16484d93;
+  color: rgba(254, 254, 232, 0.665);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  float: right;
+  margin-top: 10px;
+}
+
+.botonEncargar:hover {
+  background-color: rgba(48, 156, 120, 0.563);
+  color: #ffffff;
+  border: none;
+}
+
 
 .seguirComprando1 {
   display: flex;
@@ -71,7 +90,19 @@
   background-color: #00eaff93;
   color: rgba(0, 0, 0, 0.665);
 }
- 
+
+
+/* Estilos para centrar y cambiar el color de fondo de las opciones de los selects */
+select.form-select option {
+  text-align: center;
+  /* Centrar el texto */
+  background-color: #ffffff;
+  /* Cambiar el color de fondo a verde jade */
+  color: black;
+  /* Color del texto en las opciones */
+  border-radius: 20px;
+}
+
 
 .tamañoicono1 {
   font-size: 2rem;
@@ -98,14 +129,14 @@
 }
 
 .producto.seleccionado {
-  border: 2px solid #ff4081;
+  border: 2px solid #00ffe5;
 }
 
 
-  .tituloPrecio1 {
-    // text-decoration: underline;
-    color: rgba(0, 255, 208, 0.409);
-    font-size: medium;
+.tituloPrecio1 {
+  // text-decoration: underline;
+  color: rgba(0, 255, 208, 0.409);
+  font-size: medium;
 }
 
 .tituloPrecioCarrito {
@@ -122,12 +153,15 @@
   width: 100%;
   padding: 10px;
 }
+
 .itemProducto .productoCarrito {
   display: flex;
   align-items: center;
 }
+
 .itemProducto .imagenProductoCarrito {
-  width: 50px; /* Ajusta el tamaño de la imagen */
+  width: 50px;
+  /* Ajusta el tamaño de la imagen */
   height: auto;
   margin-right: 10px;
 }
@@ -136,6 +170,14 @@
   flex-grow: 1;
 }
 
+.producto {
+  margin-top: 5px;
+}
+
+.producto.seleccionado {
+  border: 2px solid #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
 
 
 /* Estilos para las imágenes de producto */
@@ -156,7 +198,7 @@
 .producto-precio {
   font-size: 16px;
   font-weight: bold;
-  color: #007bff;
+  color: #228c87;
 }
 
 

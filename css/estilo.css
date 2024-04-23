@@ -84,10 +84,12 @@ h3 {
 
 h4 {
   color: #e3baa5; /* Color de texto */
+  font-size: medium;
 }
 
 h5 {
   color: rgb(255, 255, 255); /* Color de texto */
+  font-size: x-small;
 }
 
 /* Estilos para los títulos h6 */
@@ -118,6 +120,14 @@ a:link {
 a:visited {
   color: rgba(158, 207, 201, 0.78); /* Color de texto */
   text-decoration: none; /* Sin subrayado */
+}
+
+.card {
+  text-align: justify;
+  background: rgba(27, 140, 130, 0.039);
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+  border: 1px solid rgb(255, 255, 255);
 }
 
 .card {
@@ -564,6 +574,14 @@ imagen-limitada5:hover {
   padding: 1px;
 }
 
+.tituloImportante3 {
+  color: rgba(119, 255, 201, 0.857);
+  font-size: x-large;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .tituloPequeño1 {
   color: rgba(241, 235, 200, 0.586);
   font-size: x-small;
@@ -583,15 +601,10 @@ logoGondraWorld1 {
 
 /* Estilos mini-carrito */
 .mini-carrito {
-  position: sticky;
-  top: 80px;
-  right: 20px;
-  width: 250px;
-  background-color: rgba(16, 94, 76, 0.368627451);
-  border: none;
+  width: 800px;
+  background-color: rgba(55, 92, 83, 0.6470588235);
   border-radius: 20px;
-  padding: 10px;
-  z-index: 1000;
+  padding: 40px;
 }
 
 .mini-carrito h4 {
@@ -773,7 +786,7 @@ logoGondraWorld1 {
   font-size: small;
   border: none;
   border-radius: 10px;
-  background-color: transparent;
+  background-color: rgba(22, 72, 77, 0.5764705882);
   color: rgba(254, 254, 232, 0.665);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -782,8 +795,8 @@ logoGondraWorld1 {
 }
 
 .botonComprar:hover {
-  background-color: transparent;
-  color: #00f7ff;
+  background-color: rgba(48, 156, 120, 0.563);
+  color: #ffffff;
   border: none;
 }
 
@@ -797,10 +810,29 @@ logoGondraWorld1 {
   cursor: pointer;
   transition: all 0.3s ease;
   float: right;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .botonComprar1:hover {
+  background-color: rgba(48, 156, 120, 0.563);
+  color: #ffffff;
+  border: none;
+}
+
+.botonEncargar {
+  padding: 8px 16px;
+  font-size: small;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(22, 72, 77, 0.5764705882);
+  color: rgba(254, 254, 232, 0.665);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  float: right;
+  margin-top: 10px;
+}
+
+.botonEncargar:hover {
   background-color: rgba(48, 156, 120, 0.563);
   color: #ffffff;
   border: none;
@@ -837,6 +869,17 @@ logoGondraWorld1 {
   color: rgba(0, 0, 0, 0.665);
 }
 
+/* Estilos para centrar y cambiar el color de fondo de las opciones de los selects */
+select.form-select option {
+  text-align: center;
+  /* Centrar el texto */
+  background-color: #ffffff;
+  /* Cambiar el color de fondo a verde jade */
+  color: black;
+  /* Color del texto en las opciones */
+  border-radius: 20px;
+}
+
 .tamañoicono1 {
   font-size: 2rem;
 }
@@ -862,7 +905,7 @@ logoGondraWorld1 {
 }
 
 .producto.seleccionado {
-  border: 2px solid #ff4081;
+  border: 2px solid #00ffe5;
 }
 
 .tituloPrecio1 {
@@ -888,13 +931,23 @@ logoGondraWorld1 {
 }
 
 .itemProducto .imagenProductoCarrito {
-  width: 50px; /* Ajusta el tamaño de la imagen */
+  width: 50px;
+  /* Ajusta el tamaño de la imagen */
   height: auto;
   margin-right: 10px;
 }
 
 .itemProducto .infoProductoCarrito {
   flex-grow: 1;
+}
+
+.producto {
+  margin-top: 5px;
+}
+
+.producto.seleccionado {
+  border: 2px solid #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
 /* Estilos para las imágenes de producto */
@@ -915,7 +968,7 @@ logoGondraWorld1 {
 .producto-precio {
   font-size: 16px;
   font-weight: bold;
-  color: #007bff;
+  color: #228c87;
 }
 
 .border-bottom {
@@ -934,9 +987,8 @@ logoGondraWorld1 {
 /* GRID */
 .gridPadre {
   display: grid;
-  background-color: rgba(0, 0, 0, 0.687);
+  background-color: rgba(0, 0, 0, 0.563);
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 10px;
   justify-content: center;
   align-items: center;
   /* Centra verticalmente el contenido */
@@ -948,7 +1000,7 @@ logoGondraWorld1 {
   /* Ajusta este valor según la distancia deseada */
   border: 1px rgba(0, 255, 255, 0.101) solid;
   border-radius: 30px;
-  padding: 10px;
+  padding: 30px;
 }
 
 .gridPadreCarrito1 {
@@ -970,7 +1022,8 @@ logoGondraWorld1 {
   align-items: center;
   margin: 0 auto;
   max-width: 1168px;
-  margin-top: 20px; /* Ajusta según necesites */
+  margin-top: 20px;
+  /* Ajusta según necesites */
   border: 1px rgba(0, 255, 255, 0.21) solid;
   border-radius: 30px;
   padding: 10px;
