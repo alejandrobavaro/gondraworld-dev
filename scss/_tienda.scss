@@ -23,27 +23,31 @@
   font-size: x-large;
   border: none;
   border-radius: 10px;
-  background-color: #1a05ffca;
+  background-color: #00ffaaa9;
 }
 
 .botonPagar:hover {
-   border: none;
+  border: none;
   border-radius: 10px;
   background-color: #00ffff84;
 }
 
 /* Detalles del producto agregado */
 #detalleProductoAgregado {
-  flex-basis: 40%; /* Toma el 40% del espacio */
-  padding-left: 20px; /* Espacio a la izquierda */
+  flex-basis: 40%;
+  /* Toma el 40% del espacio */
+  padding-left: 20px;
+  /* Espacio a la izquierda */
 }
 
 #detalleProductoAgregado img {
-  width: 100px; /* Tamaño de la imagen */
+  width: 100px;
+  /* Tamaño de la imagen */
   height: auto;
   border-radius: 10px;
   margin-bottom: 10px;
 }
+
 /* Botón "Vaciar Carrito" */
 #btnVaciarCarrito {
   padding: 8px 16px;
@@ -61,6 +65,7 @@
   background-color: rgba(156, 48, 77, 0.563);
   color: #ffffff;
 }
+
 .botonComprar1 {
   padding: 8px 16px;
   font-size: small;
@@ -86,7 +91,7 @@
   font-size: small;
   border: none;
   border-radius: 10px;
-  background-color: #16484d93;
+  background-color: #2bbdcd84;
   color: rgba(254, 254, 232, 0.665);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -95,7 +100,7 @@
 }
 
 .botonEncargar:hover {
-  background-color: rgba(48, 156, 120, 0.563);
+  background-color: rgba(48, 156, 120, 0.754);
   color: #ffffff;
   border: none;
 }
@@ -133,15 +138,22 @@
 }
 
 
+
+
+.form-select{
+  background-color: #548377;
+  color: white;
+  border: none
+}
 /* Estilos para centrar y cambiar el color de fondo de las opciones de los selects */
 select.form-select option {
   text-align: center;
   /* Centrar el texto */
-  background-color: #ffffff;
-  /* Cambiar el color de fondo a verde jade */
-  color: black;
+  background-color:#2a8371c0;
+   /* Cambiar el color de fondo a verde jade */
+  color: rgb(255, 255, 255);
   /* Color del texto en las opciones */
-  border-radius: 20px;
+
 }
 
 
@@ -165,6 +177,26 @@ select.form-select option {
 
 .botonEliminar:hover {
   background-color: rgba(48, 156, 120, 0.563);
+  color: #ffffff;
+  border: none;
+}
+
+/* Botón de eliminar */
+.btn-eliminar {
+  padding: 8px 16px;
+  font-size: small;
+  border: none;
+  border-radius: 10px;
+  background-color: #e32727;
+  color: rgba(254, 254, 232, 0.665);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  // float: right;
+  margin-top: 10px;
+}
+
+.btn-eliminar:hover {
+  background-color: rgba(227, 69, 69, 0.864);
   color: #ffffff;
   border: none;
 }
@@ -266,8 +298,10 @@ select.form-select option {
   padding: 20px;
   margin-top: 20px;
   display: flex;
-  justify-content: space-between; /* Alinea los elementos */
-  flex-wrap: wrap; /* Permite que los elementos se ajusten al tamaño del contenedor */
+  justify-content: space-between;
+  /* Alinea los elementos */
+  flex-wrap: wrap;
+  /* Permite que los elementos se ajusten al tamaño del contenedor */
 }
 
 /* Lista del mini carrito */
@@ -275,8 +309,40 @@ select.form-select option {
   list-style: none;
   padding: 0;
   margin: 0;
-  flex-basis: 50%; /* Toma la mitad del espacio */
+  flex-basis: 50%;
+  /* Toma la mitad del espacio */
 }
+
+
+
+/* Estilo CSS para el elemento <li> */
+.estilo-lista {
+  /* Estilos de disposición */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Estilos de apariencia */
+  background-color: #e3e3e3d2;
+  /* Color de fondo */
+  border: 1px solid #6c757d;
+  /* Borde */
+  border-radius: 20px;
+  /* Bordes redondeados */
+  padding: 10px;
+  /* Espaciado interno */
+  margin: 5px;
+  /* Margen inferior */
+  gap: 20px;
+}
+
+/* Estilo para el último elemento de la lista */
+.estilo-lista:last-child {
+  margin-bottom: 0;
+  /* Quitar margen inferior al último elemento */
+}
+
+
 
 /* Ítems del mini carrito */
 #listaMiniCarrito li {
@@ -296,7 +362,8 @@ select.form-select option {
 
 /* Estilos para la imagen del carrito */
 .carrito-imagen img {
-  width: 100px; /* Tamaño deseado para la imagen */
+  width: 100px;
+  /* Tamaño deseado para la imagen */
   height: auto;
   margin-bottom: 10px;
   /* Otros estilos según necesites */
@@ -307,4 +374,15 @@ select.form-select option {
 .list-group-item {
   border: none;
   padding: 15px;
+}
+
+
+//TOSTIFY
+/* Estilos personalizados para el Toastify */
+.iconoToastify {
+  font-size: small;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff0303e0;
+  color: rgba(254, 254, 232, 0.665);
 }

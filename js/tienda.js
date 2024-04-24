@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnVaciarCarrito = document.getElementById("btnVaciarCarrito");
   const detalleProductoAgregado = document.getElementById("detalleProductoAgregado");
 
+
   // Array de productos (simulación, puedes obtenerlo de una API o base de datos)
   const productos = [
     {
@@ -139,6 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Llamar a la función para cargar los productos cuando la página esté lista
   cargarProductos();
 
+
   // Función para manejar clics en los botones "Encargar"
   function handleEncargarClick(event) {
     event.preventDefault();
@@ -165,19 +167,39 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Agregar evento click para manejar clics en los botones "Encargar"
+  // Agregar evento de clic para manejar el botón "Encargar"
   contenedorProductos.addEventListener('click', function (event) {
-    handleEncargarClick(event);
+    const botonEncargar = event.target.closest('.botonEncargar');
+    if (botonEncargar) {
+      handleEncargarClick(event);
+    }
   });
 
-  // Función para agregar un producto al mini carrito
-  function agregarAlCarrito(producto) {
-    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-    carrito.push(producto);
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-    actualizarCarrito();
-    mostrarDetalleProductoAgregado(producto);
-  }
+
+
+// Función para agregar un producto al carrito
+function agregarAlCarrito(producto) {
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  carrito.push(producto);
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  actualizarCarrito();
+  mostrarDetalleProductoAgregado(producto);
+
+  
+  // Mostrar Toast de confirmación
+  Toastify({
+    text: `${producto.nombre} agregado al carrito`,
+    duration: 3000,
+    gravity: "top",
+    position: "left",
+    stopOnFocus: true,
+    className: "iconoToastify", // Clase CSS personalizada
+  }).showToast();
+}
+
+
+
+
 
   // Función para mostrar los detalles del producto agregado en el mini carrito
   function mostrarDetalleProductoAgregado(producto) {
@@ -194,6 +216,14 @@ document.addEventListener("DOMContentLoaded", function () {
     detalleProductoAgregado.innerHTML = detalleProductoHTML;
   }
 
+  // Función para cargar el carrito previamente guardado en localStorage al cargar la página
+  function cargarCarrito() {
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    carrito.forEach((producto) => {
+      agregarAlCarrito(producto);
+    });
+  }
+
   // Función para cargar el mini carrito
   function cargarMiniCarrito() {
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -203,20 +233,19 @@ document.addEventListener("DOMContentLoaded", function () {
     carrito.forEach((producto, index) => {
       // Crear elemento li para cada producto en el carrito
       const itemHTML = `
-        <li class="list-group-item d-flex justify-content-between align-items-center bg-light border border-secondary rounded">
+        <li class="estilo-lista">
           <div class="d-flex align-items-center">
-            <img src="${producto.imagen}" class="img-thumbnail me-3" alt="${producto.nombre}" style="max-width: 60px;">
+            <img src="${producto.imagen}" class="me-3" alt="${producto.nombre}" style="max-width: 60px;">
             <div>
-              <h6 class="mb-0">${producto.nombre}</h6>
+              <h6 class="mb-0 tituloPequeño4">${producto.nombre}</h6>
               <small class="text-muted">Color: ${producto.color}, Talla: ${producto.talla}</small>
             </div>
           </div>
           <div>
             <span class="badge bg-primary rounded-pill tituloImportante1">$${producto.precio.toFixed(2)}</span>
-            <button type="button" class="btn btn-sm btn-danger ms-2 btn-eliminar seguirComprando1" data-index="${index}">
-              <i class="bi bi-trash"></i>
-            </button>
-          </div>
+            <p><button class="btn btn-sm btn-danger ms-2 btn-eliminar  seguirComprando1" data-index="${index}">
+              <i class="bi bi-trash"></i> </button></p>
+              </div>
         </li>
       `;
 
@@ -234,6 +263,12 @@ document.addEventListener("DOMContentLoaded", function () {
     carrito.splice(index, 1);
     localStorage.setItem("carrito", JSON.stringify(carrito));
     actualizarCarrito();
+
+    // Enviamos un evento personalizado cuando se elimina un producto
+    const eliminarEvento = new CustomEvent("productoEliminado", {
+      detail: { index }, // Detalles del producto eliminado (puede ser el ID u otra identificación)
+    });
+    document.dispatchEvent(eliminarEvento); // Disparamos el evento para notificar a otras páginas
   }
 
   // Función para vaciar el carrito
@@ -271,28 +306,15 @@ document.addEventListener("DOMContentLoaded", function () {
     vaciarCarrito();
   });
 
-  // Agregar evento click para alternar la clase seleccionado
-  contenedorProductos.addEventListener('click', function (event) {
-    const producto = event.target.closest('.producto');
-    if (producto) {
-      producto.classList.toggle('seleccionado');
-    }
-  });
 
   // Función para manejar clics en el botón "COMPRAR"
   function handleComprarClick(event) {
     event.preventDefault();
     const botonComprar = event.target.closest("#btnComprar");
     if (botonComprar) {
-      // Obtener el carrito del localStorage
       const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-      
-      // Verificar si el carrito tiene productos
       if (carrito.length > 0) {
-        // Guardar el carrito en sessionStorage para enviarlo a tienda-pago.html
         sessionStorage.setItem("carrito", JSON.stringify(carrito));
-
-        // Redirigir a la página de pago después de agregar al carrito
         window.location.href = "./tienda-pago.html";
       } else {
         console.error("No hay productos en el carrito para comprar.");
@@ -300,7 +322,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Escuchar clics en el botón "COMPRAR" y manejarlos
-  document.addEventListener("click", handleComprarClick);
+  // Agregar evento de clic para manejar el botón "Comprar"
+  document.getElementById("btnComprar").addEventListener("click", handleComprarClick);
+
+
+  // Cargar el carrito al abrir la página
+  cargarMiniCarrito();
+
+  // Escuchar el evento productoEliminado para sincronizar la eliminación entre páginas
+  document.addEventListener("productoEliminado", function (event) {
+    const index = event.detail.index;
+    eliminarDelCarrito(index);
+  });
 
 });

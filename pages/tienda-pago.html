@@ -111,12 +111,14 @@
       <i class="bi bi-activity"></i> REALIZA TU PAGO <i class="bi bi-activity"></i>
     </h4>
   </section>
+
+
   <div class="card-container">
     <div class="mini-carrito tituloImportante1">
       <div class="objetoCentrado1" id="resumenCarrito">
     
-        <ul id="listaCarrito" class="list-group"></ul>
-        
+          <ul id="listaCarrito" class="list-group mb-3">
+            <p id="totalCarrito" class="fs-4">Total: $0.00</p>
       </div>
    
     </div>
@@ -127,10 +129,10 @@
 
    <!-- Botón para realizar el pago -->
    <div class="objetoCentrado1">
-    <a href="https://www.paypal.com/paypalme/alegondramusic?country.x=AR&locale.x=es_XC" class="btn botonSecundario botonPagar" target="_blank">
+         <button id="btnPagar" class="btn btn-success">
       <h3 class="tituloImportante2 textoMovimiento">
         <i class="bi bi-shift-fill"></i> PAGAR
-      </h3>
+      </h3></button>
     </a>
   </div>
   
@@ -142,7 +144,7 @@
    <!-- Botón para realizar el pago -->
    <div class="objetoCentrado1">
     <button  class="seguirComprando1">
-      <a href="./tienda.html"  target="_blank">
+      <a href="./tienda.html">
         <h3 class="tituloImportante2">
           <i class="bi bi-shift-fill"></i> SEGUIR COMPRANDO  <i class="bi bi-shift-fill"></i>
         </h3>
@@ -245,6 +247,10 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 
 </body>
