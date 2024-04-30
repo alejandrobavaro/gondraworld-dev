@@ -1,33 +1,38 @@
+//---------------------ESTILOS HEADER----------------------------//
+
 /* Estilos para la barra de navegación */
 .navbar {
   // background-color: rgba(127, 255, 212, 0.268);
   // border: 1px solid aqua;
-  font-family: "Caveat", cursive;
-
+  // font-family: "Caveat", cursive;
   border-radius: 20px;
    flex-direction: row;
   padding-bottom: 20px;
   /* Asegura que los elementos del menú se alineen en una fila */
-}
+  
+
+
+
+  font-family: "Montserrat Alternates", sans-serif;
+ }
 
 .navbar-nav {
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
-  // font-family: 'Fredericka the Great';
+  font-family: 'Fredericka the Great';
   font-size: x-large;
   font-weight: bolder;
 }
 
 .navbar-nav .nav-link {
-  text-align: center; /* Centra horizontalmente */
+  text-align: center;
+  /* Centra horizontalmente */
 }
-
 
 /* Estilos para el enlace del menú al pasar el mouse */
 .menu-link:hover {
   color: rgb(255, 255, 255);
-  /* Cambia el color del texto a blanco al pasar el mouse */
 }
 
 .navbar-nav .nav-item.active .nav-link,
@@ -39,20 +44,20 @@
 /* Estilos para el encabezado */
 .encabezado {
   background-color: transparent;
-  /* Fondo transparente */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Centra los elementos verticalmente */
-  margin-top: 20px;
-  /* Margen superior */
+  // border: 1px solid rgba(243, 206, 171, 0.474);
+  border-radius: 20px;
+  // box-shadow: 0 0 20px rgb(245, 179, 179);
+  margin-bottom: 20px;
   border: none;
-  padding-bottom: 0px;
+  padding-bottom: 10px;
 }
 
 /* Estilos para la imagen dentro del botón del menú hamburguesa en pantallas pequeñas */
 .menu-logo {
-  width: 70%; /* Ajusta el ancho deseado */
+  width: 60%; /* Ajusta el ancho deseado */
   height: auto; /* Ajusta la altura automáticamente */
 }
 
@@ -61,7 +66,6 @@
 .navbar-toggler .navbar-toggler-icon {
   background-color: rgba(0, 255, 255, 0.417);
   border-radius: 1px;
-  /* Ajusta el radio de borde */
 }
 
 .navbar-toggler {
@@ -87,7 +91,6 @@
   margin: 15px; /* Elimina cualquier margen que pueda estar causando problemas */
 }
 
-
 /* Estilos para la imagen al costado del menú hamburguesa */
 .side-icon {
   width: 70px;
@@ -99,10 +102,19 @@
 }
 
 
-
 /* Estilos para la imagen en el header */
 .imagenHeader1 {
   width: 35%; /* Ancho */
   height: auto; /* Altura automática */
 }
 
+
+
+/* Estilos para la imagen en el header */
+.imagenHeader1:hover {
+  width: 35%;
+  /* Ancho */
+  height: auto;
+  /* Altura automática */
+  animation: shake 0.5s ease;
+}

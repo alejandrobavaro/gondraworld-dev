@@ -1,37 +1,43 @@
-/* AQUI SE IMPORTA EL SASS AL CSS */
+/*---------------------SASS A CSS------------------------*/
 
-// @import "animaciones";
-@import "animaciones";
+/* Estilos de ajustes responsive*/
+@import "00-responsive";
 
-/* Estilos del cuerpo de la página */
-@import "body";
+/* Estilos del Body*/
+@import "01-body";
 
-// @import "cards";
-@import "cards";
+/* Estilos del Main */
+@import "02-main";
 
-// @import "contacto";
-@import "contacto";
+/* Estilos del Header-NAV*/
+@import "03-header-nav";
 
-/* Estilos del pie de página */
-@import "footer";
+/* Estilos del Footer */
+@import "04-footer";
+
+// @import "TEXTOS";
+@import "05a-textos";
 
 // @import "formularios";
-@import "formularios";
+@import "05b-formularios";
+
+// @import "IMAGENES";
+@import "06-imagenes";
+
+/* Estilos GRID-Estructuras*/
+@import "07-grid-estructuras";
+
+// @import "cards";
+@import "08-cards";
+
+// @import "textos";
+@import "09-botones";
+
+// @import "animaciones";
+@import "10-animaciones";
 
 /* Estilos del encabezado de la página */
-@import "header";
-
-/* Estilos del contenido principal de la página */
-@import "main";
-
-/* Estilos responsivos para diferentes tamaños de pantalla */
-@import "responsive";
+@import "11-alerts-toasts";
 
 // @import "tienda";
-@import "tienda";
-
-/* Estilos responsivos para diferentes tamaños de pantalla */
-@import "gridestructura";
-
-
-
+@import "12-tienda";

@@ -1,5 +1,5 @@
+/*---------------------------------GRID------------------------------------*/
 
-/* GRID */
 .gridPadre {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -14,7 +14,8 @@
 
 .gridPadreCarrito1 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: auto; /* Solo una columna */
+  grid-auto-flow: row; /* Flujo automático en filas */
   gap: 10px;
   justify-content: center;
   align-items: center;
@@ -61,16 +62,13 @@
   max-width: 300px; /* Ancho máximo de cada elemento */
 }
 
-
-
-.item {
+.row-cols-md-4 {
   display: flex;
-  justify-content: center;
-  text-align: center;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en filas */
+  justify-content: center; /* Centra los elementos horizontalmente */
 }
 
-.item img {
-  min-width: 250px;
-  width: 75%;
-  height: auto;
+.col-md-4 {
+  flex: 0 0 25%; /* Establece el ancho de cada elemento para que haya 4 elementos por fila */
+  max-width: 25%; /* Establece el ancho máximo de cada elemento */
 }

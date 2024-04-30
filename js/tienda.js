@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <img src="${producto.imagen}" class="card-img-top img-fluid" alt="${producto.nombre}" />
               <h5 class="card-title">${producto.nombre}</h5>
               <h4 class="objetoCentrado1 tituloPrecio1">Precio:<span>
-                  <h3 class="tituloImportante2 objetoCentrado1"> $${producto.precio.toFixed(2)} </h3>
+                  <span class="tituloImportante2 objetoCentrado1"> $${producto.precio.toFixed(2)} </span>
                 </span></h4>
             
               <!-- Select para color -->
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
             
               <!-- Botón "Encargar" -->
               <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="botonEncargar btn btn-primary" data-producto-id="${producto.id}">
+                <button class="btn btn-primary botonEncargar" data-producto-id="${producto.id}">
                   <i class="bi bi-shift-fill"></i> Encargar 
                 </button>
               </div>
@@ -238,11 +238,11 @@ function agregarAlCarrito(producto) {
             <img src="${producto.imagen}" class="me-3" alt="${producto.nombre}" style="max-width: 60px;">
             <div>
               <h6 class="mb-0 tituloPequeño4">${producto.nombre}</h6>
-              <small class="text-muted">Color: ${producto.color}, Talla: ${producto.talla}</small>
+              <small class="text-muted1">Color: ${producto.color}, Talla: ${producto.talla}</small>
             </div>
           </div>
           <div>
-            <span class="badge bg-primary rounded-pill tituloImportante1">$${producto.precio.toFixed(2)}</span>
+            <span class="badge rounded-pill">$${producto.precio.toFixed(2)}</span>
             <p><button class="btn btn-sm btn-danger ms-2 btn-eliminar  seguirComprando1" data-index="${index}">
               <i class="bi bi-trash"></i> </button></p>
               </div>

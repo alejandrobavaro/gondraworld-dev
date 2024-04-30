@@ -1,0 +1,112 @@
+//---------------ESTILO IMAGENES-----------------------//
+
+
+/* Estilos para las imágenes limitadas */
+.imagen-limitada1 {
+  width: 50%; /* Ancho */
+  height: auto; /* Altura automática */
+  border: none; /* Borde */
+  border-radius: 20px; /* Radio del borde */
+}
+
+/* Estilos para las imágenes limitadas */
+.imagen-limitada2 {
+  width: 35%; /* Ancho */
+  height: auto; /* Altura automática */
+  border: none; /* Borde */
+  border-radius: 20px; /* Radio del borde */
+  }
+
+/* Estilos para las imágenes limitadas */
+.imagen-limitada3 {
+  width: 5%; /* Ancho */
+  height: auto; /* Altura automática */
+  border: none; /* Borde */
+  border-radius: 20px; /* Radio del borde */
+  }
+
+/* Estilos para las imágenes limitadas */
+.imagen-limitada4 {
+  width: 15%; /* Ancho */
+  height: auto; /* Altura automática */
+  border: none; /* Borde */
+  border-radius: 20px; /* Radio del borde */
+  }
+
+
+
+/* Estilos para las imágenes limitadas */
+.imagen-limitada5 {
+  width: 30%; /* Ancho por defecto */
+  height: auto; /* Altura automática */
+}
+
+imagen-limitada5:hover {
+  object-position: botton right;
+}
+
+
+
+
+
+/* Estilos para las imágenes limitadas */
+.imagen-limitada6 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 2/1;
+  transition: 1s;
+}
+
+//-----------------------------------------------------------------/
+
+
+//-------------------ESTILOS GIF-----------------------------/
+
+.gif-limitado1 {
+  width: 40%; /* Ancho */
+  height: auto; /* Altura automática */
+  border: rgba(156, 223, 202, 0.592) 10px solid; /* Borde */
+  border-radius: 20px; /* Radio del borde */
+  padding:0px;
+  margin-bottom: 0px;
+ }
+ 
+ .gifLimitado2 {
+   text-align: center; /* Centra horizontalmente el contenido */
+ }
+ 
+ .gifLimitado2 .logoGondraWorld1 img {
+   max-width: 10%; /* Ajusta el ancho máximo de la imagen */
+   height: auto; /* Permite que la altura se ajuste automáticamente según el ancho */
+ }
+ 
+
+
+
+//-----------------------------------------------------------------/
+
+
+
+//-------------------LOGO WHATSAPP FLOTANTE------------------------------/
+/**LOGO WHATSAPP**/
+.logoWhats {
+  width: 100px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+//-----------------------------------------------------------------/
+
+.banner1 {
+  width: 500px;
+  height: 80px;
+  border-color: aqua 5px solid;
+}
+
+// logoGondraWorld1 {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
