@@ -3,10 +3,10 @@
 //-----------------CARDS--------------------------//
 .card {
   text-align: justify;
-    background: rgba(27, 140, 130, 0.039);
-    color: rgb(255, 255, 255);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.512);
+  background: rgba(27, 140, 130, 0.039);
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.512);
   // box-shadow: 0 0 5px rgb(255, 166, 0);
 }
 
@@ -32,10 +32,10 @@
 
 .card4 {
   background: transparent;
-    border-radius: 20px;
-    font-size: xx-small;
-    padding: 10px;
-    // border: 1px rgba(0, 255, 255, 0.419) solid;
+  border-radius: 20px;
+  font-size: xx-small;
+  padding: 10px;
+  // border: 1px rgba(0, 255, 255, 0.419) solid;
 }
 
 //-----------------CARDS-TITLE--------------------------//
@@ -59,6 +59,17 @@
   text-align: center;
 }
 
+.card-title4 {
+  text-transform: normal;
+  // border: 1px solid aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
 .producto-card {
   background: #fff;
   border-radius: 20px;
@@ -72,8 +83,10 @@
 
 .card-container {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
 }
 
 .bannerCarrusel1 {

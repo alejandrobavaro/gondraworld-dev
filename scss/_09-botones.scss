@@ -27,16 +27,16 @@
   font-size: small;
   border: none;
   border-radius: 10px;
-  background-color: #2bbdcd;
+  background-color: #24ba9a80;
   color: rgba(254, 254, 232, 0.665);
   cursor: pointer;
-  transition: all 0.3s ease;
-  float: right;
+  // transition: all 0.3s ease;
+  // float: right;
   margin-top: 10px;
 }
 
 .botonEncargar:hover {
-  background-color: rgba(48, 156, 120, 0.754);
+  background-color: rgba(36, 220, 192, 0.511);
   color: #ffffff;
   border: none;
 }

@@ -74,13 +74,24 @@
   max-width: 300px; /* Ancho máximo de cada elemento */
 }
 
+
+
+//--------------------COLUMNAS PRODUCTOS JS-----------//
 .row-cols-md-4 {
   display: flex;
   flex-wrap: wrap; /* Permite que los elementos se envuelvan en filas */
   justify-content: center; /* Centra los elementos horizontalmente */
 }
 
+// .row .row-cols-1 .row-cols-md-4 .g-4 {
+//   border: 1px solid aquamarine;
+//   border-radius: 20px;
+//   background-color: red;
+// }
+
+
 .col-md-4 {
   flex: 0 0 25%; /* Establece el ancho de cada elemento para que haya 4 elementos por fila */
   max-width: 25%; /* Establece el ancho máximo de cada elemento */
 }
+

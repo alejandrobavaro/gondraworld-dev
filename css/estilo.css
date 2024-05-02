@@ -793,6 +793,15 @@ imagen-limitada5:hover {
   text-align: center;
 }
 
+.card-title4 {
+  text-transform: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 20px;
+}
+
 .producto-card {
   background: #fff;
   border-radius: 20px;
@@ -806,8 +815,10 @@ imagen-limitada5:hover {
 
 .card-container {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
 }
 
 .bannerCarrusel1 {
@@ -836,16 +847,14 @@ imagen-limitada5:hover {
   font-size: small;
   border: none;
   border-radius: 10px;
-  background-color: #2bbdcd;
+  background-color: rgba(36, 186, 154, 0.5019607843);
   color: rgba(254, 254, 232, 0.665);
   cursor: pointer;
-  transition: all 0.3s ease;
-  float: right;
   margin-top: 10px;
 }
 
 .botonEncargar:hover {
-  background-color: rgba(48, 156, 120, 0.754);
+  background-color: rgba(36, 220, 192, 0.511);
   color: #ffffff;
   border: none;
 }
@@ -1093,12 +1102,6 @@ imagen-limitada5:hover {
   background-color: rgba(55, 92, 83, 0.6470588235);
   border-radius: 20px;
   padding: 20px;
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  /* Alinea los elementos */
-  flex-wrap: wrap;
-  /* Permite que los elementos se ajusten al tamaño del contenedor */
 }
 
 .mini-carrito2 {
@@ -1106,6 +1109,14 @@ imagen-limitada5:hover {
   background-color: transparent;
   box-shadow: 0 0 20px wheat;
   padding: 20px;
+}
+
+.carrito-imagen {
+  width: cover;
+  /* Puedes ajustar el tamaño de la imagen según sea necesario */
+  height: auto;
+  border-radius: 20px;
+  opacity: 0.8;
 }
 
 .listaMiniCarrito3 {
@@ -1141,11 +1152,10 @@ imagen-limitada5:hover {
 
 /* Estilos para la imagen del carrito */
 .carrito-imagen img {
-  width: 100px;
+  width: 30%;
   /* Tamaño deseado para la imagen */
   height: auto;
   margin-bottom: 10px;
-  /* Otros estilos según necesites */
 }
 
 .list-group-item {
@@ -1177,8 +1187,10 @@ imagen-limitada5:hover {
 }
 
 .form-select {
-  background-color: #0e3f33;
-  color: white;
+  font-family: "Caveat", cursive;
+  background-color: #162925;
+  color: rgba(255, 255, 255, 0.694);
+  color: rgba(255, 255, 255, 0.694);
   border: none;
   padding: 0px;
 }
@@ -1186,8 +1198,7 @@ imagen-limitada5:hover {
 /* Estilos para centrar y cambiar el color de fondo de las opciones de los selects */
 select.form-select option {
   text-align: center;
-  background-color: #0e3f33;
-  color: rgb(255, 255, 255);
+  background-color: #162925;
 }
 
 /* Detalles del producto agregado */

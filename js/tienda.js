@@ -6,150 +6,34 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnVaciarCarrito = document.getElementById("btnVaciarCarrito");
   const detalleProductoAgregado = document.getElementById("detalleProductoAgregado");
 
+  // Variable para almacenar los productos cargados desde JSON
+  let productos = [];
 
-  // Array de productos (simulación, puedes obtenerlo de una API o base de datos)
-  // const productos = [
-  //   {
-  //     id: 1,
-  //     nombre: "Remera Gondra World W-B-1",
-  //     precio: 20000.99,
-  //     imagen: "../img/06-tiendagondraworld/tienda1-.png",
-  //   },
-  //   {
-  //     id: 2,
-  //     nombre: "Remera Almango A-G-1 Ponele Onda",
-  //     precio: 18000.50,
-  //     imagen: "../img/06-tiendagondraworld/tienda2-.png",
-  //   },
-  //   {
-  //     id: 3,
-  //     nombre: "Remera Gondra World W-G-2",
-  //     imagen: "../img/06-tiendagondraworld/tienda3-.png",
-  //     precio: 11210,
-  //   },
-  //   {
-  //     id: 4,
-  //     nombre: "Remera Almango A-B-2 Fundidos",
-  //     imagen: "../img/06-tiendagondraworld/tienda4-.png",
-  //     precio: 16200,
-  //   },
-  //   {
-  //     id: 5,
-  //     nombre: "Remera Puchulita P-B-1",
-  //     imagen: "../img/06-tiendagondraworld/tienda5-.png",
-  //     precio: 15130,
-  //   },
-  //   {
-  //     id: 6,
-  //     nombre: "Remera Almango D-2-C Fiesta",
-  //     imagen: "../img/06-tiendagondraworld/tienda6-.png",
-  //     precio: 15200,
-  //   },
-  //   {
-  //     id: 7,
-  //     nombre: "Remera Almango D-4-A Logo Antiguo",
-  //     imagen: "../img/06-tiendagondraworld/tienda7-.png",
-  //     precio: 13250,
-  //   },
-  //   {
-  //     id: 8,
-  //     nombre: "Remera Almango A-Gorro D-5-A",
-  //     imagen: "../img/06-tiendagondraworld/tienda8-.png",
-  //     precio: 16200,
-  //   },
-  //   {
-  //     id: 9,
-  //     nombre: "Remera Gondra Estudio D-4-B",
-  //     imagen: "../img/06-tiendagondraworld/tienda9-.png",
-  //     precio: 17100,
-  //   },
-  //   {
-  //     id: 10,
-  //     nombre: "Remera Almango D-6-A Logo Descontrol",
-  //     imagen: "../img/06-tiendagondraworld/tienda10-.png",
-  //     precio: 13210,
-  //   },
-  //   {
-  //     id: 11,
-  //     nombre: "Remera Almango Ale Gondra D-3-B",
-  //     imagen: "../img/06-tiendagondraworld/tienda11-.png",
-  //     precio: 16540,
-  //   },
-  //   {
-  //     id: 12,
-  //     nombre: "Remera Almango D-6-B Sexotica",
-  //     imagen: "../img/06-tiendagondraworld/tienda12-.png",
-  //     precio: 15250,
-  //   }
-  // ];
-
-
-
-//-----------------------------------------------------------//
-//-----------------------------------------------------------//
-
-// Cargar los productos desde el archivo JSON
-async function cargarProductosDesdeJSON() {
-  try {
-    const response = await fetch('../json/productos.json');
-    const productos = await response.json();
-    mostrarProductos(productos);
-  } catch (error) {
-    console.error('Error al cargar los productos:', error);
+  // Cargar los productos desde el archivo JSON
+  async function cargarProductosDesdeJSON() {
+    try {
+      const response = await fetch('../json/productos.json');
+      productos = await response.json();
+      mostrarProductos(productos);
+    } catch (error) {
+      console.error('Error al cargar los productos:', error);
+    }
   }
-}
 
-// Función para mostrar los productos en el DOM
-function mostrarProductos(productos) {
-  const contenedorProductos = document.querySelector(".contenedor-productos");
+  // Función para mostrar los productos en el DOM
+  function mostrarProductos(productos) {
+    contenedorProductos.innerHTML = ""; // Limpiar el contenedor antes de agregar los productos
 
-  // Limpiar el contenedor antes de agregar los productos
-  contenedorProductos.innerHTML = "";
-
-  // Iterar sobre cada producto y crear su representación HTML
-  productos.forEach((producto) => {
-    const productoHTML = `
-      <div class="producto">
-        <img src="${producto.imagen}" alt="${producto.nombre}" />
-        <h3>${producto.nombre}</h3>
-        <p>Precio: $${producto.precio}</p>
-      </div>
-    `;
-
-    // Agregar el producto al contenedor
-    contenedorProductos.innerHTML += productoHTML;
-  });
-}
-
-
-// Llamar a la función para cargar los productos cuando la página esté lista
-document.addEventListener("DOMContentLoaded", function () {
-  cargarProductosDesdeJSON();
-});
-
-//-----------------------------------------------------------//
-//-----------------------------------------------------------//
-
-
-
-  // Función para cargar los productos en el DOM
-  function cargarProductos() {
     productos.forEach((producto) => {
       const productoHTML = `
         <div class="col producto" id="producto${producto.id}" data-id="${producto.id}">
           <div class="card">
-            <div class="card-body card4">
-              <section>
-                <h5 class="objetoCentrado1"><i class="bi bi-activity"></i> (Producto por encargo) <i class="bi bi-activity"></i></h5>
-              </section>
-              <img src="${producto.imagen}" class="card-img-top img-fluid" alt="${producto.nombre}" />
+            <img src="${producto.imagen}" class="card-img-top img-fluid" alt="${producto.nombre}" />
+            <div class="card-body">
               <h5 class="card-title">${producto.nombre}</h5>
-              <h4 class="objetoCentrado1 tituloPrecio1">Precio:<span>
-                  <span class="tituloImportante2 objetoCentrado1"> $${producto.precio.toFixed(2)} </span>
-                </span></h4>
-            
+              <p class="card-text objetoCentrado1 tituloImportante2">Precio: $${producto.precio.toFixed(2)}</p>
               <!-- Select para color -->
-              <label for="selectColor${producto.id}" class="objetoCentrado1 tituloPequeño1"><i class="bi bi-activity"></i> ELIGE COLOR <i class="bi bi-activity"></i></label>
+              <label for="selectColor${producto.id}" class="objetoCentrado1 tituloPequeño2"><i class="bi bi-activity"></i> ELIGE COLOR <i class="bi bi-activity"></i></label>
               <select id="selectColor${producto.id}" class="form-select mb-3">
                 <option value="Negro">Negro</option>
                 <option value="Blanco">Blanco</option>
@@ -158,9 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 <option value="Rojo">Rojo</option>
                 <option value="Naranja">Naranja</option>
               </select>
-            
               <!-- Select para talla -->
-              <label for="selectTalla${producto.id}" class="objetoCentrado1 tituloPequeño1"><i class="bi bi-activity"></i> ELIGE TALLE <i class="bi bi-activity"></i></label>
+              <label for="selectTalla${producto.id}" class="objetoCentrado1 tituloPequeño2"><i class="bi bi-activity"></i> ELIGE TALLE <i class="bi bi-activity"></i></label>
               <select id="selectTalla${producto.id}" class="form-select">
                 <option value="x-small">X-Small</option>
                 <option value="xx-small">XX-Small</option>
@@ -169,26 +52,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 <option value="x-large">X-Large</option>
                 <option value="xx-large">XX-Large</option>
               </select>
-            
               <!-- Botón "Encargar" -->
               <div class="d-grid gap-2 col-6 mx-auto">
                 <button class="btn btn-primary botonEncargar" data-producto-id="${producto.id}">
-                  <i class="bi bi-shift-fill"></i> Encargar 
+                  <i class="bi bi-shift-fill"></i> ENCARGAR 
                 </button>
               </div>
-            
             </div>
           </div>
         </div>
       `;
 
-      contenedorProductos.insertAdjacentHTML("beforeend", productoHTML);
+      contenedorProductos.innerHTML += productoHTML; // Agregar el producto al contenedor
     });
   }
 
   // Llamar a la función para cargar los productos cuando la página esté lista
-  cargarProductos();
-
+  cargarProductosDesdeJSON();
 
   // Función para manejar clics en los botones "Encargar"
   function handleEncargarClick(event) {
@@ -224,31 +104,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Función para agregar un producto al carrito
+  function agregarAlCarrito(producto) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    carrito.push(producto);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    actualizarCarrito();
+    mostrarDetalleProductoAgregado(producto);
 
-
-// Función para agregar un producto al carrito
-function agregarAlCarrito(producto) {
-  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-  carrito.push(producto);
-  localStorage.setItem("carrito", JSON.stringify(carrito));
-  actualizarCarrito();
-  mostrarDetalleProductoAgregado(producto);
-
-  
-  // Mostrar Toast de confirmación
-  Toastify({
-    text: `${producto.nombre} agregado al carrito`,
-    duration: 3000,
-    gravity: "top",
-    position: "left",
-    stopOnFocus: true,
-    className: "iconoToastify", // Clase CSS personalizada
-  }).showToast();
-}
-
-
-
-
+    // Mostrar Toast de confirmación
+    Toastify({
+      text: `${producto.nombre} agregado al carrito`,
+      duration: 3000,
+      gravity: "top",
+      position: "left",
+      stopOnFocus: true,
+      className: "iconoToastify", // Clase CSS personalizada
+    }).showToast();
+  }
 
   // Función para mostrar los detalles del producto agregado en el mini carrito
   function mostrarDetalleProductoAgregado(producto) {
@@ -355,7 +228,6 @@ function agregarAlCarrito(producto) {
     vaciarCarrito();
   });
 
-
   // Función para manejar clics en el botón "COMPRAR"
   function handleComprarClick(event) {
     event.preventDefault();
@@ -373,7 +245,6 @@ function agregarAlCarrito(producto) {
 
   // Agregar evento de clic para manejar el botón "Comprar"
   document.getElementById("btnComprar").addEventListener("click", handleComprarClick);
-
 
   // Cargar el carrito al abrir la página
   cargarMiniCarrito();
