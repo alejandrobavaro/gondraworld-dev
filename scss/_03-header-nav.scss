@@ -9,30 +9,31 @@
    flex-direction: row;
   padding-bottom: 20px;
   /* Asegura que los elementos del menú se alineen en una fila */
-  
-
-
-
   font-family: "Montserrat Alternates", sans-serif;
- }
+   }
 
 .navbar-nav {
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
   font-family: 'Fredericka the Great';
-  font-size: x-large;
+  font-size: medium;
   font-weight: bolder;
+  text-transform: uppercase;
+  // padding: 10px;
 }
 
 .navbar-nav .nav-link {
   text-align: center;
   /* Centra horizontalmente */
+  color: rgba(255, 255, 255, 0.708);
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 /* Estilos para el enlace del menú al pasar el mouse */
-.menu-link:hover {
-  color: rgb(255, 255, 255);
+.navbar-nav .nav-link:hover {
+  color: rgba(0, 255, 225, 0.78);
 }
 
 .navbar-nav .nav-item.active .nav-link,
@@ -88,7 +89,7 @@
 .navbar-toggler .menu-logo {
   width: 30%; /* Ajusta el ancho de la imagen al 100% del tamaño del botón */
   height: auto; /* Ajusta la altura automáticamente */
-  margin: 15px; /* Elimina cualquier margen que pueda estar causando problemas */
+  margin: 15px; 
 }
 
 /* Estilos para la imagen al costado del menú hamburguesa */
