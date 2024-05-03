@@ -174,10 +174,12 @@
 }
 
 /* Media query para dispositivos móviles */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 766px) {
   .estiloFormulario {
-    width: 80%; /* Establece el ancho del formulario al 100% en dispositivos móviles */
+    width: 90%; /* Establece el ancho del formulario al 90% en dispositivos móviles */
+    max-width: 350px; /* Establece un ancho máximo para el formulario */
     padding: 20px; /* Ajusta el relleno para dispositivos móviles */
+    font-size: 14px; /* Ajusta el tamaño de fuente para dispositivos móviles */
   }
 }
 
@@ -187,14 +189,14 @@
 
 /* Media query para dispositivos con un ancho máximo de 992px (escritorio) */
 @media only screen and (max-width: 992px) {
-  .imagen-limitada5 {
-    width: 50%; /* Ancho al 100% en dispositivos de escritorio */
+  .imagen-limitada2 {
+    width: 60%; /* Ancho al 100% en dispositivos de escritorio */
   }
 }
 
 /* Media query para dispositivos con un ancho máximo de 767px (móvil) */
 @media only screen and (max-width: 767px) {
-  .imagen-limitada5 {
+  .imagen-limitada2 {
     width: 80%; /* Ancho al 50% en dispositivos móviles */
   }
 }

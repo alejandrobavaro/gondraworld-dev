@@ -61,21 +61,6 @@
   border: none;
 }
 
-// .botonComprar {
-//   padding: 8px 16px;
-//   font-size: small;
-//   border: none;
-//   border-radius: 10px;
-//   background-color: #296c7273;
-//   color: rgba(254, 254, 232, 0.665);
-//   cursor: pointer;
-//   transition: all 0.3s ease;
-// }
-
-// .botonComprar:hover {
-//   background-color: #27c5d363;
-//   color: rgba(254, 254, 232, 0.665);
-// }
 
 /*----------------Boton Seguir comprando----------------*/
 .botonSeguirComprando1 {
@@ -115,24 +100,6 @@
   border: none;
 }
 
-// .btnPagar {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   padding: 10px;
-//   // font-size: large;
-//   border: none;
-//   border-radius: 10px;
-//   background-color: #23a08fa6;
-//   // color: rgba(254, 254, 232, 0.665);
-// }
-
-// .btnPagar:hover {
-//   background-color: rgba(48, 156, 156, 0.563);
-//   color: #ffffff;
-//   border: none;
-// }
-
 /*----------------Botón "Vaciar Carrito"----------------*/
 
 
@@ -153,23 +120,6 @@
   color: #ffffff;
   border: none;
 }
-
-// .btnVaciarCarrito {
-//   padding: 8px 16px;
-//   font-size: small;
-//   border: none;
-//   border-radius: 10px;
-//   background-color: #296c7273;
-//   color: rgba(254, 254, 232, 0.665);
-//   cursor: pointer;
-//   transition: all 0.3s ease;
-//   margin-top: 10px;
-// }
-
-// .btnVaciarCarrito:hover {
-//   background-color: rgba(156, 48, 77, 0.563);
-//   color: #ffffff;
-// }
 
 /*----------------Botón de eliminar----------------*/
 
@@ -194,11 +144,11 @@
 }
 
 .btn-eliminar {
-  padding: 8px 16px;
-  font-size: small;
+  padding: 8px 12px;
+  font-size: xx-small;
   border: none;
   border-radius: 10px;
-  background-color: #e32727;
+  background-color: #2a4b4756;
   color: rgba(254, 254, 232, 0.665);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -207,7 +157,7 @@
 }
 
 .btn-eliminar:hover {
-  background-color: rgba(227, 69, 69, 0.864);
+  background-color: rgba(86, 158, 135, 0.631);
   color: #ffffff;
   border: none;
 }

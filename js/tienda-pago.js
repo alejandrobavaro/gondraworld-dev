@@ -11,19 +11,24 @@ document.addEventListener("DOMContentLoaded", function () {
       const itemCarrito = document.createElement("li");
       itemCarrito.className = "elementoHijo";
       itemCarrito.innerHTML = `
+      <div class="gridPadre"
+      <div class="card objetoCentrado1">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-5">
             <img src="${producto.imagen}" class="img-fluid" alt="${producto.nombre}" />
           </div>
-          <div class="col-md-8">
+          
+          <div class="col">
             <h5>${producto.nombre}</h5>
+            
             <p><strong>Color:</strong> ${producto.color}</p>
             <p><strong>Talla:</strong> ${producto.talla}</p>
             <p><strong>Precio:</strong> $${producto.precio.toFixed(2)}</p>
-            <p><button class="btnEliminar btn btn-danger btn-sm" data-index="${index}">Eliminar <i class="bi bi-trash"></i></button></p>
+            <p><button class="btnEliminar btn btn-danger btn-sm" data-index="${index}">  <i class="bi bi-trash"></i></button></p>
           </div>
-        </div>
-        <hr />
+        </div>       
+        </div>      
+        </div>   
       `;
       listaCarrito.appendChild(itemCarrito);
     });

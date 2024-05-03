@@ -125,21 +125,23 @@
   }
 }
 /* Media query para dispositivos móviles */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 766px) {
   .estiloFormulario {
-    width: 80%; /* Establece el ancho del formulario al 100% en dispositivos móviles */
+    width: 90%; /* Establece el ancho del formulario al 90% en dispositivos móviles */
+    max-width: 350px; /* Establece un ancho máximo para el formulario */
     padding: 20px; /* Ajusta el relleno para dispositivos móviles */
+    font-size: 14px; /* Ajusta el tamaño de fuente para dispositivos móviles */
   }
 }
 /* Media query para dispositivos con un ancho máximo de 992px (escritorio) */
 @media only screen and (max-width: 992px) {
-  .imagen-limitada5 {
-    width: 50%; /* Ancho al 100% en dispositivos de escritorio */
+  .imagen-limitada2 {
+    width: 60%; /* Ancho al 100% en dispositivos de escritorio */
   }
 }
 /* Media query para dispositivos con un ancho máximo de 767px (móvil) */
 @media only screen and (max-width: 767px) {
-  .imagen-limitada5 {
+  .imagen-limitada2 {
     width: 80%; /* Ancho al 50% en dispositivos móviles */
   }
 }
@@ -267,7 +269,6 @@ a:hover {
 .navbar {
   border-radius: 20px;
   flex-direction: row;
-  padding-bottom: 20px;
   /* Asegura que los elementos del menú se alineen en una fila */
   font-family: "Montserrat Alternates", sans-serif;
 }
@@ -276,10 +277,9 @@ a:hover {
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
-  font-family: "Fredericka the Great";
-  font-size: medium;
+  font-family: "Caveat", cursive;
+  font-size: large;
   font-weight: bolder;
-  text-transform: uppercase;
 }
 
 .navbar-nav .nav-link {
@@ -303,14 +303,11 @@ a:hover {
 
 /* Estilos para el encabezado */
 .encabezado {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.86);
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
   margin-bottom: 20px;
-  border: none;
-  padding-bottom: 10px;
 }
 
 /* Estilos para la imagen dentro del botón del menú hamburguesa en pantallas pequeñas */
@@ -455,9 +452,9 @@ footer {
 }
 
 .tituloImportante3 {
-  color: rgba(255, 255, 255, 0.879);
-  font-size: medium;
-  font-family: "Fredericka the Great";
+  color: rgba(135, 242, 211, 0.843);
+  font-size: small;
+  font-weight: bold;
 }
 
 .tituloImportante4 {
@@ -482,8 +479,9 @@ footer {
 }
 
 .tituloPequeño2 {
-  color: rgba(180, 206, 201, 0.689);
+  color: rgba(186, 217, 213, 0.995);
   font-size: small;
+  font-weight: bolder;
 }
 
 .tituloPequeño3 {
@@ -500,11 +498,6 @@ footer {
   color: rgba(255, 255, 255, 0.879);
   font-size: x-small;
   font-family: "Fredericka the Great";
-}
-
-.text-muted1 {
-  color: rgba(198, 214, 214, 0.817);
-  font-size: xx-small;
 }
 
 .estiloContacto1 {
@@ -803,10 +796,13 @@ imagen-limitada5:hover {
 }
 
 .producto-card {
-  background: #fff;
+  background: none;
   border-radius: 20px;
   padding: 10px;
   box-shadow: 0 4px 6px rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-body {
@@ -949,11 +945,11 @@ imagen-limitada5:hover {
 }
 
 .btn-eliminar {
-  padding: 8px 16px;
-  font-size: small;
+  padding: 8px 12px;
+  font-size: xx-small;
   border: none;
   border-radius: 10px;
-  background-color: #e32727;
+  background-color: rgba(42, 75, 71, 0.337254902);
   color: rgba(254, 254, 232, 0.665);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -961,7 +957,7 @@ imagen-limitada5:hover {
 }
 
 .btn-eliminar:hover {
-  background-color: rgba(227, 69, 69, 0.864);
+  background-color: rgba(86, 158, 135, 0.631);
   color: #ffffff;
   border: none;
 }
@@ -1043,12 +1039,17 @@ imagen-limitada5:hover {
 
 /* Estilos del encabezado de la página */
 /* Estilos personalizados para el Toastify */
-.iconoToastify {
+.iconoToastify1 {
   font-size: small;
   border: none;
   border-radius: 10px;
   background-color: rgba(255, 3, 3, 0.8784313725);
   color: rgba(254, 254, 232, 0.665);
+}
+
+.imagen-pequena {
+  max-width: 70px; /* Ajusta el tamaño máximo de la imagen según lo necesites */
+  max-height: 70px; /* Ajusta el tamaño máximo de la imagen según lo necesites */
 }
 
 .tamañoicono1 {
@@ -1188,7 +1189,7 @@ imagen-limitada5:hover {
 
 .form-select {
   font-family: "Caveat", cursive;
-  background-color: #162925;
+  background-color: #284741;
   color: rgba(255, 255, 255, 0.694);
   color: rgba(255, 255, 255, 0.694);
   border: none;

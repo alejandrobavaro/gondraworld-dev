@@ -71,10 +71,13 @@
 
 
 .producto-card {
-  background: #fff;
+  background: none;
   border-radius: 20px;
   padding: 10px;
   box-shadow: 0 4px 6px rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-body {

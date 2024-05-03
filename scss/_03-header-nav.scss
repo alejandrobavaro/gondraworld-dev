@@ -1,13 +1,14 @@
 //---------------------ESTILOS HEADER----------------------------//
 
+header {
+
+}
 /* Estilos para la barra de navegación */
 .navbar {
-  // background-color: rgba(127, 255, 212, 0.268);
   // border: 1px solid aqua;
-  // font-family: "Caveat", cursive;
   border-radius: 20px;
    flex-direction: row;
-  padding-bottom: 20px;
+  // padding-bottom: 20px;
   /* Asegura que los elementos del menú se alineen en una fila */
   font-family: "Montserrat Alternates", sans-serif;
    }
@@ -16,10 +17,11 @@
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
-  font-family: 'Fredericka the Great';
-  font-size: medium;
+  // font-family: 'Fredericka the Great';
+    font-family: "Caveat", cursive;
+  font-size: large;
   font-weight: bolder;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   // padding: 10px;
 }
 
@@ -44,16 +46,15 @@
 
 /* Estilos para el encabezado */
 .encabezado {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.86);
   display: flex;
   justify-content: center;
   align-items: center;
   // border: 1px solid rgba(243, 206, 171, 0.474);
-  border-radius: 20px;
+  // border-radius: 20px;
   // box-shadow: 0 0 20px rgb(245, 179, 179);
   margin-bottom: 20px;
-  border: none;
-  padding-bottom: 10px;
+  // padding-bottom: 10px;
 }
 
 /* Estilos para la imagen dentro del botón del menú hamburguesa en pantallas pequeñas */

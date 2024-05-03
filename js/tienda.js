@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Función para agregar un producto al carrito
+
   function agregarAlCarrito(producto) {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     carrito.push(producto);
@@ -112,26 +112,41 @@ document.addEventListener("DOMContentLoaded", function () {
     actualizarCarrito();
     mostrarDetalleProductoAgregado(producto);
 
-    // Mostrar Toast de confirmación
-    Toastify({
-      text: `${producto.nombre} agregado al carrito`,
-      duration: 3000,
-      gravity: "top",
-      position: "left",
-      stopOnFocus: true,
-      className: "iconoToastify", // Clase CSS personalizada
-    }).showToast();
-  }
-
-  // Función para mostrar los detalles del producto agregado en el mini carrito
-  function mostrarDetalleProductoAgregado(producto) {
-    const detalleProductoHTML = `
-      <div class="card">
-        <img src="${producto.imagen}" class="card-img-top img-fluid" alt="${producto.nombre}" />
+    // Crear el HTML del detalle del producto como un elemento DOM
+    const detalleProductoHTML = document.createElement("div");
+    detalleProductoHTML.innerHTML = `
+      <div class="card2 objetoCentrado1">
+        <img src="${producto.imagen}" class="card-img-top img-fluid imagen-pequena" alt="${producto.nombre}" /> 
         <div class="card-body">
           <h5 class="card-title">${producto.nombre}</h5>
           <p class="card-text">Color: ${producto.color}</p>
           <p class="card-text">Talla: ${producto.talla}</p>
+        </div>
+      </div>
+    `;
+
+    // Mostrar Toast de confirmación con el detalle del producto
+    Toastify({
+      text: `${producto.nombre} agregado al carrito`, // Mensaje de confirmación
+      node: detalleProductoHTML, // Elemento HTML del detalle del producto
+      duration: 3000,
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
+      className: "iconoToastify1", // Clase CSS personalizada
+    }).showToast();
+}
+
+
+  // Función para mostrar los detalles del producto agregado en el mini carrito
+  function mostrarDetalleProductoAgregado(producto) {
+    const detalleProductoHTML = `
+      <div class="card-title1 card">
+        <img src="${producto.imagen}" class="card-img-top img-fluid" alt="${producto.nombre}" />
+        <div class="card-body">
+          <h5 class="tituloImportante3">${producto.nombre}</h5>
+          <p class="card-text tituloPequeño1">Color: ${producto.color}</p>
+          <p class="card-text tituloPequeño1">Talla: ${producto.talla}</p>
         </div>
       </div>
     `;
@@ -155,20 +170,24 @@ document.addEventListener("DOMContentLoaded", function () {
     carrito.forEach((producto, index) => {
       // Crear elemento li para cada producto en el carrito
       const itemHTML = `
+      <div class="objetoCentrado1">
         <li class="estilo-lista">
           <div class="d-flex align-items-center">
             <img src="${producto.imagen}" class="me-3" alt="${producto.nombre}" style="max-width: 60px;">
             <div>
-              <h6 class="mb-0 tituloPequeño4">${producto.nombre}</h6>
-              <small class="text-muted1">Color: ${producto.color}, Talla: ${producto.talla}</small>
+              <h6 class="mb-0 tituloImportante3">${producto.nombre}</h6>
+              <small class="tituloPequeño1">Color: ${producto.color}</small>
+              <br>
+              <small class="tituloPequeño1">Talla: ${producto.talla}</small>
             </div>
           </div>
           <div>
             <span class="badge rounded-pill">$${producto.precio.toFixed(2)}</span>
-            <p><button class="btn btn-sm btn-danger ms-2 btn-eliminar  seguirComprando1" data-index="${index}">
+            <p><button class="btn btn-sm btn-danger ms-2 btn-eliminar" data-index="${index}">
               <i class="bi bi-trash"></i> </button></p>
               </div>
         </li>
+        </div>
       `;
 
       listaMiniCarrito.insertAdjacentHTML("beforeend", itemHTML);

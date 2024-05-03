@@ -4,10 +4,17 @@
 
 //TOSTIFY
 /* Estilos personalizados para el Toastify */
-.iconoToastify {
+.iconoToastify1 {
   font-size: small;
   border: none;
   border-radius: 10px;
   background-color: #ff0303e0;
   color: rgba(254, 254, 232, 0.665);
+}
+
+
+//-------------IMAGEN TOSTIFY---------------//
+.imagen-pequena {
+  max-width: 70px; /* Ajusta el tamaño máximo de la imagen según lo necesites */
+  max-height: 70px; /* Ajusta el tamaño máximo de la imagen según lo necesites */
 }
