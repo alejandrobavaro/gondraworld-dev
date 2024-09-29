@@ -10,18 +10,16 @@ header {
    flex-direction: row;
   // padding-bottom: 20px;
   /* Asegura que los elementos del menú se alineen en una fila */
-  font-family: "Montserrat Alternates", sans-serif;
+
    }
 
 .navbar-nav {
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
-  // font-family: 'Fredericka the Great';
-    font-family: "Caveat", cursive;
-  font-size: large;
-  font-weight: bolder;
-  // text-transform: uppercase;
+  font-family: 'Fredericka the Great';
+  font-size: medium;
+  text-transform: uppercase;
   // padding: 10px;
 }
 

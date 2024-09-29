@@ -2,7 +2,7 @@
 .h1Titulo {
     font-size: x-large;
     color: rgba(181, 225, 222, 0.986);
-    font-family: 'Fredericka the Great';
+    // font-family: 'Fredericka the Great';
     // font-weight: bold;
     // text-transform: uppercase;
     // border: 1px solid rgba(245, 222, 179, 0.482);
@@ -14,18 +14,16 @@
     font-size: medium;
     color: rgba(196, 255, 252, 0.649);
     font-family: 'Fredericka the Great';
-    // font-weight: bold;
-    // text-transform: uppercase;
-    // border: 1px solid rgba(245, 222, 179, 0.482);
-    // border-radius: 20px;
-    padding: 20px;
+       text-transform: uppercase;
+     padding: 20px;
+     padding: 20px;
 }
 
 .h3Titulo {
     // background-color: rgba(0, 251, 255, 0.388);
     font-size: small;
     color: rgba(187, 237, 237, 0.817);
-    font-family:'Courier New', Courier, monospace;
+    // font-family:'Courier New', Courier, monospace;
     font-weight: bold;
     text-transform: uppercase;
     border: 1px solid rgba(0, 255, 255, 0.533);
@@ -36,7 +34,7 @@
 .h4Titulo {
     font-size: small;
     color: rgba(181, 225, 222, 0.986);
-    font-family: 'Fredericka the Great';
+    // font-family: 'Fredericka the Great';
     // font-weight: bold;
     // text-transform: uppercase;
     // border: 1px solid rgba(245, 222, 179, 0.482);
@@ -47,7 +45,6 @@
 .tituloImportante1 {
     color: rgb(218, 247, 236);
   font-size: medium;
-
    text-transform: uppercase;
 }
 
@@ -55,7 +52,7 @@
     color: #cffffcd2;
     border: 2px rgba(255, 255, 255, 0.237) dotted;
     font-size: large;
-    font-family: 'Courier New', Courier, monospace;
+    // font-family: 'Courier New', Courier, monospace;    // font-family: 'Courier New', Courier, monospace;
      font-weight: bolder;
     padding: 1px;
 }
@@ -122,10 +119,6 @@
     //  font-weight: bold;
     //  text-transform: uppercase;
 }
-
-
-
-//-----------------------------------------------//
 
 
 
