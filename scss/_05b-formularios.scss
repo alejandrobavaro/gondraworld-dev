@@ -10,15 +10,13 @@
     background-color: #00000090;
     font-family: "Caveat", cursive;
     width: 30%;
-    font-size: small;
-    color: rgba(212, 211, 211, 0.411);
+    font-size: medium;
+    color: rgba(190, 255, 252, 0.897);
     font-weight: bold;
-    border: 3px solid #00ddff2f;
-    border-radius: 20px;
-    padding: 30px;
+        padding: 40px;
     margin-top: 10px;
     border-radius: 20px;
-    box-shadow: 0 0 20px rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgba(0, 255, 179, 0.384);
 }
 
 /* Estilos para los campos de entrada del formulario */
@@ -37,8 +35,7 @@
 .estiloFormulario textarea {
     background-color: #d4d0d0e0;
     color: #FFF;
-    font-style: italic;
-    font-weight: bolder;
+     font-weight: bolder;
     border: none;
     border-radius: 10px;
     padding: 5px;

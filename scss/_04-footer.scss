@@ -2,8 +2,8 @@
 
 /* Estilos para el pie de página */
 footer {
- 
-  font-size: x-small;
+  // background-color: rgba(0, 0, 0, 0.534);
+   font-size: small;
   padding: 10%;
   border-radius: 30px;
   color: rgb(209, 207, 207);
@@ -16,6 +16,7 @@ footer {
   display: flex;
   justify-content: center;
   text-align: center;
+  padding: 5px;
 }
 
 /* Estilos para los enlaces en el pie de página */

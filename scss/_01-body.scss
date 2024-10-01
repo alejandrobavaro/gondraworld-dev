@@ -4,17 +4,28 @@ html {
 }
 
 //-------------------------ESTILOS BODY----------------------------//
-body {
-  background-image: url(../img/00-fondos/fondo4tvvieja1c.jpg); /* Imagen de fondo */
-  background-color: rgb(0, 0, 0); /* Color de fondo */
-  background-repeat:no-repeat; /* No repetir la imagen de fondo */
-  background-position: center; /* Posición de la imagen de fondo */
-  background-size:cover; /* Ajusta la imagen al tamaño del body */
-  background-attachment: fixed; /* Fija la imagen de fondo */
-  // font-family:'Courier New', Courier, monospace
-  font-family: "Montserrat Alternates", sans-serif;
-  // font-family: 'Fredericka the Great';
+@keyframes backgroundScroll {
+  0% {
+    background-position: center top;
+  }
+  100% {
+    background-position: center bottom;
+  }
 }
+
+body {
+  background-image: url(../img/00-fondos/fondo5b.jpg); /* Imagen de fondo */
+  background-color: rgb(0, 0, 0); /* Color de fondo */
+  background-repeat: no-repeat; /* No repetir la imagen de fondo */
+  background-position: center top; /* Posición inicial */
+  background-size: cover; /* Ajusta la imagen al tamaño del body */
+  background-attachment: fixed; /* Fija la imagen de fondo */
+  font-family: 'Cinzel Decorative', serif;
+  
+  /* Animación */
+  animation: backgroundScroll 30s infinite alternate ease-in-out;
+}
+
 
 //---------------ESTILOS GENERALES P-H1/H6---------------------//
 p {

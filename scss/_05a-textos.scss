@@ -12,9 +12,8 @@
 
 .h2Titulo {
     font-size: medium;
-    color: rgba(196, 255, 252, 0.649);
-    font-family: 'Fredericka the Great';
-       text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.836);
+font-weight: bold;
      padding: 20px;
      padding: 20px;
 }
@@ -124,8 +123,7 @@
 
 //--------------CONTACTO TEXTOS ESTILOS--------------------//
 .estiloContacto1 {
-    font-size: large;
-    font-family: "Caveat", cursive;
+    font-size: medium;
     display: flex;
     align-items: center;
     justify-content: center; 
@@ -141,4 +139,10 @@ color: rgb(156, 217, 209);
     font-size: small;
       color: rgb(42, 131, 131);
     text-align: center;
+   }
+
+   .contactos {
+     padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 179, 0.384);
    }

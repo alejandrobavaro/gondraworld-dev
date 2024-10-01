@@ -151,14 +151,24 @@ html {
   margin-top: 0;
 }
 
+@keyframes backgroundScroll {
+  0% {
+    background-position: center top;
+  }
+  100% {
+    background-position: center bottom;
+  }
+}
 body {
-  background-image: url(../img/00-fondos/fondo4tvvieja1c.jpg); /* Imagen de fondo */
+  background-image: url(../img/00-fondos/fondo5b.jpg); /* Imagen de fondo */
   background-color: rgb(0, 0, 0); /* Color de fondo */
   background-repeat: no-repeat; /* No repetir la imagen de fondo */
-  background-position: center; /* Posición de la imagen de fondo */
+  background-position: center top; /* Posición inicial */
   background-size: cover; /* Ajusta la imagen al tamaño del body */
   background-attachment: fixed; /* Fija la imagen de fondo */
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Cinzel Decorative", serif;
+  /* Animación */
+  animation: backgroundScroll 30s infinite alternate ease-in-out;
 }
 
 p {
@@ -260,7 +270,7 @@ a:hover {
 
 .item img {
   min-width: 250px;
-  width: 75%;
+  width: 60%;
   height: auto;
 }
 
@@ -269,29 +279,27 @@ a:hover {
 .navbar {
   border-radius: 20px;
   flex-direction: row;
-  /* Asegura que los elementos del menú se alineen en una fila */
+  padding: 20px;
 }
 
 .navbar-nav {
-  display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  font-family: "Fredericka the Great";
-  font-size: medium;
+  font-family: "Cinzel Decorative", serif;
+  font-size: large;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
 .navbar-nav .nav-link {
   text-align: center;
   /* Centra horizontalmente */
-  color: rgba(255, 255, 255, 0.708);
+  color: rgb(200, 255, 249);
   margin-left: 5px;
   margin-right: 5px;
 }
 
 /* Estilos para el enlace del menú al pasar el mouse */
 .navbar-nav .nav-link:hover {
-  color: rgba(0, 255, 225, 0.78);
+  color: rgba(255, 255, 255, 0.708);
 }
 
 .navbar-nav .nav-item.active .nav-link,
@@ -302,10 +310,11 @@ a:hover {
 
 /* Estilos para el encabezado */
 .encabezado {
-  background-color: rgba(0, 0, 0, 0.86);
+  background-color: rgba(0, 0, 0, 0.144);
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 20px;
   margin-bottom: 20px;
 }
 
@@ -372,7 +381,7 @@ a:hover {
 /* Estilos del Footer */
 /* Estilos para el pie de página */
 footer {
-  font-size: x-small;
+  font-size: small;
   padding: 10%;
   border-radius: 30px;
   color: rgb(209, 207, 207);
@@ -385,6 +394,7 @@ footer {
   display: flex;
   justify-content: center;
   text-align: center;
+  padding: 5px;
 }
 
 /* Estilos para los enlaces en el pie de página */
@@ -409,9 +419,8 @@ footer {
 
 .h2Titulo {
   font-size: medium;
-  color: rgba(196, 255, 252, 0.649);
-  font-family: "Fredericka the Great";
-  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.836);
+  font-weight: bold;
   padding: 20px;
   padding: 20px;
 }
@@ -497,8 +506,7 @@ footer {
 }
 
 .estiloContacto1 {
-  font-size: large;
-  font-family: "Caveat", cursive;
+  font-size: medium;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -515,6 +523,12 @@ footer {
   text-align: center;
 }
 
+.contactos {
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 179, 0.384);
+}
+
 /* Estilos para el formulario */
 .contenedorFormulario {
   display: flex;
@@ -526,15 +540,13 @@ footer {
   background-color: rgba(0, 0, 0, 0.5647058824);
   font-family: "Caveat", cursive;
   width: 30%;
-  font-size: small;
-  color: rgba(212, 211, 211, 0.411);
+  font-size: medium;
+  color: rgba(190, 255, 252, 0.897);
   font-weight: bold;
-  border: 3px solid rgba(0, 221, 255, 0.1843137255);
-  border-radius: 20px;
-  padding: 30px;
+  padding: 40px;
   margin-top: 10px;
   border-radius: 20px;
-  box-shadow: 0 0 20px rgb(255, 255, 255);
+  box-shadow: 0 0 20px rgba(0, 255, 179, 0.384);
 }
 
 /* Estilos para los campos de entrada del formulario */
@@ -553,7 +565,6 @@ footer {
 .estiloFormulario textarea {
   background-color: rgba(212, 208, 208, 0.8784313725);
   color: #FFF;
-  font-style: italic;
   font-weight: bolder;
   border: none;
   border-radius: 10px;
@@ -632,7 +643,7 @@ imagen-limitada5:hover {
 
 /**LOGO WHATSAPP**/
 .logoWhats {
-  width: 100px;
+  width: 80px;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -653,20 +664,20 @@ imagen-limitada5:hover {
   align-items: center;
   margin: 0 auto;
   max-width: 1168px;
-  border: 1px solid rgba(0, 255, 255, 0.101);
-  border-radius: 30px;
-  padding: 30px;
+  border-top: 2px solid rgba(255, 255, 255, 0.336);
+  border-radius: 50%;
+  padding: 40px;
 }
 
 .gridPadre1 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   justify-content: center;
   align-items: center;
-  margin: 10px auto;
-  max-width: 1168px;
-  border-radius: 30px;
+  margin: 5px auto;
+  max-width: 600px;
   padding: 10px;
+  gap: 20px;
 }
 
 .gridPadreCarrito1 {
