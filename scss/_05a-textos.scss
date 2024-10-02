@@ -141,3 +141,30 @@
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 255, 179, 0.384);
 }
+
+
+
+//CV ESTILOS//
+
+section {
+  h2, h3 {
+          color: #00fbff; // Tono cian
+      margin-bottom: 20px;
+      font-size: x-large;
+  }
+
+  p, ul {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 16px; // Tamaño de fuente ajustado
+      line-height: 1.5;
+      color: #ffffff; // Color de texto blanco
+  }
+
+  .progress {
+      background-color: #246e6e; // Color de fondo de la barra de progreso
+  }
+
+  .progress-bar {
+      background-color: #00fbff; // Color de la barra de progreso
+  }
+}

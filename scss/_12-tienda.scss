@@ -127,6 +127,22 @@
 }
 
 
+.my-5 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    }
+
+.list-group-item {
+    background-color: #1e1e1e; /* Fondo oscuro para cada item de la lista */
+     color: #ffffff; /* Texto en blanco para los items */
+}
+
+.list-group-item:hover {
+    background-color: #175158; /* Color de fondo al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+
 /* Estilo CSS para el elemento <li> */
 .estilo-lista {
   /* Estilos de disposición */

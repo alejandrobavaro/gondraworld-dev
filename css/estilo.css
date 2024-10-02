@@ -519,6 +519,24 @@ footer {
   box-shadow: 0 0 20px rgba(0, 255, 179, 0.384);
 }
 
+section h2, section h3 {
+  color: #00fbff;
+  margin-bottom: 20px;
+  font-size: x-large;
+}
+section p, section ul {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+section .progress {
+  background-color: #246e6e;
+}
+section .progress-bar {
+  background-color: #00fbff;
+}
+
 /* Estilos para el formulario */
 .contenedorFormulario {
   display: flex;
@@ -1294,6 +1312,21 @@ imagen-limitada5:hover {
 .list-group-item {
   border: none;
   padding: 15px;
+}
+
+.my-5 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.list-group-item {
+  background-color: #1e1e1e; /* Fondo oscuro para cada item de la lista */
+  color: #ffffff; /* Texto en blanco para los items */
+}
+
+.list-group-item:hover {
+  background-color: #175158; /* Color de fondo al pasar el mouse */
+  transition: background-color 0.3s; /* Transición suave */
 }
 
 /* Estilo CSS para el elemento <li> */
