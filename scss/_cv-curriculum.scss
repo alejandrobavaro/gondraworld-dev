@@ -1,0 +1,93 @@
+// Estilos generales para el modo oscuro
+.gridContainerCurriculum {
+    padding: 20px;
+    background-color: #052b3a6b; // Fondo oscuro
+    color: #f8f9fa; // Color de texto claro
+    border: 1px solid #00e1ff; // Borde oscuro
+    border-radius: 50px;
+}
+
+// Estilos para la sección de Habilidades
+.skillSetContainer {
+    background-color: #052b3a6b; // Fondo oscuro
+    color: #f8f9fa; // Color de texto claro
+    border: 1px solid #00e1ff; // Borde oscuro
+    border-radius: 50px;
+    padding: 20px;
+    border-radius: 8px;
+
+    h2 {
+        margin-bottom: 20px;
+        color: #00fbff; // Color cian para los títulos
+    }
+
+    .skillCard {
+        background-color: #052b3a6b; // Fondo oscuro
+        color: #f8f9fa; // Color de texto claro
+        border: 1px solid #00e1ff; // Borde oscuro
+        border-radius: 20px;
+        margin-bottom: 15px;
+        transition: transform 0.2s; // Efecto de hover
+
+        &:hover {
+            transform: scale(1.03); // Efecto de ampliación al pasar el mouse
+        }
+
+        .skillCardBody {
+            padding: 15px;
+
+            h5 {
+                font-weight: bold;
+                color: #00fbff; // Color cian para los subtítulos
+            }
+
+            .progress {
+                background-color: #444; // Fondo de la barra de progreso
+                border-radius: 4px;
+
+                .progress-bar {
+                    background-color: #007bff; // Color azul para la barra de progreso
+                    color: #fff;
+                    border-radius: 4px;
+                }
+            }
+
+            h4 {
+                font-size: 0.9em;
+                color: #ccc; // Color de texto más claro
+            }
+        }
+    }
+}
+
+// Estilos para las secciones de Educación y Proyectos
+.list-group {
+    background-color: transparent; // Fondo transparente para lista
+    margin-bottom: 20px;
+
+    .list-group-item {
+        background-color: #10415870; // Fondo oscuro
+        border: 1px solid #444; // Borde oscuro
+        border-radius: 5px;
+        margin-bottom: 10px;
+        color: #f8f9fa; // Color de texto claro
+
+        strong {
+            color: #00fbff; // Color cian para texto destacado
+        }
+    }
+}
+
+// Estilos adicionales para el texto
+p, ul {
+    color: #e0e0e0; // Color de texto claro para párrafos y listas
+}
+
+// Estilos para encabezados
+h3 {
+    color: #00fbff; // Color cian para encabezados secundarios
+}
+
+
+//-----------------------//
+
