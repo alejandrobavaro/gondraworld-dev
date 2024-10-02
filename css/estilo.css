@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /*---------------------SASS A CSS------------------------*/
 /* Estilos de ajustes responsive*/
-/* Ajustes para la imagen después de los 1704px */
 @media (max-width: 991.98px) {
   .navbar-nav {
     margin-top: 1rem; /* Espacio adicional en la parte superior del menú para evitar superposiciones */
@@ -13,8 +12,25 @@
     padding-left: 0; /* Elimina el espacio adicional entre elementos del menú en dispositivos móviles */
     font-size: 18px; /* Tamaño de fuente para el menú principal */
   }
+  .menu-logo {
+    width: 100px; /* Ajusta el tamaño del logo en el menú en dispositivos móviles */
+    margin: 0 auto; /* Centra el logo en dispositivos móviles */
+  }
 }
-/* Ajustes para el footer en diferentes tamaños de pantalla */
+* {
+  box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho total de los elementos */
+}
+
+html, body {
+  max-width: 100%; /* Evita el desbordamiento horizontal en dispositivos móviles */
+  overflow-x: hidden; /* Elimina la barra de scroll horizontal */
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 /* Para pantallas menores o iguales a 420px */
 @media screen and (max-width: 420px) {
   .linksFooter div {
@@ -49,106 +65,41 @@
     margin-bottom: 0.5rem;
   }
 }
-/* Ajustes para el título (h1Titulo) en pantallas menores o iguales a 768px */
+/* Ajustes para la imagen en el carrusel en pantallas móviles */
+@media (max-width: 768px) {
+  .gif-limitado1 {
+    width: 100%; /* Asegura que las imágenes se ajusten al ancho completo de la pantalla en modo móvil */
+    height: auto; /* Mantiene las proporciones correctas de las imágenes */
+  }
+}
+/* Ajustes para el título en pantallas pequeñas */
 @media (max-width: 768px) {
   .h1Titulo {
-    font-size: 1.2em;
+    font-size: 2rem; /* Reduce el tamaño del título en dispositivos móviles */
   }
 }
-/* Ajustes para el número de teléfono (telefonoWhattsapp) en diferentes tamaños de pantalla */
-/* Para pantallas menores o iguales a 992px */
-@media (max-width: 992px) {
-  #telefonoWhattsapp {
-    font-size: 1em;
-  }
-}
-/* Para pantallas menores o iguales a 768px */
+/* Ajustes para botones */
 @media (max-width: 768px) {
-  #telefonoWhattsapp {
-    font-size: 1.2em;
+  .botonResponsive {
+    width: 100%; /* Asegura que los botones ocupen el ancho completo en pantallas pequeñas */
+    margin-bottom: 1rem; /* Agrega espacio entre los botones en dispositivos móviles */
   }
 }
-/* Para pantallas menores o iguales a 600px */
-@media only screen and (max-width: 600px) {
-  h1 {
-    font-size: medium;
-  }
-  h2 {
-    font-size: small;
-  }
-  p {
-    font-size: small;
-  }
-}
-/* Para pantallas menores o iguales a 600px */
-@media only screen and (max-width: 600px) {
-  .navBar {
-    font-size: large;
-  }
-  .navBardrop1 {
-    font-size: large;
-  }
-  .navBardrop2 {
-    font-size: medium;
-  }
-}
-/* Para pantallas menores o iguales a 600px */
-@media only screen and (max-width: 600px) {
-  .botonEnviar {
-    font-size: 14px;
-  }
-  .botonComprar {
-    font-size: 14px;
-  }
-}
-/* Para pantallas menores o iguales a 768px */
-@media only screen and (max-width: 768px) {
-  .carruselContainer {
-    display: none;
-  }
-}
-/* Ajuste para dispositivos móviles */
+/* Ajustes para el contenedor principal */
 @media (max-width: 768px) {
-  .item img {
-    max-width: 80%; /* Porcentaje del ancho del contenedor */
-  }
-}
-@media (max-width: 991.98px) {
-  .imagenHeader1 {
-    display: none; /* Oculta la imagen en pantallas más pequeñas */
-  }
-}
-/* Media query para dispositivos de escritorio */
-@media only screen and (max-width: 992px) {
-  .estiloFormulario {
-    width: 70%; /* Cambia el ancho del formulario en dispositivos de escritorio */
-  }
-}
-/* Media query para dispositivos móviles */
-@media only screen and (max-width: 766px) {
-  .estiloFormulario {
-    width: 90%; /* Establece el ancho del formulario al 90% en dispositivos móviles */
-    max-width: 350px; /* Establece un ancho máximo para el formulario */
-    padding: 20px; /* Ajusta el relleno para dispositivos móviles */
-    font-size: 14px; /* Ajusta el tamaño de fuente para dispositivos móviles */
-  }
-}
-/* Media query para dispositivos con un ancho máximo de 992px (escritorio) */
-@media only screen and (max-width: 992px) {
-  .imagen-limitada2 {
-    width: 60%; /* Ancho al 100% en dispositivos de escritorio */
-  }
-}
-/* Media query para dispositivos con un ancho máximo de 767px (móvil) */
-@media only screen and (max-width: 767px) {
-  .imagen-limitada2 {
-    width: 80%; /* Ancho al 50% en dispositivos móviles */
+  .objetoCentrado1 {
+    margin: 0 auto; /* Centra los objetos en pantallas móviles */
+    padding: 1rem; /* Ajusta el padding para dispositivos móviles */
   }
 }
 /* Estilos del Body*/
-html {
-  font-size: 100%;
-  margin-top: 0;
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 @keyframes backgroundScroll {
@@ -254,6 +205,25 @@ a:hover {
   justify-content: center;
 }
 
+.objetoCentradoTitulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Espacio adicional superior */
+  /* Ajustes para tabletas */
+  /* Ajustes para móviles */
+}
+@media (max-width: 991.98px) {
+  .objetoCentradoTitulo {
+    margin-top: 15px; /* Reducir el espacio en tabletas */
+  }
+}
+@media (max-width: 767.98px) {
+  .objetoCentradoTitulo {
+    margin-top: 10px; /* Reducir aún más el espacio en móviles */
+  }
+}
+
 .objetoCostadoDerecho1 {
   display: flex;
   justify-content: right;
@@ -272,6 +242,26 @@ a:hover {
   min-width: 250px;
   width: 60%;
   height: auto;
+}
+
+.itemTv {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: large;
+  padding: 10px; /* Espaciado alrededor del GIF */
+  transition: all 0.3s ease-in-out;
+  /* Ajustes para pantallas más pequeñas */
+}
+@media (max-width: 991.98px) {
+  .itemTv {
+    font-size: medium; /* Ajusta el tamaño de la fuente en tabletas */
+  }
+}
+@media (max-width: 767.98px) {
+  .itemTv {
+    font-size: small; /* Ajusta el tamaño de la fuente en móviles */
+  }
 }
 
 /* Estilos del Header-NAV*/
@@ -411,7 +401,7 @@ footer {
 }
 
 .h1Titulo {
-  font-size: x-large;
+  font-size: large;
   color: rgba(181, 225, 222, 0.986);
   border-radius: 20px;
   padding: 20px;
@@ -534,12 +524,13 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px; /* Añadir un poco de padding para evitar que los bordes se peguen demasiado en móviles */
 }
 
 .estiloFormulario {
   background-color: rgba(0, 0, 0, 0.5647058824);
   font-family: "Caveat", cursive;
-  width: 30%;
+  width: 30%; /* Tamaño por defecto para escritorio */
   font-size: medium;
   color: rgba(190, 255, 252, 0.897);
   font-weight: bold;
@@ -547,6 +538,26 @@ footer {
   margin-top: 10px;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 255, 179, 0.384);
+  /* Ajustes para tabletas */
+  /* Ajustes para móviles */
+}
+@media (max-width: 991.98px) {
+  .estiloFormulario {
+    width: 50%; /* Ajusta el tamaño del formulario al 50% del ancho de la pantalla en tabletas */
+    padding: 30px; /* Reducir el padding en tabletas */
+  }
+}
+@media (max-width: 767.98px) {
+  .estiloFormulario {
+    width: 80%; /* El formulario ocupará el 80% del ancho de la pantalla en móviles */
+    padding: 20px; /* Reducir aún más el padding en móviles */
+    font-size: small; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+  }
+}
+@media (max-width: 575.98px) {
+  .estiloFormulario {
+    width: 90%; /* El formulario ocupará casi todo el ancho en móviles pequeños */
+  }
 }
 
 /* Estilos para los campos de entrada del formulario */
@@ -570,6 +581,17 @@ footer {
   border-radius: 10px;
   padding: 5px;
   margin-bottom: 8px;
+}
+
+.estiloFormulario input,
+.estiloFormulario textarea {
+  width: 100%; /* Asegura que los campos ocupen el 100% del ancho disponible */
+  box-sizing: border-box; /* Asegura que el padding no desborde los inputs */
+}
+
+.estiloFormulario button {
+  width: 100%; /* El botón ocupará todo el ancho en dispositivos móviles */
+  margin-top: 15px; /* Espacio entre el último campo y el botón */
 }
 
 /* Estilos para las imágenes limitadas */
@@ -614,6 +636,29 @@ imagen-limitada5:hover {
   object-position: botton right;
 }
 
+.imagen-limitadaTitulo {
+  max-width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+  height: auto; /* Mantiene las proporciones de la imagen */
+  object-fit: cover; /* Ajuste para asegurarse de que la imagen se vea bien en diferentes tamaños de pantalla */
+  /* Ajustes para tabletas */
+  /* Ajustes para móviles */
+}
+@media (max-width: 991.98px) {
+  .imagen-limitadaTitulo {
+    max-width: 80%; /* Reduce el tamaño de la imagen en tabletas */
+  }
+}
+@media (max-width: 767.98px) {
+  .imagen-limitadaTitulo {
+    max-width: 70%; /* Reduce el tamaño de la imagen en móviles */
+  }
+}
+@media (max-width: 575.98px) {
+  .imagen-limitadaTitulo {
+    max-width: 70%; /* Ajuste para móviles pequeños */
+  }
+}
+
 /* Estilos para las imágenes limitadas */
 .imagen-limitada6 {
   width: 100%;
@@ -621,6 +666,55 @@ imagen-limitada5:hover {
   object-fit: cover;
   aspect-ratio: 2/1;
   transition: 1s;
+}
+
+.carousel-responsive {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 20px 0;
+  /* Ajustes generales para el contenedor */
+  /* Ajustes responsivos */
+  /* Para tabletas (pantallas entre 768px y 991.98px) */
+  /* Para móviles (pantallas entre 576px y 767.98px) */
+  /* Para móviles pequeños (pantallas menores a 576px) */
+}
+.carousel-responsive .carousel-inner {
+  max-width: 100%;
+  height: auto;
+}
+.carousel-responsive .carousel-inner img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out; /* Transición suave en hover */
+}
+.carousel-responsive .carousel-inner img:hover {
+  transform: scale(1.05); /* Efecto zoom al pasar el cursor */
+}
+@media (max-width: 991.98px) {
+  .carousel-responsive {
+    padding: 15px 0;
+  }
+  .carousel-responsive .carousel-inner .carousel-item img {
+    max-width: 90%; /* Reduce el tamaño en tabletas */
+  }
+}
+@media (max-width: 767.98px) {
+  .carousel-responsive {
+    padding: 10px 0;
+  }
+  .carousel-responsive .carousel-inner .carousel-item img {
+    max-width: 80%; /* Reduce el tamaño en móviles */
+  }
+}
+@media (max-width: 575.98px) {
+  .carousel-responsive {
+    padding: 8px 0;
+  }
+  .carousel-responsive .carousel-inner .carousel-item img {
+    max-width: 100%; /* Ajuste para móviles pequeños */
+    transform: none; /* Desactiva el zoom en pantallas pequeñas */
+  }
 }
 
 .gif-limitado1 {
@@ -639,6 +733,38 @@ imagen-limitada5:hover {
 .gifLimitado2 .logoGondraWorld1 img {
   max-width: 10%; /* Ajusta el ancho máximo de la imagen */
   height: auto; /* Permite que la altura se ajuste automáticamente según el ancho */
+}
+
+.gif-limitadoTv {
+  width: 70%; /* Tamaño por defecto para pantallas grandes */
+  height: auto; /* Mantiene la proporción del GIF */
+  border: rgba(156, 223, 202, 0.592) 10px solid; /* Borde */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 0px;
+  margin-bottom: 0px;
+  transition: all 0.3s ease-in-out; /* Transición suave para cambios de tamaño */
+  /* Ajustes responsivos */
+  /* Tablet (pantallas entre 768px y 991.98px) */
+  /* Móviles (pantallas entre 576px y 767.98px) */
+  /* Móviles pequeños (pantallas menores a 576px) */
+}
+@media (max-width: 991.98px) {
+  .gif-limitadoTv {
+    width: 60%; /* Ajusta el tamaño del GIF para tabletas */
+    border-radius: 15px; /* Bordes más pequeños en tabletas */
+  }
+}
+@media (max-width: 767.98px) {
+  .gif-limitadoTv {
+    width: 80%; /* Aumenta el ancho en pantallas móviles */
+    border-radius: 10px; /* Reducción adicional en bordes */
+  }
+}
+@media (max-width: 575.98px) {
+  .gif-limitadoTv {
+    width: 90%; /* Tamaño casi completo para pantallas pequeñas */
+    border-radius: 8px; /* Bordes más pequeños para móviles pequeños */
+  }
 }
 
 /**LOGO WHATSAPP**/
