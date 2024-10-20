@@ -61,7 +61,12 @@
     justify-content: center;
     text-align: center;
     font-size: large;
-  }
+  //   transition: transform 0.2s;
+
+  //     &:hover {
+  //   transform: scale(1.02); // Animación sutil en hover
+  // }
+      }
   
   .item img {
     min-width: 250px;
