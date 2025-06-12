@@ -1,0 +1,370 @@
+// Curriculum.scss - Estilos para curriculum.html y curriculum2.html
+
+/*---------------------ESTILOS GENERALES-----------------------*/
+body {
+    background-image: url(../img/00-fondos/fondo5b.jpg);
+    background-color: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Cinzel Decorative', serif;
+    animation: backgroundScroll 30s infinite alternate ease-in-out;
+  }
+  
+  /*---------------------ESTILOS MAIN----------------------------*/
+  .gridContainerCurriculum {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    
+    section {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 20px rgba(0, 255, 179, 0.2);
+      
+      h2 {
+        color: #00fbff;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-family: 'Cinzel Decorative', serif;
+      }
+      
+      h3 {
+        color: #00fbff;
+        font-size: 1.5rem;
+        margin: 1.5rem 0 1rem;
+      }
+      
+      h4, h5 {
+        color: #e3baa5;
+        margin: 1rem 0;
+      }
+      
+      p, li {
+        color: #ffffff;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      
+      ul {
+        padding-left: 1.5rem;
+        
+        li {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+    
+    .skillSetContainer {
+      margin-top: 2rem;
+      
+      .skillCard {
+        // background-color: rgba(36, 110, 110, 0.2);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        
+        .skillCardBody {
+          h5 {
+            color: #ffffff;
+            font-weight: 600;
+          }
+          
+          .progress {
+            height: 1.5rem;
+            background-color: #246e6e;
+            border-radius: 4px;
+            
+            .progress-bar {
+              background-color: #00fbff;
+              font-weight: 600;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /*---------------------BOTONES DESCARGAR----------------------*/
+  .ver-mas-container {
+    text-align: center;
+    margin: 2rem 0;
+    
+    .ver-mas {
+      display: inline-block;
+      background-color: #488c8d;
+      color: #ffe3e3;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background-color: #00c4c7;
+        transform: translateY(-2px);
+      }
+      
+      i {
+        margin: 0 0.5rem;
+      }
+    }
+  }
+
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+
+
+
+  .seccion-habilidades {
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #ffffff;
+    }
+  
+    .seccion-titulo {
+      font-size: 1.5rem;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+  
+    .seccion-texto {
+      font-size: 1rem;
+      color: #cacaca;
+      line-height: 1.7;
+    }
+  
+    .seccion-lista {
+      padding-left: 1rem;
+      li {
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+  
+      .detalle {
+        color: #e4e4e4;
+        font-size: 0.9rem;
+      }
+    }
+  
+    .experiencia {
+      margin-bottom: 1.5rem;
+      color: rgb(218, 218, 218);
+  
+      h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        color: #7ac0ba;
+  
+        .puesto {
+          font-weight: normal;
+          color: #d4d2b0;
+          font-size: 0.9rem;
+        }
+      }
+  
+      ul {
+        padding-left: 1.2rem;
+        list-style: disc;
+      }
+    }
+  
+    a {
+      color: #bbc0c5;
+      text-decoration: underline;
+      &:hover {
+        color: #554e40;
+      }
+    }
+  }
+  
+
+
+
+
+
+
+  .educacion-seccion {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 179, 0.2);
+    max-width: 900px;
+    margin: 0 auto;
+  
+    .educacion-titulo {
+      font-family: 'Cinzel Decorative', serif;
+      color: rgba(181, 225, 222, 0.986);
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+  
+    .educacion-lista {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  
+      .educacion-item {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-left: 4px solid rgb(0, 255, 179);
+        padding: 20px;
+        border-radius: 12px;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.65);
+        }
+  
+        h3 {
+          font-family: 'Cinzel Decorative', serif;
+          color: rgb(156, 217, 209);
+          font-size: 1.3rem;
+          margin-bottom: 5px;
+        }
+  
+        p {
+          color: rgba(190, 255, 252, 0.897);
+          font-family: 'Caveat', cursive;
+          font-size: 1.1rem;
+          margin: 0;
+        }
+      }
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .educacion-seccion {
+      padding: 20px;
+  
+      .educacion-titulo {
+        font-size: 2rem;
+      }
+  
+      .educacion-lista .educacion-item {
+        padding: 15px;
+      }
+    }
+  }
+  
+
+
+
+
+//----------------------------FOOTER----------------------------//
+
+.footerElements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 1rem;
+  
+    .img1Footer, .img2Footer {
+      flex: 1 1 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      img {
+        max-height: 80px;
+      }
+    }
+  
+    .linksFooter {
+      flex: 2 1 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  
+      .textoMovimiento {
+        margin: 0.5rem 0;
+  
+        a {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          color: white;
+          text-decoration: none;
+          font-size: 1.1rem;
+  
+          i {
+            font-size: 1.3rem;
+          }
+  
+          &:hover {
+            color: #00fbff;
+          }
+        }
+      }
+  
+      hr {
+        width: 100%;
+        margin: 1rem 0;
+      }
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+  
+  /*---------------------RESPONSIVE----------------------------*/
+  @media (max-width: 991.98px) {
+    .gridContainerCurriculum section {
+      padding: 1.5rem;
+      
+      h2 {
+        font-size: 1.8rem;
+      }
+      
+      h3 {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    .gridContainerCurriculum {
+      padding: 0;
+      
+      section {
+        padding: 1.5rem;
+        
+        h2 {
+          font-size: 1.6rem;
+        }
+        
+        h3 {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
