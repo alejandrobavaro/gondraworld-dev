@@ -1,0 +1,271 @@
+/* ============================== */
+/*          ESTILOS GENERALES      */
+/* ============================== */
+body {
+  background-image: url(../img/00-fondos/fondo5b.jpg);
+  background-color: rgb(0, 0, 0);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Cinzel Decorative', serif;
+  animation: backgroundScroll 30s infinite alternate ease-in-out;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ============================== */
+/*          COMPONENTE LOGO       */
+/* ============================== */
+.logo-container {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  
+  .logo-main {
+    max-height: 150px;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+/* ============================== */
+/*         COMPONENTE GIF         */
+/* ============================== */
+.gif-container {
+  padding: 1rem;
+  text-align: center;
+  margin: 0 auto;
+  
+  .main-gif {
+    max-width: 400px;
+    width: 85%;
+    height: auto;
+    border: 8px solid rgba(156, 223, 202, 0.592);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px rgba(156, 223, 202, 0.3);
+    }
+  }
+}
+
+/* ============================== */
+/*       SECCIÓN DE PROYECTOS     */
+/* ============================== */
+.projects-container {
+  flex: 1;
+  padding-bottom: 2rem;
+}
+
+.gridPadre1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: transparent;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      max-height: 120px;
+      object-fit: contain;
+      transition: all 0.3s ease;
+    }
+    
+    &:hover {
+      transform: translateY(-5px);
+      
+      img {
+        filter: drop-shadow(0 5px 15px rgba(156, 223, 202, 0.5));
+      }
+    }
+  }
+}
+
+/* ============================== */
+/*            FOOTER              */
+/* ============================== */
+.footer-spacer {
+  height: 2rem;
+}
+
+.footer-simplificado {
+  background-color: rgba(0, 0, 0, 0.438);
+  padding: 1.5rem 1rem;
+  border-top: 1px solid rgba(156, 223, 202, 0.192);
+  text-align: center;
+  
+  .footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    
+    .social-icon {
+      color: rgba(156, 223, 202, 0.8);
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        color: #ffc107;
+        transform: translateY(-2px);
+      }
+    }
+  }
+  
+  .brand-signature {
+    .gondra-dev-link {
+      color: white;
+      text-decoration: none;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: all 0.3s ease;
+      
+      i {
+        opacity: 0;
+        transform: translateX(-5px);
+        transition: all 0.3s ease;
+        color: #ffc107;
+        font-size: 0.7rem;
+      }
+      
+      &:hover {
+        color: rgba(156, 223, 202, 1);
+        
+        i {
+          opacity: 1;
+          transform: translateX(0);
+          animation: twinkle 1.5s infinite;
+        }
+      }
+    }
+  }
+}
+
+/* ============================== */
+/*      WHATSAPP FLOTANTE         */
+/* ============================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  
+  .logoWhats {
+    width: 60px;
+    height: auto;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 10px rgba(37, 211, 102, 0.5));
+    
+    &:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 15px rgba(37, 211, 102, 0.8));
+    }
+  }
+}
+
+/* ============================== */
+/*          ANIMACIONES           */
+/* ============================== */
+@keyframes backgroundScroll {
+  from { background-position: center top; }
+  to { background-position: center bottom; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* ============================== */
+/*         MEDIA QUERIES          */
+/* ============================== */
+
+/* Tablet (768px) */
+@media (min-width: 768px) {
+  .gif-container .main-gif {
+    max-width: 450px;
+  }
+  
+  .gridPadre1 {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    
+    .item img {
+      max-height: 140px;
+    }
+  }
+  
+  .footer-simplificado {
+    .footer-content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+/* Escritorio (1024px) */
+@media (min-width: 1024px) {
+  .gif-container .main-gif {
+    max-width: 500px;
+  }
+  
+  .gridPadre1 {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+    
+    .item img {
+      max-height: 150px;
+    }
+  }
+  
+  .footer-spacer {
+    height: 3rem;
+  }
+}
