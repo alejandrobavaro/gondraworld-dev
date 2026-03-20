@@ -1,6 +1,6 @@
 // ========================================
 // ARCHIVO: _index.scss
-// VERSIÓN CORREGIDA - SIN ROMPER EL DISEÑO
+// VERSIÓN COMPLETA - CON ANIMACIÓN DE INICIO
 // ========================================
 
 :root {
@@ -13,7 +13,125 @@
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
+  
+  // Nuevas variables para animación
+  --anim-duration: 1.2s;
+  --anim-delay-base: 0.2s;
 }
+
+/* ===== ANIMACIÓN DE INICIO DE PÁGINA ===== */
+.page-load-animation {
+  animation: pageFadeIn var(--anim-duration) ease-in-out forwards;
+}
+
+@keyframes pageFadeIn {
+  0% {
+    opacity: 0;
+    background-color: #000;
+  }
+  100% {
+    opacity: 1;
+    background-color: transparent;
+  }
+}
+
+/* Animación escalonada para elementos principales */
+.page-load-animation {
+  .logo-wrapper {
+    animation: slideDownFade 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+  }
+  
+  .projects-grid {
+    .project-link {
+      animation: scaleFade 0.6s ease-out forwards;
+      opacity: 0;
+      
+      // Generamos retrasos escalonados para cada proyecto
+      @for $i from 1 through 60 {
+        &:nth-child(#{$i}) {
+          animation-delay: 0.3s + ($i * 0.05s);
+        }
+      }
+    }
+  }
+  
+  .slider-container {
+    animation: slideUpFade 0.8s ease-out forwards;
+    animation-delay: 0.8s;
+    opacity: 0;
+  }
+  
+  .footer {
+    animation: slideUpFade 0.8s ease-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
+  }
+}
+
+/* Keyframes para las diferentes animaciones */
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Efecto de glitch inicial opcional (comentado por si quieres probarlo) */
+/*
+.page-load-animation::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent 45%, var(--primary) 50%, transparent 55%);
+  background-size: 200% 200%;
+  animation: glitchFlash 0.5s ease-out forwards;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+}
+
+@keyframes glitchFlash {
+  0% {
+    opacity: 0.3;
+    background-position: 100% 100%;
+  }
+  100% {
+    opacity: 0;
+    background-position: 0% 0%;
+  }
+}
+*/
 
 /* ===== RESET ===== */
 * {
@@ -60,14 +178,14 @@ body {
 .logo {
   max-width: 180px;
   height: auto;
-}
-
-@media (min-width: 768px) {
-  .logo { max-width: 220px; }
-}
-
-@media (min-width: 1024px) {
-  .logo { max-width: 260px; }
+  
+  @media (min-width: 768px) {
+    max-width: 220px;
+  }
+  
+  @media (min-width: 1024px) {
+    max-width: 260px;
+  }
 }
 
 /* ===== GRID DE PROYECTOS ===== */
@@ -78,23 +196,17 @@ body {
   justify-items: center;
   align-items: center;
   margin-bottom: var(--spacing-xl);
-}
-
-@media (min-width: 600px) {
-  .projects-grid {
+  
+  @media (min-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-xl);
   }
-}
-
-@media (min-width: 900px) {
-  .projects-grid {
+  
+  @media (min-width: 900px) {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-
-@media (min-width: 1200px) {
-  .projects-grid {
+  
+  @media (min-width: 1200px) {
     grid-template-columns: repeat(5, 1fr);
   }
 }
@@ -106,35 +218,35 @@ body {
   width: 100%;
   max-width: 220px;
   transition: transform 0.3s ease;
-}
-
-.project-link img {
-  width: 100%;
-  height: auto;
-  max-height: 140px;
-  object-fit: contain;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-@media (min-width: 600px) {
-  .project-link img { max-height: 150px; }
-}
-
-@media (min-width: 900px) {
-  .project-link img { max-height: 160px; }
-}
-
-@media (min-width: 1200px) {
-  .project-link img { max-height: 140px; }
-}
-
-.project-link:hover {
-  transform: translateY(-8px);
-}
-
-.project-link:hover img {
-  transform: scale(1.08);
-  filter: drop-shadow(0 0 25px rgba(100, 255, 218, 0.5));
+  
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 140px;
+    object-fit: contain;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    @media (min-width: 600px) {
+      max-height: 150px;
+    }
+    
+    @media (min-width: 900px) {
+      max-height: 160px;
+    }
+    
+    @media (min-width: 1200px) {
+      max-height: 140px;
+    }
+  }
+  
+  &:hover {
+    transform: translateY(-8px);
+    
+    img {
+      transform: scale(1.08);
+      filter: drop-shadow(0 0 25px rgba(100, 255, 218, 0.5));
+    }
+  }
 }
 
 /* ===== SLIDER AUTOMÁTICO ===== */
@@ -152,21 +264,21 @@ body {
   display: flex;
   animation: scroll 30s linear infinite;
   gap: var(--spacing-lg);
-}
-
-.slider-track img {
-  height: 50px;
-  width: auto;
-  opacity: 0.6;
-  transition: opacity 0.3s;
-}
-
-.slider-track img:hover {
-  opacity: 1;
-}
-
-@media (min-width: 768px) {
-  .slider-track img { height: 70px; }
+  
+  img {
+    height: 50px;
+    width: auto;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+    
+    @media (min-width: 768px) {
+      height: 70px;
+    }
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 @keyframes scroll {
@@ -174,7 +286,7 @@ body {
   100% { transform: translateX(-50%); }
 }
 
-/* ===== FOOTER MEJORADO ===== */
+/* ===== FOOTER MEJORADO CON LOGO ANIMADO ===== */
 .footer {
   margin-top: auto;
   padding: var(--spacing-xl) 0 var(--spacing-lg);
@@ -186,54 +298,114 @@ body {
 .footer-brand {
   text-align: center;
   margin-bottom: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-logo {
-  max-width: 80px;
+  max-width: 160px;
   height: auto;
   margin-bottom: var(--spacing-xs);
+  transition: all 0.3s ease;
+  
+  @media (min-width: 768px) {
+    max-width: 200px;
+  }
+  
+  @media (min-width: 1024px) {
+    max-width: 240px;
+  }
 }
 
-@media (min-width: 768px) {
-  .footer-logo { max-width: 100px; }
+/* ANIMACIÓN PARA EL LOGO DEL FOOTER */
+.footer-logo-animado {
+  animation: floatLogo 3s ease-in-out infinite, glowPulse 2.5s ease-in-out infinite;
+  filter: drop-shadow(0 5px 15px rgba(100, 255, 218, 0.3));
+  
+  &:hover {
+    animation: floatLogo 1.5s ease-in-out infinite, glowIntense 1.5s ease-in-out infinite;
+    transform: scale(1.05);
+  }
 }
 
-.footer-tagline {
-  font-size: 0.85rem;
-  color: var(--primary);
-  letter-spacing: 1px;
+@keyframes floatLogo {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    filter: drop-shadow(0 5px 15px rgba(100, 255, 218, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 5px 25px rgba(100, 255, 218, 0.7));
+  }
+  100% {
+    filter: drop-shadow(0 5px 15px rgba(100, 255, 218, 0.3));
+  }
+}
+
+@keyframes glowIntense {
+  0% {
+    filter: drop-shadow(0 5px 20px rgba(100, 255, 218, 0.6));
+  }
+  50% {
+    filter: drop-shadow(0 5px 35px rgba(100, 255, 218, 0.9));
+  }
+  100% {
+    filter: drop-shadow(0 5px 20px rgba(100, 255, 218, 0.6));
+  }
 }
 
 .footer-info-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-md);
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto var(--spacing-lg);
-}
-
-@media (min-width: 600px) {
-  .footer-info-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 900px) {
-  .footer-info-grid {
-    grid-template-columns: repeat(4, 1fr);
+  padding: 0 var(--spacing-sm);
+  
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .footer-info-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--spacing-sm);
   padding: var(--spacing-xs);
-}
-
-.footer-info-item i {
-  font-size: 1.3rem;
-  color: var(--primary);
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateX(5px);
+    
+    i {
+      color: var(--primary);
+      transform: scale(1.1);
+    }
+  }
+  
+  i {
+    font-size: 1.3rem;
+    color: var(--text-dim);
+    transition: all 0.3s ease;
+    min-width: 24px;
+    margin-top: 3px;
+  }
+  
+  > div {
+    flex: 1;
+    min-width: 0;
+  }
 }
 
 .info-label {
@@ -242,21 +414,44 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   display: block;
+  margin-bottom: 2px;
 }
 
 .info-value {
   font-size: 0.85rem;
   color: var(--text);
   text-decoration: none;
+  transition: color 0.3s ease;
+  word-break: break-word;
+  display: inline-block;
+  
+  a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: var(--primary);
+    }
+  }
 }
 
-.info-value a {
-  color: var(--text);
-  text-decoration: none;
+/* Estilo específico para el contenedor del email */
+.info-email-container {
+  display: flex;
+  flex-direction: column;
 }
 
-.info-value a:hover {
-  color: var(--primary);
+.info-email {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: block;
+  
+  @media (min-width: 768px) {
+    font-size: 0.9rem;
+  }
 }
 
 .footer-social {
@@ -264,17 +459,18 @@ body {
   justify-content: center;
   gap: var(--spacing-md);
   margin-bottom: var(--spacing-lg);
-}
-
-.footer-social a {
-  color: var(--text-dim);
-  font-size: 1.4rem;
-  transition: all 0.3s;
-}
-
-.footer-social a:hover {
-  color: var(--primary);
-  transform: translateY(-3px);
+  
+  a {
+    color: var(--text-dim);
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    
+    &:hover {
+      color: var(--primary);
+      transform: translateY(-5px) scale(1.1);
+    }
+  }
 }
 
 .footer-bottom {
@@ -291,15 +487,17 @@ body {
 
 .credits {
   font-size: 0.75rem;
-}
-
-.credits a {
-  color: var(--primary);
-  text-decoration: none;
-}
-
-.credits a:hover {
-  text-decoration: underline;
+  
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      text-decoration: underline;
+      opacity: 0.9;
+    }
+  }
 }
 
 /* ===== WHATSAPP FLOTANTE ===== */
@@ -309,21 +507,21 @@ body {
   right: var(--spacing-md);
   z-index: 100;
   transition: transform 0.2s;
+  
+  &:hover {
+    transform: scale(1.1) rotate(5deg);
+  }
 }
 
 .whatsapp-icon {
   width: 42px;
   height: auto;
-}
-
-@media (min-width: 768px) {
-  .whatsapp-icon { width: 48px; }
-}
-
-@media (min-width: 1024px) {
-  .whatsapp-icon { width: 52px; }
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
+  
+  @media (min-width: 768px) {
+    width: 48px;
+  }
+  
+  @media (min-width: 1024px) {
+    width: 52px;
+  }
 }
