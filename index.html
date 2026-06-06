@@ -3,25 +3,69 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portafolio de proyectos de Gondra World - Desarrollo web profesional, sistemas, tiendas y más." />
-    <title>Gondra World | Portafolio Profesional de Proyectos</title>
+    
+    <!-- ===== META TAGS SEO PRINCIPALES ===== -->
+    <meta name="description" content="Gondra World - Portafolio profesional de desarrollo web: soluciones a medida, sistemas de gestión, e-commerce y herramientas interactivas." />
+    <meta name="keywords" content="desarrollo web, portafolio, gondra world, software gestión, e-commerce, desarrollo frontend, programación, react, javascript, html, css" />
+    <meta name="author" content="Alejandro Bavaro - Gondra World" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- ===== OPEN GRAPH (Facebook, WhatsApp, LinkedIn) ===== -->
+    <meta property="og:title" content="Gondra World | Portafolio de Desarrollo Web Profesional" />
+    <meta property="og:description" content="Soluciones web a medida | Sistemas de gestión | E-commerce | Herramientas interactivas" />
+    <meta property="og:image" content="https://alejandrobavaro.github.io/gondraworld-dev/img/05-gif/logogondraworldanimado1.gif" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://alejandrobavaro.github.io/gondraworld-dev/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Gondra World Dev" />
+    
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gondra World | Portafolio de Desarrollo Web" />
+    <meta name="twitter:description" content="Soluciones web a medida | Sistemas de gestión | E-commerce | Herramientas interactivas" />
+    <meta name="twitter:image" content="https://alejandrobavaro.github.io/gondraworld-dev/img/05-gif/logogondraworldanimado1.gif" />
+    
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" type="image/png" href="./img/08-favicon/dragonpequeñomenu1.png" />
+    <link rel="shortcut icon" href="./img/08-favicon/dragonpequeñomenu1.png" />
+    
+    <!-- ===== TÍTULO OPTIMIZADO ===== -->
+    <title>Gondra World | Portafolio de Desarrollo Web Profesional</title>
+    
+    <!-- ===== RECURSOS EXTERNOS ===== -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="./css/estilo.css" />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body class="page-load-animation">
+    <!-- ===== FONDOS MULTICAPA (animación espacial) ===== -->
+    <div class="background-container">
+        <div class="layer-space"></div>
+        <div class="layer-space-secondary"></div>
+        <div class="layer-gif"></div>
+        <div class="layer-vignette"></div>
+        <div class="layer-glint"></div>
+    </div>
+
     <div class="container">
 
         <!-- ===== CABECERA CON LOGO PRINCIPAL ===== -->
         <header class="logo-wrapper">
-            <img src="./img/05-gif/logogondraworldanimado1.gif" alt="Gondra World" class="logo" />
+            <img src="./img/05-gif/logogondraworldanimado1.gif" alt="Gondra World - Desarrollo Web Profesional" class="logo" />
         </header>
+
+        <!-- ===== H1 PRINCIPAL (SEO) ===== -->
+        <div class="hero-text">
+            <h1 class="main-title">Gondra World | Portafolio de Desarrollo Web Profesional</h1>
+            <p class="main-subtitle">Soluciones web a medida | Sistemas de gestión | E-commerce | Herramientas interactivas</p>
+        </div>
 
         <!-- ===== BUSCADOR EN VIVO ===== -->
         <div class="search-container">
             <div class="search-wrapper">
                 <i class="bi bi-search"></i>
-                <input type="text" id="projectSearch" placeholder="Buscar proyecto..." autocomplete="off" />
+                <input type="text" id="projectSearch" placeholder="Buscar proyecto por nombre..." autocomplete="off" />
                 <button id="clearSearch" class="clear-search" style="display: none;">
                     <i class="bi bi-x-lg"></i>
                 </button>
@@ -44,28 +88,28 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <a href="https://gondrafotografia.netlify.app/" target="_blank" class="project-link" data-name="gondra fotografia" data-description="Plataforma profesional para fotógrafos con galerías y booking online">
-                        <img src="./img/02-logos/logogondrafotografia.png" alt="Gondra Fotografía" />
+                        <img src="./img/02-logos/logogondrafotografia.png" alt="Gondra Fotografía - Plataforma profesional para fotógrafos" />
                         <span class="tooltip">📸 Gondra Fotografía - Plataforma profesional para fotógrafos</span>
                     </a>
                     <button class="btn-ver-mas" data-project="gondra-fotografia" data-url="https://gondrafotografia.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://gondralivestreaming.netlify.app/" target="_blank" class="project-link" data-name="gondra live streaming" data-description="Plataforma de streaming en vivo para eventos y transmisiones">
-                        <img src="./img/02-logos/logogondralivestreaming.png" alt="Gondra Live Streaming" />
+                        <img src="./img/02-logos/logogondralivestreaming.png" alt="Gondra Live Streaming - Streaming profesional para eventos" />
                         <span class="tooltip">🎥 Gondra Live - Streaming profesional para eventos</span>
                     </a>
                     <button class="btn-ver-mas" data-project="gondra-live" data-url="https://gondralivestreaming.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://leitmotivarte.netlify.app/" target="_blank" class="project-link" data-name="leitmotiv arte" data-description="Producciones audiovisuales y contenido artístico">
-                        <img src="./img/02-logos/logoleitmotivarte.png" alt="Leit Motivarte" />
+                        <img src="./img/02-logos/logoleitmotivarte.png" alt="Leit Motivarte - Producciones audiovisuales" />
                         <span class="tooltip">🎬 Leit Motivarte - Producciones audiovisuales</span>
                     </a>
                     <button class="btn-ver-mas" data-project="leitmotiv-arte" data-url="https://leitmotivarte.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://vhsvideoclubonline.netlify.app/" target="_blank" class="project-link" data-name="vhs videoclub" data-description="Plataforma de streaming de cine clásico y culto">
-                        <img src="./img/02-logos/logovhsvideoclibonline.png" alt="VHS Videoclub" />
+                        <img src="./img/02-logos/logovhsvideoclibonline.png" alt="VHS Videoclub - Streaming de cine clásico y culto" />
                         <span class="tooltip">📼 VHS Videoclub - Streaming de cine clásico y culto</span>
                     </a>
                     <button class="btn-ver-mas" data-project="vhs-videoclub" data-url="https://vhsvideoclubonline.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
@@ -86,77 +130,77 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <a href="https://cabinafotograficacosmocam.netlify.app/" target="_blank" class="project-link" data-name="cosmocam" data-description="Sistema de cabina fotográfica para eventos con impresión y efectos">
-                        <img src="./img/02-logos/logocosmocam.png" alt="Cosmocam" />
+                        <img src="./img/02-logos/logocosmocam.png" alt="Cosmocam - Cabina fotográfica interactiva para eventos" />
                         <span class="tooltip">📷 Cosmocam - Cabina fotográfica interactiva para eventos</span>
                     </a>
                     <button class="btn-ver-mas" data-project="cosmocam" data-url="https://cabinafotograficacosmocam.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://noscasamos-aleyfabi.netlify.app/" target="_blank" class="project-link" data-name="nos casamos" data-description="Sitio web para casamiento con galería, cronograma y confirmación">
-                        <img src="./img/02-logos/logonoscasamos.png" alt="Nos Casamos" />
+                        <img src="./img/02-logos/logonoscasamos.png" alt="Nos Casamos - Sitio web para bodas y eventos" />
                         <span class="tooltip">💍 Nos Casamos - Sitio web para bodas y eventos</span>
                     </a>
                     <button class="btn-ver-mas" data-project="nos-casamos" data-url="https://noscasamos-aleyfabi.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://heyoueventos.netlify.app/" target="_blank" class="project-link" data-name="heyou eventos" data-description="Gestión integral de eventos sociales y empresariales">
-                        <img src="./img/02-logos/logoheyoueventos.png" alt="Heyou Eventos" />
+                        <img src="./img/02-logos/logoheyoueventos.png" alt="Heyou Eventos - Gestión completa de eventos" />
                         <span class="tooltip">🎉 Heyou - Gestión completa de eventos</span>
                     </a>
                     <button class="btn-ver-mas" data-project="heyou-eventos" data-url="https://heyoueventos.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://msjspantallaeventos.netlify.app/" target="_blank" class="project-link" data-name="mensajes pantalla" data-description="Sistema de mensajes en pantalla para eventos en vivo">
-                        <img src="./img/02-logos/logomsjpantallaeventos.png" alt="Mensajes Pantalla" />
+                        <img src="./img/02-logos/logomsjpantallaeventos.png" alt="Mensajes Pantalla - Interacción en vivo para eventos" />
                         <span class="tooltip">💬 Mensajes en Pantalla - Interacción en vivo para eventos</span>
                     </a>
                     <button class="btn-ver-mas" data-project="mensajes-pantalla" data-url="https://msjspantallaeventos.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://listadetareaseventos.netlify.app/" target="_blank" class="project-link" data-name="lista tareas eventos" data-description="Gestión de tareas y checklist para organizadores de eventos">
-                        <img src="./img/02-logos/logolistastareaseventos.png" alt="Lista Tareas Eventos" />
+                        <img src="./img/02-logos/logolistastareaseventos.png" alt="Lista Tareas Eventos - Checklist para organizadores" />
                         <span class="tooltip">✅ Lista Tareas - Checklist para organizadores de eventos</span>
                     </a>
                     <button class="btn-ver-mas" data-project="lista-tareas-eventos" data-url="https://listadetareaseventos.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://asignacionmesasinvitados.netlify.app/" target="_blank" class="project-link" data-name="asignacion mesas" data-description="Sistema de asignación de mesas para bodas y eventos">
-                        <img src="./img/02-logos/logoasignacionmesasinvitados1.png" alt="Asignación Mesas" />
+                        <img src="./img/02-logos/logoasignacionmesasinvitados1.png" alt="Asignación Mesas - Organización de invitados por mesa" />
                         <span class="tooltip">🪑 Asignación de Mesas - Organización de invitados por mesa</span>
                     </a>
                     <button class="btn-ver-mas" data-project="asignacion-mesas" data-url="https://asignacionmesasinvitados.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://tarjetasinvitaciones.netlify.app/" target="_blank" class="project-link" data-name="tarjetas invitaciones" data-description="Creador de invitaciones digitales para eventos">
-                        <img src="./img/02-logos/logotarjetasinvitaciones.png" alt="Tarjetas Invitaciones" />
+                        <img src="./img/02-logos/logotarjetasinvitaciones.png" alt="Tarjetas Invitaciones - Invitaciones digitales personalizadas" />
                         <span class="tooltip">💌 Tarjetas - Invitaciones digitales personalizadas</span>
                     </a>
                     <button class="btn-ver-mas" data-project="tarjetas-invitaciones" data-url="https://tarjetasinvitaciones.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://confirmarasistenciaevento.netlify.app/" target="_blank" class="project-link" data-name="confirmar asistencia" data-description="Sistema de confirmación de asistencia para eventos">
-                        <img src="./img/02-logos/logoconfirmacionevento.png" alt="Confirmar Asistencia" />
+                        <img src="./img/02-logos/logoconfirmacionevento.png" alt="Confirmar Asistencia - RSVP digital para eventos" />
                         <span class="tooltip">✅ Confirmar Asistencia - RSVP digital para eventos</span>
                     </a>
                     <button class="btn-ver-mas" data-project="confirmar-asistencia" data-url="https://confirmarasistenciaevento.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://casadelmar.netlify.app/" target="_blank" class="project-link" data-name="casa del mar" data-description="Eventos en Casa del Mar - Locación y organización">
-                        <img src="./img/02-logos/logo-casa-del-mar-2.png" alt="Casa del Mar" />
+                        <img src="./img/02-logos/logo-casa-del-mar-2.png" alt="Casa del Mar - Locación de eventos" />
                         <span class="tooltip">🏖️ Casa del Mar - Locación y organización de eventos</span>
                     </a>
                     <button class="btn-ver-mas" data-project="casa-del-mar" data-url="https://casadelmar.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://qrsocial.netlify.app/" target="_blank" class="project-link" data-name="qr social" data-description="Perfil social unificado con código QR para eventos y networking">
-                        <img src="./img/02-logos/logoqrsocial11a.png" alt="QR Social" />
+                        <img src="./img/02-logos/logoqrsocial11a.png" alt="QR Social - Perfil social unificado" />
                         <span class="tooltip">📱 QR Social - Perfil social unificado para eventos</span>
                     </a>
                     <button class="btn-ver-mas" data-project="qr-social" data-url="https://qrsocial.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="#" class="project-link project-coming-soon" data-name="regalos me viene bien" data-description="Registro de regalos para eventos y casamientos">
-                        <img src="./img/02-logos/logoregalosmevienebien.png" alt="Regalos Me Viene Bien" />
+                        <img src="./img/02-logos/logoregalosmevienebien.png" alt="Regalos Me Viene Bien - Lista de regalos online" />
                         <span class="coming-soon-bar"></span>
                         <span class="tooltip">🎁 Regalos Me Viene Bien - Lista de regalos online</span>
                     </a>
@@ -164,7 +208,7 @@
                 </div>
                 <div class="project-card">
                     <a href="#" class="project-link project-coming-soon" data-name="lista invitados" data-description="Gestión de lista de invitados para eventos">
-                        <img src="./img/02-logos/logolistadeinvitadoseventos.png" alt="Lista Invitados" />
+                        <img src="./img/02-logos/logolistadeinvitadoseventos.png" alt="Lista Invitados - Gestión de invitados" />
                         <span class="coming-soon-bar"></span>
                         <span class="tooltip">📋 Lista Invitados - Gestión de invitados para eventos</span>
                     </a>
@@ -172,7 +216,7 @@
                 </div>
                 <div class="project-card">
                     <a href="https://listascancionesdjeventos.netlify.app/" target="_blank" class="project-link" data-name="pistas para eventos" data-description="Gestión de listas de canciones para DJs en eventos">
-                        <img src="./img/02-logos/logopistasmagic.png" alt="Pistas para Eventos" />
+                        <img src="./img/02-logos/logopistasmagic.png" alt="Pistas para Eventos - Setlists para DJs" />
                         <span class="tooltip">🎧 Pistas para Eventos - Setlists para DJs</span>
                     </a>
                     <button class="btn-ver-mas" data-project="pistas-eventos" data-url="https://listascancionesdjeventos.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
@@ -191,65 +235,73 @@
                 <div class="category-line"></div>
             </div>
             <div class="projects-grid">
+                <!-- NUEVO PROYECTO: MUNDO LIBROS DIGITALES -->
+                <div class="project-card">
+                    <a href="https://mundolibrosdigitales.netlify.app/" target="_blank" class="project-link" data-name="mundo libros digitales" data-description="Tienda online de libros digitales con entrega automática por email, panel de cliente y administración, pagos con Mercado Pago y backend en Express">
+                        <img src="./img/02-logos/logotiedalibrosdigitales.png" alt="Mundo Libros Digitales" />
+                        <span class="tooltip">📚 Mundo Libros Digitales - Tienda de libros PDF con entrega automática</span>
+                    </a>
+                    <button class="btn-ver-mas" data-project="mundo-libros-digitales" data-url="https://mundolibrosdigitales.netlify.app/" data-github="https://github.com/alejandrobavaro/mundolibrosdigitales" data-tech="React, Express, Mercado Pago, Node.js" data-date="2026">Ver más</button>
+                </div>
                 <div class="project-card">
                     <a href="https://puchulitatiendamusicalinfantil.netlify.app" target="_blank" class="project-link" data-name="puchulita" data-description="Tienda online de instrumentos musicales infantiles">
-                        <img src="./img/02-logos/logopuchulita.png" alt="Puchulita" />
+                        <img src="./img/02-logos/logopuchulita.png" alt="Puchulita - Instrumentos musicales para niños" />
                         <span class="tooltip">🎵 Puchulita - Instrumentos musicales para niños</span>
                     </a>
                     <button class="btn-ver-mas" data-project="puchulita" data-url="https://puchulitatiendamusicalinfantil.netlify.app" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://linatiendabazar.netlify.app/" target="_blank" class="project-link" data-name="lina tienda" data-description="Bazar online con productos de decoración y regalos">
-                        <img src="./img/02-logos/logolinatiendabazar.png" alt="Lina Tienda" />
+                        <img src="./img/02-logos/logolinatiendabazar.png" alt="Lina Bazar - Tienda online de decoración" />
                         <span class="tooltip">🛍️ Lina Bazar - Tienda online de decoración y regalos</span>
                     </a>
                     <button class="btn-ver-mas" data-project="lina-tienda" data-url="https://linatiendabazar.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://feriusadostienda.netlify.app/" target="_blank" class="project-link" data-name="feri usados" data-description="Marketplace de productos usados y segunda mano">
-                        <img src="./img/02-logos/logoferiusados.png" alt="Ferí Usados" />
+                        <img src="./img/02-logos/logoferiusados.png" alt="Ferí Usados - Marketplace de segunda mano" />
                         <span class="tooltip">🔄 Ferí Usados - Compra y venta de productos usados</span>
                     </a>
                     <button class="btn-ver-mas" data-project="feri-usados" data-url="https://feriusadostienda.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://deira.netlify.app/" target="_blank" class="project-link" data-name="deira" data-description="Tienda online de carteras y accesorios personalizados">
-                        <img src="./img/02-logos/logodeira.png" alt="Deira" />
+                        <img src="./img/02-logos/logodeira.png" alt="Deira - Carteras y accesorios personalizados" />
                         <span class="tooltip">👜 Deira - Carteras y accesorios personalizados</span>
                     </a>
                     <button class="btn-ver-mas" data-project="deira" data-url="https://deira.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://polirubrodonjuan.netlify.app/" target="_blank" class="project-link" data-name="polirubro" data-description="Sistema de gestión para comercios multi-rubro">
-                        <img src="./img/02-logos/logopolirubrodonjuan3.png" alt="Polirubro" />
+                        <img src="./img/02-logos/logopolirubrodonjuan3.png" alt="Polirubro Don Juan - Gestión de comercio multi-rubro" />
                         <span class="tooltip">🏪 Polirubro Don Juan - Gestión de comercio multi-rubro</span>
                     </a>
                     <button class="btn-ver-mas" data-project="polirubro" data-url="https://polirubrodonjuan.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://lasplantitasdeelina.netlify.app/" target="_blank" class="project-link" data-name="plantitas" data-description="Tienda online de plantas y jardinería">
-                        <img src="./img/02-logos/logolasplantitasdeelina.png" alt="Plantitas" />
+                        <img src="./img/02-logos/logolasplantitasdeelina.png" alt="Plantitas de Elina - Vivero online" />
                         <span class="tooltip">🌱 Plantitas de Elina - Vivero y jardinería online</span>
                     </a>
                     <button class="btn-ver-mas" data-project="plantitas" data-url="https://lasplantitasdeelina.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://felitatiendamascotas.netlify.app/" target="_blank" class="project-link" data-name="felita mascotas" data-description="Tienda online de productos para mascotas">
-                        <img src="./img/02-logos/logofelitatiendamascotas.png" alt="Felita Mascotas" />
+                        <img src="./img/02-logos/logofelitatiendamascotas.png" alt="Felita Mascotas - Productos para mascotas" />
                         <span class="tooltip">🐾 Felita Mascotas - Productos y accesorios para mascotas</span>
                     </a>
                     <button class="btn-ver-mas" data-project="felita-mascotas" data-url="https://felitatiendamascotas.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://personaliza.netlify.app/" target="_blank" class="project-link" data-name="personaliza" data-description="Plataforma de personalización de productos">
-                        <img src="./img/02-logos/logopersonaliza.png" alt="Personaliza" />
+                        <img src="./img/02-logos/logopersonaliza.png" alt="Personaliza - Diseño y personalización de productos" />
                         <span class="tooltip">✨ Personaliza - Diseño y personalización de productos</span>
                     </a>
                     <button class="btn-ver-mas" data-project="personaliza" data-url="https://personaliza.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://staffserviceparaelhogar.netlify.app/" target="_blank" class="project-link" data-name="staff service" data-description="Plataforma de servicios para el hogar">
-                        <img src="./img/02-logos/logostaffserviceparaelhogar.png" alt="Staff Service" />
+                        <img src="./img/02-logos/logostaffserviceparaelhogar.png" alt="Staff Service - Servicios para el hogar" />
                         <span class="tooltip">🏠 Staff Service - Servicios para el hogar</span>
                     </a>
                     <button class="btn-ver-mas" data-project="staff-service" data-url="https://staffserviceparaelhogar.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
@@ -270,56 +322,56 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <a href="https://auto-ventas-system.netlify.app/" target="_blank" class="project-link" data-name="auto ventas" data-description="Sistema de gestión para concesionarias de autos">
-                        <img src="./img/02-logos/logo-auto-ventas-system-1a-largo.png" alt="Auto Ventas" />
+                        <img src="./img/02-logos/logo-auto-ventas-system-1a-largo.png" alt="Auto Ventas - Gestión de concesionarias" />
                         <span class="tooltip">🚗 Auto Ventas - Gestión de concesionarias y stock de vehículos</span>
                     </a>
                     <button class="btn-ver-mas" data-project="auto-ventas" data-url="https://auto-ventas-system.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://taller-mecanico-system.netlify.app/" target="_blank" class="project-link" data-name="taller mecanico" data-description="Sistema de gestión para talleres mecánicos">
-                        <img src="./img/02-logos/logo-taller-mecanico-system-1.png" alt="Taller Mecánico" />
+                        <img src="./img/02-logos/logo-taller-mecanico-system-1.png" alt="Taller Mecánico - Gestión de talleres" />
                         <span class="tooltip">🔧 Taller Mecánico - Gestión de turnos, órdenes y clientes</span>
                     </a>
                     <button class="btn-ver-mas" data-project="taller-mecanico" data-url="https://taller-mecanico-system.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://felitasistemvet.netlify.app/" target="_blank" class="project-link" data-name="felita vet" data-description="Sistema de gestión para clínicas veterinarias">
-                        <img src="./img/02-logos/logofelitasistem2.png" alt="Felita Vet" />
+                        <img src="./img/02-logos/logofelitasistem2.png" alt="Felita Vet - Gestión veterinaria" />
                         <span class="tooltip">🐕 Felita Vet - Gestión de pacientes, turnos e historias clínicas</span>
                     </a>
                     <button class="btn-ver-mas" data-project="felita-vet" data-url="https://felitasistemvet.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://sistematurnoscanchas.netlify.app/" target="_blank" class="project-link" data-name="turnos canchas" data-description="Sistema de reserva de turnos para canchas deportivas">
-                        <img src="./img/02-logos/logosistematurnoscanchas.png" alt="Turnos Canchas" />
+                        <img src="./img/02-logos/logosistematurnoscanchas.png" alt="Turnos Canchas - Reserva de canchas" />
                         <span class="tooltip">⚽ Turnos Canchas - Reserva online de canchas deportivas</span>
                     </a>
                     <button class="btn-ver-mas" data-project="turnos-canchas" data-url="https://sistematurnoscanchas.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://sistematurnosbanco.netlify.app/pantalla/turnos" target="_blank" class="project-link" data-name="turnos banco" data-description="Sistema de gestión de turnos para entidades bancarias">
-                        <img src="./img/02-logos/logosistematurnosbancarios3.png" alt="Turnos Banco" />
+                        <img src="./img/02-logos/logosistematurnosbancarios3.png" alt="Turnos Banco - Gestión de colas bancarias" />
                         <span class="tooltip">🏦 Turnos Banco - Gestión de colas y turnos bancarios</span>
                     </a>
                     <button class="btn-ver-mas" data-project="turnos-banco" data-url="https://sistematurnosbanco.netlify.app/pantalla/turnos" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://gondraestudioturnossalaensayo.netlify.app/" target="_blank" class="project-link" data-name="gondra estudio" data-description="Sistema de reserva de salas de ensayo para músicos">
-                        <img src="./img/02-logos/logogondraestudio.png" alt="Gondra Estudio" />
+                        <img src="./img/02-logos/logogondraestudio.png" alt="Gondra Estudio - Reserva de salas de ensayo" />
                         <span class="tooltip">🎸 Gondra Estudio - Reserva de salas de ensayo musical</span>
                     </a>
                     <button class="btn-ver-mas" data-project="gondra-estudio" data-url="https://gondraestudioturnossalaensayo.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://inmosystem.netlify.app/" target="_blank" class="project-link" data-name="inmo system" data-description="Sistema de gestión para inmobiliarias">
-                        <img src="./img/02-logos/logoinmosystem3.png" alt="Inmo System" />
+                        <img src="./img/02-logos/logoinmosystem3.png" alt="Inmo System - Gestión inmobiliaria" />
                         <span class="tooltip">🏠 Inmo System - Gestión de propiedades, clientes y operaciones</span>
                     </a>
                     <button class="btn-ver-mas" data-project="inmo-system" data-url="https://inmosystem.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="#" class="project-link project-coming-soon" data-name="cocheras controller" data-description="Sistema de control de tickets para cocheras">
-                        <img src="./img/02-logos/logococherascontroler.png" alt="Cocheras Controller" />
+                        <img src="./img/02-logos/logococherascontroler.png" alt="Cocheras Controller - Gestión de tickets" />
                         <span class="coming-soon-bar"></span>
                         <span class="tooltip">🅿️ Cocheras Controller - Gestión de tickets y cocheras</span>
                     </a>
@@ -341,111 +393,110 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <a href="https://expensasconsorciosadm.netlify.app/" target="_blank" class="project-link" data-name="expensas" data-description="Sistema de gestión de expensas para consorcios">
-                        <img src="./img/02-logos/logoexpensasconsorciosadm.png" alt="Expensas" />
+                        <img src="./img/02-logos/logoexpensasconsorciosadm.png" alt="Expensas - Gestión de expensas" />
                         <span class="tooltip">🏢 Expensas - Gestión de expensas y consorcios</span>
                     </a>
                     <button class="btn-ver-mas" data-project="expensas" data-url="https://expensasconsorciosadm.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://asambleas.netlify.app/" target="_blank" class="project-link" data-name="asambleas" data-description="Sistema de gestión de asambleas y votaciones">
-                        <img src="./img/02-logos/logoasambleasvotaciones.png" alt="Asambleas" />
+                        <img src="./img/02-logos/logoasambleasvotaciones.png" alt="Asambleas - Gestión de votaciones" />
                         <span class="tooltip">🗳️ Asambleas - Gestión de asambleas y votaciones</span>
                     </a>
                     <button class="btn-ver-mas" data-project="asambleas" data-url="https://asambleas.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://calculadoraretro.netlify.app/" target="_blank" class="project-link" data-name="calculadora retro" data-description="Calculadora con diseño retro y funciones básicas">
-                        <img src="./img/02-logos/logocalculadoraretro.png" alt="Calculadora Retro" />
+                        <img src="./img/02-logos/logocalculadoraretro.png" alt="Calculadora Retro - Herramienta vintage" />
                         <span class="tooltip">🧮 Calculadora Retro - Herramienta de cálculo estilo vintage</span>
                     </a>
                     <button class="btn-ver-mas" data-project="calculadora-retro" data-url="https://calculadoraretro.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://temporizadordetareas.netlify.app/" target="_blank" class="project-link" data-name="temporizador" data-description="Temporizador Pomodoro para gestión de tareas">
-                        <img src="./img/02-logos/logotemporizadordetareas.png" alt="Temporizador" />
+                        <img src="./img/02-logos/logotemporizadordetareas.png" alt="Temporizador - Método Pomodoro" />
                         <span class="tooltip">⏱️ Temporizador - Método Pomodoro para productividad</span>
                     </a>
                     <button class="btn-ver-mas" data-project="temporizador" data-url="https://temporizadordetareas.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://mininotas.netlify.app/" target="_blank" class="project-link" data-name="mini notas" data-description="Bloc de notas simple y minimalista">
-                        <img src="./img/02-logos/logomininotas.png" alt="Mini Notas" />
+                        <img src="./img/02-logos/logomininotas.png" alt="Mini Notas - Bloc de notas" />
                         <span class="tooltip">📝 Mini Notas - Bloc de notas rápido y simple</span>
                     </a>
                     <button class="btn-ver-mas" data-project="mini-notas" data-url="https://mininotas.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://miagendita.netlify.app/" target="_blank" class="project-link" data-name="mi agendita" data-description="Agenda digital para organizar tu día a día">
-                        <img src="./img/02-logos/logomiagendita.png" alt="Mi Agendita" />
+                        <img src="./img/02-logos/logomiagendita.png" alt="Mi Agendita - Agenda digital" />
                         <span class="tooltip">📅 Mi Agendita - Agenda digital personal</span>
                     </a>
                     <button class="btn-ver-mas" data-project="mi-agendita" data-url="https://miagendita.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://utilesoficina.netlify.app/" target="_blank" class="project-link" data-name="utiles oficina" data-description="Suite de herramientas de oficina online">
-                        <img src="./img/02-logos/logoutilesoficina.png" alt="Útiles Oficina" />
+                        <img src="./img/02-logos/logoutilesoficina.png" alt="Útiles Oficina - Herramientas de productividad" />
                         <span class="tooltip">📎 Útiles Oficina - Herramientas de productividad</span>
                     </a>
                     <button class="btn-ver-mas" data-project="utiles-oficina" data-url="https://utilesoficina.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://tareasenproceso.netlify.app/" target="_blank" class="project-link" data-name="tareas proceso" data-description="Gestor de tareas y proyectos personales">
-                        <img src="./img/02-logos/logotareasenproceso.png" alt="Tareas en Proceso" />
+                        <img src="./img/02-logos/logotareasenproceso.png" alt="Tareas en Proceso - Gestión de tareas" />
                         <span class="tooltip">✅ Tareas en Proceso - Gestión de tareas personales</span>
                     </a>
                     <button class="btn-ver-mas" data-project="tareas-proceso" data-url="https://tareasenproceso.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://cordinemosproyectos.netlify.app/" target="_blank" class="project-link" data-name="coordinemos" data-description="Plataforma de coordinación y gestión de proyectos">
-                        <img src="./img/02-logos/logocoordinandoproyectos.png" alt="Coordinemos" />
+                        <img src="./img/02-logos/logocoordinandoproyectos.png" alt="Coordinemos - Gestión de proyectos" />
                         <span class="tooltip">📊 Coordinemos - Gestión colaborativa de proyectos</span>
                     </a>
                     <button class="btn-ver-mas" data-project="coordinemos" data-url="https://cordinemosproyectos.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://misgastosintegrales-porfolio.netlify.app/" target="_blank" class="project-link" data-name="mis gastos" data-description="Control de gastos personales y presupuestos">
-                        <img src="./img/02-logos/logomisgastosintegrales.png" alt="Mis Gastos" />
+                        <img src="./img/02-logos/logomisgastosintegrales.png" alt="Mis Gastos - Control financiero" />
                         <span class="tooltip">💰 Mis Gastos - Control financiero personal</span>
                     </a>
                     <button class="btn-ver-mas" data-project="mis-gastos" data-url="https://misgastosintegrales-porfolio.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://misingresosintegrales-porfolio.netlify.app/" target="_blank" class="project-link" data-name="mis ingresos" data-description="Control de ingresos personales">
-                        <img src="./img/02-logos/logomisingresos.png" alt="Mis Ingresos" />
+                        <img src="./img/02-logos/logomisingresos.png" alt="Mis Ingresos - Control de ingresos" />
                         <span class="tooltip">💰 Mis Ingresos - Control financiero de ingresos</span>
                     </a>
                     <button class="btn-ver-mas" data-project="mis-ingresos" data-url="https://misingresosintegrales-porfolio.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://dolarchito.netlify.app/" target="_blank" class="project-link" data-name="dolar chito" data-description="Cotizador de dólar y conversor de monedas">
-                        <img src="./img/02-logos/logodolarchito.png" alt="Dolar Chito" />
+                        <img src="./img/02-logos/logodolarchito.png" alt="Dolar Chito - Cotizador de dólar" />
                         <span class="tooltip">💵 Dolar Chito - Cotización del dólar en tiempo real</span>
                     </a>
                     <button class="btn-ver-mas" data-project="dolar-chito" data-url="https://dolarchito.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://capacitacionesadm.netlify.app/" target="_blank" class="project-link" data-name="capacitaciones" data-description="Plataforma de capacitaciones y cursos administrativos">
-                        <img src="./img/02-logos/logocapacitacionesadm.png" alt="Capacitaciones" />
+                        <img src="./img/02-logos/logocapacitacionesadm.png" alt="Capacitaciones ADM - Cursos online" />
                         <span class="tooltip">📚 Capacitaciones ADM - Cursos de administración y gestión</span>
                     </a>
                     <button class="btn-ver-mas" data-project="capacitaciones" data-url="https://capacitacionesadm.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://datos-rapidos-documentos-consorcios.netlify.app/" target="_blank" class="project-link" data-name="datos rapidos consorcios" data-description="Gestión rápida de documentos para consorcios">
-                        <img src="./img/02-logos/logodatosrapidosconsorcios.png" alt="Datos Rápidos Consorcios" />
+                        <img src="./img/02-logos/logodatosrapidosconsorcios.png" alt="Datos Rápidos Consorcios - Documentos" />
                         <span class="tooltip">📄 Datos Rápidos - Documentos para consorcios</span>
                     </a>
                     <button class="btn-ver-mas" data-project="datos-rapidos" data-url="https://datos-rapidos-documentos-consorcios.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="#" class="project-link project-coming-soon" data-name="lista de tareas" data-description="Gestor de tareas simple y efectivo">
-                        <img src="./img/02-logos/logolistadetareas.png" alt="Lista de Tareas" />
+                        <img src="./img/02-logos/logolistadetareas.png" alt="Lista de Tareas - Gestor simple" />
                         <span class="coming-soon-bar"></span>
                         <span class="tooltip">✅ Lista de Tareas - Gestión de tareas diarias</span>
                     </a>
                     <button class="btn-ver-mas" data-project="lista-tareas" data-url="#" data-github="#" data-tech="Próximamente" data-date="2025">Próximamente</button>
                 </div>
-                <!-- Grupo Administración Bavaro - ACTIVO -->
                 <div class="project-card">
                     <a href="https://grupoadministracionbavaro.netlify.app/" target="_blank" class="project-link" data-name="grupo bavaro" data-description="Grupo de administración de propiedades">
                         <img src="./img/02-logos/logogrupoadministracionbavaro.png" alt="Grupo Administración Bavaro" />
@@ -469,37 +520,36 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <a href="https://90sbar.netlify.app/" target="_blank" class="project-link" data-name="90s bar" data-description="Sitio web para bar temático de los años 90">
-                        <img src="./img/02-logos/logo90sbar.png" alt="90s Bar" />
+                        <img src="./img/02-logos/logo90sbar.png" alt="90s Bar - Bar temático" />
                         <span class="tooltip">🍻 90s Bar - Bar temático de los años 90</span>
                     </a>
                     <button class="btn-ver-mas" data-project="90s-bar" data-url="https://90sbar.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://sistemaqrmenurpedidos.netlify.app/" target="_blank" class="project-link" data-name="menu qr" data-description="Sistema de menú digital QR para restaurantes">
-                        <img src="./img/02-logos/sistemaqrmenurpedidos1.png" alt="Menú QR" />
+                        <img src="./img/02-logos/sistemaqrmenurpedidos1.png" alt="Menú QR - Pedidos sin contacto" />
                         <span class="tooltip">📱 Menú QR - Pedidos sin contacto vía código QR</span>
                     </a>
                     <button class="btn-ver-mas" data-project="menu-qr" data-url="https://sistemaqrmenurpedidos.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://pirulatequenos.netlify.app/" target="_blank" class="project-link" data-name="pirula tequeños" data-description="Delivery de tequeños - Sistema de gestión">
-                        <img src="./img/02-logos/logotequenospirula2.png" alt="Pirula Tequeños" />
+                        <img src="./img/02-logos/logotequenospirula2.png" alt="Pirula Tequeños - Delivery" />
                         <span class="tooltip">🧀 Pirula Tequeños - Delivery de tequeños artesanales</span>
                     </a>
                     <button class="btn-ver-mas" data-project="pirula-tequenos" data-url="https://pirulatequenos.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="#" class="project-link project-coming-soon" data-name="restaurant cheff" data-description="Sistema de gestión para restaurantes">
-                        <img src="./img/02-logos/logorestaurantcheff.png" alt="Restaurant Cheff" />
+                        <img src="./img/02-logos/logorestaurantcheff.png" alt="Restaurant Cheff - Gestión de restaurantes" />
                         <span class="coming-soon-bar"></span>
                         <span class="tooltip">🍽️ Restaurant Cheff - Gestión de restaurantes</span>
                     </a>
                     <button class="btn-ver-mas" data-project="restaurant-cheff" data-url="#" data-github="#" data-tech="Próximamente" data-date="2025">Próximamente</button>
                 </div>
-             
                 <div class="project-card">
                     <a href="#" class="project-link project-coming-soon" data-name="pedidos en mesa" data-description="Sistema de pedidos desde la mesa para restaurantes">
-                        <img src="./img/02-logos/logopedidosenmesa.png" alt="Pedidos en Mesa" />
+                        <img src="./img/02-logos/logopedidosenmesa.png" alt="Pedidos en Mesa - Comandas digitales" />
                         <span class="coming-soon-bar"></span>
                         <span class="tooltip">🛎️ Pedidos en Mesa - Sistema de comandas digitales</span>
                     </a>
@@ -521,55 +571,54 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <a href="https://almangopopmusic.netlify.app/" target="_blank" class="project-link" data-name="almango music" data-description="Plataforma de streaming y descubrimiento musical">
-                        <img src="./img/02-logos/logoalmangopopmusic.png" alt="Almango Music" />
+                        <img src="./img/02-logos/logoalmangopopmusic.png" alt="Almango Music - Streaming musical" />
                         <span class="tooltip">🎧 Almango Pop Music - Streaming y descubrimiento musical</span>
                     </a>
                     <button class="btn-ver-mas" data-project="almango-music" data-url="https://almangopopmusic.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://almangopopcovers.netlify.app/" target="_blank" class="project-link" data-name="almango covers" data-description="Plataforma de covers y versiones musicales">
-                        <img src="./img/02-logos/logoalmangopopcovers.png" alt="Almango Covers" />
+                        <img src="./img/02-logos/logoalmangopopcovers.png" alt="Almango Covers - Covers musicales" />
                         <span class="tooltip">🎤 Almango Covers - Comunidad de covers musicales</span>
                     </a>
                     <button class="btn-ver-mas" data-project="almango-covers" data-url="https://almangopopcovers.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://rockola-chords.netlify.app/" target="_blank" class="project-link" data-name="rockola" data-description="Buscador de acordes y letras de canciones">
-                        <img src="./img/02-logos/logorockolacancioneros.png" alt="Rockola" />
+                        <img src="./img/02-logos/logorockolacancioneros.png" alt="Rockola Chords - Acordes y tablaturas" />
                         <span class="tooltip">🎸 Rockola Chords - Acordes y tablaturas para músicos</span>
                     </a>
                     <button class="btn-ver-mas" data-project="rockola" data-url="https://rockola-chords.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://reproductormp3dj.netlify.app/" target="_blank" class="project-link" data-name="mp3 dj" data-description="Reproductor MP3 estilo DJ con efectos y mezclas">
-                        <img src="./img/02-logos/logoreproductormp3dj.png" alt="MP3 DJ" />
+                        <img src="./img/02-logos/logoreproductormp3dj.png" alt="MP3 DJ - Reproductor con efectos" />
                         <span class="tooltip">🎚️ MP3 DJ - Reproductor con efectos para DJs</span>
                     </a>
                     <button class="btn-ver-mas" data-project="mp3-dj" data-url="https://reproductormp3dj.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://alejandrobavaro.github.io/alegondramusic/" target="_blank" class="project-link" data-name="alegondra" data-description="Portfolio musical y plataforma de promoción para artistas">
-                        <img src="./img/02-logos/logoalegondramusic.png" alt="Alegondra" />
+                        <img src="./img/02-logos/logoalegondramusic.png" alt="Alegondra Music - Portfolio musical" />
                         <span class="tooltip">🎵 Alegondra Music - Promoción y portfolio musical</span>
                     </a>
                     <button class="btn-ver-mas" data-project="alegondra" data-url="https://alejandrobavaro.github.io/alegondramusic/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://manojodeuvas.netlify.app/" target="_blank" class="project-link" data-name="manojo de uvas" data-description="Ramo de uvas virtual para sorteos musicales">
-                        <img src="./img/02-logos/logomanojodeuvas.png" alt="Manojo de Uvas" />
+                        <img src="./img/02-logos/logomanojodeuvas.png" alt="Manojo de Uvas - Sorteos musicales" />
                         <span class="tooltip">🍇 Manojo de Uvas - Sorteos y dinámicas musicales</span>
                     </a>
                     <button class="btn-ver-mas" data-project="manojo-uvas" data-url="https://manojodeuvas.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="#" class="project-link project-coming-soon" data-name="multipistas" data-description="Multi-pistas y estudio de grabación online">
-                        <img src="./img/02-logos/logomultipistas.png" alt="Multi-pistas" />
+                        <img src="./img/02-logos/logomultipistas.png" alt="Multi-pistas - Estudio de grabación online" />
                         <span class="coming-soon-bar"></span>
                         <span class="tooltip">🎛️ Multi-pistas - Estudio de grabación online</span>
                     </a>
                     <button class="btn-ver-mas" data-project="multipistas" data-url="#" data-github="#" data-tech="Próximamente" data-date="2025">Próximamente</button>
                 </div>
- 
             </div>
         </section>
 
@@ -586,41 +635,36 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <a href="https://juegotetris.netlify.app/" target="_blank" class="project-link" data-name="tetris" data-description="Clásico juego de Tetris en versión web">
-                        <img src="./img/02-logos/logojuegotetris2.png" alt="Tetris" />
+                        <img src="./img/02-logos/logojuegotetris2.png" alt="Tetris - Juego clásico" />
                         <span class="tooltip">🧩 Tetris - El clásico juego de puzzles</span>
                     </a>
                     <button class="btn-ver-mas" data-project="tetris" data-url="https://juegotetris.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://larule.netlify.app/" target="_blank" class="project-link" data-name="la rule" data-description="Juego de preguntas y respuestas estilo trivia">
-                        <img src="./img/02-logos/logolarule.png" alt="La Rule" />
+                        <img src="./img/02-logos/logolarule.png" alt="La Rule - Trivia" />
                         <span class="tooltip">🎲 La Rule - Trivia y preguntas para grupos</span>
                     </a>
                     <button class="btn-ver-mas" data-project="la-rule" data-url="https://larule.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://chulusgames.vercel.app/" target="_blank" class="project-link" data-name="chulus" data-description="Plataforma de minijuegos casuales online">
-                        <img src="./img/02-logos/logochulusgames.png" alt="Chulus" />
+                        <img src="./img/02-logos/logochulusgames.png" alt="Chulus Games - Minijuegos" />
                         <span class="tooltip">🎮 Chulus Games - Minijuegos casuales online</span>
                     </a>
                     <button class="btn-ver-mas" data-project="chulus" data-url="https://chulusgames.vercel.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
-        
-
-         <div class="project-card">
+                <div class="project-card">
                     <a href="#" class="project-link project-coming-soon" data-name="ocho escalones" data-description="Juego de escaleras y serpientes versión online">
-                        <img src="./img/02-logos/logojuegoochoescalones.png" alt="Ocho Escalones" />
+                        <img src="./img/02-logos/logojuegoochoescalones.png" alt="Ocho Escalones - Juego de escaleras" />
                         <span class="coming-soon-bar"></span>
                         <span class="tooltip">🐍 Ocho Escalones - Juego de escaleras y serpientes</span>
                     </a>
                     <button class="btn-ver-mas" data-project="ocho-escalones" data-url="#" data-github="#" data-tech="Próximamente" data-date="2025">Próximamente</button>
                 </div>
-
-
-
                 <div class="project-card">
                     <a href="#" class="project-link project-coming-soon" data-name="bingo" data-description="Bingo online multijugador">
-                        <img src="./img/02-logos/logojuegobingo.png" alt="Bingo" />
+                        <img src="./img/02-logos/logojuegobingo.png" alt="Bingo online" />
                         <span class="coming-soon-bar"></span>
                         <span class="tooltip">🎰 Bingo - Bingo online multijugador</span>
                     </a>
@@ -628,13 +672,12 @@
                 </div>
                 <div class="project-card">
                     <a href="#" class="project-link project-coming-soon" data-name="kinect" data-description="Juegos con Kinect para Xbox">
-                        <img src="./img/02-logos/logojuegoskinect.png" alt="Kinect Games" />
+                        <img src="./img/02-logos/logojuegoskinect.png" alt="Kinect Games - Juegos por movimiento" />
                         <span class="coming-soon-bar"></span>
                         <span class="tooltip">🎯 Kinect Games - Juegos con control por movimiento</span>
                     </a>
                     <button class="btn-ver-mas" data-project="kinect" data-url="#" data-github="#" data-tech="Próximamente" data-date="2025">Próximamente</button>
                 </div>
-       
             </div>
         </section>
 
@@ -651,14 +694,14 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <a href="https://eltallerdeemilio.netlify.app/" target="_blank" class="project-link" data-name="taller emilio" data-description="Portfolio y sistema de pedidos para taller de carpintería">
-                        <img src="./img/02-logos/logotalleremilio.png" alt="Taller de Emilio" />
+                        <img src="./img/02-logos/logotalleremilio.png" alt="Taller de Emilio - Carpintería" />
                         <span class="tooltip">🪚 Taller de Emilio - Carpintería y muebles a medida</span>
                     </a>
-                    <button class="btn-ver-mas" data-project="taller-emilio" data-url="https://eltallerdeemilio.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
+                    <button class="btn-ver-mas" data-project="taller-emilio" data-url="https://eltallerdemilio.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://tinderpupis.netlify.app/" target="_blank" class="project-link" data-name="tinder pupis" data-description="Red social tipo Tinder para encontrar pareja a tu mascota">
-                        <img src="./img/02-logos/logotinderpupis.png" alt="Tinder Pupis" />
+                        <img src="./img/02-logos/logotinderpupis.png" alt="Tinder Pupis - Red social para mascotas" />
                         <span class="tooltip">🐕 Tinder Pupis - Red social para mascotas</span>
                     </a>
                     <button class="btn-ver-mas" data-project="tinder-pupis" data-url="https://tinderpupis.netlify.app/" data-github="#" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
@@ -679,23 +722,22 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <a href="https://alejandrobavaro.github.io/gondraworld-dev/" target="_blank" class="project-link" data-name="gondra world html" data-description="Portafolio de proyectos - Versión HTML/CSS/JS">
-                        <img src="./img/02-logos/logogondraworld.png" alt="Gondra World HTML" />
+                        <img src="./img/02-logos/logogondraworld.png" alt="Gondra World HTML - Portafolio actual" />
                         <span class="tooltip">🌐 Gondra World HTML - Portafolio actual (estás aquí)</span>
                     </a>
                     <button class="btn-ver-mas" data-project="gondra-world-html" data-url="https://alejandrobavaro.github.io/gondraworld-dev/" data-github="https://github.com/alejandrobavaro/gondraworld-dev" data-tech="HTML, CSS, JavaScript" data-date="2024">Ver más</button>
                 </div>
                 <div class="project-card">
                     <a href="https://gondraworld-dev-servicios.netlify.app/" target="_blank" class="project-link" data-name="gondra world servicios" data-description="Empresa de desarrollo de sistemas y soluciones web">
-                        <img src="./img/02-logos/logogondraworldporfolio.png" alt="Gondra World Servicios" />
+                        <img src="./img/02-logos/logogondraworldporfolio.png" alt="Gondra World Servicios - Desarrollo de sistemas" />
                         <span class="tooltip">💼 Gondra World Dev - Desarrollo de sistemas y soluciones a medida</span>
                     </a>
                     <button class="btn-ver-mas" data-project="gondra-world-empresa" data-url="https://gondraworld-dev-servicios.netlify.app/" data-github="https://github.com/alejandrobavaro/gondraworld-dev-servicios" data-tech="React, Node.js, MongoDB" data-date="2024">Ver más</button>
                 </div>
-              
             </div>
         </section>
 
-        <!-- ===== MODAL PARA VER MÁS INFORMACIÓN ..npm===== -->
+        <!-- ===== MODAL PARA VER MÁS INFORMACIÓN ===== -->
         <div id="projectModal" class="modal">
             <div class="modal-content">
                 <span class="modal-close">&times;</span>
