@@ -266,7 +266,7 @@ Cuando se comparte en **WhatsApp, Facebook, LinkedIn**, aparece:
 | Asignación Mesas | [Ver](https://asignacionmesasinvitados.netlify.app/) | Organización de invitados por mesa |
 | Tarjetas Invitaciones | [Ver](https://tarjetasinvitaciones.netlify.app/) | Invitaciones digitales |
 | Confirmar Asistencia | [Ver](https://confirmarasistenciaevento.netlify.app/) | RSVP digital |
-| Casa del Mar | [Ver](https://casadelmar.netlify.app/) | Locación de eventos |
+| Casa del Mar | [Ver](https://casadelmar.com.ar/) | Locación de eventos |
 | QR Social | [Ver](https://qrsocial.netlify.app/) | Perfil social unificado |
 | Regalos Me Viene Bien | Próximamente | Lista de regalos online |
 | Lista Invitados | Próximamente | Gestión de invitados |
