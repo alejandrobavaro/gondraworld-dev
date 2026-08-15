@@ -1,6 +1,6 @@
 # Gondra World · Porfolio (versión HTML)
 
-Porfolio de desarrollo web de Ale Bavaro. Una sola página con los **61 proyectos
+Porfolio de desarrollo web de Ale Bavaro. Una sola página con los **57 proyectos
 publicados**, agrupados en 11 rubros, con buscador y ficha de detalle por proyecto.
 
 **En vivo:** https://alejandrobavaro.github.io/gondraworld-dev/
@@ -17,11 +17,17 @@ npx http-server -p 5500 -c-1
 
 Y abrir http://localhost:5500. Con Live Server de VS Code funciona igual.
 
-El CSS se escribe en `scss/` y se compila a `css/estilo.css`. Si tocás los `.scss`:
+### El CSS se edita a mano. No hay Sass.
 
-```bash
-sass scss/estilo.scss css/estilo.css
-```
+> **Ojo con «Watch Sass» de VS Code.** Este proyecto **tenía** una carpeta `scss/`
+> que había quedado congelada en junio de 2026. El 14/08/2026 el Live Sass Compiler
+> se despertó, compiló ese SCSS viejo encima de `css/estilo.css` y se llevó puesto
+> todo el rediseño. Se recuperó del último commit.
+>
+> Para que no vuelva a pasar, el `scss/` y los `.map` se movieron a
+> `- ARCHIVO/scss-viejo-gondraworld-html/`. **La fuente de verdad es
+> `css/estilo.css`.** Si alguna vez volvés a usar Sass, hay que portar primero
+> todo el CSS actual al SCSS; si no, se pierde de nuevo.
 
 ---
 
@@ -30,10 +36,9 @@ sass scss/estilo.scss css/estilo.css
 ```
 gondraworld-html/
 ├── index.html          Todo: markup, estilos de página, buscador y ficha
-├── css/estilo.css      Compilado desde scss/
-├── scss/               Fuente de los estilos
+├── css/estilo.css      Los estilos. Se edita a mano (ver aviso de Sass arriba)
 └── img/
-    ├── 00-fondos/      Los 2 fondos del espacio (webp)
+    ├── 00-fondos/      Los fondos del espacio y el del pie (webp)
     ├── 02-logos/       Un logo por proyecto (webp)
     ├── 05-gif/         Logo animado del header + su poster estático
     └── 08-favicon/     Favicon y la imagen para compartir en redes
@@ -81,7 +86,7 @@ gondraworld-html/
    | `data-tech` / `data-date` | Ficha técnica. |
 
 3. Listo. El buscador, los chips de rubro y la ficha lo toman solos.
-   El contador del encabezado (`61 proyectos · 11 rubros`) está escrito a mano en
+   El contador del encabezado (`57 proyectos · 11 rubros`) está escrito a mano en
    el bloque `.hero-datos` del `index.html`: hay que subirlo al agregar uno.
 
 ## Cómo agregar un rubro
@@ -89,7 +94,7 @@ gondraworld-html/
 1. Duplicá una `<section class="category-section">` y cambiale el `id`, el
    `data-category`, el número, el ícono y el nombre. El `id` y el `data-category`
    tienen que ser iguales.
-2. Agregá el chip en el `<nav class="rubros-nav">`, apuntando a `#ese-id`.
+2. Agregá el enlace en el `<nav class="barra-rubros">`, apuntando a `#ese-id`.
 3. Renumerá las secciones siguientes.
 
 El rubro que muestra la ficha se saca de la sección donde vive la tarjeta, así que
@@ -104,7 +109,7 @@ PNG de 2300px que se mostraban a 320px: pesaban 17 MB entre todos y ahora pesan 
 Los PNG originales están en `- ARCHIVO/img-originales-reemplazados-por-webp/`.
 
 **Todos los logos llevan `loading="lazy"` y `width`/`height`.** El lazy evita bajar
-61 imágenes de una; las dimensiones evitan que la página salte mientras cargan.
+57 imágenes de una; las dimensiones evitan que la página salte mientras cargan.
 
 **El logo del header carga en dos tiempos.** Primero se muestra
 `logogondraworld-poster.webp` (20 KB, estático) y recién cuando la página terminó de
@@ -125,11 +130,34 @@ sigue con gestión B2B, después lo audiovisual y musical, y cierra con las
 herramientas propias y los juegos. Los números 01–11 reflejan ese orden, así que
 si se reordena hay que renumerarlos.
 
-**Sin header ni menú: se entra directo a la grilla.** Los atajos a cada rubro son
-los chips de `.rubros-nav`, no una barra fija. El enlace de contacto del encabezado
-apunta al `id="contacto"` del pie.
+**Sin header ni menú: se entra directo a la grilla.** Lo único fijo es la barra de
+rubros (`.barra-rubros`), que acompaña el scroll porque la página mide siete
+pantallas y no había forma de saltar de un rubro a otro sin volver al principio.
+Marca en cuál estás parado con un `IntersectionObserver`.
 
-**Dos columnas ya desde los 400 px.** Con 61 proyectos, una sola columna convierte
+**Los rubros no llevan caja, ni borde, ni fondo.** La página es espacial y todo
+está como suspendido: lo que distingue al rubro activo es el subrayado que se
+dibuja, el mismo gesto que usan el contacto y los nombres de proyecto. El velo de
+la barra aparece **solo** cuando queda pegada arriba, va en un pseudo-elemento
+`position: fixed` de lado a lado (con `left/right: 0`, no `100vw`, para no
+provocar scroll horizontal) y se degrada hacia abajo para no cortar la página con
+una línea recta.
+
+**El buscador vive adentro de la barra y es chico.** Antes era lo más grande de la
+página (1368 × 65 px) siendo lo menos útil para quien llega por primera vez: nadie
+puede buscar lo que todavía no conoce. Los rubros son la puerta de entrada; el
+buscador sirve después. Con el cambio, el primer proyecto pasó de aparecer al 68%
+de la primera pantalla a aparecer al 50%.
+
+**El pie es el mismo del sitio de la empresa, replicado en HTML plano.** Mismo
+fondo, misma grilla y mismos enlaces, para que los dos sitios se lean como partes
+de lo mismo. Vive **fuera** de `.container` para ocupar todo el ancho, igual que
+allá. Si se toca el footer de React, conviene tocar este.
+
+**El encabezado enlaza a Servicios y a Tienda del sitio de la empresa.** Acá se
+muestra el trabajo hecho; lo que se vende vive allá.
+
+**Dos columnas ya desde los 400 px.** Con 57 proyectos, una sola columna convierte
 el celular en un scroll interminable. La grilla va 2 → 3 (1024 px) → 4 (1400 px).
 
 **Cada dato del contador es un `<span class="dato">` con `nowrap`.** Si no, en
@@ -158,6 +186,10 @@ estructurados.
 | Carga inicial | 29 MB | 203 KB |
 | Carpeta `img/` | 319 MB | 3,8 MB |
 | Enlaces rotos | 5 | 0 |
+
+También se quitó el slider de marcas del pie: de sus 28 logos, **26 ya estaban más
+arriba** en su propia tarjeta. Repetirlos sumaba peso y hacía dudar de si eran
+otros proyectos.
 
 ---
 

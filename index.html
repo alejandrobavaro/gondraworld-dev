@@ -92,9 +92,42 @@
     <div class="container">
 
         <!-- ===== CABECERA CON LOGO PRINCIPAL ===== -->
-        <header class="logo-wrapper">
-            <img src="./img/05-gif/logogondraworld-poster.webp" data-animado="./img/05-gif/logogondraworldanimado1.webp" alt="Gondra World - Desarrollo Web Profesional" class="logo" width="500" height="158" fetchpriority="high" decoding="async" />
-        </header>
+        <div class="zona-cabecera">
+            <header class="logo-wrapper">
+                <img src="./img/05-gif/logogondraworld-poster.webp" data-animado="./img/05-gif/logogondraworldanimado1.webp" alt="Gondra World - Desarrollo Web Profesional" class="logo" width="500" height="158" fetchpriority="high" decoding="async" />
+            </header>
+
+            <!-- ===== AVISOS DE LA EMPRESA =====
+                 Este porfolio muestra el trabajo hecho, pero no lo vende: los
+                 servicios, los precios y la tienda viven en el sitio de la
+                 empresa. Esta columna va rotando lo que se ofrece alla, en vez
+                 de dejar el costado del logo vacio.
+
+                 Un aviso a la vez. Cuatro mensajes apilados compiten entre si
+                 y no se lee ninguno. -->
+            <aside class="avisos" aria-label="Qué ofrece Gondra World Dev">
+                <a class="aviso esta-visible" href="https://gondraworld-dev-servicios.netlify.app/servicios" target="_blank" rel="noopener">
+                    <span class="aviso__rubro">Servicios</span>
+                    <span class="aviso__titulo">Tu sistema, hecho a medida</span>
+                    <span class="aviso__ir">Ver servicios y precios <span class="flecha" aria-hidden="true">&#8599;</span></span>
+                </a>
+                <a class="aviso" href="https://gondraworld-dev-servicios.netlify.app/tienda" target="_blank" rel="noopener">
+                    <span class="aviso__rubro">Tienda</span>
+                    <span class="aviso__titulo">Packs listos para arrancar</span>
+                    <span class="aviso__ir">Ir a la tienda <span class="flecha" aria-hidden="true">&#8599;</span></span>
+                </a>
+                <a class="aviso" href="https://gondraworld-dev-servicios.netlify.app/empezar" target="_blank" rel="noopener">
+                    <span class="aviso__rubro">Cómo trabajamos</span>
+                    <span class="aviso__titulo">Una parte para vender y otra para administrar</span>
+                    <span class="aviso__ir">Empezá tu proyecto <span class="flecha" aria-hidden="true">&#8599;</span></span>
+                </a>
+                <a class="aviso" href="https://gondraworld-dev-servicios.netlify.app/contacto" target="_blank" rel="noopener">
+                    <span class="aviso__rubro">Consultas</span>
+                    <span class="aviso__titulo">Contanos qué necesitás y lo charlamos</span>
+                    <span class="aviso__ir">Escribinos <span class="flecha" aria-hidden="true">&#8599;</span></span>
+                </a>
+            </aside>
+        </div>
 
         <!-- ===== H1 PRINCIPAL (SEO) ===== -->
         <div class="hero-text">
@@ -105,37 +138,54 @@
                                 <span class="dato"><strong>11</strong> rubros</span>
                                 <span class="dato">Mar del Plata</span>
                             </p>
+            <!-- Puente con el sitio de la empresa. El porfolio muestra el
+                 trabajo hecho; los servicios, la tienda y el contacto viven
+                 en gondraworld-dev-servicios. Son dos sitios distintos y
+                 conviene que se note que son del mismo lugar. -->
             <p class="hero-contacto">
+                <a href="https://gondraworld-dev-servicios.netlify.app/servicios" target="_blank" rel="noopener">Servicios y precios <span class="flecha" aria-hidden="true">&#8599;</span></a>
+                <a href="https://gondraworld-dev-servicios.netlify.app/tienda" target="_blank" rel="noopener">Tienda <span class="flecha" aria-hidden="true">&#8599;</span></a>
                 <a href="#contacto">Trabajemos juntos <span class="flecha" aria-hidden="true">&rarr;</span></a>
             </p>
         </div>
 
-        <!-- ===== BUSCADOR EN VIVO ===== -->
-        <div class="search-container">
-            <div class="search-wrapper">
-                <i class="bi bi-search"></i>
-                <input type="text" id="projectSearch" placeholder="Buscar proyecto por nombre..." autocomplete="off" />
-                <button id="clearSearch" class="clear-search" style="display: none;">
-                    <i class="bi bi-x-lg"></i>
-                </button>
-            </div>
-            <div class="search-info">
-                <span id="searchResultsCount"></span>
-            </div>
-        </div>
+        <!-- ===== BARRA DE RUBROS =====
+             Queda fija al scrollear. Con 11 secciones y siete pantallas de
+             largo, volver arriba cada vez para cambiar de rubro es demasiado;
+             ademas marca en cual estas parado.
 
-        <nav class="rubros-nav" aria-label="Ir a un rubro">
-            <a href="#tiendas">Tiendas</a>
-            <a href="#gastronomia">Gastronomía</a>
-            <a href="#eventos">Eventos</a>
-            <a href="#consorcios">Consorcios</a>
-            <a href="#automotor">Automotor</a>
-            <a href="#turnos">Turnos</a>
-            <a href="#audiovisual">Audiovisual</a>
-            <a href="#musica">Música</a>
-            <a href="#productividad">Productividad</a>
-            <a href="#juegos">Juegos</a>
-            <a href="#gondra-world">Gondra World</a>
+             El buscador vive aca adentro y chico a proposito: quien entra por
+             primera vez no sabe que existe "Pirula Tequenos", asi que no puede
+             buscar lo que no conoce. Los rubros son la puerta de entrada; el
+             buscador sirve despues, a quien ya vio el proyecto y lo vuelve a
+             buscar por nombre. -->
+        <nav class="barra-rubros" aria-label="Rubros del porfolio">
+            <div class="barra-rubros__interior">
+                <div class="barra-rubros__chips">
+                    <a href="#tiendas">Tiendas</a>
+                    <a href="#gastronomia">Gastronomía</a>
+                    <a href="#eventos">Eventos</a>
+                    <a href="#consorcios">Consorcios</a>
+                    <a href="#automotor">Automotor</a>
+                    <a href="#turnos">Turnos</a>
+                    <a href="#audiovisual">Audiovisual</a>
+                    <a href="#musica">Música</a>
+                    <a href="#productividad">Productividad</a>
+                    <a href="#juegos">Juegos</a>
+                    <a href="#gondra-world">Gondra World</a>
+                </div>
+
+                <div class="barra-rubros__buscar">
+                    <div class="search-wrapper">
+                        <i class="bi bi-search" aria-hidden="true"></i>
+                        <input type="text" id="projectSearch" placeholder="Buscar por nombre..." aria-label="Buscar un proyecto por nombre" autocomplete="off" />
+                        <button id="clearSearch" class="clear-search" type="button" aria-label="Limpiar la búsqueda" style="display: none;">
+                            <i class="bi bi-x-lg" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <span id="searchResultsCount" class="search-info" role="status"></span>
+                </div>
+            </div>
         </nav>
 
 
@@ -661,93 +711,88 @@
             <button id="resetSearch">Limpiar búsqueda</button>
         </div>
 
-        <!-- ===== SLIDER AUTOMÁTICO DE MARCAS CON LINKS ===== -->
-        <div class="slider-container">
-            <div class="slider-track">
-                <a href="https://gondrafotografia.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logogondrafotografia.webp" alt="Gondra Fotografía" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://cabinafotograficacosmocam.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logocosmocam.webp" alt="Cosmocam" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://gondralivestreaming.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logogondralivestreaming.webp" alt="Live Streaming" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://puchulitatiendamusicalinfantil.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logopuchulita.webp" alt="Puchulita" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://linatiendabazar.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logolinatiendabazar.webp" alt="Lina Tienda" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://feriusadostienda.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logoferiusados.webp" alt="Ferí Usados" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://deira.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logodeira.webp" alt="Deira" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://polirubrodonjuan.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logopolirubrodonjuan3.webp" alt="Polirubro" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://noscasamos-aleyfabi.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logonoscasamos.webp" alt="Nos Casamos" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://heyoueventos.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logoheyoueventos.webp" alt="Heyou" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://auto-ventas-system.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logo-auto-ventas-system-1a-largo.webp" alt="Auto Ventas" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://taller-mecanico-system.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logo-taller-mecanico-system-1.webp" alt="Taller Mecánico" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://almangopopmusic.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logoalmangopopmusic.webp" alt="Almango Music" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://rockola-chords.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logorockolacancioneros.webp" alt="Rockola" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://juegotetris.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logojuegotetris2.webp" alt="Tetris" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://vhsvideoclubonline.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logovhsvideoclibonline.webp" alt="VHS Club" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://inmosystem.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logoinmosystem3.webp" alt="Inmo System" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://expensasconsorciosadm.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logoexpensasconsorciosadm.webp" alt="Expensas" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://asambleas.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logoasambleasvotaciones.webp" alt="Asambleas" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://alegondramusic.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logoalegondramusic.webp" alt="Alegondra" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://lasplantitasdeelina.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logolasplantitasdeelina.webp" alt="Plantitas" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://capacitacionesadm.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logocapacitacionesadm.webp" alt="Capacitaciones" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://grupoadministracionbavaro.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logogrupoadministracionbavaro.webp" alt="Grupo Bavaro" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://datos-rapidos-documentos-consorcios.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logodatosrapidosconsorcios.webp" alt="Datos Rápidos" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://gondrafotografia.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logogondrafotografia.webp" alt="Gondra Fotografía" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://cabinafotograficacosmocam.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logocosmocam.webp" alt="Cosmocam" loading="lazy" decoding="async" width="320" height="120" /></a>
-                <a href="https://gondralivestreaming.netlify.app/" target="_blank" class="slider-link"><img src="./img/02-logos/logogondralivestreaming.webp" alt="Live Streaming" loading="lazy" decoding="async" width="320" height="120" /></a>
-            </div>
-        </div>
 
         <!-- ===== BOTÓN VOLVER ARRIBA ===== -->
         <button id="backToTop" class="back-to-top" style="display: none;">
             <i class="bi bi-arrow-up"></i>
         </button>
 
-        <!-- ===== FOOTER ===== -->
-        <footer class="footer" id="contacto">
-            <div class="footer-brand">
-                <img src="./img/05-gif/logogondraworld-poster.webp" data-animado="./img/05-gif/logogondraworldanimado1.webp" alt="Gondra World" class="footer-logo footer-logo-animado" width="500" height="158" loading="lazy" decoding="async" />
-            </div>
-            
-            <div class="footer-quote">
-                <i class="bi bi-quote"></i>
-                <p>Transformando ideas en soluciones digitales</p>
-            </div>
-            
-            <div class="footer-info-grid">
-                <div class="footer-info-item">
-                    <i class="bi bi-geo-alt-fill"></i>
-                    <div>
-                        <span class="info-label">Ubicación</span>
-                        <span class="info-value">Mar del Plata, Buenos Aires, Argentina</span>
-                    </div>
-                </div>
-                <div class="footer-info-item">
-                    <i class="bi bi-envelope-fill"></i>
-                    <div>
-                        <span class="info-label">Email</span>
-                        <a href="mailto:bavaroalejandro@gmail.com" class="info-value">bavaroalejandro@gmail.com</a>
-                    </div>
-                </div>
-                <div class="footer-info-item">
-                    <i class="bi bi-whatsapp"></i>
-                    <div>
-                        <span class="info-label">WhatsApp</span>
-                        <a href="https://api.whatsapp.com/send?phone=2235455451" class="info-value">+54 223 545-5451</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-social">
-                <a href="https://www.instagram.com/alegondramusic/" target="_blank" class="social-icon"><i class="bi bi-instagram"></i></a>
-                <a href="https://www.facebook.com/alegondramusic" target="_blank" class="social-icon"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.youtube.com/@almangopopmusic" target="_blank" class="social-icon"><i class="bi bi-youtube"></i></a>
-                <a href="https://github.com/alejandrobavaro" target="_blank" class="social-icon"><i class="bi bi-github"></i></a>
-                <a href="https://www.linkedin.com/in/alejandro-bavaro/" target="_blank" class="social-icon"><i class="bi bi-linkedin"></i></a>
-            </div>
-            
-            <div class="footer-bottom">
-                <p class="copyright">© 2026 Gondra World. Todos los derechos reservados.</p>
-                <p class="credits">Diseño y desarrollo con <i class="bi bi-heart-fill"></i> por <a href="#">Gondra World Dev</a></p>
-            </div>
-        </footer>
     </div>
+
+    <!-- ===== FOOTER =====
+         Replica del footer del sitio de la empresa (React), hecho en HTML
+         plano: mismo fondo, misma grilla y mismos enlaces, para que el
+         porfolio se lea como una pagina mas de Gondra World y no como un
+         sitio suelto.
+
+         Los enlaces de navegacion salen al sitio de React, que es donde
+         viven esas paginas. -->
+    <footer class="site-footer" id="contacto">
+        <div class="footer-accent" aria-hidden="true"></div>
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+                <a href="https://gondraworld-dev-servicios.netlify.app/" class="footer-logo-link" target="_blank" rel="noopener" title="Ir a Gondra World Dev">
+                    <img src="./img/02-logos/logogondraworldporfolio.webp" alt="Gondra World" class="footer-logo footer-logo--planeta" width="640" height="349" loading="lazy" decoding="async" />
+                </a>
+                <p class="footer-tagline">Transformamos ideas en soluciones digitales a medida.</p>
+                <a href="https://gondraworld-dev-servicios.netlify.app/empezar" class="footer-cta" target="_blank" rel="noopener">
+                    <i class="bi bi-rocket-takeoff" aria-hidden="true"></i> Empezá tu proyecto
+                </a>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-col__title">Contacto</h3>
+                <div class="footer-contact">
+                    <div class="footer-contact__item">
+                        <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                        <span>Mar del Plata, Buenos Aires, Argentina</span>
+                    </div>
+                    <a href="mailto:juntossomosmejoresaleyfabi@gmail.com" class="footer-contact__item">
+                        <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                        <span>juntossomosmejoresaleyfabi@gmail.com</span>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=+542235455451&amp;text=Hola!%20Quiero%20consultar%20por%20un%20proyecto" class="footer-contact__item" target="_blank" rel="noopener">
+                        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                        <span>Escribinos por WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-col__title">Navegación</h3>
+                <nav class="footer-nav" aria-label="Secciones del sitio">
+                    <a href="https://gondraworld-dev-servicios.netlify.app/" class="footer-nav__link" target="_blank" rel="noopener"><i class="bi bi-chevron-right" aria-hidden="true"></i> Inicio</a>
+                    <a href="https://gondraworld-dev-servicios.netlify.app/servicios" class="footer-nav__link" target="_blank" rel="noopener"><i class="bi bi-chevron-right" aria-hidden="true"></i> Servicios</a>
+                    <a href="https://gondraworld-dev-servicios.netlify.app/tienda" class="footer-nav__link" target="_blank" rel="noopener"><i class="bi bi-chevron-right" aria-hidden="true"></i> Tienda</a>
+                    <a href="https://gondraworld-dev-servicios.netlify.app/proyectos" class="footer-nav__link" target="_blank" rel="noopener"><i class="bi bi-chevron-right" aria-hidden="true"></i> Nuestros desarrollos</a>
+                    <a href="https://gondraworld-dev-servicios.netlify.app/contacto" class="footer-nav__link" target="_blank" rel="noopener"><i class="bi bi-chevron-right" aria-hidden="true"></i> Contacto</a>
+                    <a href="https://gondraworld-dev-servicios.netlify.app/preguntas-frecuentes" class="footer-nav__link" target="_blank" rel="noopener"><i class="bi bi-chevron-right" aria-hidden="true"></i> Preguntas frecuentes</a>
+                </nav>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-col__title">Seguinos</h3>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/alegondramusic/" class="footer-social__icon" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/alegondramusic" class="footer-social__icon" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/@almangopopmusic" class="footer-social__icon" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+                    <a href="https://github.com/alejandrobavaro" class="footer-social__icon" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/alejandro-bavaro/" class="footer-social__icon" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+                    <a href="mailto:juntossomosmejoresaleyfabi@gmail.com" class="footer-social__icon" aria-label="Email" title="Email"><i class="bi bi-envelope-fill" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-bottom__copy">© 2026 Gondra World — Todos los derechos reservados</p>
+            <p class="footer-bottom__credits">
+                Diseño y desarrollo con <i class="bi bi-heart-fill" aria-hidden="true"></i> por
+                <a href="https://gondraworld-dev-servicios.netlify.app/" target="_blank" rel="noopener" class="footer-bottom__credits-link">Gondra World Dev</a>
+            </p>
+        </div>
+    </footer>
 
     <!-- ===== JAVASCRIPT ===== -->
     <script>
@@ -930,6 +975,123 @@
             }
             if (document.readyState === "complete") activarLogosAnimados();
             else window.addEventListener("load", activarLogosAnimados);
+        })();
+    </script>
+    <script>
+        /* La barra de rubros: marca en cual estas parado y se despega del
+           hero cuando queda pegada arriba. Sin esto, despues de siete
+           pantallas de scroll no hay forma de saber donde estas. */
+        (function () {
+            var barra = document.querySelector('.barra-rubros');
+            var chips = Array.prototype.slice.call(
+                document.querySelectorAll('.barra-rubros__chips a')
+            );
+            var secciones = Array.prototype.slice.call(
+                document.querySelectorAll('.category-section[id]')
+            );
+            if (!barra || !chips.length || !secciones.length) return;
+
+            var porId = {};
+            chips.forEach(function (a) {
+                porId[a.getAttribute('href').slice(1)] = a;
+            });
+
+            function marcar(id) {
+                chips.forEach(function (a) {
+                    a.classList.toggle('rubro-actual', a === porId[id]);
+                });
+            }
+
+            /* Se usa un centinela invisible arriba de todo en vez de leer
+               scrollY en cada cuadro: el navegador avisa solo cuando la barra
+               deja de estar en su lugar. */
+            var centinela = document.createElement('div');
+            centinela.setAttribute('aria-hidden', 'true');
+            centinela.style.cssText = 'position:absolute;top:0;height:1px;width:1px;';
+            barra.parentNode.insertBefore(centinela, barra);
+
+            if ('IntersectionObserver' in window) {
+                new IntersectionObserver(function (entradas) {
+                    barra.classList.toggle('esta-fija', !entradas[0].isIntersecting);
+                }).observe(centinela);
+
+                /* La franja de observacion arranca justo debajo de la barra y
+                   termina a media pantalla, asi se enciende el rubro que se
+                   esta mirando y no el que ya paso de largo.
+
+                   Se lleva la cuenta de que secciones estan dentro de la
+                   franja y se marca la primera en orden de pagina. Marcar
+                   directamente la que dispara el evento falla: cuando el
+                   salto es largo, las secciones intermedias nunca entran a
+                   la franja y queda encendida una que ya paso. */
+                var visibles = Object.create(null);
+                var observador = new IntersectionObserver(function (entradas) {
+                    entradas.forEach(function (e) {
+                        visibles[e.target.id] = e.isIntersecting;
+                    });
+                    for (var i = 0; i < secciones.length; i++) {
+                        if (visibles[secciones[i].id]) { marcar(secciones[i].id); return; }
+                    }
+                }, { rootMargin: '-80px 0px -55% 0px' });
+                secciones.forEach(function (s) { observador.observe(s); });
+            }
+
+            /* Al hacer clic se enciende de una, sin esperar a que termine el
+               desplazamiento suave. */
+            chips.forEach(function (a) {
+                a.addEventListener('click', function () {
+                    marcar(a.getAttribute('href').slice(1));
+                });
+            });
+        })();
+    </script>
+    <script>
+        /* Los avisos de la empresa, uno a la vez. Cuatro mensajes apilados
+           compiten entre si y no se lee ninguno. */
+        (function () {
+            var avisos = Array.prototype.slice.call(document.querySelectorAll('.aviso'));
+            if (avisos.length < 2) return;
+
+            var actual = 0;
+            var reloj = null;
+            var quieto = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+            function mostrar(i) {
+                avisos.forEach(function (a, n) {
+                    a.classList.toggle('esta-visible', n === i);
+                });
+                actual = i;
+            }
+
+            function arrancar() {
+                if (reloj) return;
+                reloj = setInterval(function () {
+                    mostrar((actual + 1) % avisos.length);
+                }, 5200);
+            }
+            function frenar() {
+                clearInterval(reloj);
+                reloj = null;
+            }
+
+            /* Se frena mientras el visitante lo esta leyendo o lo tiene con
+               el teclado: cambiarle el aviso justo cuando iba a hacer clic
+               es la peor version de esto. */
+            var zona = avisos[0].parentNode;
+            zona.addEventListener('mouseenter', frenar);
+            zona.addEventListener('mouseleave', arrancar);
+            zona.addEventListener('focusin', frenar);
+            zona.addEventListener('focusout', arrancar);
+
+            /* Tampoco tiene sentido rotar con la pestana en segundo plano. */
+            document.addEventListener('visibilitychange', function () {
+                if (document.hidden) frenar(); else arrancar();
+            });
+
+            if (!quieto.matches) arrancar();
+            quieto.addEventListener('change', function (e) {
+                if (e.matches) frenar(); else arrancar();
+            });
         })();
     </script>
 </body>
