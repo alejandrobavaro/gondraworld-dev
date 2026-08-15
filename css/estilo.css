@@ -279,12 +279,18 @@ body {
      necesidad de flechas ni puntitos. */
   transform: translateY(0.6rem);
   visibility: hidden;
-  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 0.85, 0.3, 1), visibility 0.7s;
+  /* El que se va sale rapido y sin demora. */
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s;
 }
+/* El que entra espera a que el anterior se haya ido del todo. Sin esta
+   demora los dos se pisan durante el cruce y, como los textos tienen
+   largos distintos, se ve un amasijo de letras encimadas cada vez que
+   cambia. */
 .aviso.esta-visible {
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
+  transition: opacity 0.5s ease 0.3s, transform 0.5s cubic-bezier(0.22, 0.85, 0.3, 1) 0.3s, visibility 0s 0.3s;
 }
 
 .aviso__rubro {
