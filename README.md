@@ -85,7 +85,13 @@ gondraworld-html/
    | `data-github` | URL del repo, o `#` si es privado (la ficha dirá "Repositorio privado"). |
    | `data-tech` / `data-date` | Ficha técnica. |
 
-3. Listo. El buscador, los chips de rubro y la ficha lo toman solos.
+3. Listo. El buscador, la barra de rubros y la ficha lo toman solos.
+
+   > **Falta un paso más:** los datos estructurados llevan la lista de los 57
+   > proyectos y se generan leyendo las propias tarjetas. Después de agregar
+   > uno hay que volver a correr el script que arma el `ItemList` del
+   > `<script type="application/ld+json">`, o el proyecto nuevo no le va a
+   > figurar a Google.
    El contador del encabezado (`57 proyectos · 11 rubros`) está escrito a mano en
    el bloque `.hero-datos` del `index.html`: hay que subirlo al agregar uno.
 
@@ -169,6 +175,30 @@ muestra el trabajo hecho, allá se contrata. Los datos estructurados de cada uno
 apuntan al otro, así Google los entiende como partes del mismo trabajo y no como
 dos sitios que compiten por lo mismo.
 
+**El buscador compara sin tildes y mira más de un campo.** Antes solo miraba
+`data-name` y comparaba tal cual: escribir «menu» encontraba el proyecto y
+escribir «menú» no encontraba nada, o sea que quien escribe bien el castellano se
+quedaba sin resultados. Y buscar «gastronomía» o «react» daba cero aunque la
+ficha lo dijera. Ahora busca en nombre, título, descripción, tecnologías y rubro,
+y con varias palabras pide que estén todas.
+
+**Ninguna tarjeta enlaza al repositorio.** Los 57 repos son privados: un
+«Ver repositorio» le da 404 a cualquier visitante. Con `data-github="#"` la
+ficha dice «Repositorio privado», que es la verdad. Si algún día un repo se hace
+público, ahí sí se le pone la URL.
+
+**Los datos estructurados declaran los 57 proyectos.** No solo que existe una
+colección: cada proyecto con su nombre, URL, descripción y rubro. Cuesta 4,1 KB
+comprimido y es lo que le dice a Google qué hay adentro.
+
+**El SEO habla con la misma voz que el sitio de la empresa** pero no dice lo
+mismo: allá se contrata, acá se muestra el trabajo hecho. Los dos declaran los
+mismos datos del negocio y se enlazan mutuamente.
+
+**En el SEO no van números.** La descripción decía «los 57 proyectos» y «11
+rubros»: números escritos a mano en un lugar que nadie mira y que envejecen en
+silencio. En el texto visible sí van, que es donde suman.
+
 **El favicon es `logo1.ico`, el mismo de la web de la empresa.** Trae varias
 resoluciones, por eso se ve nítido en la pestaña. Si se cambia, cambiarlo en los
 dos proyectos.
@@ -184,8 +214,9 @@ estructurados.
 | | Antes | Ahora |
 |---|---|---|
 | Carga inicial | 29 MB | 203 KB |
-| Carpeta `img/` | 319 MB | 3,8 MB |
+| Carpeta `img/` | 319 MB | 3,7 MB |
 | Enlaces rotos | 5 | 0 |
+| Primer proyecto visible | al 68% de la pantalla | al 50% |
 
 También se quitó el slider de marcas del pie: de sus 28 logos, **26 ya estaban más
 arriba** en su propia tarjeta. Repetirlos sumaba peso y hacía dudar de si eran
