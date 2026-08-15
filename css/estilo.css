@@ -126,7 +126,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../img/00-fondos/fondo5b-espacioyplaneta.jpg);
+  background-image: url(../img/00-fondos/fondo5b-espacioyplaneta.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -139,7 +139,7 @@
   left: 0;
   width: 105%;
   height: 100%;
-  background-image: url(../img/00-fondos/fondo5-espacio.jpg);
+  background-image: url(../img/00-fondos/fondo5-espacio.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -290,6 +290,7 @@ body {
   font-size: 0.75rem;
   color: var(--text-dim);
   letter-spacing: 0.5px;
+  text-wrap: balance;
 }
 @media (min-width: 768px) {
   .main-subtitle {
@@ -297,8 +298,134 @@ body {
   }
 }
 
+/* La cifra que da peso al porfolio: 61 proyectos, no una promesa vaga.
+   Cada dato es una pieza indivisible: en pantalla angosta bajan enteros
+   en vez de partirse al medio ("MAR / DEL PLATA"). */
+.hero-datos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3rem 0;
+  margin-top: var(--spacing-sm);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.hero-datos .dato {
+  white-space: nowrap;
+}
+.hero-datos .dato + .dato::before {
+  content: "·";
+  margin: 0 0.6rem;
+  opacity: 0.4;
+}
+.hero-datos strong {
+  color: var(--primary);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Contacto al alcance desde arriba, sin recorrer las 11 secciones. */
+.hero-contacto {
+  margin-top: var(--spacing-sm);
+}
+.hero-contacto a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding-bottom: 2px;
+  color: var(--primary);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  position: relative;
+}
+.hero-contacto a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--primary);
+  transform: scaleX(0.3);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.22, 0.85, 0.3, 1);
+}
+.hero-contacto a:hover::after,
+.hero-contacto a:focus-visible::after {
+  transform: scaleX(1);
+}
+.hero-contacto .flecha {
+  transition: transform 0.4s cubic-bezier(0.22, 0.85, 0.3, 1);
+}
+.hero-contacto a:hover .flecha,
+.hero-contacto a:focus-visible .flecha {
+  transform: translateX(4px);
+}
+
+/* Atajos a cada rubro: con 11 secciones, bajar scrolleando es demasiado. */
+.rubros-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* En el celular caen en tres lineas: necesitan aire vertical para no amontonarse. */
+  gap: 0.85rem 1.1rem;
+  max-width: 780px;
+  margin: 0 auto var(--spacing-xl);
+  padding: 0 var(--spacing-sm);
+}
+@media (min-width: 768px) {
+  .rubros-nav {
+    gap: 0.4rem 1.2rem;
+  }
+}
+.rubros-nav a {
+  position: relative;
+  padding-bottom: 3px;
+  color: var(--text-dim);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.73rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.rubros-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.35s cubic-bezier(0.22, 0.85, 0.3, 1);
+}
+.rubros-nav a:hover,
+.rubros-nav a:focus-visible {
+  color: var(--primary);
+}
+.rubros-nav a:hover::after,
+.rubros-nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 .category-section {
   margin-bottom: var(--spacing-xl);
+  /* Al saltar desde los chips, que el titulo del rubro no quede pegado arriba. */
+  scroll-margin-top: var(--spacing-lg);
 }
 .category-section:last-of-type {
   margin-bottom: var(--spacing-lg);
@@ -382,350 +509,323 @@ body {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: var(--spacing-xl);
+  gap: var(--spacing-lg) var(--spacing-xl);
   justify-items: center;
   align-items: center;
 }
-@media (min-width: 550px) {
+/* Dos columnas ya desde el celular: con 61 proyectos, una sola columna
+   convierte la pagina en un scroll interminable. */
+@media (min-width: 400px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md) var(--spacing-sm);
+  }
+}
+@media (min-width: 550px) {
+  .projects-grid {
+    gap: var(--spacing-lg) var(--spacing-md);
   }
 }
 @media (min-width: 768px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-xl);
+    gap: var(--spacing-lg) var(--spacing-xl);
   }
 }
 @media (min-width: 1024px) {
   .projects-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-xl);
+    gap: var(--spacing-lg) var(--spacing-xl);
   }
 }
 @media (min-width: 1400px) {
   .projects-grid {
     grid-template-columns: repeat(4, 1fr);
-    gap: var(--spacing-xl);
+    gap: var(--spacing-lg) var(--spacing-xl);
   }
 }
 
+/* ===== TARJETA DE PROYECTO =====
+   Toda la tarjeta es un unico destino clickeable: no hay boton aparte.
+   El logo vive en una caja de proporcion fija para que los 61 logos,
+   por distintos que sean de origen, ocupen exactamente el mismo lugar. */
 .project-card {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
-  max-width: 320px;
+  max-width: 300px;
   position: relative;
 }
 
 .project-link {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  gap: var(--spacing-sm);
   width: 100%;
-  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-  position: relative;
+  padding: var(--spacing-md) var(--spacing-sm);
+  text-decoration: none;
 }
-.project-link img {
+
+.project-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  height: 116px;
+}
+@media (min-width: 768px) {
+  .project-logo {
+    height: 130px;
+  }
+}
+
+.project-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
   height: auto;
-  max-height: 200px;
   object-fit: contain;
-  transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
-}
-@media (min-width: 768px) {
-  .project-link img {
-    max-height: 220px;
-  }
-}
-@media (min-width: 1024px) {
-  .project-link img {
-    max-height: 240px;
-  }
-}
-.project-link:hover {
-  transform: translateY(-10px);
-}
-.project-link:hover img {
-  transform: scale(1.05);
-  filter: drop-shadow(0 0 30px rgba(100, 255, 218, 0.5));
-}
-.project-link:hover .tooltip {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
+  /* Los logos son PNG recortados: la sombra sigue su silueta y los despega
+     del fondo sin necesidad de ninguna caja detras. */
+  filter:
+    drop-shadow(0 2px 4px rgba(0, 0, 0, 0.55))
+    drop-shadow(0 9px 20px rgba(0, 0, 0, 0.38));
+  transition:
+    transform 0.55s cubic-bezier(0.22, 0.85, 0.3, 1),
+    filter 0.55s cubic-bezier(0.22, 0.85, 0.3, 1);
 }
 
-.project-coming-soon img {
-  max-height: 130px !important;
-  transform: scale(0.7);
-  opacity: 0.5;
-}
-@media (min-width: 768px) {
-  .project-coming-soon img {
-    max-height: 140px !important;
-  }
-}
-@media (min-width: 1024px) {
-  .project-coming-soon img {
-    max-height: 150px !important;
-  }
-}
-
-.tooltip {
-  position: absolute;
-  bottom: -50px;
-  left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  background: rgba(0, 0, 0, 0.95);
-  backdrop-filter: blur(8px);
-  color: var(--primary);
-  font-size: 0.75rem;
+/* El nombre siempre visible reemplaza al tooltip flotante:
+   la grilla se puede leer sin pasar el mouse por cada logo. */
+.project-nombre {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.78rem;
   font-weight: 500;
-  padding: 8px 16px;
-  border-radius: 30px;
-  white-space: nowrap;
-  letter-spacing: 0.3px;
-  border: 1px solid var(--primary);
-  box-shadow: 0 0 20px rgba(100, 255, 218, 0.25);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-  z-index: 100;
-  font-family: "Space Grotesk", monospace;
-  pointer-events: none;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-wrap: balance;
+  color: var(--text-dim);
+  position: relative;
+  padding-bottom: 7px;
+  transition: color 0.4s ease;
 }
-.tooltip::before {
+/* Filete que se dibuja desde el centro al pasar el mouse. */
+.project-nombre::after {
   content: "";
   position: absolute;
-  top: -6px;
   left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 6px solid var(--primary);
-}
-@media (max-width: 768px) {
-  .tooltip {
-    display: none;
-  }
-}
-
-.project-coming-soon {
-  position: relative;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.project-coming-soon:hover {
-  transform: translateY(-5px);
-}
-.project-coming-soon:hover img {
-  transform: scale(0.72);
-  opacity: 0.7;
-}
-.project-coming-soon .coming-soon-bar {
-  position: absolute;
-  top: 50%;
-  left: -5%;
-  width: 110%;
+  bottom: 0;
+  width: 28px;
   height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(100, 255, 218, 0.4) 20%, rgba(152, 255, 234, 0.6) 50%, rgba(100, 255, 218, 0.4) 80%, transparent 100%);
-  transform: translateY(-50%) rotate(-8deg);
-  box-shadow: none;
-  z-index: 10;
-  pointer-events: none;
+  background: var(--primary);
+  transform: translateX(-50%) scaleX(0);
+  transition: transform 0.5s cubic-bezier(0.22, 0.85, 0.3, 1);
 }
-.project-coming-soon .coming-soon-bar::after {
-  content: "Próx";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-8deg);
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(2px);
-  color: rgba(100, 255, 218, 0.7);
-  font-size: 0.5rem;
-  font-weight: 500;
-  padding: 2px 6px;
-  border-radius: 20px;
-  white-space: nowrap;
-  letter-spacing: 0.5px;
-  font-family: "Space Grotesk", monospace;
-  border: none;
-  box-shadow: none;
-  text-shadow: none;
+
+/* Un solo gesto: el logo se eleva y su sombra se abre en un halo,
+   mientras el nombre queda anclado abajo y se enciende. */
+.project-link:hover .project-logo img,
+.project-link:focus-visible .project-logo img {
+  transform: translateY(-9px) scale(1.05);
+  filter:
+    drop-shadow(0 4px 7px rgba(0, 0, 0, 0.6))
+    drop-shadow(0 18px 30px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 0 24px rgba(100, 255, 218, 0.42));
 }
-@media (min-width: 768px) {
-  .project-coming-soon .coming-soon-bar::after {
-    font-size: 0.55rem;
-    padding: 2px 8px;
+.project-link:hover .project-nombre,
+.project-link:focus-visible .project-nombre {
+  color: var(--primary);
+}
+.project-link:hover .project-nombre::after,
+.project-link:focus-visible .project-nombre::after {
+  transform: translateX(-50%) scaleX(1);
+}
+.project-link:focus-visible {
+  outline: 1px solid var(--primary);
+  outline-offset: 4px;
+  border-radius: 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-logo img,
+  .project-nombre,
+  .project-nombre::after {
+    transition-duration: 0.01ms;
+  }
+  .project-link:hover .project-logo img,
+  .project-link:focus-visible .project-logo img {
+    transform: none;
   }
 }
-.project-coming-soon img {
-  filter: grayscale(0.4) brightness(0.9);
-  transition: all 0.3s ease;
-}
-.project-coming-soon:hover .coming-soon-bar {
-  background: linear-gradient(90deg, transparent 0%, rgba(100, 255, 218, 0.6) 20%, rgba(152, 255, 234, 0.8) 50%, rgba(100, 255, 218, 0.6) 80%, transparent 100%);
-}
-.project-coming-soon:hover .coming-soon-bar::after {
-  color: rgba(100, 255, 218, 0.9);
-  background: rgba(0, 0, 0, 0.7);
-}
-.project-coming-soon:hover img {
-  filter: grayscale(0.2) brightness(0.95);
-  opacity: 0.7;
-}
 
-.btn-ver-mas {
-  margin-top: var(--spacing-md);
-  padding: 6px 16px;
-  background: rgba(100, 255, 218, 0.1);
-  border: 1px solid rgba(100, 255, 218, 0.3);
-  border-radius: 30px;
-  color: var(--primary);
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 0.7rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.btn-ver-mas:hover {
-  background: rgba(100, 255, 218, 0.2);
-  transform: translateY(-2px);
-  border-color: var(--primary);
-}
-
+/* ===== FICHA DEL PROYECTO ===== */
 .modal {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(8px);
+  inset: 0;
+  background: rgba(2, 6, 10, 0.86);
+  backdrop-filter: blur(10px);
   z-index: 2000;
   align-items: center;
   justify-content: center;
+  padding: var(--spacing-sm);
+  overflow-y: auto;
 }
 
 .modal-content {
-  background: rgba(10, 10, 10, 0.95);
-  border: 1px solid var(--primary);
-  border-radius: 24px;
-  max-width: 500px;
-  width: 90%;
-  padding: var(--spacing-lg);
+  background: linear-gradient(160deg, rgba(14, 22, 30, 0.97), rgba(8, 12, 17, 0.97));
+  border: 1px solid rgba(100, 255, 218, 0.16);
+  border-radius: 20px;
+  max-width: 520px;
+  width: 100%;
+  padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg);
   position: relative;
-  animation: modalFadeIn 0.3s ease;
+  animation: modalFadeIn 0.28s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
 }
 
 @keyframes modalFadeIn {
   from {
     opacity: 0;
-    transform: scale(0.9);
+    transform: translateY(12px) scale(0.98);
   }
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0) scale(1);
   }
 }
+
 .modal-close {
   position: absolute;
-  top: 16px;
-  right: 20px;
-  font-size: 28px;
+  top: 14px;
+  right: 18px;
+  font-size: 26px;
+  line-height: 1;
   color: var(--text-dim);
+  background: none;
+  border: none;
+  padding: 6px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
 }
-.modal-close:hover {
+.modal-close:hover,
+.modal-close:focus-visible {
   color: var(--primary);
 }
 
 .modal-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
   margin-bottom: var(--spacing-lg);
-  padding-bottom: var(--spacing-md);
-  border-bottom: 1px solid rgba(100, 255, 218, 0.2);
 }
 .modal-header img {
-  width: 60px;
-  height: 60px;
+  width: auto;
+  height: 84px;
+  max-width: 78%;
   object-fit: contain;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.5));
 }
 .modal-header h2 {
-  font-size: 1.3rem;
+  font-size: 1.28rem;
   font-weight: 600;
-  color: var(--primary);
+  color: var(--text);
+  text-align: center;
+  text-wrap: balance;
+  letter-spacing: 0.01em;
 }
 
-.modal-body {
+.modal-body p {
+  color: var(--text-dim);
+  line-height: 1.65;
+  text-align: center;
   margin-bottom: var(--spacing-lg);
 }
-.modal-body p {
-  color: var(--text);
-  line-height: 1.6;
-  margin-bottom: var(--spacing-md);
-}
 
+/* Ficha tecnica en dos columnas, separada por finas lineas en vez de recuadros. */
 .modal-details {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-}
-.modal-details .detail-item {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.7rem var(--spacing-md);
   font-size: 0.85rem;
+  padding: var(--spacing-md) 0;
+  border-top: 1px solid rgba(100, 255, 218, 0.14);
+  border-bottom: 1px solid rgba(100, 255, 218, 0.14);
 }
-.modal-details .detail-item i {
-  color: var(--primary);
-  font-size: 1.1rem;
-  width: 24px;
-}
-.modal-details .detail-item strong {
+.modal-details dt {
   color: var(--text-dim);
+  font-size: 0.72rem;
   font-weight: 500;
-  min-width: 90px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding-top: 0.1rem;
 }
-.modal-details .detail-item a, .modal-details .detail-item span {
+.modal-details dd {
+  color: var(--text);
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.modal-details dd a {
   color: var(--text);
   text-decoration: none;
-  word-break: break-all;
+  border-bottom: 1px solid rgba(100, 255, 218, 0.3);
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
-.modal-details .detail-item a:hover, .modal-details .detail-item span:hover {
+.modal-details dd a:hover,
+.modal-details dd a:focus-visible {
   color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+.modal-details dd.sin-dato {
+  color: var(--text-dim);
 }
 
 .modal-footer {
   display: flex;
   justify-content: center;
-  padding-top: var(--spacing-md);
-  border-top: 1px solid rgba(100, 255, 218, 0.2);
+  padding-top: var(--spacing-lg);
 }
 
+/* Enlace de accion sin fondo ni recuadro: solo texto, flecha y subrayado que crece. */
 .modal-btn {
-  background: rgba(100, 255, 218, 0.15);
-  border: 1px solid var(--primary);
-  padding: 10px 24px;
-  border-radius: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.2rem 0;
   color: var(--primary);
-  text-decoration: none;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.95rem;
   font-weight: 500;
-  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  background: none;
+  border: none;
+  position: relative;
 }
-.modal-btn:hover {
-  background: rgba(100, 255, 218, 0.3);
-  transform: translateY(-2px);
+.modal-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--primary);
+  transform: scaleX(0.36);
+  transform-origin: left;
+  transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+.modal-btn:hover::after,
+.modal-btn:focus-visible::after {
+  transform: scaleX(1);
+}
+.modal-btn .flecha {
+  transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+.modal-btn:hover .flecha,
+.modal-btn:focus-visible .flecha {
+  transform: translateX(5px);
 }
 
 .search-container {
