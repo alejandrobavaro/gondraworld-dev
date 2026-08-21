@@ -1575,3 +1575,37 @@ html {
     filter: drop-shadow(0 5px 20px rgba(100, 255, 218, 0.5));
   }
 }
+
+/* ============================================================================
+   PROYECTOS QUE TODAVIA NO ESTAN PUBLICADOS
+   ----------------------------------------------------------------------------
+   Se listan igual, porque existen y se pueden mostrar, pero SIN link: un link
+   muerto en un porfolio de venta lo ve el cliente. El logo va en gris y una
+   etiqueta lo dice con palabras, no solo con el color.
+   ========================================================================== */
+.project-link.is-proximamente {
+  cursor: default;
+  position: relative;
+}
+
+.project-link.is-proximamente .project-logo img {
+  filter: grayscale(0.6) brightness(0.9);
+  opacity: 0.55;
+}
+
+.project-link.is-proximamente:hover .project-logo img {
+  transform: none;
+}
+
+.project-proximamente {
+  display: inline-block;
+  margin-top: 0.35rem;
+  padding: 0.15rem 0.55rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
