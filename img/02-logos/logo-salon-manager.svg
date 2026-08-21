@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 120" width="640" height="120" role="img" aria-label="Salón Manager · Gestión de salones de evento">
+  <title>Salón Manager · Gestión de salones de evento</title>
+  <g fill="none" stroke="#1A3A3A" stroke-width="7" stroke-linecap="round">
+    <path d="M28 82 L60 40 L92 82"/>
+    <path d="M40 82 L40 62 L80 62 L80 82"/>
+  </g>
+  <circle cx="60" cy="34" r="6" fill="#D4AF37"/>
+  <text x="116" y="70" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="700" fill="#1A3A3A">Salón <tspan fill="#BF8F7A">Manager</tspan></text>
+  <text x="118" y="95" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" fill="#6B645E" letter-spacing="3.2">GESTIÓN DE SALONES DE EVENTO</text>
+</svg>

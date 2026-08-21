@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 120" width="640" height="120" role="img" aria-label="Celebra · Invitados y confirmaciones">
+  <title>Celebra · Invitados y confirmaciones</title>
+  <g stroke="#C9A96E" stroke-width="6" stroke-linecap="round">
+    <path d="M46 46 L46 26"/>
+    <path d="M28 60 L12 52"/>
+    <path d="M64 60 L80 52"/>
+  </g>
+  <circle cx="46" cy="72" r="16" fill="#5A1520"/>
+  <circle cx="46" cy="72" r="6" fill="#C9A96E"/>
+  <text x="110" y="70" font-family="Georgia, 'Times New Roman', serif" font-size="48" font-weight="700" fill="#5A1520">Celebra</text>
+  <text x="112" y="95" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" fill="#A8323F" letter-spacing="3.4">INVITADOS Y CONFIRMACIONES</text>
+</svg>

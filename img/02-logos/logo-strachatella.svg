@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 120" width="640" height="120" role="img" aria-label="Strachatella · Carrito de helados para eventos">
+  <title>Strachatella · Carrito de helados para eventos</title>
+  <g>
+    <circle cx="58" cy="42" r="20" fill="#1FA855"/>
+    <circle cx="50" cy="36" r="4" fill="#0E5F30" opacity="0.7"/>
+    <circle cx="66" cy="46" r="3.5" fill="#0E5F30" opacity="0.7"/>
+    <path d="M40 58 L58 96 L76 58 Z" fill="none" stroke="#1FA855" stroke-width="6" stroke-linejoin="round"/>
+  </g>
+  <text x="110" y="68" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="43" font-weight="700" fill="#1FA855" letter-spacing="0.3">Strachatella</text>
+  <text x="112" y="94" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" fill="#0E5F30" opacity="0.8" letter-spacing="3">CARRITO DE HELADOS PARA EVENTOS</text>
+</svg>

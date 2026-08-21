@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 120" width="640" height="120" role="img" aria-label="Mostrador · Gestión gastronómica">
+  <title>Mostrador · Gestión gastronómica</title>
+  <g fill="none" stroke="#E0562D" stroke-width="7">
+    <circle cx="60" cy="60" r="34"/>
+    <circle cx="60" cy="60" r="19" stroke-width="5" opacity="0.55"/>
+  </g>
+  <text x="116" y="72" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="46" font-weight="700" fill="#E0562D" letter-spacing="0.5">Mostrador</text>
+  <text x="118" y="96" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="600" fill="#B8421F" opacity="0.85" letter-spacing="3.2">GESTIÓN GASTRONÓMICA</text>
+</svg>
