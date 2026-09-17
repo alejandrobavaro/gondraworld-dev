@@ -1714,3 +1714,29 @@ html {
 /* El destino lleva tabindex="-1" para poder recibir el foco. Eso le dibujaria
    un contorno al hacer clic, y no tiene sentido en un ancla vacia. */
 #proyectos:focus { outline: none; }
+
+/* ============================================================
+   SI EL SISTEMA PIDE MENOS MOVIMIENTO, SE LE HACE CASO
+   ------------------------------------------------------------
+   Arriba hay cinco bloques que apagan animaciones puntuales.
+   Esta regla es la red: agarra las que se escriban despues y a
+   las que nadie se acordo de agregarle su bloque.
+
+   Quien enciende esta preferencia suele tener una razon fisica
+   —vertigo, migrana con aura, epilepsia fotosensible—, y hay que
+   apretarla a proposito: no se prende sin querer.
+
+   NO apaga: acorta a 0,01s. Con `animation: none` las
+   animaciones que ARRANCAN invisibles (opacity: 0) dejan el
+   elemento invisible para siempre.
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

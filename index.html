@@ -2503,6 +2503,40 @@
                 if (ultimoFoco) ultimoFoco.focus();
             }
 
+            /* LA TRAMPA DEL TAB — era lo unico que faltaba.
+               La ficha ya enfocaba el boton de cerrar al abrirse y devolvia el
+               foco al cerrarse, pero el Tab se escapaba: desde el ultimo
+               elemento de la ficha saltaba a la grilla de atras y se recorrian
+               las 192 tarjetas SIN VERLAS, porque la ficha las tapa. Quien no
+               usa mouse no tenia como volver al boton de cerrar.
+
+               Va en `capture` (el tercer argumento en true) para llegar antes
+               que cualquier otro manejador de la pagina. */
+            var ALCANZABLE = 'a[href], button:not([disabled]), input:not([disabled]), ' +
+                'select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key !== 'Tab') return;
+                if (modal.style.display !== 'flex') return;
+
+                /* Se descartan los que estan en el HTML pero no se ven: un
+                   enlace al que se le saco el href, o algo dentro de una
+                   seccion plegada, se llevaria el foco a la nada. */
+                var items = Array.prototype.filter.call(
+                    modal.querySelectorAll(ALCANZABLE),
+                    function (el) { return el.offsetParent !== null; }
+                );
+                if (!items.length) { e.preventDefault(); return; }
+
+                var primero = items[0];
+                var ultimo = items[items.length - 1];
+                var activo = document.activeElement;
+
+                if (!modal.contains(activo)) { e.preventDefault(); primero.focus(); return; }
+                if (e.shiftKey && activo === primero) { e.preventDefault(); ultimo.focus(); }
+                else if (!e.shiftKey && activo === ultimo) { e.preventDefault(); primero.focus(); }
+            }, true);
+
             document.querySelectorAll('.project-link').forEach(link => {
                 const sinSitio = link.classList.contains('is-proximamente');
 
