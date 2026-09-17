@@ -921,6 +921,13 @@ html {
   border-radius: 20px;
   max-width: 520px;
   width: 100%;
+  /* ⚠ Si la ficha es mas alta que la pantalla, con `align-items: center` en
+     el contenedor el borde de ARRIBA queda fuera y no hay forma de llegar:
+     es el defecto clasico de centrar con flexbox. Con un tope y scroll
+     propio, la ficha se recorre entera. Es lo mismo que hace la version
+     React (.proy-modal__contenido). */
+  max-height: 92vh;
+  overflow-y: auto;
   padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg);
   position: relative;
   animation: modalFadeIn 0.28s cubic-bezier(0.2, 0.9, 0.4, 1.1);
@@ -1577,6 +1584,63 @@ html {
 }
 
 /* ============================================================================
+   EL FILTRO POR ESTADO
+
+   Dos botones pegados, como un interruptor de dos posiciones. El que esta
+   puesto se distingue por FONDO y no solo por color de letra: es un control,
+   no un enlace, y tiene que leerse de un vistazo cual de los dos esta activo.
+   ========================================================================== */
+.barra-rubros__estado {
+  display: inline-flex;
+  flex-shrink: 0;
+  border: 1px solid rgba(100, 255, 218, 0.22);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.barra-rubros__estado button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.7rem;
+  border: 0;
+  background: transparent;
+  color: var(--text-dim);
+  /* En px y no en rem: la raiz achica en pantalla angosta y un 0,74rem
+     termina por debajo del piso de lectura. */
+  font-size: max(11.5px, 0.74rem);
+  font-weight: 600;
+  font-family: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.barra-rubros__estado button:hover { color: var(--text); }
+
+.barra-rubros__estado button.esta-puesto {
+  background: rgba(100, 255, 218, 0.14);
+  color: var(--primary);
+}
+
+.barra-rubros__estado button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: -2px;
+}
+
+/* El numero va mas apagado que la palabra: es el dato de apoyo, no la accion.
+   Con tabular-nums no bailan los anchos al cambiar de filtro. */
+.barra-rubros__estado span {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.75;
+  font-weight: 500;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .barra-rubros__estado button { transition: none; }
+}
+
+/* ============================================================================
    PROYECTOS QUE TODAVIA NO ESTAN PUBLICADOS
    ----------------------------------------------------------------------------
    Se listan igual, porque existen y se pueden mostrar, pero SIN link: un link
@@ -1597,6 +1661,13 @@ html {
   transform: none;
 }
 
+/* El boton de la ficha se esconde cuando el sitio no responde. Hace falta
+   decirlo aca: `.modal-btn` declara `display: inline-flex` y eso le gana al
+   `display: none` que el navegador le da solo a `[hidden]`. */
+.modal-btn[hidden] {
+  display: none;
+}
+
 .project-proximamente {
   display: inline-block;
   margin-top: 0.35rem;
@@ -1609,3 +1680,37 @@ html {
   text-transform: uppercase;
   opacity: 0.7;
 }
+
+/* ============================================================
+   SALTAR A LOS PROYECTOS
+   El primer tabulador. Escondido hasta que recibe el foco.
+
+   ⚠ No se esconde con display:none ni visibility:hidden — eso lo
+   sacaria del recorrido del teclado y no habria forma de llegar a
+   el, que es lo contrario de lo que se busca. Se lo corre fuera de
+   la pantalla con posicion.
+   ============================================================ */
+.saltar-al-contenido {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 3000;
+  padding: 0.7rem 1.1rem;
+  background: var(--primary);
+  color: #0a192f;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 0 0 10px 10px;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+.saltar-al-contenido:focus {
+  top: 0;
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* El destino lleva tabindex="-1" para poder recibir el foco. Eso le dibujaria
+   un contorno al hacer clic, y no tiene sentido en un ancla vacia. */
+#proyectos:focus { outline: none; }

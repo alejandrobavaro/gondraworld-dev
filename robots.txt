@@ -1,0 +1,8 @@
+# Porfolio de Gondra World — GitHub Pages
+#
+# Es una sola página con anclas, así que no hay nada que excluir: todo lo que
+# se sirve es público y se quiere indexar.
+User-agent: *
+Allow: /
+
+Sitemap: https://alejandrobavaro.github.io/gondraworld-dev/sitemap.xml

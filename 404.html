@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esta página no existe | Gondra World</title>
+
+    <!-- Esta página no se indexa: no es contenido, es un desvío.
+         A diferencia del sitio React —que devuelve 200 a todo y tiene que
+         pedir el noindex desde el navegador— GitHub Pages sí devuelve un
+         404 de verdad cuando sirve este archivo. -->
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="La dirección que buscás no existe en el porfolio de Gondra World." />
+
+    <link rel="icon" type="image/x-icon" href="./img/08-favicon/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+
+    <style>
+        /* Los colores son los mismos del sitio (:root de css/estilo.css).
+           Van escritos acá y no importando la hoja entera: esta página tiene
+           que dibujarse aunque el CSS del porfolio no cargue — es justamente
+           la que se ve cuando algo salió mal. */
+        :root {
+            --primary: #64ffda;
+            --text: #e6f1ff;
+            --text-dim: #8892b0;
+            --bg-dark: #0a0a0a;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            background: var(--bg-dark);
+            color: var(--text);
+            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+            line-height: 1.6;
+        }
+
+        .caja { width: 100%; max-width: 640px; text-align: center; }
+
+        .logo { width: 180px; max-width: 60%; height: auto; margin-bottom: 2rem; opacity: 0.9; }
+
+        .codigo {
+            display: inline-block;
+            margin-bottom: 0.9rem;
+            padding: 0.22rem 0.8rem;
+            border: 1px solid rgba(100, 255, 218, 0.35);
+            border-radius: 999px;
+            color: var(--primary);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0 0 0.8rem;
+            font-size: 1.7rem;
+            line-height: 1.15;
+            text-wrap: balance;
+        }
+
+        .texto {
+            margin: 0 auto 2rem;
+            max-width: 46ch;
+            color: var(--text-dim);
+            font-size: 1rem;
+        }
+
+        .ruta {
+            padding: 0.12rem 0.42rem;
+            border-radius: 6px;
+            background: rgba(100, 255, 218, 0.08);
+            color: var(--primary);
+            font-family: ui-monospace, Menlo, Consolas, monospace;
+            font-size: 0.88em;
+            word-break: break-all;
+        }
+
+        .destinos {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        @media (min-width: 600px) {
+            .destinos { grid-template-columns: repeat(2, 1fr); }
+            h1 { font-size: 2.1rem; }
+        }
+
+        .destino {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto auto;
+            column-gap: 0.75rem;
+            align-items: center;
+            padding: 0.9rem 1rem;
+            border: 1px solid rgba(100, 255, 218, 0.15);
+            border-radius: 14px;
+            background: rgba(10, 25, 47, 0.55);
+            color: inherit;
+            text-decoration: none;
+            transition: border-color 0.25s ease, transform 0.25s ease;
+        }
+
+        .destino:hover, .destino:focus-visible {
+            border-color: rgba(100, 255, 218, 0.5);
+            transform: translateY(-2px);
+        }
+        .destino:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+        .destino i { grid-row: 1 / 3; font-size: 1.4rem; color: var(--primary); }
+        .destino .t { font-weight: 700; font-size: 0.98rem; }
+        /* En px y no en rem: la raíz achica en pantalla angosta y un 0,8rem
+           termina por debajo del piso de lectura. */
+        .destino .q { color: var(--text-dim); font-size: max(11.5px, 0.8rem); line-height: 1.35; }
+
+        .volver { font-size: 0.92rem; }
+        .volver a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(100, 255, 218, 0.35);
+        }
+        .volver a:hover { border-bottom-color: var(--primary); }
+
+        @media (prefers-reduced-motion: reduce) {
+            .destino { transition: none; }
+            .destino:hover { transform: none; }
+        }
+    </style>
+</head>
+<body>
+    <main class="caja">
+        <img class="logo" src="./img/02-logos/logogondraworld.webp" alt="Gondra World" />
+
+        <p class="codigo">Error 404</p>
+        <h1>Esta página no existe</h1>
+
+        <p class="texto">
+            La dirección <code class="ruta" id="ruta">que buscaste</code> no corresponde a
+            ninguna página del porfolio. Puede que el enlace esté viejo o que tenga una
+            letra de más.
+        </p>
+
+        <div class="destinos">
+            <a class="destino" href="./index.html">
+                <i class="bi bi-grid" aria-hidden="true"></i>
+                <span class="t">El porfolio</span>
+                <span class="q">Los proyectos, rubro por rubro</span>
+            </a>
+            <a class="destino" href="./index.html#contacto">
+                <i class="bi bi-chat-dots" aria-hidden="true"></i>
+                <span class="t">Contacto</span>
+                <span class="q">Escribinos y te respondemos hoy</span>
+            </a>
+            <a class="destino" href="https://gondraworld-dev-servicios.netlify.app/servicios" target="_blank" rel="noopener">
+                <i class="bi bi-briefcase" aria-hidden="true"></i>
+                <span class="t">Servicios y precios</span>
+                <span class="q">En el sitio de la empresa</span>
+            </a>
+            <a class="destino" href="https://gondraworld-dev-servicios.netlify.app/tienda" target="_blank" rel="noopener">
+                <i class="bi bi-bag" aria-hidden="true"></i>
+                <span class="t">Tienda</span>
+                <span class="q">Servicios y productos para contratar</span>
+            </a>
+        </div>
+
+        <p class="volver"><a href="./index.html">Volver al porfolio</a></p>
+    </main>
+
+    <script>
+        /* La dirección que falló es el dato que le dice a la persona si se
+           equivocó al tipear o si el enlace que siguió estaba mal. Se escribe
+           con textContent y nunca con innerHTML: lo que viene de la barra de
+           direcciones lo escribe cualquiera, y con innerHTML se estaría
+           metiendo su HTML en la página. */
+        document.getElementById('ruta').textContent = location.pathname;
+    </script>
+</body>
+</html>

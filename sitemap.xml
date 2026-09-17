@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- El porfolio es UNA sola página con anclas.
+     Las anclas NO van acá: para un buscador, /#musica y / son la misma
+     dirección, así que listarlas no agrega nada y puede leerse como
+     contenido duplicado. Lo que hace que los rubros se entiendan es el
+     bloque ItemList de datos estructurados que ya está en el index.html. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://alejandrobavaro.github.io/gondraworld-dev/</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
