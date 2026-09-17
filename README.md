@@ -1,9 +1,28 @@
 # Gondra World · Porfolio (versión HTML)
 
-Porfolio de desarrollo web de Ale Bavaro. Una sola página con los **57 proyectos
-publicados**, agrupados en 11 rubros, con buscador y ficha de detalle por proyecto.
+Porfolio de desarrollo web de Ale Bavaro. Una sola página con **192 proyectos**
+agrupados en **19 rubros**, con buscador y ficha de detalle por proyecto.
 
 **En vivo:** https://alejandrobavaro.github.io/gondraworld-dev/
+
+**Estado al 17 de septiembre de 2026.** Verificado contra el archivo, no de
+memoria:
+
+| | |
+|---|---|
+| Proyectos en la página | **192** |
+| Rubros | **19** |
+| Que responden hoy | **31** — el resto está sin publicar o caído |
+
+> **Arranca mostrando sólo los 31 que responden**, y es una decisión de venta:
+> quien entra y toca tres tarjetas al azar, con el filtro apagado las tres le
+> dicen «No disponible». El botón «Todos» está al lado y dice cuántos son.
+
+### Publicar acá es GRATIS
+
+Vive en **GitHub Pages**: un push publica y no cuesta créditos. El que sí
+cuesta es el sitio React, que vive en Netlify (plan Free, ~20 publicaciones
+por mes).
 
 ---
 
@@ -87,13 +106,18 @@ gondraworld-html/
 
 3. Listo. El buscador, la barra de rubros y la ficha lo toman solos.
 
-   > **Falta un paso más:** los datos estructurados llevan la lista de los 57
+   > **Falta un paso más:** los datos estructurados llevan la lista de
    > proyectos y se generan leyendo las propias tarjetas. Después de agregar
    > uno hay que volver a correr el script que arma el `ItemList` del
    > `<script type="application/ld+json">`, o el proyecto nuevo no le va a
    > figurar a Google.
-   El contador del encabezado (`57 proyectos · 11 rubros`) está escrito a mano en
-   el bloque `.hero-datos` del `index.html`: hay que subirlo al agregar uno.
+
+   > ⚠️ **Y hay que agregarlo también en el sitio React**, que tiene su propia
+   > lista en `public/proyectos.json`. Los dos sitios muestran los mismos 192
+   > proyectos desde fuentes distintas: si se agrega en uno solo, quedan
+   > diciendo cosas diferentes. Hay un chequeo que compara los logos contra el
+   > disco, pero **no** compara un listado contra el otro — eso sigue siendo a
+   > mano.
 
 ## Cómo agregar un rubro
 
@@ -115,7 +139,7 @@ PNG de 2300px que se mostraban a 320px: pesaban 17 MB entre todos y ahora pesan 
 Los PNG originales están en `- ARCHIVO/img-originales-reemplazados-por-webp/`.
 
 **Todos los logos llevan `loading="lazy"` y `width`/`height`.** El lazy evita bajar
-57 imágenes de una; las dimensiones evitan que la página salte mientras cargan.
+las 192 imágenes de una; las dimensiones evitan que la página salte mientras cargan.
 
 **El logo del header carga en dos tiempos.** Primero se muestra
 `logogondraworld-poster.webp` (20 KB, estático) y recién cuando la página terminó de
@@ -133,8 +157,8 @@ gestión" no distinguía nada.
 **El orden de los rubros no es alfabético ni por tamaño: va por peso comercial.**
 Abre con los rubros de los que más clientes hay (tiendas, gastronomía, eventos),
 sigue con gestión B2B, después lo audiovisual y musical, y cierra con las
-herramientas propias y los juegos. Los números 01–11 reflejan ese orden, así que
-si se reordena hay que renumerarlos.
+herramientas propias y los juegos. Los números de cada sección reflejan ese
+orden, así que si se reordena hay que renumerarlos.
 
 **Sin header ni menú: se entra directo a la grilla.** Lo único fijo es la barra de
 rubros (`.barra-rubros`), que acompaña el scroll porque la página mide siete
@@ -163,7 +187,7 @@ allá. Si se toca el footer de React, conviene tocar este.
 **El encabezado enlaza a Servicios y a Tienda del sitio de la empresa.** Acá se
 muestra el trabajo hecho; lo que se vende vive allá.
 
-**Dos columnas ya desde los 400 px.** Con 57 proyectos, una sola columna convierte
+**Dos columnas ya desde los 400 px.** Con 192 proyectos, una sola columna convierte
 el celular en un scroll interminable. La grilla va 2 → 3 (1024 px) → 4 (1400 px).
 
 **Cada dato del contador es un `<span class="dato">` con `nowrap`.** Si no, en
@@ -182,13 +206,17 @@ quedaba sin resultados. Y buscar «gastronomía» o «react» daba cero aunque l
 ficha lo dijera. Ahora busca en nombre, título, descripción, tecnologías y rubro,
 y con varias palabras pide que estén todas.
 
-**Ninguna tarjeta enlaza al repositorio.** Los 57 repos son privados: un
+**Ninguna tarjeta enlaza al repositorio.** Los repos son privados: un
 «Ver repositorio» le da 404 a cualquier visitante. Con `data-github="#"` la
 ficha dice «Repositorio privado», que es la verdad. Si algún día un repo se hace
 público, ahí sí se le pone la URL.
 
-**Los datos estructurados declaran los 57 proyectos.** No solo que existe una
-colección: cada proyecto con su nombre, URL, descripción y rubro. Cuesta 4,1 KB
+**Los datos estructurados declaran los 31 proyectos QUE RESPONDEN.** No solo
+que existe una colección: cada uno con su nombre, URL, descripción y rubro.
+
+> Los `proximamente` quedan afuera a propósito: declararle al buscador una
+> página que da 404 es pedirle que la visite para nada, y desgasta la
+> confianza en el resto del listado. Cuesta 4,1 KB
 comprimido y es lo que le dice a Google qué hay adentro.
 
 **El SEO habla con la misma voz que el sitio de la empresa** pero no dice lo
@@ -228,3 +256,47 @@ otros proyectos.
 
 En `- DOCUMENTACION/` (un nivel arriba) está el detalle: el inventario completo de
 proyectos, el mapa de cuentas de GitHub, Netlify y Vercel, y lo que queda pendiente.
+
+---
+
+## 🔴 La ficha: el error que más caro salió
+
+La ficha de proyecto (`#projectModal`) va **justo después de `</footer>` y
+ANTES de los `<script>`**. No es un detalle de estilo:
+
+- **Si va adentro de `.container`**, queda atrapada en su contexto de apilado y
+  **el pie de página la tapa**, por más `z-index` que se le ponga.
+- **Si va al final del `<body>`, después de los scripts**, pasa algo peor: al
+  correr el script `getElementById('projectModal')` devuelve `null`, tira
+  `TypeError` y **se lleva puestos los 192 manejadores de clic de las
+  tarjetas**. La página se ve perfecta y no hace absolutamente nada.
+
+Lo segundo pasó de verdad. No lo encontró el ojo: lo encontró la auditoría, al
+leer los errores de la consola.
+
+### Cómo se comprueba
+
+```bash
+node --experimental-websocket auditar-porfolio.mjs
+```
+
+Abre la página en un Chrome de verdad y mira elementos sin nombre, imágenes sin
+`alt`, campos sin etiqueta, saltos de encabezado, scroll horizontal en celular
+y —lo que importa acá— **errores de consola y respuestas 4xx/5xx**.
+
+> ⚠️ El flag `--experimental-websocket` hace falta en Node 20. Sin él tira
+> `ReferenceError: WebSocket is not defined`, que parece un error del script y
+> no lo es.
+
+---
+
+## Lo que queda pendiente acá
+
+- [ ] **24 botones de menos de 30 px** en la barra de rubros: quedan chicos
+      para un dedo. Lo reporta la auditoría.
+- [ ] **Capturas de los 161 proyectos** que todavía no las tienen.
+- [ ] Decidir qué hacer con **Tributos (53), Salud (25) y Oficina (21)**: casi
+      no tienen nada en línea, y un rubro entero de «No disponible» resta más
+      de lo que suma.
+
+La lista completa y ordenada está en `- DOCUMENTACION/TAREAS-PENDIENTES.md`.
