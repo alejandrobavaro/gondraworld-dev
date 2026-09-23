@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120" role="img" aria-label="Toma · La red de los que hacen cine, video y sonido">
+  <title>Toma · La red de los que hacen cine, video y sonido</title>
+  <!-- La marca es la "o" de Toma, dibujada como el carrete. Los colores son
+       los de su identidad: el crema del papel y el azul de imprenta. El
+       crema queda afuera porque la grilla del porfolio es oscura y el azul
+       solo no se leeria. -->
+  <circle cx="58" cy="60" r="30" fill="none" stroke="#f2eee5" stroke-width="8"/>
+  <circle cx="58" cy="60" r="8" fill="#f2eee5"/>
+  <g fill="#6f9bd6">
+    <circle cx="58" cy="40" r="5.5"/>
+    <circle cx="58" cy="80" r="5.5"/>
+    <circle cx="38" cy="60" r="5.5"/>
+    <circle cx="78" cy="60" r="5.5"/>
+  </g>
+  <text x="112" y="68" font-family="Georgia, 'Times New Roman', serif" font-size="48" font-weight="700" fill="#f2eee5" letter-spacing="2">TOMA</text>
+  <text x="114" y="94" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" fill="#6f9bd6" letter-spacing="4.4">CINE · VIDEO · SONIDO</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 120" width="330" height="120" role="img" aria-label="Gondra Producciones · La carrera audiovisual y los primeros trabajos">
+  <title>Gondra Producciones · La carrera audiovisual y los primeros trabajos</title>
+  <!-- El dragon con las alas abiertas, como en el intro de 2003. No es un
+       adorno: "Gondra" es "dra-gon" al reves, y de ahi sale la paleta. -->
+  <g fill="#ff0000">
+    <path d="M52 66 L20 40 L26 56 L14 52 L22 68 L36 74 Z"/>
+    <path d="M52 66 L84 40 L78 56 L90 52 L82 68 L68 74 Z"/>
+    <path d="M52 44 L60 52 L60 72 Q52 86 44 72 L44 52 Z"/>
+    <path d="M44 44 Q52 30 60 44 Z"/>
+  </g>
+  <circle cx="49" cy="46" r="2.2" fill="#0a0a0a"/>
+  <circle cx="55" cy="46" r="2.2" fill="#0a0a0a"/>
+  <text x="104" y="68" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="700" fill="#ffffff">Gondra</text>
+  <text x="106" y="94" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" fill="#ff4d4d" letter-spacing="4.2">PRODUCCIONES</text>
+</svg>

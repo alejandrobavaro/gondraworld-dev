@@ -572,7 +572,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.35rem 1.15rem;
+  /* ⚠ EL HUECO VERTICAL NO ES DECORACION: es lo que hace que las areas
+     tactiles de dos filas seguidas no se pisen. Cada chip extiende su zona
+     clickeable 11,5px para arriba y para abajo (ver el ::before de abajo),
+     asi que con los 5,6px de antes las filas se solapaban y el dedo tocaba
+     el rubro de arriba. Si se baja este valor, hay que bajar tambien la
+     altura de esa area. */
+  gap: 1.5rem 1.15rem;
 }
 
 .barra-rubros__chips a {
@@ -587,6 +593,30 @@ body {
   opacity: 0.72;
   transition: color 0.28s ease, opacity 0.28s ease;
 }
+/* ============================================================
+   EL AREA QUE RESPONDE AL DEDO
+   ------------------------------------------------------------
+   Medido en el navegador: estos chips dibujan 21 px de alto. El
+   minimo que pide la WCAG 2.5.8 son 24, y para un dedo lo comodo
+   son 44. Son 19 rubros, y son EL atajo del porfolio: quien entra
+   desde el celular y le erra dos veces seguidas deja de usarlos y
+   se come 192 tarjetas de scroll.
+
+   No se agranda el texto —el diseño de la barra es una decision de
+   Ale— sino la zona invisible que escucha el toque. Visualmente no
+   cambia un pixel: lo unico que cambia es que ahora se le puede
+   pegar. Lo que separa las filas es el `gap` de arriba.
+   ============================================================ */
+.barra-rubros__chips a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 44px;
+  transform: translateY(-50%);
+}
+
 /* El subrayado se dibuja desde el centro, igual que en los proyectos. */
 .barra-rubros__chips a::after {
   content: "";
@@ -1739,4 +1769,112 @@ html {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* ============================================================
+   LO QUE EL SISTEMA SE LLEVO ADENTRO (ficha de proyecto)
+   ------------------------------------------------------------
+   Celebra y Salon Manager absorbieron cuatro webs que antes
+   eran sueltas: lista de tareas, asignacion de mesas, tarjetas
+   de invitacion y confirmacion de asistencia. Esas webs se
+   dieron de baja, asi que no tienen tarjeta propia en la
+   grilla, pero el servicio se sigue ofreciendo.
+
+   Se muestran como items y no como un parrafo corrido porque
+   para vender siguen siendo cuatro cosas chicas y claras: quien
+   entra buscando "lo de las mesas" tiene que engancharlo de un
+   vistazo, aunque hoy sea una seccion adentro de otra cosa.
+   ============================================================ */
+.modal-incluye {
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  border: 1px solid rgba(100, 255, 218, 0.14);
+  border-radius: 12px;
+}
+
+.modal-incluye__titulo {
+  margin: 0 0 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  text-align: left;
+}
+
+/* El `.modal-body p` de arriba centra todos los parrafos de la
+   ficha. Aca no: es texto de lectura, no un titulo. */
+.modal-body .modal-incluye__nota {
+  margin-bottom: 0.85rem;
+  font-size: 0.82rem;
+  text-align: left;
+}
+
+.modal-incluye__lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.modal-incluye__item {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.55rem 0.7rem;
+  border-left: 2px solid var(--primary);
+  border-radius: 8px;
+  background: rgba(100, 255, 218, 0.04);
+}
+
+.modal-incluye__item strong {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.modal-incluye__donde {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--primary);
+}
+
+.modal-incluye__detalle {
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: var(--text-dim);
+}
+
+/* ============================================================
+   EL MINIMO PARA PODER TOCAR — enlaces del hero y del pie
+   ------------------------------------------------------------
+   Medido en el navegador: estos doce enlaces dibujaban entre 16 y
+   20 px de alto. La WCAG 2.5.8 pide 24 como minimo, y son enlaces
+   de navegacion de verdad —Inicio, Servicios, Tienda, el correo,
+   el WhatsApp—, no palabras sueltas adentro de un parrafo: la
+   excepcion de "texto en linea" no los cubre.
+
+   Se les da altura minima y se centra el texto adentro. El tamaño
+   de la letra no cambia: lo unico que crece es la caja, y en el
+   pie eso se nota como un poco mas de aire entre renglones.
+
+   La barra de rubros se resuelve aparte, con area invisible, porque
+   ahi son 19 chips en varias filas y agrandarlos de verdad empujaba
+   media pantalla. Aca son doce y el lugar sobra.
+   ============================================================ */
+.hero-contacto a,
+.footer-nav a,
+.footer-contact a,
+.footer-bottom__credits a {
+  min-height: 24px;
+  align-items: center;
+}
+
+/* El de creditos vive adentro de un parrafo, asi que es `inline` — y a un
+   inline el `min-height` no le hace nada: se lo ignora. Por eso seguia
+   midiendo 16px cuando los otros ya estaban en 24. Se pasa a inline-flex,
+   que acepta la altura sin cortar el renglon donde esta metido. */
+.footer-bottom__credits a {
+  display: inline-flex;
 }

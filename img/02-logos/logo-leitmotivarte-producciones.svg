@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425 120" width="425" height="120" role="img" aria-label="Leitmotiv Arte Producciones · Productora audiovisual en Mar del Plata">
+  <title>Leitmotiv Arte Producciones · Productora audiovisual en Mar del Plata</title>
+  <!-- Se respeta la marca que ya tenia la productora: MOTIVARTE en serif,
+       con el triangulo rojo invertido abajo y PRODUCCIONES adentro. El
+       "LEIT" chico arriba a la izquierda tambien es del original. -->
+  <text x="26" y="40" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#cfd3d6" letter-spacing="3">LEIT</text>
+  <text x="24" y="76" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="700" fill="#e9edf0" letter-spacing="1">MOTIVARTE</text>
+  <path d="M24 84 L404 84 L214 112 Z" fill="#ff0000"/>
+  <text x="214" y="102" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#ffffff" letter-spacing="3.2">PRODUCCIONES</text>
+</svg>

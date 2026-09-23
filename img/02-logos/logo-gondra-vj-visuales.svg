@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 120" width="490" height="120" role="img" aria-label="Gondra VJ Visuales · Mapping y visuales en vivo">
+  <title>Gondra VJ Visuales · Mapping y visuales en vivo</title>
+  <!-- La marca del proyecto es el triangulo del proyector, cruzado por el
+       haz. Los dos colores salen de su identidad: el violeta de la luz
+       proyectada y el cian que la cruza. -->
+  <path d="M58 34 L88 86 L28 86 Z" fill="none" stroke="#a06bff" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M18 74 L96 46" stroke="#35e0d8" stroke-width="9" stroke-linecap="round"/>
+  <text x="118" y="66" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="700" fill="#ffffff" letter-spacing="1">GONDRA VJ</text>
+  <text x="120" y="93" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" fill="#35e0d8" letter-spacing="4.6">VISUALES EN VIVO · MAPPING</text>
+</svg>
