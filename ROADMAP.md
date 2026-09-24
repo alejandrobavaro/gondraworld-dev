@@ -8,15 +8,14 @@
 
 ---
 
-## 🎨 Próxima sesión: los 106 logos que faltan (24/09/2026)
+## 🎨 Próxima sesión: los 62 logos de salud (24/09/2026)
 
-- **Primero:** pedirle a Ale que inicie sesión en **Canva** (y en Gemini o
-  ChatGPT si los quiere sumar) en el Chrome, y que permita el aviso de «red local».
-- Faltan **44 tributos y 62 de salud**. Cada logo va **en los dos proyectos**
-  (HTML: `img/02-logos/` + `index.html`; React: `public/img/02-logos/` +
-  `public/proyectos.json`) — `aplicar.mjs` hace todo junto.
+- **Tributos: listos los 44** (24/09). Quedan **los 62 de salud**.
+- **Primero:** pedirle a Ale que inicie sesión en **Canva** en el Chrome.
+- Cada logo va **en los dos proyectos** (HTML: `img/02-logos/` + `index.html`;
+  React: `public/img/02-logos/` + `public/proyectos.json`) — `aplicar.mjs`
+  hace todo junto.
 - Detalle, reglas y lista: `- DOCUMENTACION/25-los-logos.md`.
-
 ---
 
 ## Para qué existe este sitio
