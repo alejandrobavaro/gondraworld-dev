@@ -1,10 +1,21 @@
 # Roadmap — Porfolio HTML de Gondra World
 
-**Estado al 17 de septiembre de 2026.**
+**Estado al 24 de septiembre de 2026.**
 
 > 📍 **La lista corta de tareas está en
 > `- DOCUMENTACION/TAREAS-PENDIENTES.md`** (dos niveles arriba). Acá está el
 > contexto de ESTE proyecto: qué es, para qué existe y qué le falta.
+
+---
+
+## 🎨 Próxima sesión: los 106 logos que faltan (24/09/2026)
+
+- **Primero:** pedirle a Ale que inicie sesión en **Canva** (y en Gemini o
+  ChatGPT si los quiere sumar) en el Chrome, y que permita el aviso de «red local».
+- Faltan **44 tributos y 62 de salud**. Cada logo va **en los dos proyectos**
+  (HTML: `img/02-logos/` + `index.html`; React: `public/img/02-logos/` +
+  `public/proyectos.json`) — `aplicar.mjs` hace todo junto.
+- Detalle, reglas y lista: `- DOCUMENTACION/25-los-logos.md`.
 
 ---
 
