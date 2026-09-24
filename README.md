@@ -1,20 +1,20 @@
 # Gondra World · Porfolio (versión HTML)
 
-Porfolio de desarrollo web de Ale Bavaro. Una sola página con **192 proyectos**
-agrupados en **19 rubros**, con buscador y ficha de detalle por proyecto.
+Porfolio de desarrollo web de Ale Bavaro. Una sola página con **194 proyectos**
+agrupados en **21 rubros**, con buscador y ficha de detalle por proyecto.
 
 **En vivo:** https://alejandrobavaro.github.io/gondraworld-dev/
 
-**Estado al 17 de septiembre de 2026.** Verificado contra el archivo, no de
+**Estado al 24 de septiembre de 2026.** Verificado contra el archivo, no de
 memoria:
 
 | | |
 |---|---|
-| Proyectos en la página | **192** |
-| Rubros | **19** |
-| Que responden hoy | **31** — el resto está sin publicar o caído |
+| Proyectos en la página | **194** |
+| Rubros | **21** |
+| Que responden hoy | **60** — el resto está sin publicar o caído |
 
-> **Arranca mostrando sólo los 31 que responden**, y es una decisión de venta:
+> **Arranca mostrando sólo los 60 que responden**, y es una decisión de venta:
 > quien entra y toca tres tarjetas al azar, con el filtro apagado las tres le
 > dicen «No disponible». El botón «Todos» está al lado y dice cuántos son.
 
@@ -67,7 +67,10 @@ gondraworld-html/
 
 ## Cómo agregar un proyecto
 
-1. Poné el logo en `img/02-logos/` como `.webp`. Para convertirlo desde PNG:
+1. Poné el logo en `img/02-logos/`. Desde el 24/09/2026 los logos nuevos van en
+   **PNG con fondo transparente, 640 px de ancho como máximo**, hechos con Canva
+   (el procedimiento está en `- DOCUMENTACION/25-los-logos.md`, fuera del repo).
+   Los viejos siguen en `.webp`; para convertir uno desde PNG:
 
    ```bash
    npx sharp-cli -i logo.png -o logo.webp resize 640 --withoutEnlargement -- webp --quality 82
@@ -113,7 +116,7 @@ gondraworld-html/
    > figurar a Google.
 
    > ⚠️ **Y hay que agregarlo también en el sitio React**, que tiene su propia
-   > lista en `public/proyectos.json`. Los dos sitios muestran los mismos 192
+   > lista en `public/proyectos.json`. Los dos sitios muestran los mismos 194
    > proyectos desde fuentes distintas: si se agrega en uno solo, quedan
    > diciendo cosas diferentes. Hay un chequeo que compara los logos contra el
    > disco, pero **no** compara un listado contra el otro — eso sigue siendo a
