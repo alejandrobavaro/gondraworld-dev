@@ -8,14 +8,11 @@
 
 ---
 
-## 🎨 Próxima sesión: los 62 logos de salud (24/09/2026)
+## ✅ Logos terminados (24/09/2026)
 
-- **Tributos: listos los 44** (24/09). Quedan **los 62 de salud**.
-- **Primero:** pedirle a Ale que inicie sesión en **Canva** en el Chrome.
-- Cada logo va **en los dos proyectos** (HTML: `img/02-logos/` + `index.html`;
-  React: `public/img/02-logos/` + `public/proyectos.json`) — `aplicar.mjs`
-  hace todo junto.
-- Detalle, reglas y lista: `- DOCUMENTACION/25-los-logos.md`.
+- Los **194 proyectos** tienen logo propio: los 44 tributos y los 62 de salud
+  se hicieron el 24/09, en las dos webs.
+- Cómo se hacen y qué aprendimos: `- DOCUMENTACION/25-los-logos.md`.
 ---
 
 ## Para qué existe este sitio
